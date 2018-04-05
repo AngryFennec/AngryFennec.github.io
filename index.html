@@ -24,7 +24,7 @@
              <div class="main-nav-flex-left">
                <a class="main-header-logo" href="index.html"><img src="img/logo-gllacy.svg" alt="Логотип Gllasy Shop"  width="154" height="64"></a>
                <ul class="site-navigation">
-                 <li><a class="header-button default-a site-navigation-cat" href="catalog.html">Каталог</a>
+                 <li class="site-navigation-sub"><a class="header-button default-a site-navigation-cat" href="catalog.html">Каталог</a>
                    <ul class="nav-catalog">
                      <li class="nav-catalog-sub nav-catalog-top">Новинки</li>
                      <li class="nav-catalog-sub"><a class="drop-menu-item" href="catalog.html">Сливочное</a></li>
@@ -85,9 +85,11 @@
        </div>
        <ul class="slider-list">
          <li class="slider-item slide" id="slide1">
+
            <h3 class="slide-title">
                      Крем-брюле и пломбир с малиновым джемом
                    </h3>
+
            <a class="button slide-button" href="#">Давайте оба!</a>
          </li>
          <li class="slider-item slide" id="slide2">
@@ -231,20 +233,22 @@
            <p class="map-adress-order">Для заказов по телефону:</p>
            <span class="map-phone"><a href="tel:+78124502525"> 8 812 450-25-25</a></span>
            <p class="map-adress-time">(с 10 до 20 ежедневно)</p>
-           <a class="default-button open-feedback" href=#>Форма обратной связи</a>
+           <a class="default-button open-feedback" href="form.html">Форма обратной связи</a>
+           <div class="feedback-overlay">
            <div class="feedback-container">
            <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
              <button class="feedback-close" type="button" value="Закрыть окно обратной связи"></button>
              <b>Мы обязательно вам ответим!</b>
              <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-             <input class="default-input fb-name" type="text" placeholder="Как вас зовут?" id="feedback-name" tabindex="-1" required>
+             <input class="default-input fb-name" type="text" placeholder="Как вас зовут?" id="feedback-name" name="name" tabindex="-1" required>
              <label class="visually-hidden" for="feedback-mail">Ваша почта для ответа?</label>
-             <input class="default-input fb-email" type="email" placeholder="Ваша почта для ответа?" id="feedback-mail" tabindex="-1" required pattern="\S+@[a-z]+.[a-z]+">
+             <input class="default-input fb-email" type="email" placeholder="Ваша почта для ответа?" name="mail" id="feedback-mail" tabindex="-1" required pattern="\S+@[a-z]+.[a-z]+">
              <label class="visually-hidden" for="feedback-write">Напишите что-нибудь...</label>
-             <textarea class="default-input fb-write" placeholder="Напишите что-нибудь..." rows="3" id="feedback-write" tabindex="-1" required></textarea>
+             <textarea class="default-input fb-write" placeholder="Напишите что-нибудь..." rows="3" name="text" id="feedback-write" tabindex="-1" required></textarea>
              <input type="submit" class="default-button feedback-button" value="Отправить" id="feedback-btn" tabindex="-1">
            </form>
        </div>
+     </div>
          </section>
        </div>
      </section>
@@ -286,6 +290,8 @@
      </div>
    </footer>
  </div>
+
+ <script src="js/scripts.js"> </script>
 </body>
 
 </html>
