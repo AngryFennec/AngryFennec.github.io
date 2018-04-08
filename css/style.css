@@ -495,7 +495,9 @@ a.header-button:active {
   padding-right: 0;
   padding-left: 10px;
 }
-
+.index-footer .footer-maker {
+  padding-top: 15px;
+}
 .footer-maker img {
   padding-left: 7px;
 }
@@ -893,17 +895,27 @@ a.header-options-phone {
 
 .nav-catalog li:hover {
   color: #323232;
-border-radius: 5px;
+border-radius: 0px;
   background-color: #fbded7;
 }
 
 
 .nav-catalog li:active {
   color: #323232;
-border-radius: 5px;
+border-radius: 0px;
   background-color: #f6b5a5;
 }
 
+.nav-catalog-sub:first-child:hover,
+.nav-catalog-sub:first-child:active {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.nav-catalog-sub:last-child:hover,
+.nav-catalog-sub:last-child:active {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .site-navigation {
   margin: 0;
   padding: 0;
@@ -1461,7 +1473,7 @@ vertical-align: baseline;
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 0;
-  padding-top: 23px;
+  padding-top: 20px;
 }
 
 .footer-left-ul,
@@ -1770,7 +1782,7 @@ z-index: 200;
 }
 .feedback-container {
   /*position: fixed;*/
-top: -10%;
+top: -50%;
   left: 50%;
 display: block;
 /*  display: none; /*display: block; для отображения*/
@@ -1783,7 +1795,7 @@ opacity: 1;
 
 .feedback {
   position: absolute;
-  top: 338px;
+  top: 20%;
   left: 50%;
 
   display: -webkit-box;
@@ -2068,6 +2080,7 @@ vertical-align: baseline;
   margin: 0 auto;
   margin-bottom: 40px;
   padding: 0;
+
 }
 
 .bonus-item {
@@ -2196,6 +2209,7 @@ margin-top: 3px;
   width: 1200px;
   min-height: 105px;
   margin: 0 auto;
+
 }
 
 .phone-href-container {
@@ -2625,7 +2639,11 @@ margin-top: 3px;
   width: 393px;
   margin: 0;
   padding: 0;
-  padding-top: 35px;
+  padding-top: 32px;
+}
+.index-footer .footer-links-list{
+  padding-top: 30px;
+
 }
 
 .footer-links-left {
@@ -2667,7 +2685,12 @@ margin-top: 3px;
 vertical-align: baseline;
   text-align: left;
 }
-
+.footer-left-ul li:first-child {
+  padding-bottom: 4px;
+}
+.footer-right-ul li:first-child {
+  padding-bottom: 4px;
+}
 .for-suppliers {
   font-weight: 700;
 }
@@ -2764,23 +2787,3 @@ vertical-align: baseline;
 .fb-write {
    min-height: 155px;
 }
-/*
-.fb-name,
-.fb-email {
-  width: 225px;
-  height: 44px;
-  margin-bottom: 20px;
-  padding-left: 14px;
-
-  border: 1px solid #d3d3d2;
-  border-radius: 5px;
-}
-
-.fb-name:hover,
-.fb-email:focus,
-.fb-name:hover,
-.fb-email:focus {
-  margin-bottom: 17px;
-
-}
-*/
