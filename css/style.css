@@ -1782,7 +1782,7 @@ z-index: 200;
 }
 .feedback-container {
   /*position: fixed;*/
-top: -50%;
+top: -10%;
   left: 50%;
 display: block;
 /*  display: none; /*display: block; для отображения*/
