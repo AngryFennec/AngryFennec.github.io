@@ -424,6 +424,7 @@ template {
 }
 body {
   font-family: 'Exo 2', 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -917,7 +918,8 @@ svg {
   background-repeat: no-repeat;
   background-position: center;
 }
-.price {
+.price-wrapper {
+  width: 320px;
   margin: 0 auto;
   padding: 20px 0;
   color: #3D2E29;
@@ -1066,6 +1068,13 @@ svg {
 .price__button {
   margin-left: 20px;
 }
+.error {
+  display: block;
+  color: red;
+  width: 100%;
+  font-weight: 500;
+  margin-left: 20px;
+}
 .social-icons__wrap {
   display: block;
   width: 30px;
@@ -1165,11 +1174,6 @@ svg {
   position: relative;
   margin: 0 auto;
   width: 320px;
-}
-.map__icon {
-  position: absolute;
-  top: 175px;
-  left: 102px;
 }
 .ability {
   width: 320px;
@@ -1372,6 +1376,80 @@ svg {
 .menu-button__text {
   display: none;
 }
+.feadback,
+.feadback-name {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: 15px;
+  font-weight: 300;
+}
+.feadback__window {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
+  width: 300px;
+  background-color: white;
+}
+.feadback__form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.feadback__button {
+  margin-left: 20px;
+  margin-bottom: 19px;
+}
+.feadback-name .feadback__legend {
+  text-align: left;
+  padding-left: 10px;
+}
+.feadback__legend {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+.feadback__name {
+  width: 280px;
+  min-height: 40px;
+  border-color: 1px solid #3D2E29;
+  padding: 0 10px;
+  margin-bottom: 13px;
+}
+.feadback__phone {
+  width: 248px;
+  min-height: 40px;
+  border-color: 1px solid #3D2E29;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 19px;
+}
+.feadback__label {
+  margin-bottom: 9px;
+}
+.feadback__label--big {
+  font-size: 16px;
+}
+.feadback__close-button,
+.feadback__close-button-name {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url("../images/upload/dagger-button.png") no-repeat 0 0;
+  background-color: transparent;
+  border: none;
+  top: 5px;
+  right: 5px;
+}
+.feadback__price {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 10px;
+}
 @media (min-width: 768px) and (max-width: 1199px) {
   .tablet-flag {
     display: block;
@@ -1400,8 +1478,12 @@ svg {
   .portfolio__block {
     width: 620px;
   }
-  .portfolio__block--2 {
+  .portfolio__block--2,
+  .portfolio__block--4 {
     margin-top: -86px;
+  }
+  .portfolio__block--3 {
+    margin-top: 22px;
   }
   .portfolio__wrapper--1 {
     margin-left: 19px;
@@ -1636,7 +1718,11 @@ svg {
     background-repeat: no-repeat;
     background-position: center;
   }
-  .price {
+  .error {
+    margin-left: 200px;
+  }
+  .price-wrapper {
+    width: 768px;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
@@ -1681,8 +1767,9 @@ svg {
     margin-left: 20px;
   }
   .price__all-rooms {
-    margin-left: 97px;
+    margin-left: -20px;
     margin-top: 15px;
+    margin-right: 500px;
   }
   .price__button {
     -ms-grid-row-align: center;
@@ -1719,12 +1806,6 @@ svg {
     position: relative;
     margin: 0 auto;
     width: 768px;
-  }
-  .map__icon {
-    position: absolute;
-    top: 172px;
-    left: auto;
-    right: 52px;
   }
   .ability {
     width: 768px;
@@ -1829,8 +1910,45 @@ svg {
     width: 30px;
     height: 27px;
   }
+  .feadback__form {
+    padding: 0 20px;
+    font-size: 18px;
+  }
+  .feadback__window {
+    width: 405px;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+  }
+  .feadback-name .feadback__legend {
+    padding-left: 20px;
+  }
+  .feadback__legend {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 7px;
+  }
+  .feadback__close-button,
+  .feadback__close-button-name {
+    top: 15px;
+    right: 15px;
+  }
+  .feadback__label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .feadback__name {
+    width: 365px;
+    margin-bottom: 18px;
+  }
+  .feadback__button {
+    margin-left: 62px;
+  }
+  .feadback__price {
+    margin: 10px 20px;
+  }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1200px) {
   .portfolio {
     margin-top: -260px;
     position: relative;
@@ -1895,17 +2013,28 @@ svg {
   .portfolio__button {
     margin-top: 48px;
     margin-bottom: 85px;
+    order: 2;
   }
   .portfolio__block--1 {
     padding-bottom: 21px;
   }
+  .portfolio__block--3 {
+    order: 1;
+    margin-top: 22px;
+    margin-left: 20px;
+  }
+  .portfolio__block--4 {
+    margin-top: -104px;
+    padding-bottom: 148px;
+  }
   .about-us {
-    padding-right: 310px;
+    width: 1200px;
   }
   .about-us__image {
     width: 950px;
     height: 417px;
     margin-top: -61px;
+    margin-left: -360px;
   }
   .about-us__header {
     margin-top: 20px;
@@ -1914,6 +2043,9 @@ svg {
   .about-us__description {
     font-size: 25px;
     line-height: 30px;
+  }
+  .about-us__content {
+    padding-right: 30px;
   }
   .h2 {
     font-size: 40px;
@@ -1973,14 +2105,14 @@ svg {
     margin-left: 20px;
   }
   .head {
-    width: 1920px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
   }
   .head__logo {
     margin-top: 0;
-    margin-left: 368px;
+    margin-left: 17px;
     height: 52.57px;
     width: 165px;
   }
@@ -2057,17 +2189,22 @@ svg {
   }
   .main-header {
     min-height: 1158px;
-    width: 1920px;
+    min-width: 1200px;
+    max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     background-image: url("../images/upload/main-header-back-desk.jpg");
+    background-position: center;
     position: relative;
   }
   .main-header::before {
     content: "";
     position: absolute;
     top: 120px;
-    left: 750px;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url("../images/header-rect-desk.svg");
+    background-position: center;
     background-repeat: no-repeat;
     width: 500px;
     height: 500px;
@@ -2150,8 +2287,9 @@ svg {
     background-repeat: no-repeat;
     background-position: center;
   }
-  .price {
+  .price-wrapper {
     width: 1180px;
+    margin: 0 auto;
     padding-right: 300px;
     padding-top: 30px;
     position: relative;
@@ -2187,22 +2325,27 @@ svg {
   }
   .price__button {
     margin-bottom: 15px;
+    margin-left: 100px;
   }
   .price__area .price__legend {
     width: 180px;
     margin-top: 21px;
   }
+  .price__all-rooms {
+    margin-left: 0px;
+    margin-right: 500px;
+  }
   .address__container {
     position: absolute;
     top: 0;
-    left: 350px;
+    left: 17.7%;
     min-height: 340px;
     width: 280px;
     z-index: 20;
     background-color: #ffffff;
   }
   .address {
-    width: 768px;
+    width: 100%;
     margin: 0 auto;
     z-index: 20;
     background-color: #ffffff;
@@ -2213,16 +2356,11 @@ svg {
     background-repeat: no-repeat;
     position: relative;
     margin: 0 auto;
-    width: 1920px;
-  }
-  .map__icon {
-    position: absolute;
-    top: 313px;
-    left: auto;
-    right: 734px;
+    width: 100%;
+    max-width: 1920px;
   }
   .ability {
-    width: 1920px;
+    width: 1200px;
     margin: 0 auto;
   }
   .ability__container {
@@ -2231,9 +2369,8 @@ svg {
     flex-direction: row;
   }
   .ability__title {
-    font-size: 40px;
-    line-height: 48px;
-    padding-left: 700px;
+    text-align: center;
+    padding-right: 172px;
   }
   .ability__photo1 {
     width: 579px;
@@ -2296,15 +2433,16 @@ svg {
   }
   .center-wrapper {
     margin: 0 auto;
-    width: 1920px;
+    min-width: 1200px;
+    max-width: 1920px;
+    width: 100%;
   }
   .contacts {
+    min-width: 1200px;
     position: relative;
-    width: 1920px;
+    width: 100%;
+    max-width: 1920px;
     margin: 0 auto;
-  }
-  .range {
-    margin-bottom: 43px;
   }
   .nav-container {
     display: flex;
@@ -2330,6 +2468,11 @@ svg {
   }
   .menu-button--close {
     display: none;
+  }
+}
+@media (min-width: 1920px) {
+  .range {
+    margin-bottom: 43px;
   }
 }
 @media (max-width: 1024px) {
