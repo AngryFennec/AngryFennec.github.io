@@ -1067,6 +1067,7 @@ svg {
   color: #3D2E29;
   border: 1px solid #3D2E29;
   margin-bottom: 31px;
+  box-shadow: none;
 }
 .price__button {
   margin-left: 20px;
@@ -1420,21 +1421,23 @@ svg {
 .feadback__name {
   width: 280px;
   min-height: 40px;
-  border: 1px solid #3D2E29;
   padding: 0 10px;
   margin-bottom: 13px;
   font-family: 'Exo 2', 'Arial', sans-serif;
   font-weight: 300;
+  border: 1px solid #3D2E29;
+  box-shadow: none;
 }
 .feadback__phone {
   width: 248px;
   min-height: 40px;
-  border: 1px solid #3D2E29;
   text-align: center;
   padding: 0 10px;
   margin-bottom: 19px;
   font-family: 'Exo 2', 'Arial', sans-serif;
   font-weight: 300;
+  border: 1px solid #3D2E29;
+  box-shadow: none;
 }
 .feadback__label {
   margin-bottom: 9px;
@@ -1915,6 +1918,9 @@ svg {
     width: 768px;
     margin-bottom: -10px;
   }
+  .nav-container {
+    box-shadow: none;
+  }
   .menu-button {
     position: absolute;
     top: 30px;
@@ -1952,6 +1958,7 @@ svg {
   .feadback__name {
     width: 365px;
     margin-bottom: 18px;
+    border: 1px solid #3D2E29;
   }
   .feadback__button {
     margin-left: 62px;
@@ -2235,7 +2242,7 @@ svg {
   .main-header__title {
     font-size: 55px;
     line-height: 66px;
-    padding-top: 180px;
+    padding-top: 205px;
     margin-bottom: 7px;
   }
   .main-header__text--upper {
@@ -2462,6 +2469,7 @@ svg {
     position: relative;
     width: 1200px;
     margin: 0 auto;
+    box-shadow: none;
   }
   .nav-container--close .menu,
   .nav-container--close .menu__outer {
