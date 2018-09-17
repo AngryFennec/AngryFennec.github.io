@@ -784,7 +784,7 @@ h2 {
   margin: 0 auto;
   width: 1920px;
   display: flex;
-  background-image: url("/images/work-desk.jpg");
+  background-image: url("../images/work-desk.jpg");
   background-repeat: no-repeat;
   background-position: 830px 220px;
   z-index: 5;
@@ -1139,7 +1139,7 @@ h2 {
   margin: 0 auto;
   width: 1920px;
   display: flex;
-  background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("/images/features-desk.png") 250px 200px no-repeat;
+  background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 250px 200px no-repeat;
 }
 .features__inner .aside {
   padding-top: 260px;
@@ -1374,7 +1374,7 @@ h2 {
   z-index: 6;
   position: relative;
   display: flex;
-  background: url("/images/head-desktop.png") 640px 80px no-repeat;
+  background: url("../images/head-desktop.png") 640px 80px no-repeat;
 }
 .head__inner .aside {
   padding-top: 60px;
@@ -1395,7 +1395,7 @@ h2 {
 .head__advantage {
   margin-bottom: 0;
   margin-top: 0;
-  margin-left: -65px;
+  margin-left: 0px;
 }
 .head__form {
   display: flex;
@@ -1808,7 +1808,7 @@ h2 {
     width: 768px;
     margin-bottom: 0;
     margin-top: -5px;
-    background-image: url("/images/work-tablet.jpg");
+    background-image: url("../images/work-tablet.jpg");
     background-position: 100px 430px;
   }
   .work__content {
@@ -1879,7 +1879,7 @@ h2 {
     padding-top: 0;
     margin-bottom: 0;
     margin-top: 0;
-    background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("/images/features-mobile.png") 0px 200px no-repeat;
+    background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 200px no-repeat;
   }
   .features__content {
     width: 768px;
@@ -1974,7 +1974,7 @@ h2 {
     display: flex;
     -moz-flex-direction: column;
     flex-direction: column;
-    background: url("/images/head-tablet.png") 35px 240px no-repeat;
+    background: url("../images/head-tablet.png") 35px 240px no-repeat;
   }
   .head__content {
     width: 768px;
@@ -2379,7 +2379,7 @@ h2 {
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
-    background: url("/images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url("/images/work-mobile.jpg") 0px 70px no-repeat;
+    background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url("../images/work-mobile.jpg") 0px 70px no-repeat;
   }
   .work__content {
     width: 320px;
@@ -2468,7 +2468,7 @@ h2 {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 10px;
-    background: url("/images/features-work-mobile-pseudo1.png") 15px 590px no-repeat, url("/images/features-mobile-pseudo1.png") 0px 80px no-repeat, url("/images/features-mobile-pseudo2.png") 0px 150px no-repeat, url("/images/features-mobile-pseudo3.png") 85px 385px no-repeat, url("/images/features-mobile-pseudo4.png") 220px 530px no-repeat, url("/images/features-mobile-pseudo5.png") 140px 570px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("/images/features-tablet.png") 0px 140px no-repeat;
+    background: url("../images/features-work-mobile-pseudo1.png") 15px 590px no-repeat, url("../images/features-mobile-pseudo1.png") 0px 80px no-repeat, url("../images/features-mobile-pseudo2.png") 0px 150px no-repeat, url("../images/features-mobile-pseudo3.png") 85px 385px no-repeat, url("../images/features-mobile-pseudo4.png") 220px 530px no-repeat, url("../images/features-mobile-pseudo5.png") 140px 570px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-tablet.png") 0px 140px no-repeat;
   }
   .features__content {
     width: 320px;
@@ -2593,7 +2593,7 @@ h2 {
     display: flex;
     -moz-flex-direction: column;
     flex-direction: column;
-    background: url("/images/head-mobile.png") 40px 180px no-repeat, url("/images/head-mobile-pseudo3.png") 0px 140px no-repeat, url("/images/head-mobile-pseudo1.png") 50px 275px no-repeat, url("/images/head-mobile-pseudo2.png") 0px 290px no-repeat;
+    background: url("../images/head-mobile.png") 40px 180px no-repeat, url("../images/head-mobile-pseudo3.png") 0px 140px no-repeat, url("../images/head-mobile-pseudo1.png") 50px 275px no-repeat, url("../images/head-mobile-pseudo2.png") 0px 290px no-repeat;
   }
   .head__content {
     width: 320px;
