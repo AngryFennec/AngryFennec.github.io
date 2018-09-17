@@ -499,6 +499,18 @@ h2 {
   padding: 0;
   border: 0;
 }
+.overlay {
+  display: block;
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  opacity: 0.4;
+}
+.overlay--close {
+  display: none;
+}
 .h2 {
   font-family: 'Montserrat bold', 'Arial', sans-serif;
   font-size: 15px;
@@ -832,6 +844,8 @@ h2 {
   padding: 25px;
   padding-top: 2px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .review__block {
   font-family: 'Dee Dee', 'Arial', sans-serif;
@@ -877,7 +891,7 @@ h2 {
   position: absolute;
   background: transparent;
   border: none;
-  top: 50%;
+  top: 125px;
 }
 .review__button--left {
   left: -7px;
@@ -888,13 +902,15 @@ h2 {
   transform: rotate(-90deg);
 }
 .review__open-form-button {
-  display: none;
+  margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 .review__back {
   position: absolute;
 }
 .review__form-wrapper {
-  width: 300px;
+  width: 270px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -914,6 +930,9 @@ h2 {
 }
 .review__form {
   display: none;
+}
+.review__form-textarea {
+  padding: 10px;
 }
 .contacts {
   display: flex;
@@ -1303,7 +1322,7 @@ h2 {
   color: #969BA7;
 }
 .menu__item:hover {
-  background-color: #969BA7;
+  background-color: rgba(0, 0, 0, 0.25);
   font-family: 'Montserrat semi', 'Arial', sans-serif;
 }
 .menu__item:hover a {
@@ -1337,10 +1356,12 @@ h2 {
 .menu__outer-link::after {
   position: absolute;
   content: "";
-  background-image: url(/images/phone-pseudo.png);
+  background-image: url(../images/phone-pseudo.png);
   background-repeat: no-repeat;
-  top: 5px;
-  left: 0;
+  top: -2px;
+  right: 90px;
+  width: 28px;
+  height: 25px;
 }
 .menu__outer-btn {
   margin-top: 25px;
@@ -1352,6 +1373,10 @@ h2 {
 }
 .head {
   min-height: 1050px;
+}
+.head__back {
+  width: 1920px;
+  margin: 0 auto;
 }
 .head__header {
   font-family: 'Montserrat bold', 'Arial', sans-serif;
@@ -1477,7 +1502,8 @@ h2 {
   .advantage {
     width: 768px;
     background: url("../images/car.svg") no-repeat 18px 100%;
-    min-height: 696px;
+    min-height: 716px;
+    padding-top: 40px;
   }
   .advantage__list {
     flex-direction: row;
@@ -1519,13 +1545,15 @@ h2 {
   .advantage__header {
     width: 650px;
     margin-bottom: 7px;
+    margin-top: 0;
   }
   .examples {
     width: 768px;
+    padding-bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: url("../images/work-back1.svg") no-repeat 100% 116.4%;
+    background: url("../images/work-back1.svg") no-repeat 100% 115.9%;
   }
   .examples__header {
     padding-left: 0;
@@ -1574,6 +1602,7 @@ h2 {
   .examples__button {
     order: 10;
     margin: 0 auto;
+    margin-top: 25px;
   }
   .examples__description {
     margin: 0;
@@ -1589,7 +1618,7 @@ h2 {
   }
   .review__block {
     width: 280px;
-    margin: 8px auto;
+    margin: 23px auto 8px auto;
   }
   .review__content {
     padding: 0;
@@ -1597,7 +1626,7 @@ h2 {
   .review {
     width: 768px;
     padding: 20px;
-    padding-top: 42px;
+    padding-top: 14px;
     background: url("../images/review-back.svg") no-repeat 99.5% 105px, url("../images/work-back1.svg") no-repeat 100% -171px;
   }
   .review__author {
@@ -1608,7 +1637,7 @@ h2 {
     margin-bottom: 5px;
   }
   .review__button {
-    top: 63%;
+    top: 175px;
   }
   .review__button--left {
     left: 150px;
@@ -1714,16 +1743,29 @@ h2 {
     min-width: 450px;
     top: 10px;
     right: -20px;
+    z-index: 6;
   }
   .menu__outer-btn {
     margin-left: 75px;
     margin-top: -5px;
     width: 170px;
+    z-index: 6;
   }
   .menu__outer-link {
     padding-top: 0;
     margin-top: 0;
     width: 150px;
+    z-index: 6;
+  }
+  .menu__outer-link::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/phone-pseudo.png);
+    background-repeat: no-repeat;
+    top: -2px;
+    right: -50px;
+    width: 28px;
+    height: 25px;
   }
   .page-header {
     margin: 0 auto;
@@ -1802,7 +1844,8 @@ h2 {
     display: none;
   }
   .work {
-    min-height: 990px;
+    margin-top: -90px;
+    min-height: 995px;
   }
   .work__inner {
     width: 768px;
@@ -1870,23 +1913,21 @@ h2 {
   }
   .features {
     min-height: 800px;
-    margin-top: 10px;
-    padding-top: 42px;
-    padding-bottom: 35px;
+    margin-top: -100px;
   }
   .features__inner {
     width: 768px;
     padding-top: 0;
     margin-bottom: 0;
     margin-top: 0;
-    background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 200px no-repeat;
+    padding-bottom: 70px;
+    background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
   }
   .features__content {
     width: 768px;
-    padding-top: 35px;
   }
   .features__header {
-    padding-top: 95px;
+    padding-top: 35px;
     margin-left: 15px;
     margin-bottom: 62px;
   }
@@ -1952,6 +1993,11 @@ h2 {
   .head {
     min-height: 700px;
   }
+  .head__back {
+    width: 768px;
+    margin: 0 auto;
+    background: url("../images/head-tablet.png") 35px 430px no-repeat, url("../images/head-tablet-pseudo7.png") 580px 147px no-repeat, url("../images/head-tablet-pseudo1.png") 300px 225px no-repeat, url("../images/head-tablet-pseudo9.png") 0px 665px no-repeat, url("../images/head-tablet-pseudo2.png") 235px 735px no-repeat, url("../images/head-tablet-pseudo3.png") -50px 730px no-repeat, url("../images/head-tablet-pseudo4.png") 0px 785px no-repeat, url("../images/head-tablet-pseudo5.png") 30px 550px no-repeat, url("../images/head-tablet-pseudo8.png") 380px 50px no-repeat, url("../images/head-tablet-pseudo8.png") 250px 50px no-repeat;
+  }
   .head__header {
     margin-bottom: 0;
     margin-left: 0;
@@ -1974,13 +2020,16 @@ h2 {
     display: flex;
     -moz-flex-direction: column;
     flex-direction: column;
-    background: url("../images/head-tablet.png") 35px 240px no-repeat;
   }
   .head__content {
     width: 768px;
+    min-height: 935px;
     line-height: 35px;
     font-size: 20px;
     border: none;
+  }
+  .head__advantage {
+    margin-left: -65px;
   }
   .head__form {
     display: flex;
@@ -2181,12 +2230,6 @@ h2 {
   .review__button--right {
     right: 0px;
   }
-  .review__open-form-button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 16px;
-    margin-bottom: 20px;
-  }
   .review__back {
     position: absolute;
     width: 1920px;
@@ -2264,6 +2307,16 @@ h2 {
     margin-top: 0;
     width: 150px;
     margin-left: 200px;
+  }
+  .menu__outer-link::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/phone-pseudo.png);
+    background-repeat: no-repeat;
+    top: 25px;
+    right: -50px;
+    width: 28px;
+    height: 25px;
   }
   .nav-container {
     display: flex;
@@ -2569,6 +2622,10 @@ h2 {
     min-height: 450px;
     z-index: 6;
   }
+  .head__back {
+    width: 320px;
+    margin: 0 auto;
+  }
   .head__header {
     line-height: 21px;
     font-size: 15px;
@@ -2602,6 +2659,9 @@ h2 {
     min-height: 450px;
     line-height: 18px;
     font-size: 12px;
+  }
+  .head__advantage {
+    margin-left: -65px;
   }
   .head__form {
     display: flex;

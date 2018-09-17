@@ -29,6 +29,7 @@
       setTimeout( function (){
         $(slides).hide();
         currentSlide = 0;
+        $('.review__button--right').prop('disabled',false);
         $(slides[currentSlide]).show();
         $(slides[currentSlide]).next().show();
         $(slides[currentSlide]).next().next().show();
@@ -37,7 +38,7 @@
     // если меньше десктопа, то сбрасываем слайдер и показываем по 1
     else {
       setTimeout( function (){
-        console.log(1);
+        $('.review__button--right').prop('disabled',false);
         $(slides).hide();
         currentSlide = 0;
         $(slides[currentSlide]).show();
@@ -117,13 +118,16 @@
 
  var burger = document.querySelector(".menu-button");
    var menu = document.querySelector(".nav-container");
+   var over = document.querySelector(".overlay");
 
     menu.classList.add("nav-container--close");
      burger.classList.add("menu-button--close");
+     over.classList.add("overlay--close");
 
      burger.addEventListener ("click", function (evt) {
      evt.preventDefault();
      menu.classList.toggle("nav-container--close");
+     over.classList.toggle("overlay--close");
      burger.classList.toggle("menu-button--close");
     });
 })();

@@ -9,7 +9,7 @@
     <link href="styles/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
-    <body class="page">
+    <div class="overlay"></div>
       <header class="page-header">
         <nav class="page-navigation">
           <div class="nav-container">
@@ -37,6 +37,7 @@
         </button>
       </header>
       <article class="head">
+        <div class="head__back">
         <div class="head__header-container">
           <h1 class="head__header"> Полимерная керамика - <br> надежная защита для вашего авто</h1>
         </div>
@@ -64,6 +65,7 @@
             </form>
           </div>
         </div>
+      </div>
       </article>
       <article class="features">
         <div class="features__inner">
@@ -472,7 +474,7 @@
                 </svg>
               </label>
             </div>
-              <textarea name="review" id="review" cols="30" rows="10" placeholder="Введите текст" required></textarea>
+              <textarea class="review__form-textarea" name="review" id="review" cols="30" rows="10" placeholder="Введите текст" required></textarea>
               <label class="visually-hidden" for="review">Текст отзыва</label>
               <button class="review__form-submit button" type="submit">Отправить</button>
             </div>
