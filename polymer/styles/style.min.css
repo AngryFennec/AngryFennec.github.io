@@ -796,10 +796,10 @@ h2 {
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
-  min-height: 979px;
+  min-height: 995px;
   width: 1920px;
   display: flex;
-  background: url("../images/klass_avto.svg") 5px -285px no-repeat, url("../images/work-desk.jpg") no-repeat 830px 220px;
+  background: url("../images/work-desktop.png") no-repeat 830px 220px, url("../images/klass_avto.svg") 5px -285px no-repeat;
   z-index: 5;
 }
 .work__content {
@@ -922,6 +922,7 @@ h2 {
 .review__form-input {
   padding: 10px;
   text-align: center;
+  border: 0.5px solid #0047FF;
 }
 .review__form-rating-block {
   margin: 20px auto;
@@ -934,6 +935,7 @@ h2 {
 }
 .review__form-textarea {
   padding: 10px;
+  border: 0.5px solid #0047FF;
 }
 .contacts {
   display: flex;
@@ -1089,6 +1091,7 @@ h2 {
 }
 .footer__logo {
   margin-top: 28px;
+  margin-left: 28px;
   width: 128px;
   height: 28px;
 }
@@ -1101,7 +1104,6 @@ h2 {
 .tabs__item {
   width: 1260px;
   min-height: 693px;
-  border: 0.5px solid #0047FF;
   display: flex;
   -moz-flex-direction: column;
   flex-direction: column;
@@ -1159,7 +1161,7 @@ h2 {
   margin: 0 auto;
   width: 1920px;
   display: flex;
-  background: url("../images/features.svg") 250px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
+  background: url("../images/features.svg") -147px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
 }
 .features__inner .aside {
   padding-top: 260px;
@@ -1474,6 +1476,80 @@ h2 {
 .head__button {
   margin-top: -15px;
 }
+.feadback,
+.feadback-name {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: 15px;
+  font-weight: 300;
+}
+.feadback__window {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
+  width: 300px;
+  background-color: white;
+}
+.feadback__form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.feadback__button {
+  margin-left: 5px;
+  margin-bottom: 19px;
+}
+.feadback-name .feadback__legend {
+  text-align: left;
+  padding-left: 10px;
+}
+.feadback__legend {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+.feadback__name {
+  width: 280px;
+  min-height: 40px;
+  border-color: 1px solid #3D2E29;
+  padding: 0 10px;
+  margin-bottom: 13px;
+}
+.feadback__phone {
+  width: 248px;
+  min-height: 40px;
+  border-color: 1px solid #3D2E29;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 19px;
+}
+.feadback__label {
+  margin-bottom: 9px;
+}
+.feadback__label--big {
+  font-size: 16px;
+}
+.feadback__close-button,
+.feadback__close-button-name {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url("../images/dagger-button.png") no-repeat 0 0;
+  background-color: transparent;
+  border: none;
+  top: 5px;
+  right: 5px;
+}
+.feadback__price {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 10px;
+}
 .page-navigation {
   position: relative;
   margin-top: 0;
@@ -1519,7 +1595,7 @@ h2 {
   }
   .advantage {
     width: 768px;
-    background: url("../images/car.svg") no-repeat 18px 100%;
+    background: url("../images/car.svg") no-repeat 18px 100%, url("../images/advantage-back-tablet.svg") no-repeat 0 -166px;
     min-height: 716px;
     padding-top: 40px;
   }
@@ -1604,6 +1680,7 @@ h2 {
     width: 256px;
     height: 249px;
     order: 2;
+    margin-left: 26px;
   }
   .examples__block--3 {
     background: url("../images/work3-tablet.jpg") no-repeat 0 0;
@@ -1758,22 +1835,26 @@ h2 {
     display: flex;
     position: absolute;
     flex-direction: row;
+    justify-content: flex-start;
     min-width: 450px;
-    margin-left: 300;
+    margin-left: 100px;
     top: 10px;
-    right: -460px;
+    right: -435px;
     z-index: 1;
   }
   .menu__outer-btn {
-    margin-left: 75px;
+    margin-left: 42px;
     margin-top: -5px;
     width: 170px;
     z-index: 1;
   }
+  .menu {
+    width: 300px;
+  }
   .menu__outer-link {
     padding-top: 0;
     margin-top: 0;
-    width: 150px;
+    width: 190px;
     z-index: 1;
   }
   .menu__outer-link::after {
@@ -1783,9 +1864,47 @@ h2 {
     background-repeat: no-repeat;
     top: -2px;
     z-index: 1;
-    right: -50px;
+    right: -10px;
     width: 28px;
     height: 25px;
+  }
+  .feadback__form {
+    padding: 0 20px;
+    font-size: 18px;
+  }
+  .feadback__window {
+    width: 405px;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+  }
+  .feadback-name .feadback__legend {
+    padding-left: 20px;
+  }
+  .feadback__legend {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 7px;
+  }
+  .feadback__close-button,
+  .feadback__close-button-name {
+    top: 15px;
+    right: 15px;
+  }
+  .feadback__label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .feadback__name {
+    width: 365px;
+    margin-bottom: 18px;
+  }
+  .feadback__button {
+    margin-left: 62px;
+    width: 250px;
+  }
+  .feadback__price {
+    margin: 10px 20px;
   }
   .page-header {
     margin: 0 auto;
@@ -1796,7 +1915,7 @@ h2 {
   .nav-container {
     box-shadow: none;
     position: relative;
-    width: 350px;
+    width: 300px;
     margin-left: 0;
   }
   .nav-container--close .menu__outer {
@@ -1875,7 +1994,7 @@ h2 {
     width: 768px;
     margin-bottom: 0;
     margin-top: -5px;
-    background: url("../images/work-tablet.jpg") no-repeat 100px 430px, url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat;
+    background: url("../images/work-tablet.png") no-repeat 100px 430px, url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat;
   }
   .work__content {
     width: 768px;
@@ -1944,7 +2063,7 @@ h2 {
     margin-bottom: 0;
     margin-top: 0;
     padding-bottom: 70px;
-    background: url("../images/features_tabletka.svg") 0px -120px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
+    background: url("../images/features_tabletka.svg") 0px -118px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
   }
   .features__content {
     width: 768px;
@@ -2099,7 +2218,7 @@ h2 {
   }
   .advantage__wrapper {
     width: 1920px;
-    background: url("../images/car-desktop.svg") no-repeat 81px 184px, url("../images/advantage-back2.svg") no-repeat 101% 88%, url("../images/advantage-back1.svg") no-repeat 100% 292px;
+    background: url("../images/car-desktop.svg") no-repeat 81px 184px, url("../images/advantage-back2.svg") no-repeat 101% 88%, url("../images/advantage-back1.svg") no-repeat 100% 292px, url("../images/advantage-back-desktop.svg") no-repeat 0 -255px;
     height: 100%;
     top: 0;
     left: -360px;
@@ -2168,10 +2287,11 @@ h2 {
     margin-bottom: 20px;
   }
   .examples__video {
-    width: 682px;
+    width: 680px;
     height: 430px;
     order: 0;
     margin-top: 30px;
+    margin-left: 18px;
     background: url("../images/video-img-desktop.jpg") no-repeat 0 0;
   }
   .examples__block {
@@ -2201,6 +2321,7 @@ h2 {
     order: 3;
     width: 282px;
     height: 349px;
+    margin-left: 0;
     background: url("../images/work4-desktop.jpg") no-repeat 0 0;
   }
   .examples__description {
@@ -2323,14 +2444,17 @@ h2 {
     display: flex;
     position: absolute;
     flex-direction: row;
+    justify-content: flex-start;
     min-width: 750px;
     top: 10px;
     right: -20px;
   }
   .menu__outer-btn {
-    margin-left: 75px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 40px;
     margin-top: 18px;
-    width: 180px;
+    width: 170px;
     height: 40px;
     font-size: 15px;
     line-height: 26px;
@@ -2340,7 +2464,7 @@ h2 {
   .menu__outer-link {
     padding-top: 28px;
     margin-top: 0;
-    width: 150px;
+    width: 190px;
     margin-left: 200px;
   }
   .menu__outer-link::after {
@@ -2349,7 +2473,7 @@ h2 {
     background-image: url(../images/phone-pseudo.png);
     background-repeat: no-repeat;
     top: 25px;
-    right: -50px;
+    right: -10px;
     width: 28px;
     height: 25px;
   }
@@ -2410,7 +2534,7 @@ h2 {
     height: 35px;
     line-height: 26px;
     font-size: 15px;
-    padding: 6px 0;
+    padding: 4px 0;
   }
   .claim {
     min-height: 287px;
