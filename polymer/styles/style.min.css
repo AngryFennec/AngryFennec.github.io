@@ -796,9 +796,7 @@ h2 {
   margin: 0 auto;
   width: 1920px;
   display: flex;
-  background-image: url("../images/work-desk.jpg");
-  background-repeat: no-repeat;
-  background-position: 830px 220px;
+  background: url("../images/work-desk.jpg") no-repeat 830px 220px, url("../images/klass_avto.svg") 5px -290px no-repeat;
   z-index: 5;
 }
 .work__content {
@@ -1158,7 +1156,7 @@ h2 {
   margin: 0 auto;
   width: 1920px;
   display: flex;
-  background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 250px 200px no-repeat;
+  background: url("../images/features.svg") 250px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
 }
 .features__inner .aside {
   padding-top: 260px;
@@ -1380,7 +1378,21 @@ h2 {
   position: relative;
   width: 1920px;
   margin: 0 auto;
-  background: url("../images/head-desktop.png") 640px 200px no-repeat, url("../images/head-desk-pseudo1.png") 1167px 100px no-repeat, url("../images/head-desk-pseudo2.png") 1650px 350px no-repeat, url("../images/head-desk-pseudo3.png") 400px 450px no-repeat, url("../images/head-desk-pseudo4.png") 1420px 840px no-repeat, url("../images/head-desk-pseudo5.png") 1330px 550px no-repeat, url("../images/head-desk-pseudo7.png") 40px 713px no-repeat, url("../images/head-desk-pseudo9.png") 950px 300px no-repeat, url("../images/head-desk-pseudo10.png") 20px 500px no-repeat, url("../images/head-desk-pseudo11.png") 380px 330px no-repeat, url("../images/head-desk-pseudo12.png") 1210px 330px no-repeat;
+  background: url("../images/head-desktop.png") 640px 200px no-repeat, url("../images/kheder.svg") 10px -122px no-repeat;
+  /*
+  background: url("../images/head-desktop.png") 640px 200px no-repeat,
+  url("../images/head-desk-pseudo1.png") 1167px 100px no-repeat,
+  url("../images/head-desk-pseudo2.png") 1650px 350px no-repeat,
+  url("../images/head-desk-pseudo3.png") 400px 450px no-repeat,
+  url("../images/head-desk-pseudo4.png") 1420px 840px no-repeat,
+
+  url("../images/head-desk-pseudo5.png") 1330px 550px no-repeat,
+
+  url("../images/head-desk-pseudo7.png") 40px 713px no-repeat,
+  url("../images/head-desk-pseudo9.png") 950px 300px no-repeat,
+  url("../images/head-desk-pseudo10.png") 20px 500px no-repeat,
+  url("../images/head-desk-pseudo11.png") 380px 330px no-repeat,
+  url("../images/head-desk-pseudo12.png") 1210px 330px no-repeat;*/
 }
 .head__header {
   font-family: 'Montserrat bold', 'Arial', sans-serif;
@@ -1855,8 +1867,7 @@ h2 {
     width: 768px;
     margin-bottom: 0;
     margin-top: -5px;
-    background-image: url("../images/work-tablet.jpg");
-    background-position: 100px 430px;
+    background: url("../images/work-tablet.jpg") no-repeat 100px 430px, url("../images/klass-avto-tabletka.svg") 10px -122px no-repeat;
   }
   .work__content {
     width: 768px;
@@ -1925,7 +1936,7 @@ h2 {
     margin-bottom: 0;
     margin-top: 0;
     padding-bottom: 70px;
-    background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
+    background: url("../images/features-tabletka.svg") 0px 110px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 150px no-repeat;
   }
   .features__content {
     width: 768px;
