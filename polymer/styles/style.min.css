@@ -714,14 +714,13 @@ h2 {
   min-height: 279px;
 }
 .claim__inner {
-  width: 1200px;
+  width: 1920px;
   margin: 0 auto;
-  height: 100%;
   padding-top: 27px;
-  padding-left: 10px;
+  padding-left: 370px;
+  padding-bottom: 90px;
   z-index: 5;
-  background: url("/images/claim-back-desk.png") -200px 50px;
-  background-repeat: no-repeat;
+  background: url("../images/forma.svg") 10px -290px no-repeat;
 }
 .claim__header {
   font-family: 'Montserrat semi', 'Arial', sans-serif;
@@ -771,6 +770,9 @@ h2 {
   line-height: 18px;
   color: #969BA7;
 }
+.aside a {
+  color: #969BA7;
+}
 .aside__list {
   list-style: none;
   padding: 0;
@@ -783,20 +785,21 @@ h2 {
 .aside__list-item:last-child {
   margin-bottom: 0;
 }
-.aside__list-item--active {
+.aside__list-item--active a {
   font-family: 'Montserrat semi', 'Arial', sans-serif;
   color: #070D1C;
 }
 .work {
-  min-height: 970px;
+  min-height: 979px;
 }
 .work__inner {
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
+  min-height: 979px;
   width: 1920px;
   display: flex;
-  background: url("../images/work-desk.jpg") no-repeat 830px 220px, url("../images/klass_avto.svg") 5px -290px no-repeat;
+  background: url("../images/klass_avto.svg") 5px -285px no-repeat, url("../images/work-desk.jpg") no-repeat 830px 220px;
   z-index: 5;
 }
 .work__content {
@@ -1130,7 +1133,7 @@ h2 {
   content: "";
   border: 1px #000 solid;
   border-radius: 50%;
-  margin-top: 5px;
+  margin-top: 17px;
   margin-left: -10px;
   position: absolute;
 }
@@ -1373,12 +1376,12 @@ h2 {
   min-height: 1040px;
 }
 .head__back {
-  z-index: 10;
+  z-index: 8;
   min-height: 1040px;
   position: relative;
   width: 1920px;
   margin: 0 auto;
-  background: url("../images/head-desktop.png") 640px 200px no-repeat, url("../images/kheder.svg") 10px -122px no-repeat;
+  background: url("../images/head-desktop.png") 640px 200px no-repeat, url("../images/border.svg") 400px 100px no-repeat, url("../images/kheder.svg") 10px -122px no-repeat;
   /*
   background: url("../images/head-desktop.png") 640px 200px no-repeat,
   url("../images/head-desk-pseudo1.png") 1167px 100px no-repeat,
@@ -1424,7 +1427,6 @@ h2 {
   width: 1270px;
   padding-top: 30px;
   min-height: 702px;
-  border: 0.5px solid #0047FF;
   padding-left: 37px;
   margin-left: 45px;
   font-family: 'Montserrat', 'Arial', sans-serif;
@@ -1757,21 +1759,22 @@ h2 {
     position: absolute;
     flex-direction: row;
     min-width: 450px;
+    margin-left: 300;
     top: 10px;
-    right: -20px;
-    z-index: 6;
+    right: -460px;
+    z-index: 1;
   }
   .menu__outer-btn {
     margin-left: 75px;
     margin-top: -5px;
     width: 170px;
-    z-index: 6;
+    z-index: 1;
   }
   .menu__outer-link {
     padding-top: 0;
     margin-top: 0;
     width: 150px;
-    z-index: 6;
+    z-index: 1;
   }
   .menu__outer-link::after {
     position: absolute;
@@ -1779,6 +1782,7 @@ h2 {
     background-image: url(../images/phone-pseudo.png);
     background-repeat: no-repeat;
     top: -2px;
+    z-index: 1;
     right: -50px;
     width: 28px;
     height: 25px;
@@ -1792,11 +1796,15 @@ h2 {
   .nav-container {
     box-shadow: none;
     position: relative;
+    width: 350px;
+    margin-left: 0;
   }
   .nav-container--close .menu__outer {
     display: flex;
+    z-index: 1;
   }
   .header {
+    width: 768px;
     padding-top: 25px;
   }
   .header__logo {
@@ -1829,12 +1837,12 @@ h2 {
     padding-bottom: 6px;
   }
   .claim {
-    min-height: 327px;
+    min-height: 330px;
   }
   .claim__inner {
     width: 768px;
     margin: 0 auto;
-    height: 100%;
+    min-height: 330px;
     padding-top: 6px;
     padding-bottom: 40px;
     padding-left: 45px;
@@ -1867,7 +1875,7 @@ h2 {
     width: 768px;
     margin-bottom: 0;
     margin-top: -5px;
-    background: url("../images/work-tablet.jpg") no-repeat 100px 430px, url("../images/klass-avto-tabletka.svg") 10px -122px no-repeat;
+    background: url("../images/work-tablet.jpg") no-repeat 100px 430px, url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat;
   }
   .work__content {
     width: 768px;
@@ -1918,7 +1926,7 @@ h2 {
     margin-left: 30px;
   }
   .tabs__inner-item::before {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .tabs__inner-price {
     margin-left: 18px;
@@ -1936,7 +1944,7 @@ h2 {
     margin-bottom: 0;
     margin-top: 0;
     padding-bottom: 70px;
-    background: url("../images/features-tabletka.svg") 0px 110px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 150px no-repeat;
+    background: url("../images/features_tabletka.svg") 0px -120px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
   }
   .features__content {
     width: 768px;
@@ -2011,7 +2019,16 @@ h2 {
   .head__back {
     width: 768px;
     margin: 0 auto;
-    background: url("../images/head-tablet.png") 35px 430px no-repeat, url("../images/head-tablet-pseudo7.png") 580px 147px no-repeat, url("../images/head-tablet-pseudo1.png") 300px 225px no-repeat, url("../images/head-tablet-pseudo9.png") 0px 665px no-repeat, url("../images/head-tablet-pseudo2.png") 235px 735px no-repeat, url("../images/head-tablet-pseudo3.png") -50px 730px no-repeat, url("../images/head-tablet-pseudo4.png") 0px 785px no-repeat, url("../images/head-tablet-pseudo5.png") 30px 550px no-repeat, url("../images/head-tablet-pseudo8.png") 380px 50px no-repeat, url("../images/head-tablet-pseudo8.png") 250px 50px no-repeat;
+    background: url("../images/head-tablet.png") 35px 430px no-repeat, url("../images/kheder-tabletka.svg") 0px 52px no-repeat;/*
+    url("../images/head-tablet-pseudo7.png") 580px 147px no-repeat,
+    url("../images/head-tablet-pseudo1.png") 300px 225px no-repeat,
+    url("../images/head-tablet-pseudo9.png") 0px 665px no-repeat,
+    url("../images/head-tablet-pseudo2.png") 235px 735px no-repeat,
+    url("../images/head-tablet-pseudo3.png") -50px 730px no-repeat,
+    url("../images/head-tablet-pseudo4.png") 0px 785px no-repeat,
+    url("../images/head-tablet-pseudo5.png") 30px 550px no-repeat,
+    url("../images/head-tablet-pseudo8.png") 380px 50px no-repeat,
+    url("../images/head-tablet-pseudo8.png") 250px 50px no-repeat*/
   }
   .head__header {
     margin-bottom: 0;
@@ -2287,6 +2304,9 @@ h2 {
   }
 }
 @media (min-width: 1920px) {
+  .overlay {
+    display: none;
+  }
   .menu-button {
     display: none;
   }
@@ -2447,6 +2467,7 @@ h2 {
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
+    min-height: 550px;
     background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url("../images/work-mobile.jpg") 0px 70px no-repeat;
   }
   .work__content {
@@ -2514,7 +2535,7 @@ h2 {
     margin-left: 22px;
   }
   .tabs__inner-item::before {
-    margin-top: 8px;
+    margin-top: 12px;
     margin-left: -2px;
   }
   .tabs__inner-price {
@@ -2536,7 +2557,7 @@ h2 {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 10px;
-    background: url("../images/features-work-mobile-pseudo1.png") 15px 590px no-repeat, url("../images/features-mobile-pseudo1.png") 0px 80px no-repeat, url("../images/features-mobile-pseudo2.png") 0px 150px no-repeat, url("../images/features-mobile-pseudo3.png") 85px 385px no-repeat, url("../images/features-mobile-pseudo4.png") 220px 530px no-repeat, url("../images/features-mobile-pseudo5.png") 140px 570px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-tablet.png") 0px 140px no-repeat;
+    background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-tablet.png") 0px 140px no-repeat;
   }
   .features__content {
     width: 320px;
@@ -2639,7 +2660,9 @@ h2 {
   }
   .head__back {
     width: 320px;
+    min-height: 450px;
     margin: 0 auto;
+    background: none;
   }
   .head__header {
     line-height: 21px;
