@@ -1928,7 +1928,7 @@ h2 {
     min-width: 450px;
     margin-left: 100px;
     top: 10px;
-    right: -435px;
+    right: -487px;
     z-index: 1;
   }
   .menu__outer-btn {
@@ -2257,6 +2257,7 @@ h2 {
     url("../images/head-tablet-pseudo8.png") 250px 50px no-repeat*/
   }
   .head__header {
+    width: 660px;
     margin-bottom: 0;
     margin-left: 0;
     margin-top: 20px;
@@ -2326,7 +2327,7 @@ h2 {
   }
   .advantage__wrapper {
     width: 1920px;
-    background: url("../images/car-desktop.svg") no-repeat 81px 184px, url("../images/advantage-back2.svg") no-repeat 101% 88%, url("../images/advantage-back1.svg") no-repeat 100% 292px, url("../images/advantage-back-desktop.svg") no-repeat -6px -255px;
+    background: url("../images/car-desktop.svg") no-repeat 81px 234px, url("../images/advantage-back2.svg") no-repeat 101% 88%, url("../images/advantage-back1.svg") no-repeat 100% 292px, url("../images/advantage-back-desktop.svg") no-repeat -6px -255px;
     height: 100%;
     top: 0;
     left: -360px;
@@ -2334,6 +2335,7 @@ h2 {
   }
   .advantage__header {
     padding: 0;
+    padding-top: 28px;
     width: 100%;
   }
   .advantage__list {
@@ -2392,7 +2394,7 @@ h2 {
   .examples__header {
     width: 100%;
     margin-top: 60px;
-    margin-left: 5px;
+    margin-left: 25px;
     order: -2;
     margin-bottom: 20px;
   }
@@ -2494,8 +2496,11 @@ h2 {
     flex-wrap: wrap;
     margin: 0 auto;
   }
+  .review__block {
+    margin-top: 10px;
+  }
   .review__header {
-    margin-top: 20px;
+    margin-top: 45px;
   }
   .review__button {
     top: 210px;
@@ -2526,6 +2531,7 @@ h2 {
   }
   .contacts__header {
     margin-bottom: 52px;
+    margin-top: 10px;
     width: 1200px;
   }
   .contacts__map {
