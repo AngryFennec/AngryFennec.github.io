@@ -1388,10 +1388,12 @@ h2 {
   -moz-flex-direction: column;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 15px;
+  padding-top: 15px;
   margin-bottom: 20px;
+  padding-bottom: 10px;
   position: relative;
   z-index: 50;
+  background-color: #ffffff;
 }
 .menu__outer-link {
   font-family: 'Montserrat semi', 'Arial', sans-serif;
@@ -1634,7 +1636,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   position: absolute;
-  background-color: transparent;
+  background-color: white;
   z-index: 10;
 }
 .nav-container--close .menu,
@@ -1644,6 +1646,7 @@ h2 {
 .header {
   min-height: 50px;
   padding-top: 20px;
+  z-index: 50;
 }
 .header__logo {
   padding-left: 90px;
@@ -1917,6 +1920,7 @@ h2 {
     height: 27px;
   }
   .menu__outer {
+    background-color: transparent;
     display: flex;
     position: absolute;
     flex-direction: row;
@@ -1945,10 +1949,11 @@ h2 {
   .menu__outer-link::after {
     position: absolute;
     content: "";
+    background-color: transparent;
     background-image: url(../images/phone-pseudo.png);
     background-repeat: no-repeat;
     top: -2px;
-    z-index: 1;
+    z-index: -1;
     right: -10px;
     width: 28px;
     height: 25px;
@@ -1996,12 +2001,15 @@ h2 {
     position: relative;
     width: 768px;
     margin-bottom: -10px;
+    z-index: 10;
   }
   .nav-container {
     box-shadow: none;
     position: relative;
     width: 300px;
+    background-color: white;
     margin-left: 0;
+    z-index: 10;
   }
   .nav-container--close .menu__outer {
     display: flex;
@@ -2010,6 +2018,7 @@ h2 {
   .header {
     width: 768px;
     padding-top: 25px;
+    z-index: 150;
   }
   .header__logo {
     padding-left: 80px;
@@ -2050,7 +2059,7 @@ h2 {
     padding-top: 6px;
     padding-bottom: 40px;
     padding-left: 45px;
-    background: url("/images/claim-back-tablet.png") 0 162px, url("/images/claim-pseudo1.png") 512px 115px, url("/images/claim-pseudo2.png") 515px 210px, url("/images/claim-pseudo3.png") 68px 305px;
+    background: url("../images/claim-back-tablet.png") 0 162px, url("../images/claim-pseudo1.png") 512px 115px, url("../images/claim-pseudo2.png") 515px 210px, url("../images/claim-pseudo3.png") 68px 305px;
     background-repeat: no-repeat;
   }
   .claim__inner {
@@ -2538,6 +2547,8 @@ h2 {
     margin-right: 20px;
   }
   .menu__outer {
+    background-color: transparent;
+    z-index: 1;
     display: flex;
     position: absolute;
     flex-direction: row;
@@ -2577,6 +2588,7 @@ h2 {
     right: -10px;
     width: 28px;
     height: 25px;
+    z-index: 1;
   }
   .page-header {
     margin: 0 auto;
@@ -2597,6 +2609,7 @@ h2 {
   .header {
     width: 768px;
     padding-top: 25px;
+    z-index: 150;
   }
   .header__logo {
     padding-left: 80px;
@@ -2657,6 +2670,7 @@ h2 {
     right: -10px;
     width: 28px;
     height: 25px;
+    z-index: 1;
   }
   .nav-container {
     display: flex;
@@ -2728,7 +2742,7 @@ h2 {
     padding-left: 20px;
     padding-right: 50px;
     height: 100%;
-    background-image: url("/images/claim-back.png");
+    background-image: url("../images/claim-back.png");
     background-repeat: no-repeat;
     background-position: 0 15px;
   }
