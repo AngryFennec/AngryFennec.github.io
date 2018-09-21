@@ -444,6 +444,8 @@ body {
   font-family: 'Montserrat', 'Arial', sans-serif;
   background-color: #ffffff;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 a {
   text-decoration: none;
@@ -573,9 +575,6 @@ h2 {
   flex-direction: column;
   background: url("../images/advantage-back.svg") no-repeat 0 -128px, url("../images/advantage-gradient.png") no-repeat 0 341px;
 }
-.advantage__wrapper {
-  position: absolute;
-}
 .advantage__list {
   list-style: none;
   padding: 0;
@@ -621,11 +620,8 @@ h2 {
 .examples__box--2 {
   display: none;
 }
-.examples__back {
-  position: absolute;
-}
 .examples__header {
-  padding-left: 23px;
+  padding-left: 3px;
   margin-top: 11px;
 }
 .examples__video {
@@ -733,14 +729,15 @@ h2 {
   width: auto;
   min-height: 279px;
 }
-.claim__inner {
-  width: 1920px;
+.claim__wrapper {
+  width: 1200px;
   margin: 0 auto;
   padding-top: 27px;
-  padding-left: 370px;
+  padding-left: 10px;
   padding-bottom: 90px;
   z-index: 5;
-  background: url("../images/forma.svg") 10px -290px no-repeat;
+  position: relative;
+  background: url("../images/forma.svg") -327px -290px no-repeat;
 }
 .claim__header {
   font-family: 'Montserrat semi', 'Arial', sans-serif;
@@ -748,6 +745,8 @@ h2 {
   line-height: 31px;
   color: #ffffff;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
 }
 .claim__header-capital {
   text-transform: uppercase;
@@ -938,9 +937,6 @@ h2 {
   margin-top: 16px;
   margin-bottom: 20px;
 }
-.review__back {
-  position: absolute;
-}
 .review__form-wrapper {
   width: 270px;
   margin: 0 auto;
@@ -967,6 +963,12 @@ h2 {
 .review__form-textarea {
   padding: 10px;
   border: 0.5px solid #0047FF;
+}
+.ymaps-2-1-34-map {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  /* Firefox 3.5+ */
+  /* Chrome 19+ & Safari 6+ */
+  filter: grayscale(100%);
 }
 .contacts {
   display: flex;
@@ -1339,6 +1341,9 @@ h2 {
   background-color: transparent;
   border: none;
 }
+.menu__nav {
+  display: none;
+}
 .menu {
   list-style: none;
   padding: 0;
@@ -1384,10 +1389,12 @@ h2 {
   -moz-flex-direction: column;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 15px;
+  padding-top: 15px;
   margin-bottom: 20px;
+  padding-bottom: 10px;
   position: relative;
   z-index: 50;
+  background-color: #ffffff;
 }
 .menu__outer-link {
   font-family: 'Montserrat semi', 'Arial', sans-serif;
@@ -1618,7 +1625,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   position: absolute;
-  background-color: #ffffff;
+  background-color: white;
   z-index: 10;
 }
 .nav-container--close .menu,
@@ -1628,6 +1635,7 @@ h2 {
 .header {
   min-height: 50px;
   padding-top: 20px;
+  z-index: 50;
 }
 .header__logo {
   padding-left: 90px;
@@ -1687,7 +1695,9 @@ h2 {
   .examples {
     width: 768px;
   }
-  .examples__back {
+  .examples::after {
+    content: "";
+    position: absolute;
     width: 100%;
     height: 1180px;
     background: url("../images/work-back1.svg") no-repeat 100% 1009px;
@@ -1894,39 +1904,50 @@ h2 {
     width: 30px;
     height: 27px;
   }
-  .menu__outer {
+  .menu__nav {
+    background-color: transparent;
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: row;
     justify-content: flex-start;
     min-width: 450px;
-    margin-left: 100px;
-    top: 10px;
-    right: -435px;
+    margin-left: 0px;
     z-index: 1;
+    margin-top: 27px;
+    padding-left: 20px;
   }
-  .menu__outer-btn {
-    margin-left: 42px;
-    margin-top: -5px;
+  .menu__nav-btn {
+    margin-left: 35px;
+    margin-top: -7px;
     width: 170px;
     z-index: 1;
   }
   .menu {
     width: 300px;
   }
-  .menu__outer-link {
+  .menu__nav-link {
+    font-family: 'Montserrat semi', 'Arial', sans-serif;
+    color: #606060;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    margin-left: 69px;
+    margin-left: 15px;
+    display: block;
+    position: relative;
     padding-top: 0;
     margin-top: 0;
     width: 190px;
     z-index: 1;
   }
-  .menu__outer-link::after {
+  .menu__nav-link::after {
     position: absolute;
     content: "";
+    background-color: transparent;
     background-image: url(../images/phone-pseudo.png);
     background-repeat: no-repeat;
     top: -2px;
-    z-index: 1;
+    z-index: -1;
     right: -10px;
     width: 28px;
     height: 25px;
@@ -1974,26 +1995,34 @@ h2 {
     position: relative;
     width: 768px;
     margin-bottom: -10px;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-top: 0px;
+    padding-left: 0;
   }
   .nav-container {
     box-shadow: none;
     position: relative;
     width: 300px;
+    background-color: #ffffff;
     margin-left: 0;
+    z-index: 10;
   }
-  .nav-container--close .menu__outer {
-    display: flex;
-    z-index: 1;
+  .nav-container--close {
+    background-color: transparent;
   }
   .header {
     width: 768px;
-    padding-top: 25px;
+    padding-top: 22px;
+    z-index: 150;
   }
   .header__logo {
-    padding-left: 80px;
+    padding-left: 70px;
   }
 }
-@media (min-width: 768px) and (max-width: 1919px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .tablet-flag {
     display: block;
   }
@@ -2021,14 +2050,14 @@ h2 {
   .claim {
     min-height: 330px;
   }
-  .claim__inner {
+  .claim__wrapper {
     width: 768px;
     margin: 0 auto;
     min-height: 330px;
     padding-top: 6px;
     padding-bottom: 40px;
     padding-left: 45px;
-    background: url("/images/claim-back-tablet.png") 0 162px, url("/images/claim-pseudo1.png") 512px 115px, url("/images/claim-pseudo2.png") 515px 210px, url("/images/claim-pseudo3.png") 68px 305px;
+    background: url("../images/claim-back-tablet.png") 0 162px, url("../images/claim-pseudo1.png") 512px 115px, url("../images/claim-pseudo2.png") 515px 210px, url("../images/claim-pseudo3.png") 68px 305px;
     background-repeat: no-repeat;
   }
   .claim__header {
@@ -2288,15 +2317,7 @@ h2 {
   .advantage {
     width: 1200px;
     padding-bottom: 0;
-    background: transparent;
-  }
-  .advantage__wrapper {
-    width: 1920px;
-    background: url("../images/car-desktop.svg") no-repeat 81px 204px, url("../images/advantage-back2.svg") no-repeat 100% 220px, url("../images/advantage-back1.svg") no-repeat 97.6% 240px, url("../images/advantage-back-desktop.svg") no-repeat 0 -255px;
-    height: 100%;
-    top: 0;
-    left: -360px;
-    z-index: -1;
+    background: url("../images/car-desktop.svg") no-repeat -275px 204px, url("../images/advantage-back2.svg") no-repeat 1070px 220px, url("../images/advantage-back1.svg") no-repeat 1085px 240px, url("../images/advantage-back-desktop.svg") no-repeat -360px -255px;
   }
   .advantage__header {
     padding: 0;
@@ -2351,11 +2372,10 @@ h2 {
   }
   .examples__header {
     width: 100%;
-    margin-top: 8px;
-    margin-left: 5px;
+    margin-top: 60px;
+    margin-left: 25px;
     order: -2;
     margin-bottom: 20px;
-    padding-left: 20px;
   }
   .examples__video {
     width: 680px;
@@ -2431,17 +2451,16 @@ h2 {
   .examples__button img {
     display: none;
   }
-  .examples__back {
-    width: 1920px;
+  .examples::after {
+    width: 1200px;
     height: 1061px;
-    background: url("../images/examples-back1.svg") no-repeat 0 401px;
+    background: url("../images/examples-back1.svg") no-repeat -360px 401px;
     z-index: -1;
     bottom: 0;
-    left: -360px;
   }
   .review {
     width: 1200px;
-    background: transparent;
+    background: url("../images/examples-back1.svg") no-repeat -360px -660px;
   }
   .review__slider {
     width: 1080px;
@@ -2452,8 +2471,11 @@ h2 {
     flex-wrap: wrap;
     margin: 0 auto;
   }
+  .review__block {
+    margin-top: 10px;
+  }
   .review__header {
-    margin-top: 20px;
+    margin-top: 45px;
   }
   .review__button {
     top: 210px;
@@ -2463,15 +2485,6 @@ h2 {
   }
   .review__button--right {
     right: 0px;
-  }
-  .review__back {
-    position: absolute;
-    width: 1920px;
-    height: 100%;
-    left: -360px;
-    top: 0;
-    background: url("../images/examples-back1.svg") no-repeat 0 -660px;
-    z-index: -1;
   }
   .review__block--2 {
     display: block;
@@ -2504,10 +2517,116 @@ h2 {
     margin-top: 8px;
     margin-right: 20px;
   }
+  .menu__nav {
+    background-color: transparent;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 0;
+    margin-top: 10px;
+    padding-left: 0;
+    margin-left: -150px;
+  }
+  .menu {
+    margin-left: 20px;
+  }
+  .menu__outer-btn {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 40px;
+    margin-top: 18px;
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 26px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin-right: 0;
+  }
+  .menu__nav-btn {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 40px;
+    margin-top: 18px;
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 26px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin-right: 0;
+  }
+  .menu__nav-link {
+    padding-top: 28px;
+    margin-top: 0;
+    width: 190px;
+    margin-left: 200px;
+  }
+  .menu__nav-link::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/phone-pseudo.png);
+    background-repeat: no-repeat;
+    top: 25px;
+    right: -10px;
+    width: 28px;
+    height: 25px;
+    z-index: 1;
+  }
+  .page-header {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+    margin-bottom: -10px;
+  }
+  .page-navigation {
+    width: 500px;
+  }
+  .nav-container {
+    box-shadow: none;
+    position: relative;
+    width: 500px;
+    margin-left: 0;
+  }
+  .header {
+    width: 1200px;
+    padding-top: 25px;
+    z-index: 150;
+  }
+  .header__logo {
+    padding-left: 0px;
+  }
 }
 @media (min-width: 1920px) {
   .overlay {
     display: none;
+  }
+  .advantage {
+    width: 1920px;
+    padding-left: 360px;
+    padding-right: 360px;
+    background: url("../images/car-desktop.svg") no-repeat 81px 204px, url("../images/advantage-back2.svg") no-repeat 100% 220px, url("../images/advantage-back1.svg") no-repeat 97.6% 240px, url("../images/advantage-back-desktop.svg") no-repeat 0 -255px;
+  }
+  .examples {
+    width: 1920px;
+    padding: 0 360px;
+  }
+  .examples::after {
+    width: 1920px;
+    background: url("../images/examples-back1.svg") no-repeat 0 401px;
+  }
+  .claim__wrapper {
+    width: 1920px;
+    padding-left: 370px;
+    padding-right: 360px;
+    background: url("../images/forma.svg") 3px -290px no-repeat;
+  }
+  .review {
+    width: 1920px;
+    padding-left: 380px;
+    padding-right: 380px;
+    background: url("../images/examples-back1.svg") no-repeat 0 -660px;
   }
   .menu-button {
     display: none;
@@ -2522,15 +2641,18 @@ h2 {
     display: none;
   }
   .menu__outer {
+    display: none;
+  }
+  .menu__nav {
     display: flex;
     position: absolute;
     flex-direction: row;
     justify-content: flex-start;
     min-width: 750px;
-    top: 10px;
+    top: 12px;
     right: -20px;
   }
-  .menu__outer-btn {
+  .menu__nav-btn {
     padding-left: 0;
     padding-right: 0;
     margin-left: 40px;
@@ -2542,13 +2664,13 @@ h2 {
     padding-bottom: 7px;
     padding-top: 7px;
   }
-  .menu__outer-link {
+  .menu__nav-link {
     padding-top: 28px;
     margin-top: 0;
     width: 190px;
     margin-left: 200px;
   }
-  .menu__outer-link::after {
+  .menu__nav-link::after {
     position: absolute;
     content: "";
     background-image: url(../images/phone-pseudo.png);
@@ -2557,6 +2679,7 @@ h2 {
     right: -10px;
     width: 28px;
     height: 25px;
+    z-index: 1;
   }
   .nav-container {
     display: flex;
@@ -2566,20 +2689,20 @@ h2 {
     margin: 0 auto;
     box-shadow: none;
   }
-  .nav-container--close .menu,
-  .nav-container--close .menu__outer {
-    display: flex;
-    z-index: 30;
+  .page-navigation {
+    margin-left: 0;
   }
   .header {
-    padding-top: 40px;
+    width: 1920px;
+    padding-top: 30px;
   }
   .header__logo {
     padding-top: 0;
     padding-left: 120px;
   }
   .page-header {
-    width: 100%;
+    width: 1920px;
+    padding-top: 10px;
     margin-bottom: -30px;
   }
 }
@@ -2620,7 +2743,7 @@ h2 {
   .claim {
     min-height: 287px;
   }
-  .claim__inner {
+  .claim__wrapper {
     width: 320px;
     margin: 0 auto;
     padding-top: 10px;
@@ -2628,7 +2751,7 @@ h2 {
     padding-left: 20px;
     padding-right: 50px;
     height: 100%;
-    background-image: url("/images/claim-back.png");
+    background-image: url("../images/claim-back.png");
     background-repeat: no-repeat;
     background-position: 0 15px;
   }

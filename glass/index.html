@@ -15,7 +15,7 @@
           <div class="nav-container">
             <article class="header">
               <picture class="header__logo">
-                <source media="(min-width: 1920px)" srcset="images/logo_desk.png">
+                <source media="(min-width: 1200px)" srcset="images/logo_desk.png">
                 <img src="images/logo_mobile.png" alt="Логотип">
               </picture>
             </article>
@@ -35,6 +35,10 @@
         <button class="menu__btn menu-button">
           <span class="menu-button__text">Меню</span>
         </button>
+        <div class="menu__nav">
+          <a class="menu__nav-link" href=tel:+74959663120>+7(495)966-31-20</a>
+          <a class="menu__nav-btn button callback">Заказать звонок</a>
+        </div>
       </header>
       <article class="head" id="head">
         <div class="head__back">
@@ -183,15 +187,15 @@
       </div>
       </article>
       <article class="claim" id="claim">
-        <div class="claim__inner">
+        <div class="claim__wrapper">
           <h3 class="claim__header">Оставьте заявку прямо сейчас и получите полировку фар<br><span class="claim__header-capital">совершенно бесплатно!</span></h3>
-          <form class=claim__form action="send.php" method="post">
-            <label class="visually-hidden" for="user-name">Как Вас зовут?</label>
-            <input class="claim__name" id="user-name" name="user-name" type="text" placeholder="Ваше имя" required></input>
-            <label class="visually-hidden" for="user-phone">Введите номер телефона</label>
-            <input class="claim__name" id="user-phone" name="user-phone" type="tel" placeholder="Номер телефона" required pattern=\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}></input>
-            <button class="claim__button button" type="submit">Оставить заявку</button>
-          </form>
+            <form class=claim__form action="send.php" method="post">
+              <label class="visually-hidden" for="user-name">Как Вас зовут?</label>
+              <input class="claim__name" id="user-name" name="user-name" type="text" placeholder="Ваше имя" required>
+              <label class="visually-hidden" for="user-phone">Введите номер телефона</label>
+              <input class="claim__name" id="user-phone" name="user-phone" type="tel" placeholder="Номер телефона" required pattern=\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}>
+              <button class="claim__button button" type="submit">Оставить заявку</button>
+            </form>
         </div>
       </article>
       <div class="svg-sprite visually-hidden">
@@ -230,7 +234,6 @@
             Имеет способность отталкивать от себя грязь и влагу. Нет необходимости в ежегодной профилактике, в отличии от аналогов
           </li>
         </ul>
-        <div class="advantage__wrapper"></div>
       </section>
 
 
@@ -282,7 +285,7 @@
             <span>Показать еще</span>
           <img src="images/arrow.svg" alt="показать еще">
         </button>
-        <div class="examples__back"></div>
+
       </section>
 
 
@@ -521,7 +524,7 @@
               </ul>
             </div>
           </div>
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.5788953201895!2d37.568194316262456!3d55.852621980580196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537ae52ceedb1%3A0xcb03ec749033efe3!2z0JTQvNC40YLRgNC-0LLRgdC60L7QtSDRiC4sIDYwINGB0YLRgNC-0LXQvdC40LUgMiwg0JzQvtGB0LrQstCwLCAxMjc0NzQ!5e0!3m2!1sru!2sru!4v1536829990294"></iframe>
+          <iframe class="ymaps-2-1-34-map contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.5788953201895!2d37.568194316262456!3d55.852621980580196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537ae52ceedb1%3A0xcb03ec749033efe3!2z0JTQvNC40YLRgNC-0LLRgdC60L7QtSDRiC4sIDYwINGB0YLRgNC-0LXQvdC40LUgMiwg0JzQvtGB0LrQstCwLCAxMjc0NzQ!5e0!3m2!1sru!2sru!4v1536829990294"></iframe>
         </section>
 
         <footer class="main-footer">
