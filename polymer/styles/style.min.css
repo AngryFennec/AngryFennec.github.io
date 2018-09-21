@@ -507,8 +507,8 @@ h2 {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 10;
   opacity: 0.4;
+  z-index: 10;
 }
 .overlay--close {
   display: none;
@@ -737,7 +737,7 @@ h2 {
   padding-bottom: 90px;
   z-index: 5;
   position: relative;
-  background: url("../images/forma.svg") -360px -290px no-repeat;
+  background: url("../images/forma.svg") -327px -290px no-repeat;
 }
 .claim__header {
   font-family: 'Montserrat semi', 'Arial', sans-serif;
@@ -1911,15 +1911,16 @@ h2 {
     justify-content: flex-start;
     min-width: 450px;
     margin-left: 0px;
-    z-index: 1;
+    z-index: -1;
     margin-top: 27px;
     padding-left: 20px;
   }
   .menu__nav-btn {
+    position: relative;
     margin-left: 35px;
     margin-top: -7px;
     width: 170px;
-    z-index: 1;
+    z-index: -1;
   }
   .menu {
     width: 300px;
@@ -1937,7 +1938,7 @@ h2 {
     padding-top: 0;
     margin-top: 0;
     width: 190px;
-    z-index: 1;
+    z-index: 0;
   }
   .menu__nav-link::after {
     position: absolute;
@@ -2003,7 +2004,8 @@ h2 {
   }
   .nav-container {
     box-shadow: none;
-    position: relative;
+    position: absolute;
+    left: -150px;
     width: 300px;
     background-color: #ffffff;
     margin-left: 0;
@@ -2147,7 +2149,7 @@ h2 {
   }
   .features {
     min-height: 800px;
-    margin-top: -120px;
+    margin-top: -135px;
   }
   .features__wrapper {
     width: 768px;
@@ -2534,6 +2536,7 @@ h2 {
     margin-top: 10px;
     padding-left: 0;
     margin-left: -150px;
+    padding-right: 20px;
   }
   .menu {
     margin-left: 20px;
@@ -2591,10 +2594,12 @@ h2 {
     width: 500px;
   }
   .nav-container {
+    position: absolute;
+    left: -130px;
     box-shadow: none;
-    position: relative;
     width: 500px;
     margin-left: 0;
+    padding-left: 50px;
   }
   .header {
     width: 1200px;
@@ -2602,7 +2607,7 @@ h2 {
     z-index: 150;
   }
   .header__logo {
-    padding-left: 0px;
+    padding-left: 30px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1919px) {
@@ -2660,6 +2665,7 @@ h2 {
     padding: 0 360px;
   }
   .examples::after {
+    width: 1920px;
     background: url("../images/examples-back1.svg") no-repeat 0 401px;
   }
   .claim__wrapper {
@@ -2771,7 +2777,7 @@ h2 {
   }
   .header__logo {
     padding-top: 0;
-    padding-left: 120px;
+    padding-left: 200px;
   }
   .page-header {
     width: 1920px;
