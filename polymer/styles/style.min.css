@@ -509,7 +509,8 @@ h2 {
   width: 100vw;
   opacity: 0.4;
   z-index: 10;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .overlay--close {
   display: none;
@@ -1418,11 +1419,9 @@ h2 {
   z-index: 50;
 }
 .head {
-  margin-top: -90px;
   min-height: 1040px;
   width: 1200px;
   margin: 0 auto;
-  margin-top: -60px;
   background: url("../images/head-desktop.png") 260px 320px no-repeat, url("../images/border.svg") 40px 220px no-repeat, url("../images/kheder.svg") -320px 0 no-repeat;
   z-index: 5;
 }
@@ -1606,11 +1605,15 @@ h2 {
   margin: 0 auto;
 }
 .page-header {
-  margin: 0 auto;
-  position: relative;
+  position: fixed;
+  background: white;
   width: 320px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
   margin-bottom: 0px;
   min-height: 50px;
+  z-index: 9;
 }
 .nav-container {
   display: flex;
@@ -1993,9 +1996,8 @@ h2 {
   }
   .page-header {
     margin: 0 auto;
-    position: relative;
     width: 768px;
-    margin-bottom: -10px;
+    padding-bottom: 10px;
     z-index: 10;
     display: flex;
     justify-content: flex-start;
@@ -2230,6 +2232,7 @@ h2 {
   .head {
     width: 768px;
     margin: 0 auto;
+    margin-top: 40px;
     min-height: 700px;
     background: transparent;
   }
@@ -2587,9 +2590,8 @@ h2 {
   }
   .page-header {
     margin: 0 auto;
-    position: relative;
     width: 1200px;
-    margin-bottom: -10px;
+    background: url("../images/kheder.svg") -320px 0 no-repeat, white;
   }
   .page-navigation {
     width: 500px;
@@ -2767,7 +2769,7 @@ h2 {
   .head {
     width: 1920px;
     margin: 0 auto;
-    margin-top: -60px;
+    margin-top: -8px;
     background: url("../images/head-desktop.png") 640px 320px no-repeat, url("../images/border.svg") 400px 220px no-repeat, url("../images/kheder.svg") 10px 0 no-repeat;
     z-index: 5;
   }
@@ -2793,8 +2795,8 @@ h2 {
   }
   .page-header {
     width: 1920px;
-    padding-top: 10px;
     margin-bottom: -30px;
+    background: url("../images/kheder.svg") 24px 0 no-repeat, white;
   }
 }
 @media (max-width: 1024px) {
@@ -3077,7 +3079,7 @@ h2 {
   .head {
     width: 320px;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 50px;
     min-height: 450px;
     z-index: 6;
     background: transparent;
