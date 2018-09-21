@@ -2694,6 +2694,15 @@ h2 {
     padding-right: 380px;
     background: url("../images/examples-back1.svg") no-repeat 0 -660px;
   }
+  .review__button {
+    top: 210px;
+  }
+  .review__button--left {
+    left: 360px;
+  }
+  .review__button--right {
+    right: 360px;
+  }
   .features__wrapper {
     width: 1920px;
     padding-left: 360px;
