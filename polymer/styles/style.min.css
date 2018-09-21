@@ -575,9 +575,6 @@ h2 {
   flex-direction: column;
   background: url("../images/advantage-back.svg") no-repeat 0 -128px, url("../images/advantage-gradient.png") no-repeat 0 341px;
 }
-.advantage__wrapper {
-  position: absolute;
-}
 .advantage__list {
   list-style: none;
   padding: 0;
@@ -622,9 +619,6 @@ h2 {
 }
 .examples__box--2 {
   display: none;
-}
-.examples__back {
-  position: absolute;
 }
 .examples__header {
   padding-left: 3px;
@@ -743,14 +737,7 @@ h2 {
   padding-bottom: 90px;
   z-index: 5;
   position: relative;
-}
-.claim__inner {
-  position: absolute;
-  width: 1920px;
-  height: 100%;
-  top: 0;
-  left: -360px;
-  background: url("../images/forma.svg") 10px -290px no-repeat;
+  background: url("../images/forma.svg") -360px -290px no-repeat;
 }
 .claim__header {
   font-family: 'Montserrat semi', 'Arial', sans-serif;
@@ -843,8 +830,10 @@ h2 {
   margin: 0 auto;
   min-height: 1017px;
   width: 1200px;
+  padding-left: 20px;
   display: flex;
   z-index: 5;
+  background: url("../images/work-desktop.png") no-repeat 470px 220px, url("../images/klass_avto.svg") -329px -247px no-repeat;
 }
 .work__content {
   width: 1270px;
@@ -952,9 +941,6 @@ h2 {
   margin-top: 16px;
   margin-bottom: 20px;
 }
-.review__back {
-  position: absolute;
-}
 .review__form-wrapper {
   width: 270px;
   margin: 0 auto;
@@ -981,6 +967,12 @@ h2 {
 .review__form-textarea {
   padding: 10px;
   border: 0.5px solid #0047FF;
+}
+.ymaps-2-1-34-map {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  /* Firefox 3.5+ */
+  /* Chrome 19+ & Safari 6+ */
+  filter: grayscale(100%);
 }
 .contacts {
   display: flex;
@@ -1201,28 +1193,16 @@ h2 {
   min-height: 900px;
   margin-top: -305px;
 }
-.features .aside {
-  margin-top: 210px;
-}
-.features__inner {
-  width: 1920px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: -360px;
-  height: 100%;
-  background: url("../images/features.svg") -183px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
-}
 .features__wrapper {
   position: relative;
   padding-top: 215px;
   margin: 0 auto;
   width: 1200px;
   display: flex;
+  background: url("../images/features.svg") -183px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
 }
 .features__wrapper .aside {
-  padding-top: 260px;
-  padding-bottom: 330px;
+  top: 470px;
 }
 .features__content {
   width: 1270px;
@@ -1439,21 +1419,14 @@ h2 {
 .head {
   margin-top: -90px;
   min-height: 1040px;
-}
-.head__inner {
-  width: 1920px;
-  position: absolute;
-  z-index: -5;
-  top: -246px;
-  left: 00px;
-  height: 1040px;
-  background: url("../images/head-desktop.png") 640px 320px no-repeat, url("../images/border.svg") 400px 220px no-repeat, url("../images/kheder.svg") 10px 0 no-repeat;
-}
-.head__inner .aside {
-  margin-top: 155px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: -60px;
+  background: url("../images/head-desktop.png") 260px 320px no-repeat, url("../images/border.svg") 40px 220px no-repeat, url("../images/kheder.svg") -320px 0 no-repeat;
+  z-index: 5;
 }
 .head__back {
-  padding-top: 109px;
+  padding-top: 60px;
   z-index: 8;
   min-height: 1040px;
   position: relative;
@@ -1498,7 +1471,7 @@ h2 {
   display: flex;
 }
 .head__wrapper .aside {
-  padding-top: 150px;
+  top: 75px;
 }
 .head__content {
   margin-top: 0;
@@ -1721,7 +1694,9 @@ h2 {
   .examples {
     width: 768px;
   }
-  .examples__back {
+  .examples::after {
+    content: "";
+    position: absolute;
     width: 100%;
     height: 1180px;
     background: url("../images/work-back1.svg") no-repeat 100% 1009px;
@@ -2084,9 +2059,6 @@ h2 {
     background: url("../images/claim-back-tablet.png") 0 162px, url("../images/claim-pseudo1.png") 512px 115px, url("../images/claim-pseudo2.png") 515px 210px, url("../images/claim-pseudo3.png") 68px 305px;
     background-repeat: no-repeat;
   }
-  .claim__inner {
-    background: none;
-  }
   .claim__header {
     font-family: 'Montserrat semi', 'Arial', sans-serif;
     font-size: 20px;
@@ -2108,9 +2080,6 @@ h2 {
   .work {
     margin-top: -90px;
     min-height: 982px;
-  }
-  .work__inner {
-    display: none;
   }
   .work__wrapper {
     width: 768px;
@@ -2179,9 +2148,6 @@ h2 {
   .features {
     min-height: 800px;
     margin-top: -120px;
-  }
-  .features__inner {
-    display: none;
   }
   .features__wrapper {
     width: 768px;
@@ -2259,11 +2225,10 @@ h2 {
     max-width: 140px;
   }
   .head {
-    margin-top: 0;
+    width: 768px;
+    margin: 0 auto;
     min-height: 700px;
-  }
-  .head__inner {
-    display: none;
+    background: transparent;
   }
   .head__back {
     padding-top: 0;
@@ -2348,15 +2313,7 @@ h2 {
   }
   .advantage {
     width: 1200px;
-    background: transparent;
-  }
-  .advantage__wrapper {
-    width: 1920px;
-    background: url("../images/car-desktop.svg") no-repeat 81px 234px, url("../images/advantage-back2.svg") no-repeat 101% 88%, url("../images/advantage-back1.svg") no-repeat 100% 292px, url("../images/advantage-back-desktop.svg") no-repeat -6px -255px;
-    height: 100%;
-    top: 0;
-    left: -360px;
-    z-index: -1;
+    background: url("../images/car-desktop.svg") no-repeat -280px 234px, url("../images/advantage-back2.svg") no-repeat 1072px 242px, url("../images/advantage-back1.svg") no-repeat 1129px 330px;
   }
   .advantage__header {
     padding: 0;
@@ -2497,20 +2454,19 @@ h2 {
   .examples__button img {
     display: none;
   }
-  .examples__back {
-    width: 1920px;
+  .examples::after {
+    width: 1200px;
     height: 1061px;
-    background: url("../images/examples-back1.svg") no-repeat 0 401px;
+    background: url("../images/examples-back1.svg") no-repeat -360px 401px;
     z-index: -1;
     bottom: 0;
-    left: -360px;
   }
   .work__aside {
     display: none;
   }
   .review {
     width: 1200px;
-    background: transparent;
+    background: url("../images/examples-back1.svg") no-repeat -360px -660px;
   }
   .review__slider {
     width: 1080px;
@@ -2535,15 +2491,6 @@ h2 {
   }
   .review__button--right {
     right: 0px;
-  }
-  .review__back {
-    position: absolute;
-    width: 1920px;
-    height: 100%;
-    left: -360px;
-    top: 0;
-    background: url("../images/examples-back1.svg") no-repeat 0 -660px;
-    z-index: -1;
   }
   .review__block--2 {
     display: block;
@@ -2668,15 +2615,6 @@ h2 {
   .features__header {
     margin-left: 15px;
   }
-  .head__inner {
-    width: 1920px;
-    position: absolute;
-    z-index: -5;
-    top: -246px;
-    left: -400px;
-    height: 1040px;
-    background: url("../images/head-desktop.png") 640px 320px no-repeat, url("../images/border.svg") 400px 220px no-repeat, url("../images/kheder.svg") 10px 0 no-repeat;
-  }
   .head__header {
     margin-left: 20px;
   }
@@ -2711,9 +2649,50 @@ h2 {
   .overlay {
     display: none;
   }
+  .advantage {
+    width: 1920px;
+    padding-left: 380px;
+    padding-right: 380px;
+    background: url("../images/car-desktop.svg") no-repeat 80px 234px, url("../images/advantage-back2.svg") no-repeat 1435px 242px, url("../images/advantage-back1.svg") no-repeat 1491px 330px, url("../images/advantage-back-desktop.svg") no-repeat -1px -265px;
+  }
+  .examples {
+    width: 1920px;
+    padding: 0 360px;
+  }
+  .examples::after {
+    background: url("../images/examples-back1.svg") no-repeat 0 401px;
+  }
+  .claim__wrapper {
+    width: 1920px;
+    padding-left: 370px;
+    padding-right: 360px;
+    background: url("../images/forma.svg") 3px -290px no-repeat;
+  }
   .work__aside {
+    position: absolute;
+    left: 117px;
+    top: 350px;
     display: block;
-    padding-top: 300px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .work__wrapper {
+    width: 1920px;
+    background: url("../images/work-desktop.png") no-repeat 830px 220px, url("../images/klass_avto.svg") 0px -247px no-repeat;
+    padding-left: 360px;
+    padding-right: 360px;
+  }
+  .review {
+    width: 1920px;
+    padding-left: 380px;
+    padding-right: 380px;
+    background: url("../images/examples-back1.svg") no-repeat 0 -660px;
+  }
+  .features__wrapper {
+    width: 1920px;
+    padding-left: 360px;
+    padding-right: 360px;
+    background: url("../images/features.svg") -183px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
   }
   .menu-button {
     display: none;
@@ -2767,6 +2746,13 @@ h2 {
     width: 28px;
     height: 25px;
     z-index: 1;
+  }
+  .head {
+    width: 1920px;
+    margin: 0 auto;
+    margin-top: -60px;
+    background: url("../images/head-desktop.png") 640px 320px no-repeat, url("../images/border.svg") 400px 220px no-repeat, url("../images/kheder.svg") 10px 0 no-repeat;
+    z-index: 5;
   }
   .nav-container {
     display: flex;
@@ -2842,9 +2828,6 @@ h2 {
     background-repeat: no-repeat;
     background-position: 0 15px;
   }
-  .claim__inner {
-    background: none;
-  }
   .claim__header {
     font-family: 'Montserrat semi', 'Arial', sans-serif;
     font-size: 15px;
@@ -2880,9 +2863,6 @@ h2 {
   }
   .work {
     min-height: 550px;
-  }
-  .work__inner {
-    display: none;
   }
   .work__wrapper {
     width: 320px;
@@ -2972,9 +2952,6 @@ h2 {
   .features {
     margin-top: -75px;
     min-height: 650px;
-  }
-  .features__inner {
-    display: none;
   }
   .features__wrapper {
     width: 320px;
@@ -3080,12 +3057,12 @@ h2 {
     height: 60px;
   }
   .head {
+    width: 320px;
+    margin: 0 auto;
     margin-top: 0px;
     min-height: 450px;
     z-index: 6;
-  }
-  .head__inner {
-    display: none;
+    background: transparent;
   }
   .head__back {
     padding-top: 0px;
