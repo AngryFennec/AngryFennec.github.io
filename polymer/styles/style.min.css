@@ -811,7 +811,7 @@ h2 {
   color: #070D1C;
 }
 .work {
-  min-height: 1017px;
+  min-height: 1015px;
 }
 .work .tabs {
   margin-left: 0;
@@ -830,12 +830,12 @@ h2 {
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
-  min-height: 1017px;
+  min-height: 1027px;
   width: 1200px;
-  padding-left: 20px;
+  padding-left: 35px;
   display: flex;
   z-index: 5;
-  background: url("../images/work-desktop.png") no-repeat 470px 220px, url("../images/klass_avto.svg") -329px -247px no-repeat;
+  background: url("../images/work-desktop.png") no-repeat 610px 310px, url("../images/border-mini.svg") 180px 200px no-repeat, url("../images/klass_avto-1200.svg") -359px -237px no-repeat;
 }
 .work__content {
   width: 1270px;
@@ -843,7 +843,7 @@ h2 {
   margin-left: -30px;
 }
 .work__header {
-  margin-left: 25px;
+  margin-left: 32px;
   margin-bottom: 65px;
 }
 .work__options-list {
@@ -1192,19 +1192,22 @@ h2 {
   margin-left: 38px;
 }
 .features {
-  min-height: 900px;
-  margin-top: -305px;
+  min-height: 800px;
+  margin-top: -127px;
+  width: 100%;
+  background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%);
 }
 .features__wrapper {
   position: relative;
-  padding-top: 215px;
+  padding-top: 33px;
   margin: 0 auto;
   width: 1200px;
   display: flex;
-  background: url("../images/features.svg") -183px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
+  background: url("../images/features.svg") -325px -145px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") -160px 45px no-repeat;
 }
 .features__wrapper .aside {
-  top: 470px;
+  top: 290px;
+  padding-bottom: 270px;
 }
 .features__content {
   width: 1270px;
@@ -1419,16 +1422,16 @@ h2 {
   z-index: 50;
 }
 .head {
-  min-height: 1040px;
+  min-height: 900px;
   width: 1200px;
   margin: 0 auto;
-  background: url("../images/head-desktop.png") 260px 320px no-repeat, url("../images/border.svg") 40px 220px no-repeat, url("../images/kheder.svg") -320px 0 no-repeat;
+  background: url("../images/head-desktop.png") 430px 320px no-repeat, url("../images/border-mini.svg") 190px 220px no-repeat, url("../images/kheder.svg") -195px 0 no-repeat;
   z-index: 5;
 }
 .head__back {
   padding-top: 60px;
   z-index: 8;
-  min-height: 1040px;
+  min-height: 900px;
   position: relative;
 }
 .head__header {
@@ -2077,13 +2080,13 @@ h2 {
   }
   .work {
     margin-top: -90px;
-    min-height: 982px;
+    min-height: 1000px;
   }
   .work__wrapper {
     width: 768px;
     margin-bottom: 0;
-    MIN-HEIGHT: 982px;
-    background: url("../images/work-tablet.png") no-repeat 100px 430px, url("../images/klass_avto_tabletka.svg") -3px -151px no-repeat;
+    MIN-HEIGHT: 1000px;
+    background: url("../images/work-tablet.png") no-repeat 100px 430px, url("../images/klass_avto_tabletka.svg") -3px -131px no-repeat;
   }
   .work__content {
     width: 768px;
@@ -2091,15 +2094,16 @@ h2 {
     padding-top: 25px;
   }
   .work__header {
-    margin-left: 20px;
+    margin-left: -10px;
     line-height: 39px;
     font-size: 27px;
-    margin-bottom: 25px;
+    margin-top: 45px;
+    margin-bottom: 20px;
   }
   .work__options-list {
     flex-wrap: wrap;
     width: 600px;
-    margin-left: 29px;
+    margin-left: -10px;
     margin-bottom: 15px;
   }
   .work__options-item {
@@ -2131,17 +2135,21 @@ h2 {
     margin-bottom: 0;
     display: none;
   }
+  .tabs__inner-list {
+    margin-left: 0px;
+  }
   .tabs__inner-item {
-    margin-left: 30px;
+    margin-left: 0px;
   }
   .tabs__inner-item::before {
     margin-top: 20px;
   }
   .tabs__inner-price {
-    margin-left: 18px;
+    margin-left: -10px;
   }
   .tabs__inner-button {
-    margin-left: 20px;
+    height: 45px;
+    margin-left: -15px;
   }
   .features {
     min-height: 800px;
@@ -2155,11 +2163,8 @@ h2 {
     padding-bottom: 70px;
     background: url("../images/features_tabletka.svg") 0px -118px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
   }
-  .features__content {
-    width: 768px;
-  }
   .features__header {
-    padding-top: 35px;
+    padding-top: 48px;
     margin-left: 15px;
     margin-bottom: 62px;
   }
@@ -2239,7 +2244,7 @@ h2 {
     width: 660px;
     margin-bottom: 0;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 25px;
   }
   .head__header-container {
     margin: 0 auto;
@@ -2521,26 +2526,23 @@ h2 {
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 0;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-left: 0;
-    margin-left: -150px;
+    margin-right: 18px;
+    margin-left: 0;
     padding-right: 20px;
   }
   .menu {
-    margin-left: 20px;
+    display: none;
   }
-  .menu__outer-btn {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 40px;
-    margin-top: 18px;
-    width: 170px;
-    height: 40px;
-    font-size: 15px;
-    line-height: 26px;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    margin-right: 0;
+  .menu__item {
+    display: none;
+  }
+  .menu__btn {
+    display: none;
+  }
+  .menu__outer {
+    display: none;
   }
   .menu__nav-btn {
     padding-left: 0;
@@ -2575,14 +2577,14 @@ h2 {
   .page-header__wrapper {
     margin: 0 auto;
     width: 1200px;
-    background: url("../images/kheder.svg") -320px 0 no-repeat, white;
+    background: url("../images/kheder.svg") -195px 0 no-repeat, white;
   }
   .page-navigation {
     width: 500px;
   }
   .nav-container {
     position: absolute;
-    left: -130px;
+    left: -50px;
     box-shadow: none;
     width: 500px;
     margin-left: 0;
@@ -2590,25 +2592,104 @@ h2 {
   }
   .header {
     width: 300px;
-    padding-top: 25px;
+    padding-top: 35px;
     z-index: 150;
   }
   .header__logo {
-    padding-left: 30px;
+    padding-left: 0px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1919px) {
+  .aside {
+    display: block;
+    padding-top: 30px;
+    padding-left: 35px;
+    width: 270px;
+  }
   .work {
     padding-top: 0;
+    min-height: 1027px;
+  }
+  .work .aside {
+    padding-top: 360px;
+    padding-left: 0;
+    width: 150px;
+  }
+  .work__content {
+    width: 1000px;
+    padding-top: 25px;
   }
   .work__header {
-    margin-left: 15px;
+    margin-left: 35px;
+    margin-top: 80px;
+  }
+  .work__options-list {
+    margin-left: 40px;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  .work__options-item:nth-child(4) {
+    max-width: 120px;
+    margin-right: 0;
+  }
+  .work__options-item:nth-child(2) {
+    margin-right: 75px;
+    margin-bottom: 10px;
+  }
+  .work__options-item:nth-child(5) {
+    max-width: 150px;
+  }
+  .work__options-item:nth-child(6) {
+    max-width: 150px;
+  }
+  .tabs__item-header {
+    margin-left: 77px;
+  }
+  .tabs__inner-list {
+    margin-left: 42px;
+  }
+  .tabs__inner-price {
+    margin-left: 88px;
+  }
+  .tabs__inner-button {
+    margin-left: 88px;
+  }
+  .features .aside {
+    width: 220px;
+    padding-top: 260px;
+    padding-left: 50px;
+  }
+  .features__content {
+    width: 900px;
   }
   .features__header {
-    margin-left: 15px;
+    margin-left: 45px;
+  }
+  .features__list {
+    margin-left: 45px;
+  }
+  .features__item {
+    margin-right: 0px;
+  }
+  .features__item:nth-child(1) {
+    margin-right: 90px;
+    margin-left: 0;
+  }
+  .features__item:nth-child(2) {
+    margin-right: 75px;
+  }
+  .features__item:nth-child(4) {
+    margin-left: -55px;
+    margin-right: 53px;
+  }
+  .features__item:nth-child(5) {
+    margin-right: 60px;
   }
   .head__header {
-    margin-left: 20px;
+    margin-left: 40px;
+    padding-top: 20px;
   }
   .head__header-container {
     width: 1200px;
@@ -2628,8 +2709,8 @@ h2 {
     width: 1270px;
     padding-top: 35px;
     min-height: 702px;
-    padding-left: 10px;
-    margin-left: 45px;
+    padding-left: 00px;
+    margin-left: 0px;
     font-family: 'Montserrat', 'Arial', sans-serif;
     margin-top: -22px;
     line-height: 35px;
@@ -2694,7 +2775,7 @@ h2 {
     width: 1920px;
     padding-left: 360px;
     padding-right: 360px;
-    background: url("../images/features.svg") -183px 200px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 260px 200px no-repeat;
+    background: url("../images/features.svg") 0px -120px no-repeat, url("../images/features-desk.png") 260px 20px no-repeat;
   }
   .menu-button {
     display: none;
@@ -2753,9 +2834,13 @@ h2 {
   .head {
     width: 1920px;
     margin: 0 auto;
-    margin-top: -8px;
-    background: url("../images/head-desktop.png") 640px 320px no-repeat, url("../images/border.svg") 400px 220px no-repeat, url("../images/kheder.svg") 10px 0 no-repeat;
+    margin-top: 0px;
+    padding-top: 20px;
+    background: url("../images/head-desktop.png") 640px 320px no-repeat, url("../images/border.svg") 400px 220px no-repeat, url("../images/kheder.svg") 0px 0 no-repeat;
     z-index: 5;
+  }
+  .head .aside {
+    margin-top: -15px;
   }
   .nav-container {
     display: flex;
@@ -2866,13 +2951,14 @@ h2 {
     display: none;
   }
   .work {
-    min-height: 550px;
+    min-height: 531px;
   }
   .work__wrapper {
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
-    min-height: 550px;
+    min-height: 531px;
+    padding-left: 0;
     background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url("../images/work-mobile.jpg") 0px 70px no-repeat;
   }
   .work__content {
@@ -2886,7 +2972,7 @@ h2 {
     line-height: 22px;
     font-size: 15px;
     margin-left: 20px;
-    margin-top: 2px;
+    margin-top: -20px;
     margin-bottom: 19px;
   }
   .work__options-list {
@@ -2919,7 +3005,7 @@ h2 {
     max-width: 150px;
   }
   .tabs__item {
-    min-height: 305px;
+    min-height: 275px;
     width: 320px;
     border: none;
     padding-top: 0;
@@ -2954,7 +3040,7 @@ h2 {
     margin-left: 24px;
   }
   .features {
-    margin-top: -75px;
+    margin-top: -55px;
     min-height: 650px;
   }
   .features__wrapper {
@@ -2970,7 +3056,7 @@ h2 {
     padding-top: 0;
   }
   .features__header {
-    padding-top: 45px;
+    padding-top: 15px;
     margin-left: 15px;
     margin-bottom: 45px;
   }
@@ -3080,7 +3166,7 @@ h2 {
     line-height: 21px;
     font-size: 15px;
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 00px;
     padding-right: 20px;
     margin-bottom: 0px;
   }
@@ -3088,7 +3174,7 @@ h2 {
     margin: 0 auto;
     padding-left: 20px;
     width: 320px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
   .head__wrapper {
     margin: 0 auto;
