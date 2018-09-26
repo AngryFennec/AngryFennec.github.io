@@ -1455,8 +1455,8 @@ h2 {
   background: white;
   left: 0;
   top: 0;
-  min-height: 110px;
   z-index: 100;
+  min-height: 60px;
 }
 .page-navigation {
   position: relative;
@@ -1893,6 +1893,9 @@ h2 {
   }
   .header__logo {
     padding-left: 70px;
+  }
+  .page-header {
+    min-height: 80px;
   }
   .advantage {
     width: 768px;
@@ -2470,6 +2473,9 @@ h2 {
   .header__logo {
     padding-left: 0px;
   }
+  .page-header {
+    min-height: 90px;
+  }
   .advantage {
     width: 1200px;
     background: url("../images/car-desktop.svg") no-repeat -280px 234px, url("../images/advantage-back2.svg") no-repeat 1072px 242px, url("../images/advantage-back1.svg") no-repeat 1129px 330px;
@@ -2899,6 +2905,9 @@ h2 {
     width: 1920px;
     margin-bottom: -30px;
     background: url("../images/kheder.svg") 16px 0 no-repeat, white;
+  }
+  .page-header {
+    min-height: 110px;
   }
   .advantage {
     width: 1920px;
