@@ -577,6 +577,9 @@ h2 {
   flex-direction: column;
   background: url("../images/advantage-back.svg") no-repeat 0 -128px, url("../images/advantage-gradient.png") no-repeat 0 341px;
 }
+.advantage__aside {
+  display: none;
+}
 .advantage__list {
   list-style: none;
   padding: 0;
@@ -620,6 +623,9 @@ h2 {
   padding-top: 0;
 }
 .examples__box--2 {
+  display: none;
+}
+.examples__aside {
   display: none;
 }
 .examples__header {
@@ -880,6 +886,9 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+.review__aside {
+  display: none;
+}
 .review__block {
   font-family: 'Dee Dee', 'Arial', sans-serif;
   font-size: 13px;
@@ -971,6 +980,9 @@ h2 {
   /* Firefox 3.5+ */
   /* Chrome 19+ & Safari 6+ */
   filter: grayscale(100%);
+}
+.contacts__aside {
+  display: none;
 }
 .contacts {
   display: flex;
@@ -1603,7 +1615,8 @@ h2 {
   background: white;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: 9;
+  min-height: 60px;
 }
 .page-navigation {
   position: relative;
@@ -1713,7 +1726,7 @@ h2 {
     justify-content: space-between;
   }
   .examples__header {
-    padding-left: 0;
+    padding-left: 20px;
     margin-top: 30px;
   }
   .examples__video {
@@ -2023,6 +2036,9 @@ h2 {
   .header__logo {
     padding-left: 70px;
   }
+  .page-header {
+    min-height: 80px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .tablet-flag {
@@ -2302,6 +2318,9 @@ h2 {
     text-transform: uppercase;
     line-height: 44px;
   }
+  .overlay {
+    display: none;
+  }
   .h2 {
     font-size: 30px;
     line-height: 37px;
@@ -2311,8 +2330,15 @@ h2 {
     padding-bottom: 0;
     background: url("../images/car-desktop.svg") no-repeat -275px 204px, url("../images/advantage-back2.svg") no-repeat 1070px 220px, url("../images/advantage-back1.svg") no-repeat 1085px 240px, url("../images/advantage-back-desktop.svg") no-repeat -360px -255px;
   }
+  .advantage__aside {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+  }
   .advantage__header {
     padding: 0;
+    padding-top: 28px;
     width: 100%;
   }
   .advantage__list {
@@ -2354,65 +2380,72 @@ h2 {
     margin-left: 419px;
     margin-top: 35px;
   }
+  .examples__aside {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 300px;
+  }
   .examples {
     width: 1200px;
     background: transparent;
   }
   .examples__box {
     padding: 0 ;
-    padding-left: 20px;
+    padding-left: 200px;
   }
   .examples__header {
     width: 100%;
+    padding-left: 175px;
     margin-top: 60px;
     margin-left: 25px;
     order: -2;
     margin-bottom: 20px;
   }
   .examples__video {
-    width: 680px;
+    width: 582px;
     height: 430px;
     order: 0;
     margin-top: 30px;
     margin-left: 18px;
-    background: url("../images/video-img-desktop.jpg") no-repeat 0 0;
+    background: url("../images/exam_v.jpg") no-repeat 0 0;
   }
   .examples__block {
     margin-top: 20px;
   }
   .examples__block--0 {
-    width: 680px;
+    width: 582px;
     height: 430px;
     order: 0;
     margin-left: 18px;
-    background: url("../images/video-img-desktop.jpg") no-repeat 0 0;
+    background: url("../images/exam_v.jpg") no-repeat 0 0;
   }
   .examples__block--1 {
     margin-top: 30px;
     order: -1;
-    width: 480px;
+    width: 400px;
     height: 249px;
-    background: url("../images/work1-desktop.jpg") no-repeat 0 0;
+    background: url("../images/exam_1.jpg") no-repeat 0 0;
   }
   .examples__block--3 {
     margin-top: -160px;
     order: 1;
-    width: 482px;
+    width: 400px;
     height: 530px;
-    background: url("../images/work3-desktop.jpg") no-repeat 0 0;
+    background: url("../images/exam_2.jpg") no-repeat 0 0;
   }
   .examples__block--2 {
     order: 2;
-    width: 382px;
+    width: 320px;
     height: 349px;
-    background: url("../images/work2-desktop.jpg") no-repeat 0 0;
+    background: url("../images/exam_3.jpg") no-repeat 0 0;
   }
   .examples__block--4 {
     order: 3;
-    width: 282px;
+    width: 240px;
     height: 349px;
     margin-left: 0;
-    background: url("../images/work4-desktop.jpg") no-repeat 0 0;
+    background: url("../images/exam_4.jpg") no-repeat 0 0;
   }
   .examples__box--2 .examples__block--1 {
     margin-top: 20px;
@@ -2453,9 +2486,10 @@ h2 {
   .review {
     width: 1200px;
     background: url("../images/examples-back1.svg") no-repeat -360px -660px;
+    padding-left: 155px;
   }
   .review__slider {
-    width: 1080px;
+    width: 1000px;
     padding-left: 20px;
     padding-right: 5px;
     display: flex;
@@ -2468,15 +2502,22 @@ h2 {
   }
   .review__header {
     margin-top: 45px;
+    padding-left: 50px;
   }
   .review__button {
     top: 210px;
   }
   .review__button--left {
-    left: 0px;
+    left: 150px;
   }
   .review__button--right {
     right: 0px;
+  }
+  .review__aside {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 30px;
   }
   .review__block--2 {
     display: block;
@@ -2485,11 +2526,13 @@ h2 {
     display: block;
   }
   .contacts__wrapper {
-    width: 1200px;
+    width: 850px;
   }
   .contacts__header {
     margin-bottom: 52px;
+    margin-top: 10px;
     width: 1200px;
+    padding-left: 200px;
   }
   .contacts__map {
     height: 685px;
@@ -2522,13 +2565,22 @@ h2 {
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 0;
-    margin-top: 10px;
+    margin-top: 0;
     padding-left: 0;
-    margin-left: -150px;
+    margin-left: 0;
     padding-right: 20px;
   }
   .menu {
-    margin-left: 20px;
+    display: none;
+  }
+  .menu__item {
+    display: none;
+  }
+  .menu__btn {
+    display: none;
+  }
+  .menu__outer {
+    display: none;
   }
   .menu__outer-btn {
     padding-left: 0;
@@ -2583,7 +2635,7 @@ h2 {
   }
   .nav-container {
     position: absolute;
-    left: -130px;
+    left: -50px;
     box-shadow: none;
     width: 500px;
     margin-left: 0;
@@ -2591,11 +2643,14 @@ h2 {
   }
   .header {
     width: 300px;
-    padding-top: 25px;
+    padding-top: 15px;
     z-index: 150;
   }
   .header__logo {
-    padding-left: 30px;
+    padding-left: 0px;
+  }
+  .page-header {
+    min-height: 68px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1919px) {
@@ -2693,14 +2748,16 @@ h2 {
   }
 }
 @media (min-width: 1920px) {
-  .overlay {
-    display: none;
-  }
   .advantage {
     width: 1920px;
     padding-left: 360px;
     padding-right: 360px;
-    background: url("../images/car-desktop.svg") no-repeat 81px 204px, url("../images/advantage-back2.svg") no-repeat 100% 220px, url("../images/advantage-back1.svg") no-repeat 97.6% 240px, url("../images/advantage-back-desktop.svg") no-repeat 0 -255px;
+    background: url("../images/car-desktop.svg") no-repeat 81px 204px, url("../images/advantage-back2.svg") no-repeat 100% 220px, url("../images/advantage-back1.svg") no-repeat 97.6% 240px, url("../images/advantage-back-desktop.svg") no-repeat 0 -265px;
+  }
+  .advantage__aside {
+    padding-top: 100px;
+    top: 200px;
+    display: block;
   }
   .examples {
     width: 1920px;
@@ -2709,6 +2766,90 @@ h2 {
   .examples::after {
     width: 1920px;
     background: url("../images/examples-back1.svg") no-repeat 0 401px;
+  }
+  .examples__aside {
+    top: 0;
+  }
+  .examples__box {
+    padding: 0 ;
+    padding-left: 20px;
+  }
+  .examples__header {
+    padding-left: 0;
+  }
+  .examples__video {
+    width: 680px;
+    height: 430px;
+    order: 0;
+    margin-top: 30px;
+    margin-left: 18px;
+    background: url("../images/video-img-desktop.jpg") no-repeat 0 0;
+  }
+  .examples__block {
+    margin-top: 20px;
+  }
+  .examples__block--0 {
+    width: 680px;
+    height: 430px;
+    order: 0;
+    margin-left: 18px;
+    background: url("../images/video-img-desktop.jpg") no-repeat 0 0;
+  }
+  .examples__block--1 {
+    margin-top: 30px;
+    order: -1;
+    width: 480px;
+    height: 249px;
+    background: url("../images/work1-desktop.jpg") no-repeat 0 0;
+  }
+  .examples__block--3 {
+    margin-top: -160px;
+    order: 1;
+    width: 482px;
+    height: 530px;
+    background: url("../images/work3-desktop.jpg") no-repeat 0 0;
+  }
+  .examples__block--2 {
+    order: 2;
+    width: 382px;
+    height: 349px;
+    background: url("../images/work2-desktop.jpg") no-repeat 0 0;
+  }
+  .examples__block--4 {
+    order: 3;
+    width: 282px;
+    height: 349px;
+    margin-left: 0;
+    background: url("../images/work4-desktop.jpg") no-repeat 0 0;
+  }
+  .examples__box--2 .examples__block--1 {
+    margin-top: 20px;
+  }
+  .examples__description {
+    background-color: transparent;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .examples__button {
+    font-family: 'Montserrat semi', 'Arial', sans-serif;
+    background-color: #ffffff;
+    width: 206px;
+    border: 2px solid #0047FF;
+    margin-top: 49px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+  }
+  .examples__button span {
+    display: block;
+    font-size: 18px;
+    line-height: 31px;
+    color: #0047FF;
+  }
+  .examples__button img {
+    display: none;
   }
   .claim__wrapper {
     width: 1920px;
@@ -2721,6 +2862,27 @@ h2 {
     padding-left: 380px;
     padding-right: 380px;
     background: url("../images/examples-back1.svg") no-repeat 0 -660px;
+  }
+  .review__button {
+    top: 210px;
+  }
+  .review__button--left {
+    left: 360px;
+  }
+  .review__button--right {
+    right: 360px;
+  }
+  .review__aside {
+    padding-top: 50px;
+  }
+  .review__header {
+    padding-left: 0;
+  }
+  .contacts__wrapper {
+    width: 1200px;
+  }
+  .contacts__header {
+    padding-left: 20px;
   }
   .menu {
     display: none;
@@ -2737,8 +2899,8 @@ h2 {
     flex-direction: row;
     justify-content: flex-start;
     min-width: 750px;
-    top: 17px;
-    right: -30px;
+    top: 12px;
+    right: -20px;
     z-index: 3;
   }
   .menu__nav-btn {
@@ -2784,7 +2946,7 @@ h2 {
   }
   .header {
     width: 300px;
-    padding-top: 40px;
+    padding-top: 20px;
   }
   .header__logo {
     padding-top: 0;
@@ -2792,9 +2954,11 @@ h2 {
   }
   .page-header__wrapper {
     width: 1920px;
-    padding-top: 10px;
     margin-bottom: -30px;
-    background: url("../images/head-back-desk.svg") 0px 0 no-repeat, white;
+    background: url("../images/head-back-desk.svg") -1px -1px no-repeat, white;
+  }
+  .page-header {
+    min-height: 79px;
   }
 }
 @media (max-width: 1024px) {
