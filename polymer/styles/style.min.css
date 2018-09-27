@@ -2903,7 +2903,7 @@ h2 {
   }
   .page-header__wrapper {
     width: 1920px;
-    margin-bottom: -30px;
+    height: 79px;
     background: url("../images/kheder.svg") 16px 0 no-repeat, white;
   }
   .page-header {

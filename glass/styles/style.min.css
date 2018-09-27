@@ -2953,8 +2953,8 @@ h2 {
     padding-left: 200px;
   }
   .page-header__wrapper {
+    height: 79px;
     width: 1920px;
-    margin-bottom: -30px;
     background: url("../images/head-back-desk.svg") -1px -1px no-repeat, white;
   }
   .page-header {
