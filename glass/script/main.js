@@ -166,5 +166,148 @@
       console.log(examplesBox);
       examplesBox.classList.toggle("open");
       examplesButton.classList.toggle("open-btn");
-    })
+    });
+
+    var imagesArray = [
+      "./images/work-desktop.png",
+      "./images/work-desktop-offroad.png",
+      "./images/work-desktop-prem.png"];
+      var imagesTabletArray = [
+        "./images/work-tablet.png",
+        "./images/work-tablet-offroad.png",
+        "./images/work-tablet-prem.png"];
+        var imagesMobileArray = [
+          "./images/work-mobile.jpg",
+          "./images/work-mobile-offroad.png",
+          "./images/work-mobile-prem.png"];
+          var pricesArray = [
+            '40 800', '37 600', '48 800'
+          ];
+
+        var tabs = document.querySelector('.tabs__item');
+    var workButtons = Array.prototype.slice.call(tabs.querySelectorAll(".work__options-item"));
+    var workWrapper = document.querySelector(".work__inner");
+    var priceValue = document.querySelector('.tabs__inner-price-value');
+    function setDesktopBackground(workButton, index) {
+      return function (evt) {
+        evt.preventDefault();
+        workButton.classList.remove('work__options-item--active');
+        workButton.removeEventListener('click', setLaptopBackground);
+        workButton.removeEventListener('click', setTabletBackground);
+        workButton.removeEventListener('click', setMobileBackground);
+        workButtons.forEach(item => {
+          item.classList.remove('work__options-item--active');
+        });
+        workWrapper.style.background = 'url(' + imagesArray[index] + ') 845px 310px no-repeat,' + '  url("../images/work-back-desk.svg") 0px -72px no-repeat';
+        workButton.classList.add('work__options-item--active');
+        priceValue.textContent = pricesArray[index];
+      };
+    }
+    function setLaptopBackground(workButton, index) {
+      return function (evt) {
+        evt.preventDefault();
+        workButton.removeEventListener('click', setDesktopBackground);
+        workButton.removeEventListener('click', setTabletBackground);
+        workButton.removeEventListener('click', setMobileBackground);
+        workButtons.forEach(item => {
+          item.classList.remove('work__options-item--active');
+        });
+        var position = '595px 310px';
+        if (index === 2) {
+          position = '650px 370px';
+        }
+        workWrapper.style.background = 'url(' + imagesArray[index] + ')' + position + ' no-repeat,' + ' url("../images/border-mini.svg") 180px 250px no-repeat, url("../images/work-back-laptop.svg") -320px -75px no-repeat';
+          workButton.classList.add('work__options-item--active');
+          priceValue.textContent = pricesArray[index];
+          };
+
+        }
+    function setTabletBackground(workButton, index) {
+      return function (evt) {
+        evt.preventDefault();
+        workButton.removeEventListener('click', setDesktopBackground);
+        workButton.removeEventListener('click', setLaptopBackground);
+        workButton.removeEventListener('click', setMobileBackground);
+        workButtons.forEach(item => {
+          item.classList.remove('work__options-item--active');
+        });
+        var position = '170px 480px';
+        if (index === 2) {
+          position = '240px 480px';
+        }
+        if (index === 1) {
+          position = '240px 480px';
+        }
+            workWrapper.style.background = 'url(' + imagesTabletArray[index] + ') no-repeat ' + position +',' + ' url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat';
+            workButton.classList.add('work__options-item--active');
+            priceValue.textContent = pricesArray[index];
+          };
+        }
+    function setMobileBackground(workButton, index) {
+      return function (evt) {
+        evt.preventDefault();
+        workButton.removeEventListener('click', setDesktopBackground);
+        workButton.removeEventListener('click', setTabletBackground);
+        workButton.removeEventListener('click', setLaptopBackground);
+        workButtons.forEach(item => {
+          item.classList.remove('work__options-item--active');
+        });
+            workWrapper.style.background = 'url("../images/work-back-mobile.svg") 0px 10px no-repeat, url(' + imagesMobileArray[index] + ') 0px 210px no-repeat';
+            workButton.classList.add('work__options-item--active');
+            priceValue.textContent = pricesArray[index];
+          };
+        }
+    function onStartCallbacks() {
+      priceValue.textContent = pricesArray[findIndex()];
+      if (document.body.clientWidth >= 1920) {
+        workWrapper.style.background = 'url(' + imagesArray[findIndex()] + ') 845px 310px no-repeat,' + '  url("../images/work-back-desk.svg") 0px -72px no-repeat';
+        workButtons.forEach((item, i) => {
+          item.addEventListener("click", setDesktopBackground(item, i));
+        });
+      }
+      else if (document.body.clientWidth < 1920 && document.body.clientWidth >= 1200) {
+        var position = '595px 310px';
+        if (findIndex() === 2) {
+          position = '650px 370px';
+        }
+        workWrapper.style.background = 'url(' + imagesArray[findIndex()] + ')' + position + ' no-repeat,' + ' url("../images/border-mini.svg") 180px 250px no-repeat, url("../images/work-back-laptop.svg") -320px -75px no-repeat';
+        workButtons.forEach((item, i) => {
+          item.addEventListener("click", setLaptopBackground(item, i));
+        });
+      }
+      else if (document.body.clientWidth < 1200 && document.body.clientWidth >= 768) {
+        var position = '170px 480px';
+        if (findIndex() === 2) {
+          position = '240px 480px';
+        }
+        if (findIndex() === 1) {
+          position = '240px 480px';
+        }
+        workWrapper.style.background = 'url(' + imagesTabletArray[findIndex()] + ') no-repeat ' + position +',' + ' url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat';
+        workButtons.forEach((item, i) => {
+          item.addEventListener("click", setTabletBackground(item, i));
+        });
+      }
+      else {
+        workWrapper.style.background = 'url("../images/work-back-mobile.svg") 0px 10px no-repeat, url(' + imagesMobileArray[findIndex()] + ') 0px 210px no-repeat';
+        workButtons.forEach((item, i) => {
+          item.addEventListener("click", setMobileBackground(item, i));
+        });
+      }
+    }
+    window.onresize = function () {
+      onStartCallbacks();
+    };
+
+    function findIndex() {
+      var ind = 0;
+      workButtons.forEach((item, i) => {
+        if (item.classList.contains('work__options-item--active')) {
+          ind = i;
+        }
+      });
+      return ind;
+    }
+
+    onStartCallbacks();
 })();

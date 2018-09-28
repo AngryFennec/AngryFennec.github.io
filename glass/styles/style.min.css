@@ -2254,7 +2254,7 @@ h2 {
   .head__back {
     width: 768px;
     margin: 0 auto;
-    background: url("../images/head-desk.png") 35px 430px no-repeat, url("../images/kheder-tabletka.svg") 0px 52px no-repeat;
+    background: url("../images/head-desk.png") 80px 430px no-repeat, url("../images/kheder-tabletka.svg") 0px 52px no-repeat;
   }
   .head__header {
     margin-bottom: 0;
