@@ -579,6 +579,7 @@ h2 {
   color: #ffffff;
   border: none;
   background-color: #0047FF;
+  white-space: nowrap;
 }
 .claim {
   background-color: rgba(5, 19, 53, 0.89);
@@ -667,6 +668,14 @@ h2 {
 .work {
   min-height: 1015px;
 }
+.work .aside {
+  position: absolute;
+  left: 117px;
+  top: 350px;
+  display: block;
+  padding-left: 0;
+  padding-top: 0;
+}
 .work .tabs {
   margin-left: 0;
   padding-left: 0;
@@ -677,7 +686,6 @@ h2 {
   top: 0;
   left: -360px;
   height: 100%;
-  background: url("../images/work-desktop.png") no-repeat 830px 220px, url("../images/klass_avto.svg") 0px -247px no-repeat;
 }
 .work__wrapper {
   position: relative;
@@ -685,15 +693,16 @@ h2 {
   margin-bottom: 60px;
   margin: 0 auto;
   min-height: 1027px;
-  width: 1200px;
-  padding-left: 35px;
   display: flex;
   z-index: 5;
-  background: url("../images/work-desktop.png") no-repeat 610px 310px, url("../images/border-mini.svg") 180px 320px no-repeat, url("../images/klass_avto-1200.svg") -359px -237px no-repeat;
+  width: 1920px;
+  background: url("../images/klass_avto.svg") -15px -267px no-repeat;
+  padding-left: 360px;
+  padding-right: 360px;
 }
 .work__content {
   width: 1270px;
-  padding-top: 72px;
+  padding-top: 52px;
   margin-left: -30px;
 }
 .work__header {
@@ -1003,10 +1012,25 @@ h2 {
 .tabs__item {
   width: 1260px;
   min-height: 693px;
+  position: relative;
   display: flex;
   -moz-flex-direction: column;
   flex-direction: column;
   padding-top: 27px;
+}
+.tabs__img {
+  position: absolute;
+  top: 20px;
+  right: -400px;
+}
+.tabs__img--1 {
+  right: -500px;
+}
+.tabs__img--6 {
+  right: -500px;
+}
+.tabs__img--3 {
+  right: -700px;
 }
 .tabs__item-header {
   margin-left: 37px;
@@ -2098,11 +2122,18 @@ h2 {
     margin-top: -90px;
     min-height: 1000px;
   }
+  .work .aside {
+    display: none;
+  }
   .work__wrapper {
     width: 768px;
+    margin: 0 auto;
     margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 40px;
+    padding-left: 35px;
     MIN-HEIGHT: 1000px;
-    background: url("../images/work-tablet.png") no-repeat 100px 430px, url("../images/klass_avto_tabletka.svg") -3px -131px no-repeat;
+    background: url("../images/klass_avto_tabletka.svg") -3px -131px no-repeat;
   }
   .work__content {
     width: 768px;
@@ -2146,6 +2177,16 @@ h2 {
     width: 768px;
     border: none;
     padding-top: 0;
+  }
+  .tabs__img {
+    top: 190px;
+    right: -100px;
+  }
+  .tabs__img--6 {
+    right: -100px;
+  }
+  .tabs__img--3 {
+    right: -100px;
   }
   .tabs__item-header {
     margin-bottom: 0;
@@ -2652,9 +2693,25 @@ h2 {
     min-height: 1027px;
   }
   .work .aside {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
     padding-top: 360px;
     padding-left: 0;
     width: 150px;
+  }
+  .work__wrapper {
+    position: relative;
+    margin-top: 68px;
+    margin-bottom: 60px;
+    margin: 0 auto;
+    min-height: 1027px;
+    width: 1200px;
+    padding-left: 35px;
+    display: flex;
+    z-index: 5;
+    background: url("../images/border-mini.svg") 180px 320px no-repeat, url("../images/klass_avto-1200.svg") -359px -237px no-repeat;
   }
   .work__content {
     width: 1000px;
@@ -2684,6 +2741,19 @@ h2 {
   }
   .work__options-item:nth-child(6) {
     max-width: 150px;
+  }
+  .tabs__img {
+    top: 120px;
+    right: -340px;
+  }
+  .tabs__img--1 {
+    right: -390px;
+  }
+  .tabs__img--6 {
+    right: -390px;
+  }
+  .tabs__img--3 {
+    right: -690px;
   }
   .tabs__item-header {
     margin-left: 77px;
@@ -2776,12 +2846,6 @@ h2 {
     display: block;
     padding-left: 0;
     padding-top: 0;
-  }
-  .work__wrapper {
-    width: 1920px;
-    background: url("../images/work-desktop.png") no-repeat 830px 220px, url("../images/klass_avto.svg") 0px -247px no-repeat;
-    padding-left: 360px;
-    padding-right: 360px;
   }
   .review {
     width: 1920px;
@@ -3098,13 +3162,17 @@ h2 {
   .work {
     min-height: 531px;
   }
+  .work .aside {
+    display: none;
+  }
   .work__wrapper {
     width: 320px;
+    margin: 0 auto;
     margin-bottom: 0;
     margin-top: 0;
     min-height: 531px;
     padding-left: 0;
-    background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url("../images/work-mobile.jpg") 0px 70px no-repeat;
+    background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat;
   }
   .work__content {
     margin: 0 auto;
@@ -3155,6 +3223,17 @@ h2 {
     border: none;
     padding-top: 0;
   }
+  .tabs__img {
+    top: -190px;
+    z-index: -1;
+    left: 0;
+  }
+  .tabs__img--6 {
+    left: 0;
+  }
+  .tabs__img--3 {
+    left: 0;
+  }
   .tabs__item-header {
     margin-bottom: 0;
     display: block;
@@ -3183,6 +3262,7 @@ h2 {
   }
   .tabs__inner-button {
     margin-left: 24px;
+    margin-bottom: 20px;
   }
   .features {
     margin-top: -55px;
