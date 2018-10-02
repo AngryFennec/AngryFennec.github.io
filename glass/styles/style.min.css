@@ -872,7 +872,7 @@ h2 {
 .addon__list {
   margin-top: 5px;
   padding-top: 0;
-  z-index: 10;
+  z-index: 2;
   margin-bottom: 45px;
 }
 .addon__list .work__options-item {
