@@ -829,7 +829,7 @@ h2 {
   min-height: 995px;
   width: 1920px;
   display: flex;
-  background: url("../images/work-desk.png") no-repeat 845px 310px, url("../images/work-back-desk.svg") 0px -72px no-repeat;
+  background: url("../images/work-back-desk.svg") 0px -72px no-repeat;
   z-index: 5;
 }
 .work__content {
@@ -872,6 +872,7 @@ h2 {
 .addon__list {
   margin-top: 5px;
   padding-top: 0;
+  z-index: 10;
   margin-bottom: 45px;
 }
 .addon__list .work__options-item {
@@ -1148,6 +1149,9 @@ h2 {
 .footer__worktime {
   margin: 5px 0 21px 24px;
 }
+.tabs__wrapper {
+  position: relative;
+}
 .tabs__item {
   width: 1260px;
   min-height: 693px;
@@ -1163,6 +1167,17 @@ h2 {
   font-size: 18px;
   color: #000000;
   margin-bottom: 16px;
+}
+.tabs__img {
+  position: absolute;
+  top: 100px;
+  right: -370px;
+}
+.tabs__img--6 {
+  right: -440px;
+}
+.tabs__img--3 {
+  right: -730px;
 }
 .tabs__inner-list {
   margin: 0;
@@ -1446,13 +1461,18 @@ h2 {
 .head {
   min-height: 1100px;
 }
+.head__img {
+  position: absolute;
+  top: 40px;
+  right: -200px;
+}
 .head__back {
   z-index: 8;
   min-height: 1100px;
   position: relative;
   width: 1920px;
   margin: 0 auto;
-  background: url("../images/head-desk.png") 670px 320px no-repeat, url("../images/head-back-desk.svg") 0px -25px no-repeat;
+  background: url("../images/head-back-desk.svg") 0px -25px no-repeat;
 }
 .head__header {
   font-family: 'Montserrat bold', 'Arial', sans-serif;
@@ -1491,6 +1511,7 @@ h2 {
   line-height: 35px;
   font-size: 20px;
   color: #000000;
+  position: relative;
 }
 .head__advantage {
   margin-bottom: 0;
@@ -1532,7 +1553,7 @@ h2 {
   border: 0.5px solid #0047FF;
 }
 .head__button {
-  margin-top: 0;
+  margin-top: 0px;
   margin-left: 0px;
 }
 .feadback,
@@ -2103,7 +2124,7 @@ h2 {
     width: 768px;
     margin-bottom: 0;
     margin-top: -5px;
-    background: url("../images/work-tablet.png") no-repeat 120px 545px, url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat;
+    background: url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat;
   }
   .work__content {
     width: 768px;
@@ -2156,6 +2177,18 @@ h2 {
   .tabs__item-header {
     margin-bottom: 0;
     display: none;
+  }
+  .tabs__img {
+    top: 300px;
+    right: -80px;
+  }
+  .tabs__img--6 {
+    right: -100px;
+    top: 290px;
+  }
+  .tabs__img--3 {
+    top: 280px;
+    right: -80px;
   }
   .tabs__inner-item {
     margin-left: 30px;
@@ -2251,10 +2284,14 @@ h2 {
   .head {
     min-height: 700px;
   }
+  .head__img {
+    top: 220px;
+    right: 0;
+  }
   .head__back {
     width: 768px;
     margin: 0 auto;
-    background: url("../images/head-desk.png") 80px 430px no-repeat, url("../images/kheder-tabletka.svg") 0px 52px no-repeat;
+    background: url("../images/kheder-tabletka.svg") 0px 52px no-repeat;
   }
   .head__header {
     margin-bottom: 0;
@@ -2662,7 +2699,8 @@ h2 {
   }
   .work__inner {
     width: 1200px;
-    background: url("../images/work-desk.png") no-repeat 595px 310px, url("../images/border-mini.svg") 180px 250px no-repeat, url("../images/work-back-laptop.svg") -320px -75px no-repeat;
+    min-height: 1005px;
+    background: url("../images/border-mini.svg") 180px 250px no-repeat, url("../images/work-back-laptop.svg") -325px -75px no-repeat;
   }
   .work__content {
     width: 1000px;
@@ -2679,6 +2717,18 @@ h2 {
   }
   .tabs__item {
     width: 1000px;
+  }
+  .tabs__img {
+    top: 60px;
+    right: -510px;
+  }
+  .tabs__img--6 {
+    top: 50px;
+    right: -600px;
+  }
+  .tabs__img--3 {
+    right: -950px;
+    top: 20px;
   }
   .features {
     margin-top: 0;
@@ -2721,10 +2771,14 @@ h2 {
   .head .aside {
     width: 150px;
   }
+  .head__img {
+    top: 70px;
+    right: -480px;
+  }
   .head__back {
     width: 1200px;
     min-height: 900px;
-    background: url("../images/head-desk.png") 255px 370px no-repeat, url("../images/kheder-tabletka.svg") 430px 52px no-repeat;
+    background: url("../images/kheder-tabletka.svg") 430px 52px no-repeat;
   }
   .head__header {
     margin-top: 0;
@@ -3051,7 +3105,7 @@ h2 {
     margin-bottom: 0;
     margin-top: 0;
     min-height: 550px;
-    background: url("../images/work-back-mobile.svg") 0px 10px no-repeat, url("../images/work-mobile.jpg") 0px 210px no-repeat;
+    background: url("../images/work-back-mobile.svg") 0px 10px no-repeat;
   }
   .work__content {
     width: 320px;
@@ -3132,6 +3186,17 @@ h2 {
     font-size: 13px;
     margin-left: 17px;
     margin-bottom: 5px;
+  }
+  .tabs__img {
+    top: 50px;
+    z-index: -1;
+    left: 0;
+  }
+  .tabs__img--6 {
+    left: 0;
+  }
+  .tabs__img--3 {
+    left: 0;
   }
   .tabs__inner-list {
     margin-bottom: 3px;
@@ -3266,6 +3331,10 @@ h2 {
     min-height: 450px;
     z-index: 6;
   }
+  .head__img {
+    top: 200px;
+    right: 45px;
+  }
   .head__back {
     width: 320px;
     min-height: 450px;
@@ -3297,7 +3366,7 @@ h2 {
     display: flex;
     -moz-flex-direction: column;
     flex-direction: column;
-    background: url("../images/head-mobile.png") 70px 170px no-repeat, url("../images/head-back-mobile.svg") 0px 145px no-repeat;
+    background: url("../images/head-back-mobile.svg") 0px 145px no-repeat;
   }
   .head__content {
     width: 320px;
