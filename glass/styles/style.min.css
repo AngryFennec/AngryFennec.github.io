@@ -684,8 +684,8 @@ h2 {
   -ms-grid-row-align: center;
       align-self: center;
   background: transparent;
+  position: relative;
   border: none;
-  margin: 0 auto;
   margin-top: 15px;
 }
 .examples__button span {
@@ -1804,7 +1804,6 @@ h2 {
   }
   .examples__button {
     order: 10;
-    margin: 0 auto;
     margin-top: 25px;
   }
   .examples__description {
@@ -2203,7 +2202,7 @@ h2 {
     margin-left: 20px;
   }
   .features {
-    min-height: 800px;
+    min-height: 700px;
     margin-top: -210px;
   }
   .features__inner {
@@ -2211,7 +2210,7 @@ h2 {
     padding-top: 0;
     margin-bottom: 0;
     margin-top: 0;
-    padding-bottom: 70px;
+    padding-bottom: 0px;
     background: url("../images/features_tabletka.svg") 0px -118px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
   }
   .features__content {
@@ -2285,7 +2284,7 @@ h2 {
     min-height: 700px;
   }
   .head__img {
-    top: 220px;
+    top: 140px;
     right: 0;
   }
   .head__back {
@@ -2697,10 +2696,13 @@ h2 {
     padding-left: 35px;
     width: 270px;
   }
+  .aside__list-item {
+    width: 165px;
+  }
   .work__inner {
     width: 1200px;
     min-height: 1005px;
-    background: url("../images/border-mini.svg") 180px 250px no-repeat, url("../images/work-back-laptop.svg") -325px -75px no-repeat;
+    background: url("../images/border-mini.svg") 210px 250px no-repeat, url("../images/work-back-laptop.svg") -325px -75px no-repeat;
   }
   .work__content {
     width: 1000px;
@@ -2778,7 +2780,7 @@ h2 {
   .head__back {
     width: 1200px;
     min-height: 900px;
-    background: url("../images/kheder-tabletka.svg") 430px 52px no-repeat;
+    background: url("../images/head-back-desk.svg") -165px 135px no-repeat;
   }
   .head__header {
     margin-top: 0;
@@ -3230,11 +3232,13 @@ h2 {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 10px;
+    min-height: 800px;
     background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-tablet.png") 0px 140px no-repeat;
   }
   .features__content {
     width: 320px;
     padding-top: 0;
+    min-height: 750px;
   }
   .features__header {
     padding-top: 45px;
