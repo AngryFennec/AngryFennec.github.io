@@ -1227,7 +1227,7 @@ h2 {
   min-height: 860px;
   width: 1920px;
   display: flex;
-  background: url("../images/features.svg") 20px -60px no-repeat, linear-gradient(143.64deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 270px 100px no-repeat;
+  background: url("../images/features.svg") -4px -3px no-repeat, linear-gradient(143.64deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") 270px 100px no-repeat;
 }
 .features__inner .aside {
   padding-top: 260px;
@@ -2204,21 +2204,22 @@ h2 {
     margin-left: 20px;
   }
   .features {
-    min-height: 700px;
-    margin-top: -220px;
+    min-height: 793px;
+    margin-top: -230px;
   }
   .features__inner {
     width: 768px;
     padding-top: 0;
     margin-bottom: 0;
     margin-top: 0;
-    min-height: 800px;
+    min-height: 793px;
     padding-bottom: 0px;
-    background: url("../images/features_tabletka.svg") 0px -110px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
+    background: url("../images/features_tabletka.svg") 0px -40px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-mobile.png") 0px 110px no-repeat;
   }
   .features__content {
     min-height: 800px;
     width: 768px;
+    min-height: 793px;
   }
   .features__header {
     padding-top: 35px;
@@ -2749,7 +2750,7 @@ h2 {
   }
   .features__inner {
     width: 1200px;
-    background: url("../images/features_tabletka.svg") 0px -718px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") -200px 150px no-repeat;
+    background: url("../images/features_tabletka.svg") 0px -718px no-repeat, linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%), url("../images/features-desk.png") -200px 151px no-repeat;
   }
   .features__content {
     width: 1000px;
