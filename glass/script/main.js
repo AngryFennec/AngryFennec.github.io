@@ -238,18 +238,20 @@
           "./images/work-mobile-offroad.png",
           "./images/work-mobile-prem.png"];
           var pricesArray = [
-            '40 800', '40 800', '37 600'
+            ['40 800', '40 900', '37 600'], ['10 000', '15 000', '20 000'], ['12 800', '16 800', '21 600'], ['13 800', '17 800', '22 600']
           ];
 
 
     var workWrapper = document.querySelector(".work__inner");
     var tabsWrapper = document.querySelector(".tabs__wrapper");
+    var glassList = document.querySelector(".glass__list");
       var workButtons = Array.prototype.slice.call(tabsWrapper.querySelectorAll(".work__options-item"));
+      var glassButtons = Array.prototype.slice.call(glassList.querySelectorAll(".work__options-item"));
     var workImgs = document.querySelectorAll(".tabs__img");
-    console.log(workImgs);
     var priceValue = document.querySelector('.tabs__inner-price-value');
+    var glassTitle = document.querySelector('.glass__title');
     function onStartCallbacks() {
-      priceValue.textContent = pricesArray[findIndex()];
+      priceValue.textContent = pricesArray[findGlassIndex()][findIndex()];
       for (var i = 0; i < workButtons.length; i++) {
         var item = workButtons[i];
         item.addEventListener("click", setItemImg(item, i));
@@ -263,12 +265,32 @@
         workImgs[findIndex()].classList.remove("visually-hidden");
       }
       workButtons[findIndex()].classList.add('work__options-item--active');
+
+    for (var i = 0; i < glassButtons.length; i++) {
+      var item = glassButtons[i];
+      item.addEventListener("click", setItemPrice(item, i));
+      item.classList.remove('work__options-item--active');
     }
+    glassButtons[findGlassIndex()].classList.add('work__options-item--active');
+    var title = glassButtons[findGlassIndex()].textContent;
+    glassTitle.textContent = title.substring(0, title.indexOf(' комплекс'));
+  }
 
     function findIndex() {
       var ind = 0;
       for (var i = 0; i < workButtons.length; i++) {
         var item = workButtons[i];
+        if (item.classList.contains('work__options-item--active')) {
+          ind = i;
+        }
+      }
+      return ind;
+    }
+
+    function findGlassIndex() {
+      var ind = 0;
+      for (var i = 0; i < glassButtons.length; i++) {
+        var item = glassButtons[i];
         if (item.classList.contains('work__options-item--active')) {
           ind = i;
         }
@@ -290,7 +312,23 @@
           workImgs[index].classList.remove("visually-hidden");
         }
         workButton.classList.add('work__options-item--active');
-        priceValue.textContent = pricesArray[index];
+        priceValue.textContent = pricesArray[findGlassIndex()][index];
+        var title = glassButtons[findGlassIndex()].textContent;
+        glassTitle.textContent = title.substring(0, title.indexOf(' комплекс'));
+      };
+    }
+
+    function setItemPrice(glassButton, index) {
+      return function (evt) {
+        evt.preventDefault();
+        for (var i = 0; i < glassButtons.length; i++) {
+          var item = glassButtons[i];
+            item.classList.remove('work__options-item--active');
+        }
+        glassButton.classList.add('work__options-item--active');
+        priceValue.textContent = pricesArray[index][findIndex()];
+        var title = glassButtons[index].textContent;
+        glassTitle.textContent = title.substring(0, title.indexOf(' комплекс'))
       };
     }
     onStartCallbacks();
