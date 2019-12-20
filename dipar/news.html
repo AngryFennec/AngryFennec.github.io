@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Дипар</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page-body">
+  <main class="page-news">
+    <article class="header">
+      <div class="header__wrapper wrapper">
+                <div class="header__container">
+        <nav class="nav">
+          <a class="nav__picture" href="index.html">
+            <picture>
+              <img width="180" height="51" src="img/header-logo.png" srcset="img/header-logo@2x.png 2x" alt="Лого">
+            </picture>
+          </a>
+          <input id="menu-toggle" type="checkbox">
+
+          <label class='menu-button-container' for="menu-toggle">&#9776;</label>
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог продукции</a></li>
+            <li class="menu__item"><a class="menu__link anchor" href="#service">Услуги</a></li>
+            <li class="menu__item menu__item--active"><a class="menu__link" href="news.html">Новости и статьи</a></li>
+            <li class="menu__item"><a class="menu__link anchor" href="#about">О компании</a></li>
+            <li class="menu__item"><a class="menu__link anchor" href="#footer">Контакты</a></li>
+          </ul>
+
+          <div class="nav__contacts">
+            <a class="nav__phone" href="tel:+78005553555">8 800 555 35 55</a>
+            <a class="nav__with-us" href="#"><span>Связаться с нами</span></a>
+          </div>
+
+        </nav>
+        <section class="header__breadcrumbs breadcrumbs">
+          <h2 class="visually-hidden">Хлебные крошки</h2>
+          <a class="breadcrumbs__item breadcrumbs__item--home" href="index.html"><span>на главную</span></a>
+          <span class="breadcrumbs__divider">/</span>
+          <a class="breadcrumbs__item" href="#">Новости</a>
+        </section>
+        <h1 class="header__page-title">Новости</h1>
+
+      </div>
+</div>
+    </article>
+    <section class="tabs">
+      <h2 class="visually-hidden">Табы</h2>
+      <div class="tabs__wrapper wrapper">
+        <ul class="tabs__list">
+          <li class="tabs__item tabs__item--active"><a>Статьи</a></li>
+          <li class="tabs__item"><a>Наш блог</a></li>
+          <li class="tabs__item"><a>Новости</a></li>
+        </ul>
+      </div>
+    </section>
+    <article class="news">
+      <h2 class="visually-hidden">Новости</h2>
+      <div class="news__wrapper wrapper">
+        <ul class="news__list news__list--active">
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-1.png" srcset="img/news-1@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-2.png" srcset="img/news-2@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-3.png" srcset="img/news-3@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-4.png" srcset="img/news-4@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-5.png" srcset="img/news-5@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Минобороны рассказали о характеристиках сбитых около Хмеймима дронов</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-6.png" srcset="img/news-6@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-7.png" srcset="img/news-7@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+
+
+
+
+
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-1.png" srcset="img/news-1@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-2.png" srcset="img/news-2@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-3.png" srcset="img/news-3@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-4.png" srcset="img/news-4@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-5.png" srcset="img/news-5@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Минобороны рассказали о характеристиках сбитых около Хмеймима дронов</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-6.png" srcset="img/news-6@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-7.png" srcset="img/news-7@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-1.png" srcset="img/news-1@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-2.png" srcset="img/news-2@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-3.png" srcset="img/news-3@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-4.png" srcset="img/news-4@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-5.png" srcset="img/news-5@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Минобороны рассказали о характеристиках сбитых около Хмеймима дронов</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-6.png" srcset="img/news-6@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-7.png" srcset="img/news-7@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-1.png" srcset="img/news-1@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-2.png" srcset="img/news-2@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-3.png" srcset="img/news-3@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-4.png" srcset="img/news-4@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-5.png" srcset="img/news-5@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Минобороны рассказали о характеристиках сбитых около Хмеймима дронов</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-6.png" srcset="img/news-6@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-7.png" srcset="img/news-7@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+
+        <ul class="news__list">
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-1.png" srcset="img/news-1@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-2.png" srcset="img/news-2@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-3.png" srcset="img/news-3@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-4.png" srcset="img/news-4@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-5.png" srcset="img/news-5@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Минобороны рассказали о характеристиках сбитых около Хмеймима дронов</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-6.png" srcset="img/news-6@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-7.png" srcset="img/news-7@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+
+        <ul class="news__list">
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-1.png" srcset="img/news-1@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-2.png" srcset="img/news-2@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-3.png" srcset="img/news-3@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-4.png" srcset="img/news-4@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Песков пояснил слова о расстреле без суда в США за брошенный стаканчик</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-5.png" srcset="img/news-5@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Минобороны рассказали о характеристиках сбитых около Хмеймима дронов</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-6.png" srcset="img/news-6@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">Появилось видео поездки в дизельном поезде по Крымскому мосту</b>
+              </div>
+            </a>
+          </li>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <picture>
+                <img width="282" height="200" src="img/news-7.png" srcset="img/news-7@2x.png 2x" alt="Картинка к новости">
+              </picture>
+              <div class="news__text">
+                <p class="news__date">27 июня 2017</p>
+                <b class="news__title">В Кирове предотвратили массовое убийство в школе</b>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="news__btn">Еще</button>
+      </div>
+    </article>
+
+    <section class="banner">
+      <h2 class="visually-hidden">Баннер</h2>
+      <div class="banner__wrapper wrapper wrapper--no-padding">
+        <p class="banner__text">Мы не продаём — </p>
+        <picture class="banner__picture">
+          <img width="793" height="180" src="img/banner-text.png" srcset="img/banner-text@2x.png 2x" alt="Мы решаем задачи бизнеса">
+        </picture>
+      </div>
+    </section>
+
+    <section class="source">
+      <a id="source"></a>
+      <h2 class="visually-hidden">Ссылки</h2>
+      <div class="source__wrapper wrapper">
+        <ul class="source__list">
+          <li class="source__list-item">
+            <ul class="source__sublist">
+              <li class="source__sublist-title source__sublist-item">
+                <h3>Металлорежущий инструмент</h3>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Центровочные и спиральные кольца</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Концевые фрезы</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Осевой инструмент</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Резьбонарезной инструмент</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Зенковки, церковки</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Развертки</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Разный инструмент и оснастка</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Токарная обработка</a>
+              </li>
+            </ul>
+          </li>
+          <li class="source__list-item">
+            <ul class="source__sublist">
+              <li class="source__sublist-title source__sublist-item">
+                <h3>Ручной инструмент</h3>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Центровочные и спиральные кольца</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Концевые фрезы</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Осевой инструмент</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Резьбонарезной инструмент</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Зенковки, церковки</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Развертки</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Разный инструмент и оснастка</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Токарная обработка</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Разный инструмент и оснастка</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Токарная обработка</a>
+              </li>
+            </ul>
+          </li>
+          <li class="source__list-item">
+            <ul class="source__sublist">
+              <li class="source__sublist-title source__sublist-item">
+                <h3>Абразивный инструмент</h3>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Центровочные и спиральные кольца</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Концевые фрезы</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Осевой инструмент</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Резьбонарезной инструмент</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Зенковки, церковки</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Развертки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="source__list-item">
+            <ul class="source__sublist">
+              <li class="source__sublist-title source__sublist-item source__sublist-title--one">
+                <h3>Услуги</h3>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Технологический аудит</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Написание технологии и управляющих программ для металлообработки</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Проектировка и изготовление инструмента под заказ</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Испытания и подбор ручного инструмента для металлообработки, на базе нашей лаборатории</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Пусконаладочные работы пневмоинструмента</a>
+              </li>
+              <li class="source__sublist-item">
+                <a class="source__link" href="#">Гарантийное и постгарантийное обслуживание электро и пневмоинструмента</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer">
+      <a id="footer"></a>
+      <div class="footer__wrapper wrapper">
+        <div class="footer__logo-container">
+          <picture class="footer__picture">
+            <img width="180" height="51" src="img/footer-logo.png" srcset="img/footer-logo@2x.png 2x" alt="Лого">
+          </picture>
+          <p class="footer__who">© 2007–2019 ООО "ДИПАР" <br> Флобер, описывая нервный припадок Эммы Бовари, переживает его сам.</p>
+        </div>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a class="footer__link anchor" href="index.html#main">Главная</a></li>
+          <li class="footer__list-item"><a class="footer__link anchor" href="#service">Услуги</a></li>
+          <li class="footer__list-item"><a class="footer__link anchor" href="#about">О компании</a></li>
+          <li class="footer__list-item"><a class="footer__linkr" href="news.html">Новости и статьи</a></li>
+          <li class="footer__list-item"><a class="footer__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="footer__list-item"><a class="footer__link anchor" href="#footer">Контакты</a></li>
+        </ul>
+        <div class="footer__contacts">
+          <a class="footer__phone" href="tel:+78005553555">8 800 555 35 55</a>
+          <a class="footer__with-us" href="#"><span>Связаться с нами</span></a>
+          <p class="footer__copyright">Сайт разработан:</p>
+          <a class="footer__developer" href="https://s-pushkin.ru/"><span>Стартап студия Pushkin</span></a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

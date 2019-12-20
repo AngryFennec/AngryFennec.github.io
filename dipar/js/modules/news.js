@@ -1,45 +1,3 @@
-/**
- * подключение js-модулей
- * //= modules/file.js
- */
-
-
-'use strict';
-
-(function () {
-  var serviceItems = Array.from(document.querySelectorAll('.service__item'));
-  serviceItems.forEach(function(item, i) {
-    item.addEventListener('click', function (event) {
-      event.preventDefault();
-      if (!item.classList.contains('service__item--active')) {
-        serviceItems.forEach(function(item) {
-          if (item.classList.contains('service__item--active')) {
-            item.classList.remove('service__item--active');
-          }
-        });
-        item.classList.add('service__item--active');
-      }
-    });
-  });
-
-})();
-'use strict';
-
-(function() {
-  var anchors = Array.from(document.querySelectorAll('.anchor'));
-  anchors.forEach(function(item) {
-    item.addEventListener('click', function(e) {
-      e.preventDefault();
-      const blockID = item.getAttribute('href').substr(1);
-      const block = document.getElementById(blockID);
-      block.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  });
-
-})();
 'use strict';
 
 (function() {
@@ -122,43 +80,5 @@ if (tabs) {
       });
     });
   });*/
-
-})();
-'use strict';
-
-(function() {
-var pricesSwiper;
-var pricesSelector = document.querySelectorAll('.prices__swiper');
-if (pricesSelector) {
-
-    // function initSwiper() {
-    //     console.log('12414125412512512');
-    //     if(document.body.clientWidth <= 1240) {
-            pricesSwiper = new Swiper('.prices__swiper', {
-                 slidesPerView: 'auto',
-                 spaceBetween: 9,
-                // centeredSlides: true,
-                  navigation: {
-                    nextEl: '.prices__next-button',
-                    prevEl: '.prices__prev-button',
-                  },
-
-            });
-          }
-
-//             return pricesSwiper;
-//         } else {
-
-//             pricesSwiper = undefined;
-//             return pricesSwiper;
-//         }
-
-//     }
-
-//     initSwiper();
-
-//     window.addEventListener('resize', function() {
-//         setTimeout(initSwiper, 500)
-//     })
 
 })();
