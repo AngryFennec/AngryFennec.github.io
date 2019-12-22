@@ -30,7 +30,7 @@
             <li class="menu__item"><a class="menu__link anchor" href="#service">Услуги</a></li>
             <li class="menu__item"><a class="menu__link" href="news.html">Новости и статьи</a></li>
             <li class="menu__item"><a class="menu__link anchor" href="#about">О компании</a></li>
-            <li class="menu__item"><a class="menu__link anchor" href="#footer">Контакты</a></li>
+            <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
           </ul>
 
           <div class="nav__contacts">
@@ -287,12 +287,12 @@
           <p class="footer__who">© 2007–2019 ООО "ДИПАР" <br> Флобер, описывая нервный припадок Эммы Бовари, переживает его сам.</p>
         </div>
         <ul class="footer__list">
-          <li class="footer__list-item"><a class="footer__link anchor" href="index.html#main">Главная</a></li>
+          <li class="footer__list-item"><a class="footer__link" href="index.html">Главная</a></li>
           <li class="footer__list-item"><a class="footer__link anchor" href="#service">Услуги</a></li>
           <li class="footer__list-item"><a class="footer__link anchor" href="#about">О компании</a></li>
-          <li class="footer__list-item"><a class="footer__linkr" href="news.html">Новости и статьи</a></li>
+          <li class="footer__list-item"><a class="footer__link" href="news.html">Новости и статьи</a></li>
           <li class="footer__list-item"><a class="footer__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="footer__list-item"><a class="footer__link anchor" href="#footer">Контакты</a></li>
+          <li class="footer__list-item"><a class="footer__link" href="contacts.html">Контакты</a></li>
         </ul>
         <div class="footer__contacts">
           <a class="footer__phone" href="tel:+78005553555">8 800 555 35 55</a>
@@ -303,7 +303,32 @@
       </div>
     </footer>
 
+    <div class="popup" style="display: none">
+      <div class="popup__window feadback">
+        <div class="feadback__info">
+          <h2 class="feadback__title">Задайте вопрос нам - получите ответ за час</h2>
+          <ul class="feadback__contact-list">
+            <li class="feadback__contact">
+              <p>Позвонить</p>
+              <a href="tel:88005553555">8 800 555 35 55</a>
+            </li>
+            <li class="feadback__contact">
+              <p>Написать</p>
+              <a href="mailto:info@megaprom.ru">info@megaprom.ru</a>
+            </li>
+          </ul>
+        </div>
+        <form class="feadback__form" action="#">
+          <input class="feadback__field" type="text" placeholder="Ваше имя">
+          <input class="feadback__field" type="text" placeholder="Номер телефона">
+          <button class="btn btn--feadback">Отправить</button>
+        </form>
+        <p class="feadback__agree">Нажимая кнопку заказать, вы даете согласие на обработку <a href="#">персональных данных</a></p>
+        <button class="popup__btn" type="button"><img src="img/close-icon.svg" alt="кнопка закрытия"></button>
+      </div>
+    </div>
   </main>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 

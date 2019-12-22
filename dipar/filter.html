@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Дипар</title>
-
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -25,11 +24,11 @@
           <label class='menu-button-container' for="menu-toggle">&#9776;</label>
           <ul class="menu">
             <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
-            <li class="menu__item menu__item--active"><a class="menu__link" href="catalog.html">Каталог продукции</a></li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог продукции</a></li>
             <li class="menu__item"><a class="menu__link anchor" href="#service">Услуги</a></li>
             <li class="menu__item"><a class="menu__link" href="news.html">Новости и статьи</a></li>
             <li class="menu__item"><a class="menu__link anchor" href="#about">О компании</a></li>
-            <li class="menu__item"><a class="menu__link anchor" href="#footer">Контакты</a></li>
+            <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
           </ul>
 
           <div class="nav__contacts">
@@ -38,164 +37,393 @@
           </div>
 
         </nav>
-        <section class="header__breadcrumbs breadcrumbs">
-          <h2 class="visually-hidden">Хлебные крошки</h2>
-          <a class="breadcrumbs__item breadcrumbs__item--home" href="index.html"><span>на главную</span></a>
-          <span class="breadcrumbs__divider">/</span>
-          <a class="breadcrumbs__item" href="#">Каталог продукции</a>
-          <span class="breadcrumbs__divider">/</span>
-          <a class="breadcrumbs__item" href="#">Металлорежущий инструмент</a>
-          <span class="breadcrumbs__divider">/</span>
-          <a class="breadcrumbs__item" href="#">Развертки</a>
-          <span class="breadcrumbs__divider">/</span>
-          <a class="breadcrumbs__item" href="#">Каталог товаров</a>
-        </section>
-            <h1 class="header__page-title">Каталог товаров</h1>
-                </div>
+        <div class="header__container--filter">
+          <section class="header__breadcrumbs breadcrumbs">
+            <h2 class="visually-hidden">Хлебные крошки</h2>
+            <a class="breadcrumbs__item breadcrumbs__item--home" href="index.html"><span>на главную</span></a>
+            <span class="breadcrumbs__divider">/</span>
+            <a class="breadcrumbs__item" href="#">Каталог продукции</a>
+            <span class="breadcrumbs__divider">/</span>
+            <a class="breadcrumbs__item" href="#">Металлорежущий инструмент</a>
+            <span class="breadcrumbs__divider">/</span>
+            <a class="breadcrumbs__item" href="#">Развертки</a>
+            <span class="breadcrumbs__divider">/</span>
+            <a class="breadcrumbs__item" href="#">Каталог товаров</a>
+          </section>
+          <h1 class="header__page-title">Каталог товаров</h1>
+        </div>
+      </div>
     </article>
-    
+
     <section class="goods goods--filter">
-      <h2 class="goods__title">Каталог товаров</h2>
-      <div class="goods__wrapper">
+
+      <div class="goods__wrapper wrapper">
         <aside class="goods__filter filter">
-          <form class="filter__form" action="">
-            <div class="filter__maker-block">
+          <form class="filter__form" action="#" method="post">
+            <div class="filter__block">
               <p class="filter__block-title">Производитель:</p>
-              <input type="checkbox" name="maker[]" id="Elco" value="Elco"><label for="Elco">Elco</label>
-              <input type="checkbox" name="maker[]" id="Wedco" value="Wedco"><label for="Wedco">Wedco</label>
-              <input type="checkbox" name="maker[]" id="Magafor" value="Magafor"><label for="Magafor">Magafor</label>
-              <input type="checkbox" name="maker[]" id="Dipar" value="Dipar"><label for="Dipar">Дипар</label>
-              <input type="checkbox" name="maker[]" id="Tungaloy" value="Tungaloy"><label for="Tungaloy">Tungaloy</label>
+              <div class="filter__wrapper hidden">
+                <input class="visually-hidden" type="checkbox" name="maker[]" id="Elco" value="Elco">
+                <label class="filter__label" for="Elco">Elco</label>
+                <input class="visually-hidden" type="checkbox" name="maker[]" id="Wedco" value="Wedco">
+                <label class="filter__label" for="Wedco">Wedco</label>
+                <input class="visually-hidden" type="checkbox" name="maker[]" id="Magafor" value="Magafor">
+                <label class="filter__label" for="Magafor">Magafor</label>
+                <input class="visually-hidden" type="checkbox" name="maker[]" id="Dipar" value="Dipar">
+                <label class="filter__label" for="Dipar">Дипар</label>
+                <input class="visually-hidden" type="checkbox" name="maker[]" id="Tungaloy" value="Tungaloy">
+                <label class="filter__label" for="Tungaloy">Tungaloy</label>
+              </div>
             </div>
-            <div class="filter__cutter-block">
+            <div class="filter__block">
               <p class="filter__block-title">Тип фрезы:</p>
-              <input type="checkbox" name="cutter[]" id="end" value="end"><label for="end">Концевая</label>
-              <input type="checkbox" name="cutter[]" id="spherical" value="spherical"><label for="spherical">Сферическая</label>
-              <input type="checkbox" name="cutter[]" id="toroidal" value="toroidal"><label for="toroidal">Тороидальная</label>
+              <div class="filter__wrapper hidden">
+                <input class="visually-hidden" type="checkbox" name="cutter[]" id="end" value="end">
+                <label class="filter__label" for="end">Концевая</label>
+                <input class="visually-hidden" type="checkbox" name="cutter[]" id="spherical" value="spherical">
+                <label class="filter__label" for="spherical">Сферическая</label>
+                <input class="visually-hidden" type="checkbox" name="cutter[]" id="toroidal" value="toroidal">
+                <label class="filter__label" for="toroidal">Тороидальная</label>
+              </div>
             </div>
-            <div class="filter__cutter-block">
+            <div class="filter__block">
               <p class="filter__block-title">Вид обработки:</p>
-              <input type="radio" name="type" id="finish" value="finish"><label for="finish">Чистовая</label>
-              <input type="radio" name="type" id="draft" value="draft"><label for="draft">Черновая</label>
+              <div class="filter__wrapper filter__wrapper--row hidden">
+                <input class="visually-hidden" type="radio" name="type" id="finish" value="finish">
+                <label class="filter__label filter__label--radio" for="finish">Чистовая</label>
+                <input class="visually-hidden" type="radio" name="type" id="draft" value="draft">
+                <label class="filter__label filter__label--radio" for="draft">Черновая</label>
+              </div>
             </div>
+            <div class="filter__block">
+              <p class="filter__block-title">Материал изготовления:</p>
+              <div class="filter__wrapper filter__wrapper--row hidden">
+                <input class="visually-hidden" type="radio" name="material" id="HM" value="HM">
+                <label class="filter__label filter__label--radio" for="HM">HM</label>
+                <input class="visually-hidden" type="radio" name="material" id="HSS" value="HSS">
+                <label class="filter__label filter__label--radio" for="HSS">HSS</label>
+                <input class="visually-hidden" type="radio" name="material" id="HSS-Co5" value="HSS-Co5">
+                <label class="filter__label filter__label--radio" for="HSS-Co5">HSS-Co5</label>
+                <input class="visually-hidden" type="radio" name="material" id="HSS–Co8" value="HSS–Co8">
+                <label class="filter__label filter__label--radio" for="HSS–Co8">HSS–Co8</label>
+              </div>
+            </div>
+            <div class="filter__block">
+              <p class="filter__block-title">Обрабатываемый материал:</p>
+              <div class="filter__wrapper hidden">
+                <input class="visually-hidden" type="checkbox" name="material-process[]" id="P" value="P">
+                <label class="filter__label" for="P">Сталь(P)</label>
+                <input class="visually-hidden" type="checkbox" name="material-process[]" id="M" value="M">
+                <label class="filter__label" for="M">Нержавеющая сталь(M)</label>
+                <input class="visually-hidden" type="checkbox" name="material-process[]" id="K" value="K">
+                <label class="filter__label" for="K">Чугун K)</label>
+                <input class="visually-hidden" type="checkbox" name="material-process[]" id="N" value="N">
+                <label class="filter__label" for="N">Цветные металлы(N)</label>
+                <input class="visually-hidden" type="checkbox" name="material-process[]" id="S" value="S">
+                <label class="filter__label" for="S">Жаропрочные материалы(S)</label>
+                <input class="visually-hidden" type="checkbox" name="material-process[]" id="H" value="H">
+                <label class="filter__label" for="H">Закалённые стали (H)</label>
+              </div>
+            </div>
+            <div class="filter__block">
+              <p class="filter__block-title">Диаметр режущей части:</p>
+
+              <div class="filter__wrapper filter__wrapper--range hidden">
+
+                <div class="range-block">
+                  <input class="range-input" id="cutter-d-input-select" name='cutter-diameter-min' value="от 0.05мм">
+                  <input class="range-input" id="cutter-d-input-number" name='cutter-diameter-max' value="до 50мм">
+                </div>
+                <div id="html5-cutter-d" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
+              </div>
+
+            </div>
+            <div class="filter__block">
+              <p class="filter__block-title">Длина режущей части:</p>
+
+              <div class="filter__wrapper filter__wrapper--range hidden">
+
+                <div class="range-block">
+                  <input class="range-input" id="cutter-w-input-select" name='cutter-width-min' value="от 0.05мм">
+                  <input class="range-input" id="cutter-w-input-number" name='cutter-width-max' value="до 50мм">
+                </div>
+                <div id="html5-cutter-w" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
+              </div>
+
+            </div>
+            <div class="filter__block">
+              <p class="filter__block-title">Количество зубьев:</p>
+
+              <div class="filter__wrapper filter__wrapper--range hidden">
+                <div class="range-block">
+                  <input class="range-input" id="tooth-input-select" name='tooth-number-min' value="от 0.05мм">
+                  <input class="range-input" id="tooth-input-number" name='tooth-number-max' value="до 50мм">
+                </div>
+                <div id="html5-tooth-n" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
+              </div>
+            </div>
+
+            <div class="filter__block">
+              <p class="filter__block-title">Тип хвостовика:</p>
+              <div class="filter__wrapper hidden">
+                <input class="visually-hidden" type="radio" name="shank" id="cylindrical" value="cylindrical">
+                <label class="filter__label filter__label--radio" for="cylindrical">Цилиндрический</label>
+                <input class="visually-hidden" type="radio" name="shank" id="Morze" value="Morze">
+                <label class="filter__label filter__label--radio" for="Morze">Конус Морзе</label>
+                <input class="visually-hidden" type="radio" name="shank" id="Weldon" value="Weldon">
+                <label class="filter__label filter__label--radio" for="Weldon">Weldon</label>
+              </div>
+            </div>
+            <div class="filter__block">
+              <p class="filter__block-title">Диаметр хвостовика:</p>
+              <div class="filter__wrapper filter__wrapper--range hidden">
+
+                <div class="range-block">
+                  <input class="range-input" id="shank-input-select" name='shank-diameter-min' value="от 0.05мм">
+                  <input class="range-input" id="shank-input-number" name='shank-diameter-max' value="до 50мм">
+                </div>
+                <div id="html5-shank" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
+              </div>
+            </div>
+            <div class="filter__block">
+              <p class="filter__block-title">Центральный зуб:</p>
+              <div class="filter__wrapper filter__wrapper--row hidden">
+                <input class="visually-hidden" type="radio" name="tooth" id="tooth-yes" value="tooth-yes">
+                <label class="filter__label filter__label--radio" for="tooth-yes">Да</label>
+                <input class="visually-hidden" type="radio" name="tooth" id="tooth-no" value="tooth-no">
+                <label class="filter__label filter__label--radio" for="tooth-no">Нет</label>
+              </div>
+            </div>
+
+            <div class="filter__block">
+              <p class="filter__block-title">Внутренний подвод СОЖ:</p>
+              <div class="filter__wrapper filter__wrapper--row hidden">
+                <input class="visually-hidden" type="radio" name="supply" id="supply-yes" value="supply-yes">
+                <label class="filter__label filter__label--radio" for="supply-yes">Да</label>
+                <input class="visually-hidden" type="radio" name="supply" id="supply-no" value="supply-no">
+                <label class="filter__label filter__label--radio" for="supply-no">Нет</label>
+
+                <div class="filter__subblock filter__block--width">
+                  <p class="filter__subblock-title">Угол стружечной канавки</p>
+                  <div class="filter__wrapper filter__wrapper--row filter__wrapper--margin">
+                    <input class="visually-hidden" type="radio" name="corner" id="first-type" value="first-type">
+                    <label class="filter__label filter__label--radio filter__label--image" for="first-type">
+                      <picture>
+                        <img width="46" height="46" src="img/filter-icon.png" alt="картинка" srcset="img/filter-icon@2x.png 2x">
+                      </picture>
+                    </label>
+                    <input class="visually-hidden" type="radio" name="corner" id="second-type" value="second-type">
+                    <label class="filter__label filter__label--radio filter__label--image" for="second-type">
+                      <picture>
+                        <img width="46" height="46" src="img/filter-icon.png" alt="картинка" srcset="img/filter-icon@2x.png 2x">
+                      </picture>
+                    </label>
+                    <input class="visually-hidden" type="radio" name="corner" id="third-type" value="third-type">
+                    <label class="filter__label filter__label--radio filter__label--image" for="third-type">
+                      <picture>
+                        <img width="46" height="46" src="img/filter-icon.png" alt="картинка" srcset="img/filter-icon@2x.png 2x">
+                      </picture>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="filter__subblock">
+                  <p class="filter__subblock-title">Покрытие</p>
+                  <div class="filter__wrapper filter__wrapper--row">
+                    <input class="visually-hidden" type="radio" name="cover" id="cover-yes" value="cover-yes">
+                    <label class="filter__label filter__label--radio" for="cover-yes">Есть</label>
+                    <input class="visually-hidden" type="radio" name="cover" id="cover-no" value="cover-no">
+                    <label class="filter__label filter__label--radio" for="cover-no">Нет</label>
+                  </div>
+                </div>
+                <div class="filter__subblock">
+                  <p class="filter__subblock-title">Защитная фаска, радиус:</p>
+                  <div class="filter__wrapper filter__wrapper--row filter__wrapper--noborder">
+                    <input class="visually-hidden" type="radio" name="chamfer" id="chamfer-no" value="chamfer-no">
+                    <label class="filter__label filter__label--radio" for="chamfer-no">Нет</label>
+                    <input class="visually-hidden" type="radio" name="chamfer" id="chamfer-yes" value="chamfer-yes">
+                    <label class="filter__label filter__label--radio" for="chamfer-yes">Есть</label>
+                  </div>
+                </div>
+                <div class="filter__subblock">
+                  <p class="filter__subblock-title"></p>
+                  <div class="filter__wrapper filter__wrapper--row filter__wrapper--noborder">
+                    <input class="visually-hidden" type="radio" name="chamfer-type" id="chamfer-first-type" value="chamfer-first-type">
+                    <label class="filter__label filter__label--radio filter__label--image" for="chamfer-first-type">
+                      <picture>
+                        <img width="46" height="46" src="img/filter-icon.png" alt="картинка" srcset="img/filter-icon@2x.png 2x">
+                      </picture>
+                    </label>
+                    <input class="visually-hidden" type="radio" name="chamfer-type" id="chamfer-second-type" value="chamfer-second-type">
+                    <label class="filter__label filter__label--radio filter__label--image" for="chamfer-second-type">
+                      <picture>
+                        <img width="46" height="46" src="img/filter-icon.png" alt="картинка" srcset="img/filter-icon@2x.png 2x">
+                      </picture>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+            <button class="filter__submit btn btn--blue">Применить</button>
+            <input class="filter__btn btn btn--blue" type="reset" value="Очистить фильтр">
           </form>
         </aside>
-        <ul class="goods__list">
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-1.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-2.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
-              <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-1.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-2.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
-              <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-1.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-2.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
-              <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-1.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-2.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
-              <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card">
-              <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара">
-              <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
-              <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
-            </article>
-          </li>
-        </ul>
+        <div>
+          <h2 class="goods__title">Заголовок</h2>
+          <ul class="goods__list">
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-1.png" alt="Изображение товара" srcset="img/catalog-1@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-2.png" alt="Изображение товара" srcset="img/catalog-2@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
+                <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара" srcset="img/catalog-3@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара" srcset="img/catalog-4@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-5.png" alt="Изображение товара" srcset="img/catalog-5@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-6.png" alt="Изображение товара" srcset="img/catalog-6@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
+                <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара" srcset="img/catalog-3@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара" srcset="img/catalog-4@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-1.png" alt="Изображение товара" srcset="img/catalog-1@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-2.png" alt="Изображение товара" srcset="img/catalog-2@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
+                <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара" srcset="img/catalog-3@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара" srcset="img/catalog-4@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-5.png" alt="Изображение товара" srcset="img/catalog-5@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Magafor Bi-face M 845-MH</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-6.png" alt="Изображение товара" srcset="img/catalog-6@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST900-NPTF</a></p>
+                <p class="goods__card-description">Фреза резьбовая для нарезания резьбы NPTF</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-3.png" alt="Изображение товара" srcset="img/catalog-3@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Пластина резьбовая трехзубая для нарезания внутренней метрической резьбы с частичным профилем</p>
+              </article>
+            </li>
+            <li class="goods__item">
+              <article class="goods__card">
+                <picture>
+                  <img class="goods__card-img" src="img/catalog-4.png" alt="Изображение товара" srcset="img/catalog-4@2x.png 2x">
+                </picture>
+                <p><a class="goods__card-name" href="#">Stamo ST-F</a></p>
+                <p class="goods__card-description">Разьбонарезная фреза с правосторонними спиральными канавками 27° для нарезания метрической резьбы и снятия фасок</p>
+              </article>
+            </li>
+          </ul>
+        </div>
       </div>
-      
+
     </section>
 
     <section class="banner">
@@ -321,7 +549,7 @@
                 <a class="source__link" href="#">Проектировка и изготовление инструмента под заказ</a>
               </li>
               <li class="source__sublist-item">
-                <a class="source__link" href="#">Испытания и подбор ручного инструмента для металлообработки, на базе  нашей лаборатории</a>
+                <a class="source__link" href="#">Испытания и подбор ручного инструмента для металлообработки, на базе нашей лаборатории</a>
               </li>
               <li class="source__sublist-item">
                 <a class="source__link" href="#">Пусконаладочные работы пневмоинструмента</a>
@@ -344,12 +572,12 @@
           <p class="footer__who">© 2007–2019 ООО "ДИПАР" <br> Флобер, описывая нервный припадок Эммы Бовари, переживает его сам.</p>
         </div>
         <ul class="footer__list">
-          <li class="footer__list-item"><a class="footer__link anchor" href="#main">Главная</a></li>
+          <li class="footer__list-item"><a class="footer__link" href="index.html">Главная</a></li>
           <li class="footer__list-item"><a class="footer__link anchor" href="#service">Услуги</a></li>
           <li class="footer__list-item"><a class="footer__link anchor" href="#about">О компании</a></li>
           <li class="footer__list-item"><a class="footer__link" href="news.html">Новости и статьи</a></li>
           <li class="footer__list-item"><a class="footer__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="footer__list-item"><a class="footer__link anchor" href="#footer">Контакты</a></li>
+          <li class="footer__list-item"><a class="footer__link" href="contacts.html">Контакты</a></li>
         </ul>
         <div class="footer__contacts">
           <a class="footer__phone" href="tel:+78005553555">8 800 555 35 55</a>
@@ -359,6 +587,31 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" style="display: none">
+      <div class="popup__window feadback">
+        <div class="feadback__info">
+          <h2 class="feadback__title">Задайте вопрос нам - получите ответ за час</h2>
+          <ul class="feadback__contact-list">
+            <li class="feadback__contact">
+              <p>Позвонить</p>
+              <a href="tel:88005553555">8 800 555 35 55</a>
+            </li>
+            <li class="feadback__contact">
+              <p>Написать</p>
+              <a href="mailto:info@megaprom.ru">info@megaprom.ru</a>
+            </li>
+          </ul>
+        </div>
+        <form class="feadback__form" action="#">
+          <input class="feadback__field" type="text" placeholder="Ваше имя">
+          <input class="feadback__field" type="text" placeholder="Номер телефона">
+          <button class="btn btn--feadback">Отправить</button>
+        </form>
+        <p class="feadback__agree">Нажимая кнопку заказать, вы даете согласие на обработку <a href="#">персональных данных</a></p>
+        <button class="popup__btn" type="button"><img src="img/close-icon.svg" alt="кнопка закрытия"></button>
+      </div>
+    </div>
 
   </main>
   <script src="js/vendor.js"></script>
