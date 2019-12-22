@@ -2191,7 +2191,7 @@ button.swiper-pagination-bullet {
   height: 200px;
   cursor: pointer; }
 
-.header__scroll-link {
+.header__scroll-link span {
   color: #46535D;
   text-decoration: none;
   font-size: 18px;
