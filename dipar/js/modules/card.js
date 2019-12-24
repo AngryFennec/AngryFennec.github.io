@@ -16,27 +16,6 @@ if (documentsSelector.length > 0) {
     });
 }
 
-var loupe = document.querySelector('.product__loupe');
-
-if (loupe) {
-    loupe.addEventListener('click', function(e){
-        e.preventDefault();
-        var src = this.parentNode.querySelector('.product__image').getAttribute('src');
-        document.querySelector('.lightbox').style.display = 'block';
-        document.querySelector('.lightbox').querySelector('img').setAttribute('src', src);
-    });
-
-    document.querySelector('.lightbox__btn').addEventListener ('click', function(){
-        document.querySelector('.lightbox').style.display = 'none';
-    })
-    document.addEventListener('keydown', function(e) {
-        e.preventDefault();
-        if (e.keyCode === 27) {
-            document.querySelector('.lightbox').style.display = 'none';
-        }
-    });
-}
-
 var images = Array.from(document.querySelectorAll('.product__image-item'));
 
 if (images) {
@@ -47,11 +26,10 @@ if (images) {
             });
             this.classList.add('product__image-item--active');
             var currentSrc = this.querySelector('.product__item-image').getAttribute('data-image');
-            console.log(currentSrc)
             document.querySelector('.product__image').setAttribute('src', currentSrc);
+            document.querySelector('a[data-fancybox = "product"]').setAttribute('href', currentSrc);
             var name = currentSrc.split('.');
             document.querySelector('.product__image').setAttribute('srcset', name[0]+"@2x."+name[1]+" 2x");
-            console.log(document.querySelector('.product__image'))
         });
       });
 }
@@ -68,11 +46,45 @@ if (document.querySelector('.parameters__table')) {
                 } else {
                     item.classList.add('hidden');
                 }
-
             });
 
         }
     })
 }
+
+//feadback
+if (document.querySelector('#feadback')) {
+    var form = document.querySelector('#feadback');
+
+    form.addEventListener('submit', function(e){
+        var name = form.querySelector('input[name="name"]');
+        var phone = form.querySelector('input[name="phone"]');
+        if (name.value) {
+            form.querySelector('.feadback__name-error').style.display = "none";
+        } else {
+            e.preventDefault();
+            form.querySelector('.feadback__name-error').style.display = "block";
+        }
+        if (phone.value) {
+            form.querySelector('.feadback__phone-error').style.display = "none";
+        } else {
+            e.preventDefault();
+            form.querySelector('.feadback__phone-error').style.display = "block";
+        }
+    });
+}
+
+(function ($) {
+    $(`[data-fancybox]`).fancybox({
+        smallBtn: `true`,
+        baseClass: `video-lightbox`,
+        iframe: {
+        css: {
+            maxWidth: `800px`,
+            maxHeight: `600px`
+            }
+        }
+    });
+})(jQuery)
 
 })();

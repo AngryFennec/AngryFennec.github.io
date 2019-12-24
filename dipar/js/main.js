@@ -65,13 +65,13 @@
   }
 
   function displayNews(array, num) {
-    var newsItems = Array.from(array.querySelectorAll('.news__item'));
+    var newsItems = Array.from(array.querySelectorAll('li'));
     var size = newsItems.length;
       newsItems.forEach(function(item) {
-        item.classList.remove('news__item--nodisplay');
+        item.classList.remove('nodisplay');
       });
       for (var i = num; i < size; i++) {
-        newsItems[i].classList.add('news__item--nodisplay');
+        newsItems[i].classList.add('nodisplay');
         currentSize = num;
       }
 
@@ -278,6 +278,16 @@ if (pricesSelector.length > 0) {
         })
     }
     
+    if (document.querySelector('.filter__dropdown')) {
+        document.querySelector('.filter__dropdown').addEventListener('click', function(e){
+            e.preventDefault();
+            if (this.parentNode.querySelector('.filter__form').classList.contains('hidden')) {
+                this.parentNode.querySelector('.filter__form').classList.remove('hidden');
+            } else {
+                this.parentNode.querySelector('.filter__form').classList.add('hidden');
+            }
+        })
+    }
 })();
 'use strict';
 
@@ -297,27 +307,6 @@ if (documentsSelector.length > 0) {
     });
 }
 
-var loupe = document.querySelector('.product__loupe');
-
-if (loupe) {
-    loupe.addEventListener('click', function(e){
-        e.preventDefault();
-        var src = this.parentNode.querySelector('.product__image').getAttribute('src');
-        document.querySelector('.lightbox').style.display = 'block';
-        document.querySelector('.lightbox').querySelector('img').setAttribute('src', src);
-    });
-
-    document.querySelector('.lightbox__btn').addEventListener ('click', function(){
-        document.querySelector('.lightbox').style.display = 'none';
-    })
-    document.addEventListener('keydown', function(e) {
-        e.preventDefault();
-        if (e.keyCode === 27) {
-            document.querySelector('.lightbox').style.display = 'none';
-        }
-    });
-}
-
 var images = Array.from(document.querySelectorAll('.product__image-item'));
 
 if (images) {
@@ -328,11 +317,10 @@ if (images) {
             });
             this.classList.add('product__image-item--active');
             var currentSrc = this.querySelector('.product__item-image').getAttribute('data-image');
-            console.log(currentSrc)
             document.querySelector('.product__image').setAttribute('src', currentSrc);
+            document.querySelector('a[data-fancybox = "product"]').setAttribute('href', currentSrc);
             var name = currentSrc.split('.');
             document.querySelector('.product__image').setAttribute('srcset', name[0]+"@2x."+name[1]+" 2x");
-            console.log(document.querySelector('.product__image'))
         });
       });
 }
@@ -349,17 +337,52 @@ if (document.querySelector('.parameters__table')) {
                 } else {
                     item.classList.add('hidden');
                 }
-
             });
 
         }
     })
 }
 
+//feadback
+if (document.querySelector('#feadback')) {
+    var form = document.querySelector('#feadback');
+
+    form.addEventListener('submit', function(e){
+        var name = form.querySelector('input[name="name"]');
+        var phone = form.querySelector('input[name="phone"]');
+        if (name.value) {
+            form.querySelector('.feadback__name-error').style.display = "none";
+        } else {
+            e.preventDefault();
+            form.querySelector('.feadback__name-error').style.display = "block";
+        }
+        if (phone.value) {
+            form.querySelector('.feadback__phone-error').style.display = "none";
+        } else {
+            e.preventDefault();
+            form.querySelector('.feadback__phone-error').style.display = "block";
+        }
+    });
+}
+
+(function ($) {
+    $(`[data-fancybox]`).fancybox({
+        smallBtn: `true`,
+        baseClass: `video-lightbox`,
+        iframe: {
+        css: {
+            maxWidth: `800px`,
+            maxHeight: `600px`
+            }
+        }
+    });
+})(jQuery)
+
 })();
 'use strict';
 
 (function() {
+
     document.querySelector('.nav__with-us').addEventListener('click', function(e) {
         e.preventDefault();
         document.querySelector('.popup').style.display = 'block';
@@ -372,12 +395,43 @@ if (document.querySelector('.parameters__table')) {
         document.querySelector('.popup').style.display = 'block';
     });
     document.addEventListener('keydown', function(e) {
-
         if (e.keyCode === 27) {
-          e.preventDefault();
             document.querySelector('.popup').style.display = 'none';
         }
     });
+
+    var form = document.querySelector('#popup-form');
+    var selector = form.querySelector('input[name="user-phone"]');
+
+    var im = new Inputmask("+7 (999) 999-99-99");
+    im.mask(selector);
+
+
+    form.addEventListener('submit', function(e){
+        var name = form.querySelector('input[name="user-name"]');
+        var phone = form.querySelector('input[name="user-phone"]');
+        if (name.value) {
+            form.querySelector('.feadback__name-error').style.display = "none";
+        } else {
+            e.preventDefault();
+            form.querySelector('.feadback__name-error').style.display = "block";
+        }
+        if (phone.value) {
+            form.querySelector('.feadback__phone-error').style.display = "none";
+        } else {
+            e.preventDefault();
+            form.querySelector('.feadback__phone-error').style.display = "block";
+        }
+    });
+
+    var formFb = document.querySelector('#feadback');
+    if (formFb) {
+    var selectorFb = formFb.querySelector('input[name="phone"]');
+
+    var imFb = new Inputmask("+7 (999) 999-99-99");
+    imFb.mask(selectorFb);
+}
+
 
 })();
 'use strict';

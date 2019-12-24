@@ -134,4 +134,14 @@
         })
     }
     
+    if (document.querySelector('.filter__dropdown')) {
+        document.querySelector('.filter__dropdown').addEventListener('click', function(e){
+            e.preventDefault();
+            if (this.parentNode.querySelector('.filter__form').classList.contains('hidden')) {
+                this.parentNode.querySelector('.filter__form').classList.remove('hidden');
+            } else {
+                this.parentNode.querySelector('.filter__form').classList.add('hidden');
+            }
+        })
+    }
 })();

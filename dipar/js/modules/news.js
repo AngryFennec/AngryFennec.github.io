@@ -23,13 +23,13 @@
   }
 
   function displayNews(array, num) {
-    var newsItems = Array.from(array.querySelectorAll('.news__item'));
+    var newsItems = Array.from(array.querySelectorAll('li'));
     var size = newsItems.length;
       newsItems.forEach(function(item) {
-        item.classList.remove('news__item--nodisplay');
+        item.classList.remove('nodisplay');
       });
       for (var i = num; i < size; i++) {
-        newsItems[i].classList.add('news__item--nodisplay');
+        newsItems[i].classList.add('nodisplay');
         currentSize = num;
       }
 
