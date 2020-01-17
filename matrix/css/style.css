@@ -605,8 +605,7 @@ input::-ms-clear {
 .article__content {
   max-width: 800px;
   margin: 0 auto;
-  margin-bottom: 44px;
-  padding-bottom: 40px; }
+  padding-bottom: 26px; }
   .article__content h3 {
     font-family: "Playfair Display", serif;
     font-style: normal;
@@ -639,15 +638,20 @@ input::-ms-clear {
     margin-bottom: 10px;
     margin-top: 0; }
   .article__content ul {
-    list-style: none; }
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-top: 6px;
+    margin-left: 40px;
+    padding-bottom: 7px; }
     .article__content ul li {
       position: relative;
       padding-left: 10px;
-      margin-bottom: 9px; }
+      margin-bottom: 10px; }
       .article__content ul li::before {
         content: "";
         position: absolute;
-        top: 5px;
+        top: 8px;
         left: -13px;
         width: 10px;
         height: 10px;
@@ -655,11 +659,16 @@ input::-ms-clear {
         background-color: #000000; }
   .article__content ol {
     counter-reset: item;
-    list-style: none; }
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 6px;
+    margin-left: 40px;
+    padding-bottom: 7px; }
     .article__content ol li {
       position: relative;
       padding-left: 10px;
-      margin-bottom: 9px; }
+      margin-bottom: 10px; }
       .article__content ol li::before {
         content: "";
         position: absolute;
@@ -669,7 +678,7 @@ input::-ms-clear {
         line-height: 21px;
         color: #000000;
         counter-increment: item;
-        top: 0px;
+        top: 2px;
         left: -13px; }
   .article__content table {
     margin-top: 30px;
@@ -677,10 +686,7 @@ input::-ms-clear {
     border: 1px solid rgba(57, 201, 192, 0.2);
     width: 100%;
     text-align: left;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
-    padding-bottom: 20px; }
+    padding: 25px 25px 20px; }
   .article__content th {
     border: none;
     font-size: 16px;
@@ -723,7 +729,8 @@ input::-ms-clear {
   max-width: 800px;
   margin: 0 auto;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-bottom: 57px; }
   .article__share span {
     font-weight: 700;
     font-size: 12px;
@@ -806,8 +813,8 @@ input::-ms-clear {
 .article__similar-wrapper {
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 32px;
-  padding-bottom: 70px; }
+  padding-top: 35px;
+  padding-bottom: 66px; }
 
 @media (max-width: 1023px) {
   .article__similar-wrapper {
@@ -823,24 +830,42 @@ input::-ms-clear {
     line-height: 120%; }
   .article__header::after {
     content: none; }
-  .article__content {
-    margin-bottom: 0; }
-    .article__content h3 {
-      font-size: 22px;
-      line-height: 120%;
-      margin-bottom: 15px;
-      margin-top: 15px; }
-    .article__content table {
-      padding-left: 10px;
-      padding-right: 10px; }
-    .article__content th {
-      font-size: 14px;
-      line-height: 26px;
-      width: 33%; }
-    .article__content td {
-      font-size: 12px;
-      line-height: 20px;
-      width: 33%; }
+  .article__content h3 {
+    font-size: 22px;
+    line-height: 120%;
+    margin-bottom: 15px;
+    margin-top: 25px; }
+  .article__content table {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .article__content th {
+    font-size: 14px;
+    line-height: 26px;
+    width: 33%; }
+  .article__content td {
+    font-size: 12px;
+    line-height: 20px;
+    width: 33%; }
+  .article__content ul li::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -13px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000000; }
+  .article__content ol li::before {
+    content: "";
+    position: absolute;
+    content: counter(item) ". ";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 120%;
+    color: #000000;
+    counter-increment: item;
+    top: 2px;
+    left: -13px; }
   .article__share {
     max-width: 800px;
     margin: 0 auto;
@@ -860,25 +885,13 @@ input::-ms-clear {
     border: 5px solid #39C9C0;
     margin-top: 20px; }
     .article__similar h2 {
-      font-family: "Playfair Display", serif;
-      font-style: normal;
-      font-weight: bold;
       font-size: 20px;
       line-height: 120%;
-      color: #202538;
       margin-top: 0;
       margin-bottom: 25px; }
     .article__similar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      margin-left: 60px;
-      max-width: 600px;
-      position: relative; }
+      margin-left: 60px; }
       .article__similar ul::before {
-        content: "";
-        position: absolute;
-        top: 5px;
         left: -53px;
         background: url("../img/similar.png") no-repeat;
         background-size: cover;
