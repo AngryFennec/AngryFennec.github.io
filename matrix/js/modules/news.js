@@ -1,9 +1,3 @@
-/**
- * подключение js-модулей
- * //= modules/file.js
- */
-
-
 (function() {
   $(document).ready(function() {
     var swiperInstances = {};
