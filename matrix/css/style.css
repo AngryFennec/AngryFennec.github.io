@@ -1057,16 +1057,27 @@ button.swiper-pagination-bullet {
     -ms-flex-direction: column;
         flex-direction: column;
     max-width: 200px;
-    margin-right: 8%; }
+    margin-right: 6%; }
     .advantages ul li:last-child {
       margin-right: 0; }
+      .advantages ul li:last-child span span {
+        right: 23px; }
     .advantages ul li:nth-child(2) {
-      margin-right: 13.3%; }
+      margin-right: 18%; }
     .advantages ul li span {
       font-size: 36px;
       line-height: 41px;
       color: #39C9C0;
-      font-weight: 700; }
+      font-weight: 700;
+      position: relative;
+      display: inline; }
+      .advantages ul li span span {
+        background: url("../img/rub.svg") no-repeat;
+        position: absolute;
+        top: 22%;
+        right: -40px;
+        height: 43px;
+        width: 30px; }
     .advantages ul li p {
       font-size: 14px;
       line-height: 16px;
@@ -1087,7 +1098,7 @@ button.swiper-pagination-bullet {
   .advantages ul li {
     margin-right: 3%; }
     .advantages ul li:nth-child(2) {
-      margin-right: 5%; } }
+      margin-right: 12%; } }
 
 @media (max-width: 1023px) {
   .advantages__wrapper {
@@ -1112,6 +1123,8 @@ button.swiper-pagination-bullet {
       margin-right: 0;
       width: 220px;
       max-width: 220px; }
+      .advantages ul li:nth-child(2) span span {
+        right: 17px; }
   .advantages__title-container {
     display: -ms-flexbox;
     display: flex; }
@@ -1138,9 +1151,16 @@ button.swiper-pagination-bullet {
         margin-right: 0;
         max-width: 100%;
         width: 100%; }
+        .advantages ul li:nth-child(2) span span {
+          left: 112px; }
       .advantages ul li span {
         font-size: 24px;
         line-height: 120%; }
+        .advantages ul li span span {
+          height: 28px;
+          width: 15px;
+          left: 77px;
+          background-size: contain; }
       .advantages ul li p {
         margin-top: 5px; }
   .advantages__title-container {
@@ -1333,8 +1353,9 @@ button.swiper-pagination-bullet {
   width: 100%;
   margin-bottom: 30px; }
   .article__img-container img {
-    max-width: 100%;
-    height: auto; }
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .article__img-container--double {
     display: -ms-flexbox;
     display: flex;
@@ -1342,9 +1363,8 @@ button.swiper-pagination-bullet {
         justify-content: space-between; }
     .article__img-container--double img {
       width: 49%;
-      height: auto;
-      -o-object-fit: contain;
-         object-fit: contain; }
+      -o-object-fit: cover;
+         object-fit: cover; }
 
 .article__share {
   max-width: 800px;
@@ -1440,7 +1460,11 @@ button.swiper-pagination-bullet {
 @media (max-width: 1023px) {
   .article__similar-wrapper {
     padding-left: 20px;
-    padding-right: 20px; } }
+    padding-right: 20px; }
+  .article__img-container {
+    max-height: 200px; }
+    .article__img-container img {
+      max-height: 100%; } }
 
 @media (max-width: 767px) {
   .article__header h2 {
@@ -1522,7 +1546,11 @@ button.swiper-pagination-bullet {
         margin-bottom: 10px; }
         .article__similar ul li a {
           font-size: 16px;
-          line-height: 28px; } }
+          line-height: 28px; }
+  .article__img-container {
+    max-height: 150px; }
+    .article__img-container img {
+      max-height: 100%; } }
 
 .about h2 {
   font-family: "Playfair Display", serif;
