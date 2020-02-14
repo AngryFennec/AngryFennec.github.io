@@ -15,7 +15,7 @@
     <div class="header__wrapper wrapper">
       <div class="header__logo">
         <a href="#">
-            <img src="img/logo-menu.png" width=135 height=115 alt="Логотип PFERD">
+            <img src="img/logo-menu.png" width=117 height=100 alt="Логотип PFERD">
           </a>
       </div>
       <div class="header__container">
@@ -26,7 +26,7 @@
             <a href="tel:+79155956242">8 (915) 595-62-42</a>
           </div>
           <div class="header__btns">
-            <a class="header__btns-call" href="#">Заказать звонок</a>
+            <a class="header__btns-call js-popup" href="#">Заказать звонок</a>
             <a class="header__btns-mail" href="#"></a>
           </div>
         </div>
@@ -51,14 +51,18 @@
     </div>
   </header>
   <main>
-  <div class="breadcrumbs">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__wrapper wrapper">
 
-    <a class="breadcrumbs__item breadcrumbs__item--home" href="index.html"><span>на главную</span></a>
-    <span class="breadcrumbs__divider">/</span>
-    <a class="breadcrumbs__item" href="#">Новости</a>
-    <span class="breadcrumbs__divider">/</span>
-    <a class="breadcrumbs__item breadcrumbs__item--active" href="#">Выставка WD 2020</a>
-  </div>
+        <a class="breadcrumbs__item breadcrumbs__item--home" href="index.html"><span>на главную</span></a>
+        <span class="breadcrumbs__divider">/</span>
+        <a class="breadcrumbs__item" href="#">Каталог продукции</a>
+        <span class="breadcrumbs__divider">/</span>
+        <a class="breadcrumbs__item" href="#">Абразивные головки</a>
+        <span class="breadcrumbs__divider">/</span>
+        <a class="breadcrumbs__item breadcrumbs__item--active" href="#">Брусок абразивный UNIVERSAL</a>
+      </div>
+    </div>
 
         <div class="wrapper">
             <aside class="left-menu">
@@ -120,7 +124,7 @@
                         <td data-label="DF (мм)">806968</td>
                         <td data-label="Опт. кол-во об/мин">6.300-12.500</td>
                         <td data-label="Макс. кол-во об/мин">12 000</td>
-                        
+
                       </tr>
                       <tr>
                         <td data-label="D (мм)"> 125</td>
@@ -131,7 +135,7 @@
                         <td data-label="DF (мм)">806968</td>
                         <td data-label="Опт. кол-во об/мин">6.300-12.500</td>
                         <td data-label="Макс. кол-во об/мин">11 000</td>
-                        
+
                       </tr>
                       <tr>
                         <td data-label="D (мм)"> 115</td>
@@ -142,7 +146,7 @@
                         <td data-label="DF (мм)">806968</td>
                         <td data-label="Опт. кол-во об/мин">6.300-12.500</td>
                         <td data-label="Макс. кол-во об/мин">12 000</td>
-                        
+
                       </tr>
                       <tr>
                         <td data-label="D (мм)"> 125</td>
@@ -153,28 +157,28 @@
                         <td data-label="DF (мм)">806968</td>
                         <td data-label="Опт. кол-во об/мин">6.300-12.500</td>
                         <td data-label="Макс. кол-во об/мин">11 000</td>
-                        
+
                       </tr>
-                     
+
                     </tbody>
                   </table>
             </section>
         </div>
 
-       <section class="feadback">
+       <section class="feedback">
            <div class="wrapper">
-            <h2>Оставись вопросы?</h2>
+            <h2>Остались вопросы?</h2>
             <form action="#" method="post">
                 <div>
                      <label class="visually-hidden" for="name">Ваше имя</label>
                      <input type="text" name="name" id = "name" placeholder="Ваше имя">
-         
+
                      <label class="visually-hidden" for="email">Ваше E-mail</label>
                      <input type="text" name="email" id = "email" placeholder="Ваше E-mail">
-         
+
                      <label class="visually-hidden" for="phone">Ваш телефон</label>
                      <input type="text" name="phone" id = "phone" placeholder="Ваш телефон">
-         
+
                      <label class="visually-hidden" for="town">Город</label>
                      <input type="text" name="town" id = "town" placeholder="Город">
                 </div>
@@ -187,51 +191,68 @@
                      <label for="agree">Я даю свое согласие на обработку персональных данных и соглашаюсь с условиями политики конфиденциальности.</label>
                      <button type="submit">Отправить</button>
                 </div>
-             
+
             </form>
            </div>
-           
+
        </section>
    </main>
-<footer class="footer">
-    <div class="footer__wrapper wrapper">
-    <div class="footer__logo">
-        <a href="#">
-        <img src="img/logo-footer.png" width=135 height=115 alt="Логотип PFERD">
-        </a>
+   <footer class="footer">
+     <div class="footer__wrapper wrapper">
+       <div class="footer__logo">
+         <a href="#">
+       <img src="img/logo-footer.png" width=135 height=115 alt="Логотип PFERD">
+     </a>
+       </div>
+       <div class="footer__items">
+         <table>
+           <tr>
+             <td><a href="#">Главная</a></td>
+             <td><a href="#">Документация</a></td>
+             <td><a href="#">Оплата и доставка</a></td>
+           </tr>
+           <tr>
+             <td><a href="#">Каталог</a></td>
+             <td><a href="#">Контакты</a></td>
+             <td></td>
+           </tr>
+           <tr>
+             <td><a href="#">Новости</a></td>
+             <td><a href="#">Видео</a></td>
+             <td></td>
+           </tr>
+
+         </table>
+       </div>
+       <div class="footer__contacts">
+         <div class="footer__phone">
+         <p>Ежедневно с 08:00 до 22:00</p>
+         <a href="tel:+7915595-62-42">8 (915) 595-62-42</a>
+       </div>
+         <div class="footer__btns">
+           <a class="footer__btns-call js-popup" href="#">Заказать звонок</a>
+           <a class="footer__btns-mail" href="#"></a>
+         </div>
+       </div>
+     </div>
+   </footer>
+   <div class="popup" style="display: none">
+    <div>
+      <button class="popup__close" type="button"><img src="img/close.png" alt="close"></button>
+      <h2>Заказать звонок?</h2>
+      <p>Мы перезвоним вам в ближайшее время!</p>
+      <form action="#" method="post">
+        <label class="visually-hidden" for="user-name">Ваше имя</label>
+        <input type="text" name="user-name" id="user-name" required placeholder="Ваше имя">
+        <label class="visually-hidden" for="user-phone">Ваш телефон</label>
+        <input type="text" name="user-phone" id="user-phone" required placeholder="Ваш телефон">
+        <button type="submit">Отправить</button>
+        <p>Нажимая кнопку “Отправить”, вы автоматически соглашаетесь с <a href="#">обработкой ваших данных.</a></p>
+      </form>
     </div>
-        <div class="footer__items">
-        <table>
-            <tr>
-            <td><a href="#">Главная</a></td>
-            <td><a href="#">Документация</a></td>
-            <td><a href="#">Оплата и доставка</a></td>
-            </tr>
-            <tr>
-            <td><a href="#">Каталог</a></td>
-            <td><a href="#">Контакты</a></td>
-            <td></td>
-            </tr>
-            <tr>
-            <td><a href="#">Новости</a></td>
-            <td><a href="#">Видео</a></td>
-            <td></td>
-            </tr>
-    
-        </table>
-        </div>
-        <div class="footer__contacts">
-        <p>Ежедневно с 08:00 до 22:00</p>
-        <a href="tel:+7915595-62-42">8 (915) 595-62-42</a>
-        <div class="footer__btns">
-            <a class="footer__btns-call" href="#">Заказать звонок</a>
-            <a class="footer__btns-mail" href="#"></a>
-        </div>
-        </div>
-    </div>
-    </footer>
+  </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
     </body>
-    
+
     </html>

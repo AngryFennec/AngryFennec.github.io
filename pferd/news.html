@@ -26,7 +26,7 @@
             <a href="tel:+79155956242">8 (915) 595-62-42</a>
           </div>
           <div class="header__btns">
-            <a class="header__btns-call" href="#">Заказать звонок</a>
+            <a class="header__btns-call js-popup" href="#">Заказать звонок</a>
             <a class="header__btns-mail" href="#"></a>
           </div>
         </div>
@@ -139,12 +139,27 @@
         <a href="tel:+7915595-62-42">8 (915) 595-62-42</a>
       </div>
         <div class="footer__btns">
-          <a class="footer__btns-call" href="#">Заказать звонок</a>
+          <a class="footer__btns-call js-popup" href="#">Заказать звонок</a>
           <a class="footer__btns-mail" href="#"></a>
         </div>
       </div>
     </div>
   </footer>
+  <div class="popup" style="display: none">
+    <div>
+      <button class="popup__close" type="button"><img src="img/close.png" alt="close"></button>
+      <h2>Заказать звонок?</h2>
+      <p>Мы перезвоним вам в ближайшее время!</p>
+      <form action="#" method="post">
+        <label class="visually-hidden" for="user-name">Ваше имя</label>
+        <input type="text" name="user-name" id="user-name" required placeholder="Ваше имя">
+        <label class="visually-hidden" for="user-phone">Ваш телефон</label>
+        <input type="text" name="user-phone" id="user-phone" required placeholder="Ваш телефон">
+        <button type="submit">Отправить</button>
+        <p>Нажимая кнопку “Отправить”, вы автоматически соглашаетесь с <a href="#">обработкой ваших данных.</a></p>
+      </form>
+    </div>
+  </div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
