@@ -3094,11 +3094,12 @@ button.swiper-pagination-bullet {
     width: 33px;
     height: 33px;
     background: url("../img/marker-contacts.svg") no-repeat;
+    background-size: contain;
     left: -45px;
     top: 2px; }
   .contacts__left li:nth-child(2)::before {
     background: url("../img/phone-contacts.svg") no-repeat;
-    top: -5px; }
+    top: -8px; }
   .contacts__left li:nth-child(3)::before {
     background: url("../img/mail-contacts.svg") no-repeat;
     top: -5px; }
