@@ -27,3 +27,17 @@ if(input)im.mask(input);
 const input2 = $('input[name="phone"]')[0];
 let im2 = new Inputmask("+7 (999) 999-99-99");
 if(input2) im2.mask(input2);
+'use strict';
+(function() {
+  var headerSelector = document.querySelector('.main__header-swiper .swiper-container');
+  if (headerSelector) {
+  var swiper = new Swiper(headerSelector, {
+      direction: 'vertical',
+      slidesPerView: 1,
+      pagination: {
+        el: '.main__header-pagination',
+        clickable: true,
+      },
+    });
+  }
+})();
