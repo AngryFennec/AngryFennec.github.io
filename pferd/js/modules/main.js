@@ -16,6 +16,12 @@
   if (industrySelector) {
   var industrySwiper = new Swiper(industrySelector, {
       slidesPerView: 1,
+      fadeEffect: {
+    crossFade: true
+  },
+  parallax: true,
+  effect: "slide",
+  speed: 1000,
       pagination: {
         el: '.industry__pagination',
         clickable: true,

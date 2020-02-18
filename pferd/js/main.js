@@ -7,16 +7,19 @@
 $('.js-popup').on('click', function (evt) {
   evt.preventDefault();
   $('.popup').fadeIn(300);
+  $('.page-body').addClass('page-body--overflow');
 });
 
 $('.popup__close').on('click', function (evt) {
   evt.preventDefault();
   $('.popup').fadeOut(300);
+  $('.page-body').removeClass('page-body--overflow');
 });
 
 $(document).on('keydown', function (evt) {
   if (evt.keyCode === 27) {
     $('.popup').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
   }
 });
 
@@ -45,6 +48,12 @@ if(input2) im2.mask(input2);
   if (industrySelector) {
   var industrySwiper = new Swiper(industrySelector, {
       slidesPerView: 1,
+      fadeEffect: {
+    crossFade: true
+  },
+  parallax: true,
+  effect: "slide",
+  speed: 1000,
       pagination: {
         el: '.industry__pagination',
         clickable: true,
