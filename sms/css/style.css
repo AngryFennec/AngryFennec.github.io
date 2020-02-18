@@ -826,7 +826,9 @@ button.swiper-pagination-bullet {
       justify-content: space-between; }
 
 .main-block__content {
-  padding-top: 120px; }
+  padding-top: 90px;
+  position: relative;
+  padding-bottom: 90px; }
 
 .main-block__title {
   font-style: normal;
@@ -834,7 +836,11 @@ button.swiper-pagination-bullet {
   font-size: 30px;
   line-height: 40px;
   color: #1A1A1A;
-  position: relative; }
+  position: relative;
+  margin-top: 30px;
+  display: block;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
   .main-block__title::before {
     position: absolute;
     content: "";
@@ -843,29 +849,47 @@ button.swiper-pagination-bullet {
     background: url("../img/sms.svg") no-repeat;
     background-size: contain;
     left: -44px;
-    top: 7px; }
+    top: 7px;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
 
-.main-block--voice .main-block__title::before {
-  background: url("../img/voice.svg") no-repeat;
-  background-size: contain; }
+.main-block__hidden-title {
+  position: absolute;
+  top: 120px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  /* identical to box height */
+  color: #1A1A1A;
+  opacity: 0; }
 
-.main-block--viber .main-block__title::before {
-  background: url("../img/viber.svg") no-repeat;
-  background-size: contain; }
-
-.main-block--chat .main-block__title::before {
-  background: url("../img/chat.svg") no-repeat;
-  background-size: contain; }
-
-.main-block--phone .main-block__title::before {
-  background: url("../img/phone-book.svg") no-repeat;
-  background-size: contain; }
-
-.main-block--start {
-  margin-bottom: 100px; }
-  .main-block--start .main-block__title::before {
+.main-block__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .main-block__content--voice .main-block__title::before {
     background: url("../img/voice.svg") no-repeat;
     background-size: contain; }
+  .main-block__content--viber .main-block__title::before {
+    background: url("../img/viber.svg") no-repeat;
+    background-size: contain; }
+  .main-block__content--chat .main-block__title::before {
+    background: url("../img/chat.svg") no-repeat;
+    background-size: contain; }
+  .main-block__content--phone .main-block__title::before {
+    background: url("../img/phone-book.svg") no-repeat;
+    background-size: contain; }
+  .main-block__content--start {
+    margin-bottom: 100px; }
+    .main-block__content--start .main-block__title::before {
+      background: url("../img/voice.svg") no-repeat;
+      background-size: contain; }
 
 .main-block__list {
   padding: 0;
@@ -876,8 +900,7 @@ button.swiper-pagination-bullet {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 600px;
-  width: 100%;
-  margin-top: 32px; }
+  width: 100%; }
 
 .main-block__list-item {
   max-width: 224px;
@@ -987,6 +1010,65 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   line-height: 21px;
   color: #2A2935; }
+
+.main-block__img {
+  position: relative;
+  width: 538px;
+  height: 538px;
+  background: url("../img/main-1-back.png") no-repeat;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  .main-block__img img {
+    position: absolute;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+
+.main-block__content-link {
+  width: 30%;
+  height: 50%;
+  position: absolute;
+  right: 20%;
+  z-index: 3;
+  display: block;
+  cursor: pointer; }
+
+.main-block__content-link:hover + .main-block__img {
+  background: url("../img/main-1-back-hover.png") no-repeat;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  .main-block__content-link:hover + .main-block__img img.animate {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+
+.main-block__content-link:hover ~ .main-block__content--sms .main-block__hidden-title {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 1; }
+
+.main-block__content-link:hover ~ .main-block__content--sms .main-block__title {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  margin-bottom: 40px;
+  color: #707070; }
+  .main-block__content-link:hover ~ .main-block__content--sms .main-block__title::before {
+    position: absolute;
+    content: "";
+    left: -44px;
+    top: 37px;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background: url("../img/sms-full.svg") no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: contain; }
 
 .header__wrapper {
   display: -ms-flexbox;
