@@ -36,10 +36,10 @@
           <label class="nav__back" for="showmenu"></label>
           <div class="nav__content">
             <ul>
-              <li class="nav__item--active"><a href="#">Главная</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li ><a href="#">Главная</a></li>
+              <li class="nav__item--active"><a href="catalog.html">Каталог</a></li>
               <li><a href="#">Видео</a></li>
-              <li><a href="#">Новости</a></li>
+              <li><a href="news.html">Новости</a></li>
               <li><a href="#">Документация</a></li>
               <li><a href="#">Оплата и доставка</a></li>
               <li><a href="contacts.html">Контакты</a></li>
@@ -62,20 +62,90 @@
     <h1 class="title">Каталог продукции</h1>
 
        <div class="wrapper">
-           <aside class="left-menu">
-               <ul>
-                   <li><a href="#">Технические щетки</a></li>
-                   <li><a href="#">Шлифованльные и отрезные круги </a></li>
-                   <li><a href="#">Инструмент для тонкого шлифования и полирования </a> </li>
-                   <li><a href="#">Инструмент произведенный на заводе “PFERD” в России </a></li>
-                   <li><a href="#">Режущий инструмент</a></li>
-                   <li><a href="#">Абразивные головки, шлифовальные круги </a></li>
-                   <li><a href="#">Пневматический инструмент</a></li>
-                   <li><a href="#">Электрический инструмент</a></li>
-                   <li><a href="#">Алмазный инструмент</a></li>
-                   <li><a href="#">Напильники</a></li>
-               </ul>
-           </aside>
+        <aside class="left-menu">
+            <ul>
+                <li>
+                  <a href="#">Технические щетки</a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Шлифованльные и отрезные круги </a>
+                  <ul  class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Инструмент для тонкого шлифования и полирования </a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Инструмент произведенный на заводе “PFERD” в России </a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Режущий инструмент</a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Абразивные головки, шлифовальные круги </a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Пневматический инструмент</a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Электрический инструмент</a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Алмазный инструмент</a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Алмазный круг</a></li>
+                    <li><a href="#">Шлифовальный круг</a></li>
+                    <li><a href="#">Алмазная абразивная крошка</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Напильники</a>
+                  <ul class="left-menu__sublist">
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                    <li><a href="#">Технические щетки</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </aside>
            <section class="catalog">
                <ul>
                     <li>
@@ -325,13 +395,13 @@
             <form action="#" method="post">
                 <div>
                      <label class="visually-hidden" for="name">Ваше имя</label>
-                     <input type="text" name="name" id = "name" placeholder="Ваше имя">
+                     <input type="text" name="name" id = "name" placeholder="Ваше имя" required>
 
                      <label class="visually-hidden" for="email">Ваше E-mail</label>
-                     <input type="text" name="email" id = "email" placeholder="Ваше E-mail">
+                     <input type="text" name="email" id = "email" placeholder="Ваше E-mail" required>
 
                      <label class="visually-hidden" for="phone">Ваш телефон</label>
-                     <input type="text" name="phone" id = "phone" placeholder="Ваш телефон">
+                     <input type="text" name="phone" id = "phone" placeholder="Ваш телефон" required>
 
                      <label class="visually-hidden" for="town">Город</label>
                      <input type="text" name="town" id = "town" placeholder="Город">
