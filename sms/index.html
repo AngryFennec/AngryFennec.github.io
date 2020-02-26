@@ -17,43 +17,117 @@
         <img src="img/logo-header.svg" width=99 height=42 alt="Лого">
       </div>
       <ul class="header__menu">
-        <li class="header__menu-item"><a>Услуги</a></li>
-        <li class="header__menu-item"><a>Тарифы</a></li>
-        <li class="header__menu-item"><a>База знаний</a></li>
-        <li class="header__menu-item"><a>О компании</a></li>
-        <li class="header__menu-item"><a>Контакты</a></li>
+        <li class="header__menu-item header__menu-item--main">
+          <a href="#">Услуги</a>
+          <div class="header__submenu-block">
+            <ul class="header__submenu">
+              <li><a href="#">Рассылка Viber</a></li>
+              <li><a href="#">Голосовая рассылка</a></li>
+              <li><a href="#">СМС рассылка</a></li>
+              <li><a href="#">Онлайн чат</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="header__menu-item"><a href="#">Тарифы</a></li>
+        <li class="header__menu-item"><a href="#">База&nbsp;знаний</a></li>
+        <li class="header__menu-item header__menu-item--main">
+          <a href="#">О&nbsp;компании</a>
+          <div class="header__submenu-block header__submenu-block--company">
+            <ul class="header__submenu ">
+              <li><a href="#">Преимущества</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Дилерам</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Способы оплаты</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="header__menu-item"><a href="#">Контакты</a></li>
+        <li class="header__menu-item header__menu-item--mobile header__menu-item--lk"><a href="">Личный&nbsp;кабинет</a></li>
+        <li class="header__menu-item header__menu-item--mobile header__menu-item--main header__menu-item--town">
+          <a href="#">Санкт&#8209;Петербург</a>
+          <div class="header__submenu-block header__submenu-block--towns">
+            <ul class="header__submenu header__submenu--towns">
+              <li><a href="#">Москва</a></li>
+              <li><a href="#">Санкт&#8209;Петербург</a></li>
+              <li><a href="#">Новосибирск</a></li>
+              <li><a href="#">Челябинск</a></li>
+              <li><a href="#">Екатеринбург</a></li>
+              <li><a href="#">Нижний&nbsp;Новгород</a></li>
+              <li><a href="#">Самара</a></li>
+              <li><a href="#">Казань</a></li>
+              <li><a href="#">Омск</a></li>
+              <li><a href="#">Ростов&#8209;на&#8209;Дону</a></li>
+              <li><a href="#">Уфа</a></li>
+              <li><a href="#">Волгоград</a></li>
+              <li><a href="#">Пермь</a></li>
+              <li><a href="#">Красноярск</a></li>
+              <li><a href="#">Воронеж</a></li>
+              <li><a href="#">Калининград</a></li>
+              <li><a href="#">Новокузнецк</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="header__menu-item header__menu-item--mobile header__menu-item--phone"><a href="tel:88001000905">8&nbsp;800&nbsp;100&nbsp;09&nbsp;05</a></li>
       </ul>
-      <div class="header__contacts">
-        <a class="header__contacts-city">Санкт-Петербург</a>
-        <a class="header__contacts-phone">8 800 100 09 05</a>
-        <a class="header__contacts-lk">Личный кабинет</a>
-      </div>
+      <ul class="header__contacts">
+        <li>
+          <a class="header__contacts-city" href="#">Санкт&#8209;Петербург</a>
+          <div class="header__submenu-block header__submenu-block--towns">
+            <ul class="header__submenu header__submenu--towns">
+              <li><a href="#">Москва</a></li>
+              <li><a href="#">Санкт&#8209;Петербург</a></li>
+              <li><a href="#">Новосибирск</a></li>
+              <li><a href="#">Челябинск</a></li>
+              <li><a href="#">Екатеринбург</a></li>
+              <li><a href="#">Нижний&nbsp;Новгород</a></li>
+              <li><a href="#">Самара</a></li>
+              <li><a href="#">Казань</a></li>
+              <li><a href="#">Омск</a></li>
+              <li><a href="#">Ростов&#8209;на&#8209;Дону</a></li>
+              <li><a href="#">Уфа</a></li>
+              <li><a href="#">Волгоград</a></li>
+              <li><a href="#">Пермь</a></li>
+              <li><a href="#">Красноярск</a></li>
+              <li><a href="#">Воронеж</a></li>
+              <li><a href="#">Калининград</a></li>
+              <li><a href="#">Новокузнецк</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="header__contacts-phone" href="tel:88001000905">8&nbsp;800&nbsp;100&nbsp;09&nbsp;05</a></li>
+        <li><a class="header__contacts-lk" href="#">Личный&nbsp;кабинет</a></li>
+      </ul>
+      <button class="header__burger" type="button"><img src="img/burger.svg" alt="меню"></button>
     </div>
   </header>
   <main class="main">
     <b class="visually-hidden">Главная страница</b>
     <div class="main__wrapper">
       <article class="main__serve serve">
-        <div class="serve__warpper wrapper">
+        <div class="serve__wrapper wrapper">
           <div class="serve__content">
             <b class="serve__title">СМС УСЛУГИ</b>
-            <p class="serve__text">Омниканальный сервис рассылок.
+            <p class="serve__text">Омниканальный сервис рассылок.<br>
               Более 10 лет помогаем информировать клиентов
               по всему миру.</p>
+              <div class="serve__img-mobile">
+                <img src="img/main-1.png" width=538 height=538 alt="Услуги">
+              </div>
             <ul class="serve__icons">
-              <li class="serve__icons-item serve__icons-item--main-block">Смс</li>
-              <li class="serve__icons-item serve__icons-item--voice">Голос</li>
-              <li class="serve__icons-item serve__icons-item--viber">Viber</li>
-              <li class="serve__icons-item serve__icons-item--chat">Онлайн-чат</li>
+              <li class="serve__icons-item serve__icons-item--sms"><a href="#"><span><img src="img/sms.svg" alt="иконка"></span>Смс</a></li>
+              <li class="serve__icons-item serve__icons-item--voice"><a href="#"><span><img src="img/voice.svg" alt="иконка"></span>Голос</a></li>
+              <li class="serve__icons-item serve__icons-item--viber"><a href="#"><span><img src="img/viber.svg" alt="иконка"></span>Viber</a></li>
+              <li class="serve__icons-item serve__icons-item--chat"><a href="#"><span><img src="img/chat.svg" alt="иконка"></span>Онлайн-чат</a></li>
             </ul>
             <a class="serve__register btn" href="#">Регистрация</a>
           </div>
           <div class="serve__img">
-            <img src="img/main-1.png" width=658 height=628 alt="Услуги">
+            <img src="img/main-1.png" width=538 height=538 alt="Услуги">
           </div>
         </div>
       </article>
-      <article class="main__main-block main-block main-block">
+      <article class="main__main-block main-block main-block--right main-block--sms">
         <div class="main-block__wrapper wrapper">
           <div class="main-block__top">
             <a class="main-block__content-link">
@@ -76,16 +150,16 @@
                 <li class="main-block__list-item">
                   <b class="main-block__list-title">Единый кабинет</b>
                   <p class="main-block__list-text">Все настройки, статистика
-                    и отправки в одном месте. </p>
+                    и&nbsp;отправки в одном месте. </p>
                 </li>
                 <li class="main-block__list-item">
                   <b class="main-block__list-title">Гибкие настройки</b>
                   <p class="main-block__list-text">Универсальная телефонная книга, сегментирование
-                    и коррекция вашей базы.</p>
+                    и&nbsp;коррекция вашей базы.</p>
                 </li>
                 <li class="main-block__list-item">
                   <b class="main-block__list-title">5000 смс в минуту</b>
-                  <p class="main-block__list-text">Скоростная рассылка по всей Вселенной!</p>
+                  <p class="main-block__list-text">Скоростная рассылка по всей&nbsp;Вселенной!</p>
                 </li>
               </ul>
 
@@ -100,11 +174,14 @@
           </div>
         </div>
       </article>
-      <article class="main__main-block main-block main-block--voice">
+      <article class="main__main-block main-block main-block--left main-block--voice">
         <div class="main-block__wrapper wrapper">
           <div class="main-block__top">
-            <div class="main-block__content">
-              <b class="main-block__title">Голосовая рассылка</b>
+            <a class="main-block__content-link">
+              </a>
+            <div class="main-block__content main-block__content--voice">
+              <b class="main-block__title animate">Голосовая рассылка</b>
+              <b class="main-block__hidden-title animate">Подробнее</b>
               <ul class="main-block__list">
                 <li class="main-block__list-item">
                   <b class="main-block__list-title">Дешевле чем СМС</b>
@@ -124,8 +201,11 @@
                 </li>
               </ul>
             </div>
+
             <div class="main-block__img">
-              <img src="img/main-3.png" width=657 height=657 alt="голосовая">
+              <img src="img/main-2-1.png" width=538 height=538 alt="голосовая">
+              <img class="animate" src="img/main-2-2.png" width=538 height=538 alt="голосовая">
+              <img src="img/main-2-3.png" width=538 height=538 alt="голосовая">
             </div>
           </div>
           <div class="main-block__bottom">
@@ -137,14 +217,18 @@
           </div>
         </div>
       </article>
-      <article class="main__main-block main-block main-block--viber">
+      <article class="main__main-block main-block main-block--right main-block--viber">
         <div class="main-block__wrapper wrapper">
           <div class="main-block__top">
+            <a class="main-block__content-link">
+              </a>
             <div class="main-block__img">
-              <img src="img/main-4.png" width=556 height=460 alt="viber">
+              <img src="img/main-3-1.png" width=538 height=538 alt="viber">
+              <img class="animate" src="img/main-3-2.png" width=538 height=538 alt="viber">
             </div>
-            <div class="main-block__content">
-              <b class="main-block__title">Viber рассылка</b>
+            <div class="main-block__content main-block__content--viber">
+              <b class="main-block__title animate">Viber рассылка</b>
+              <b class="main-block__hidden-title animate">Подробнее</b>
               <ul class="main-block__list">
                 <li class="main-block__list-item">
                   <b class="main-block__list-title">1000 Символов</b>
@@ -168,11 +252,14 @@
           </div>
         </div>
       </article>
-      <article class="main__main-block main-block main-block--chat">
+      <article class="main__main-block main-block main-block--left main-block--chat">
         <div class="main-block__wrapper wrapper">
           <div class="main-block__top">
-            <div class="main-block__content">
-              <b class="main-block__title">Обратная связь</b>
+            <a class="main-block__content-link">
+              </a>
+            <div class="main-block__content main-block__content--chat">
+              <b class="main-block__title animate">Обратная связь</b>
+              <b class="main-block__hidden-title animate">Подробнее</b>
               <ul class="main-block__list">
                 <li class="main-block__list-item">
                   <b class="main-block__list-title">Кроссплатформа</b>
@@ -196,8 +283,11 @@
                 </li>
               </ul>
             </div>
+            <a class="main-block__content-link">
+              </a>
             <div class="main-block__img">
-              <img src="img/main-5.png" width=720 height=720 alt="чат">
+              <img src="img/main-4-1.png" width=538 height=538 alt="Чат">
+              <img class="animate" src="img/main-4-2.png" width=538 height=538 alt="Чат">
             </div>
           </div>
           <div class="main-block__bottom">
@@ -208,14 +298,18 @@
           </div>
         </div>
       </article>
-      <article class="main__main-block main-block main-block--phone">
+      <article class="main__main-block main-block--right main-block main-block--phone">
         <div class="main-block__wrapper wrapper">
           <div class="main-block__top">
+            <a class="main-block__content-link">
+              </a>
             <div class="main-block__img">
-              <img src="img/main-6.png" width=563 height=564 alt="phone">
+              <img src="img/main-5-1.png" width=538 height=538 alt="телефон">
+              <img class="animate" src="img/main-5-2.png" width=538 height=538 alt="телефон">
             </div>
-            <div class="main-block__content">
+            <div class="main-block__content main-block__content--phone">
               <b class="main-block__title">Телефонная книга</b>
+              <b class="main-block__hidden-title animate">Подробнее</b>
               <p class="main-block__text">Выгружайте свою базу клиентов или используйте контакты, которые ваши клиенты оставили в чате.</p>
               <p class="main-block__text">Отправляйте сообщения для разных целевых аудиторий - создайте списки и сгруппируйте клиентов по полу, возрасту, доходу и другим фильтрам.</p>
               <p class="main-block__text">Удаление дубликатов, чистка баз от неактивных номеров, детальные отчеты по рассылкам.</p>
@@ -234,11 +328,11 @@
               </div>
               <div class="main-news__list-content">
                 <p class="main-news__list-text">
-                  Отправляйте официальную рассылку через Viber своим клиентам. Более 800 миллионов абонентов по всему миру ждут ваших сообщений!
+                  Отправляйте официальную рассылку через Viber своим клиентам. Более 800 миллионов абонентов по всему миру ждут ваших сообщений!<br>
                   Используйте один из самых популярных мессенджеров для информирования ваших клиентов дешёвым и эффективным способом.
                 </p>
               </div>
-              <a class="main-news__list-read">Читать новость</a>
+              <a class="main-news__list-read"><span>Читать новость</span></a>
             </li>
             <li class="main-news__list-item">
               <div class="main-news__list-header">
@@ -251,7 +345,7 @@
                   Надеемся на ваше понимание.
                 </p>
               </div>
-              <a class="main-news__list-read">Читать новость</a>
+              <a class="main-news__list-read"><span>Читать новость</span></a>
             </li>
             <li class="main-news__list-item">
               <div class="main-news__list-header">
@@ -264,7 +358,7 @@
                   От всей души поздравляем вас с наступающим Новым Годом! В новом году мы желаем вам успешного покорения новых вершин в вашем деле, благополучия и здоровья вам и вашим близким!
                 </p>
               </div>
-              <a class="main-news__list-read">Читать новость</a>
+              <a class="main-news__list-read"><span>Читать новость</span></a>
             </li>
           </ul>
           <a class="main-news__btn btn btn--green">Все новости</a>
@@ -273,7 +367,24 @@
       <article class="main__testi main-testi">
         <div class="main-testi__wrapper wrapper">
           <b class="main-testi__title">Отзывы</b>
-          <div class="main-testi__content"></div>
+          <div class="main-testi__content">
+            <ul class="main-testi__list">
+              <li class="main-testi__list-item main-testi__list-item--good">
+                <b class="main-testi__list-title">ООО “А.С.-Авто”</b>
+                <p class="main-testi__list-testi">Неделю пытаюсь решить вопрос, не могу связаться с руководством, динамят жутко!</p>
+                <p class="main-testi__list-admin">Ответ администрации:</p>
+                <p class="main-testi__list-answer">Добрый день. К сожалению, нестандартные вопросы, а именно такой был у вас, требуют больше времени на решение. Полагаю, вы всё равно остались довольны, ибо вопрос мы решили</p>
+                <p class="main-testi__list-date">26.10.2015 [19:24]</p>
+              </li>
+              <li class="main-testi__list-item main-testi__list-item--bad">
+                <b class="main-testi__list-title">ООО “А.С.-Авто”</b>
+                <p class="main-testi__list-testi">Неделю пытаюсь решить вопрос, не могу связаться с руководством, динамят жутко!</p>
+                <p class="main-testi__list-admin">Ответ администрации:</p>
+                <p class="main-testi__list-answer">Добрый день. К сожалению, нестандартные вопросы, а именно такой был у вас, требуют больше времени на решение. Полагаю, вы всё равно остались довольны, ибо вопрос мы решили</p>
+                <p class="main-testi__list-date">26.10.2015 [19:24]</p>
+              </li>
+            </ul>
+          </div>
           <a class="main-testi__btn btn btn--red">Все отзывы</a>
         </div>
       </article>

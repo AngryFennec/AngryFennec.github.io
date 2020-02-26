@@ -1,7 +1,3 @@
-/**
- * подключение js-модулей
- * //= modules/file.js
- */
 'use strict';
 
 $('.header__burger').on('click', function () {
