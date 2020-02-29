@@ -2,6 +2,7 @@
 (function() {
 
   var tabs = Array.from(document.querySelectorAll('.program__sections-btn'));
+  var tabsItems = Array.from(document.querySelectorAll('.program__sections-tab'));
   var tabsContents = Array.from(document.querySelectorAll('.program__sections-item'));
 
   var hideContents = function() {
@@ -11,18 +12,19 @@
   }
 
   var removeActives = function() {
-    tabs.forEach(function(item) {
-      item.classList.remove('program__sections-btn--active')
+    tabsItems.forEach(function(item) {
+      item.classList.remove('program__sections-tab--active')
     });
   }
 
 
-  if (tabs && tabsContents) {
+  if (tabs && tabsContents && tabsItems) {
     tabs.forEach(function(item, i) {
       item.addEventListener('click', function(evt) {
         hideContents();
+        removeActives();
         tabsContents[i].classList.add('program__sections-item--active');
-        item.classList.add('program__sections-btn--active');
+        tabsItems[i].classList.add('program__sections-tab--active');
       })
     });
   }
