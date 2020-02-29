@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Форум в Екатеринбурге</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-body">
+  <!-- <h1 class="visually-hidden">Форум</h1> -->
+  <header class="header">
+    <nav class="header__menu">
+      <a class="header__menu-item" href="#registration">О форуме</a>
+      <a class="header__menu-item" href="#registration">Регистрация</a>
+      <a class="header__menu-item" href="#">Спикеры</a>
+      <a class="header__menu-item" href="#">Программа</a>
+      <a class="header__menu-item" href="#">Фотоотчет</a>
+      <a class="header__menu-item" href="#">Контакты</a>
+    </nav>
+  </header>
+  <section class="title-block">
+    <div class="title-block__content">
+      <p class="title-block__description">Цифровая трансформация энергетики и ЖКХ <span>Екатеринбург 3 апреля</span></p>
+      <p class="title-block__caption">Выставка - <span>ФОРУМ</span></p>
+      <h1 class="title-block__header">Умный город - 2020</h1>
+      <p class="title-block__place">Международный выставочный центр «Екатеринбург-ЭКСПО» (Конгресс-Центр)</p>
+    </div>
+  </section>
+  <section class="about">
+    <h2 class="about__header"> О форуме</h2>
+    <ul class="about__list">
+      <li class="about__item about__item--left">
+        <img src="img/about-1.jpg" alt="фотография">
+        <p>Межрегиональная выставка-форум <b>«Цифровая трансформация энергетики и ЖКХ. Умный город – 2020»</b> - это значимые цифровые технологии, планируемые к реализации в энергетическом секторе, жилищно-коммунальном хозяйстве и городской среде при
+          поддержке Правительства Свердловской области.</p>
+      </li>
+      <li class="about__item about__item--right">
+        <p>Деловая программа с акцентом на практической применимости цифровых решений в энергетике и ЖКХ, механизмах их финансирования; лучшие практики и перспективы развития энергетического хозяйства в рамках реализации национальной программы
+          «Цифровая экономика Российской Федерации».</p>
+        <img src="img/about-2.jpg" alt="фотография">
+      </li>
+    </ul>
+    <ul class="about__info-list">
+      <li class="about__info-item about__info-item--1"><span>день</span>деловой программы</li>
+      <li class="about__info-item about__info-item--6"><span>тысяч</span>квадратных метров</li>
+      <li class="about__info-item about__info-item--1"><span>тысяча</span>участников</li>
+      <li class="about__info-item about__info-item--15"><span>&nbsp;</span>деловых мероприятий</li>
+      <li class="about__info-item about__info-item--15"><span>&nbsp;</span>спикеров</li>
+    </ul>
+  </section>
+  <section class="participants">
+    <h2 class="participants__header">Участники форума</h2>
+    <ul class="participants__list">
+      <li class="participants__item">представители стран Евразийского экономического союза</li>
+      <li class="participants__item">представители федеральных и региональных органов исполнительной власти </li>
+      <li class="participants__item">производители программного обеспечения и цифрового оборудования </li>
+      <li class="participants__item">органы местного самоуправления муниципальных образований Свердловской области</li>
+      <li class="participants__item">предприятия энергетики и ЖКХ и крупнейших поставщиков телекоммуникационных услуг</li>
+    </ul>
+  </section>
+  <section class="partners">
+    <h2 class="partners__header">Партнеры форума</h2>
+    <ul class="partners__list">
+      <li class="partners__item"><img src="img/partner-1.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-2.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-3.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-4.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-5.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-1.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-2.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-3.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-6.png" alt=""></li>
+      <li class="partners__item"><img src="img/partner-4.png" alt=""></li>
+    </ul>
+  </section>
+  <section class="info">
+    <div class="info__block">
+      <div class="info__wrapper">
+        <p class="info__date">3 апреля 2020 года</p>
+        <p class="info__adress">г. Екатеринбург <br>Международный выставочный центр «Екатеринбург-ЭКСПО» (Конгресс-Центр)</p>
+        <p class="info__time">с 9.00-18.00</p>
+      </div>
+    </div>
+  </section>
+  <section id="registration" class="registration">
+    <div class="registration__wrapper">
+      <div class="registration__header-block">
+        <h2 class="registration__header">Регистрация</h2>
+      </div>
+      <form class="registration__form" action="#" method="post">
+        <div>
+          <label class="visually-hidden" for="region">Регион</label>
+          <select name="region" id="region" style="color:#808080;" onchange="this.style.color='black'">
+            <option selected disabled hidden>Регион</option>
+            <option>Курганская область</option>
+            <option>Свердловская область</option>
+            <option>Челябинская область</option>
+          </select>
+        </div>
+        <div>
+          <label class="visually-hidden" for="town">Город</label>
+          <select name="town" id="town" style="color:#808080;" onchange="this.style.color='black'">
+            <option selected disabled hidden>Город</option>
+            <option>Курган</option>
+            <option>Екатеринбург</option>
+            <option>Челябинск</option>
+          </select>
+        </div>
+        <div>
+          <label for="fio">ФИО</label>
+          <input type="text" name="fio" id="fio" placeholder="Иванов Сергей" required>
+        </div>
+        <div>
+          <label for="position">Должность</label>
+          <input type="text" name="position" id="position" placeholder="исполнительный директор">
+        </div>
+        <div>
+          <label for="company">Компания</label>
+          <input type="text" name="company" id="company" placeholder='ООО "Проспект"' required>
+        </div>
+        <div>
+          <label for="phone">Телефон</label>
+          <input type="text" name="phone" id="phone" placeholder="+7 (____) _________" required>
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="text" name="email" id="email" placeholder="info@mail.ru" required>
+        </div>
+        <button class=" registration__submit btn">Зарегистрироваться</button>
+      </form>
+    </div>
+
+  </section>
+  <section class="speakers">
+    <h2 class="speakers__header">Спикеры</h2>
+    <div class="speakers__container swiper-container">
+      <ul class="speakers__list swiper-wrapper">
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+        <li class="speaker swiper-slide">
+          <div class="speaker__card">
+            <div class="speaker__header-block">
+              <img src="img/speakers.png" alt="иконка лампочки">
+              <div class="speaker__text-block">
+                <h3 class="speaker__name">Мартин Ролл</h3>
+                <p class="speaker__about">Председатель Конференции Женского Форума</p>
+              </div>
+            </div>
+            <div class="speaker__theme-block">
+              <span>Тема: </span>
+              <p class="speaker__theme">Мартин Ролл предлагает опытным глобальным бизнес-стратегам, старшим консультантам и помощникам для компаний из списка Fortune 500.</p>
+            </div>
+            <a class="speaker__presentation btn btn--small" href="#">Скачать презентацию</a>
+          </div>
+        </li>
+
+        
+      </ul>
+      <div class="speakers__next swiper-button-next"></div>
+      <div class="speakers__prev swiper-button-prev"></div>
+      <div class="speakers__bullets swiper-pagination"></div>
+    </div>
+  </section>
+  <section class="program">
+    <div class="program__wrapper wrapper">
+      <h2 class="program__header">Программа форума</h2>
+      <ul class="program__list">
+        <li class="program__item"><span>09.00 - 10.00</span>Регистрация</li>
+        <li class="program__item"><span>10.00 - 10.20</span>Открытие выставки-форума</li>
+        <li class="program__item"><span>10.20 - 10.30</span>Перерыв 10мин</li>
+        <li class="program__item program__item--bold"><span>10.30 - 11.50</span>Пленарная сессия</li>
+        <li class="program__item"><span>11.50 - 12.00 </span>Перерыв 10мин</li>
+        <li class="program__item program__item--bold"><span>12.00 - 13.20</span>Выступления по секциям</li>
+        <li class="program__item"><span>13.20 - 14.20</span> Обед</li>
+        <li class="program__item program__item--bold"><span>14.20 - 15.40</span>Круглые столы и презентации</li>
+        <li class="program__item"><span>15.40 - 15.50</span>Перерыв 10мин</li>
+        <li class="program__item program__item--bold"><span>15.50 - 17.10</span>Круглые столы и выступления по секциям</li>
+        <li class="program__item"><span>17.10 - 18.00 </span>Закрытие выставки-форума (фуршет)</li>
+      </ul>
+      <h3 class="program__sections-header">Программа секцияй по залам</h3>
+      <div class="program__sections">
+        <ul class="program__sections-tabs">
+          <li class="program__sections-tab">
+            <button class="program__sections-btn program__sections-btn--active">Зал № 1 (до 150 чел.)</button>
+          </li>
+          <li class="program__sections-tab">
+            <button class="program__sections-btn">Зал № 2 (до 150 чел.)</button>
+          </li>
+          <li class="program__sections-tab">
+            <button class="program__sections-btn">Зал № 3 (до 50 чел.)</button>
+          </li>
+          <li class="program__sections-tab">
+            <button class="program__sections-btn">Зал № 3 (до 50 чел.)</button>
+          </li>
+          <li class="program__sections-tab">
+            <button class="program__sections-btn">Выставка (до 30 чел.)</button>
+          </li>
+        </ul>
+        <ul class="program__sections-list">
+          <li class="program__sections-item program__sections-item--active">
+            <p>Зал № 1 (до 150 чел.)</p>
+          </li>
+
+          <li class="program__sections-item">
+            <p>Зал № 2 (до 150 чел.)</p>
+          </li>
+          <li class="program__sections-item">
+            <p>Зал № 3 (до 50 чел.)</p>
+          </li>
+          <li class="program__sections-item">
+            <p>Зал № 3 (до 50 чел.)</p>
+          </li>
+          <li class="program__sections-item">
+            <p>Выставка (до 30 чел.)</p>
+          </li>
+        </ul>
+
+
+      </div>
+      <a href="#" class="program__download btn">Скачать программу</a>
+    </div>
+  </section>
+  <section class="gallery">
+
+  </section>
+  <section class="contacts">
+    <h2 class="contacts__header">Контакты</h2>
+    <div class="contacts__content-block">
+      <div class="contacts__map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac0a83c85a5593ebbb6e78b332c1d2092ac998ef894a326468b4128f37e7ac85a&amp;source=constructor" width="697" height="450" frameborder="0"></iframe>
+      </div>
+      <div class="contacts__info">
+        <p class="contacts__adress" href=""> <img src="img/adress.png" alt=""> <span>Адрес</span></p>
+        <a class="contacts__phone" href=""> <img src="img/phone.png" alt=""><span>Телефон</span></a>
+        <a class="contacts__mail" href=""> <img src="img/mail.png" alt=""><span>Email</span></a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <img src="img/footer-back.jpg" alt="">
+    <p>Copyright (c)</p>
+  </footer>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
