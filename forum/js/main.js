@@ -12,7 +12,8 @@
         slidesPerView: 1,
         spaceBetween: 150,
         centeredSlides: true,
-        speed: 1000,
+        speed: 500,
+
         navigation: {
         nextEl: '.speakers__next',
         prevEl: '.speakers__prev',
@@ -27,7 +28,9 @@
             slidesPerView: 3,
             spaceBetween: -150,
             centeredSlides: true,
-            speed: 1000,
+            speed: 500,
+
+
     },
   }
     });
@@ -96,6 +99,8 @@ $(window).on('resize', function(){
   var gallerySliders = [];
   var thumbs = Array.from(document.querySelectorAll('.gallery-thumbs'));
   var tops = Array.from(document.querySelectorAll('.gallery-top'));
+  var nextBtns = Array.from(document.querySelectorAll('.gallery .swiper-button-next'));
+  var prevBtns = Array.from(document.querySelectorAll('.gallery .swiper-button-prev'));
   if (tops && thumbs) {
 
   tops.forEach(function(item, i) {
@@ -105,20 +110,24 @@ $(window).on('resize', function(){
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    observer: true,
+observeParents: true,
   });
   thumbsSliders.push(gTh);
   var gT = new Swiper(tops[i], {
     spaceBetween: 10,
+    observer: true,
+observeParents: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: nextBtns[i],
+      prevEl: prevBtns[i],
     },
     thumbs: {
       swiper: thumbsSliders[i]
     }
   });
   gallerySliders.push(gT);
-  })
+});
 }
 
 
@@ -142,6 +151,8 @@ if (galleryTabs && galleryItems) {
       removeActiveSliders();
       galleryTabs[i].classList.add('gallery__tab--active');
       galleryItems[i].classList.add('gallery__slider--active');
+      gallerySlider[i].reInit();
+      thumsSliders[i].reInit();
     })
   });
 }
