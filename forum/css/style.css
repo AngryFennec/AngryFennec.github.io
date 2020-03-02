@@ -784,7 +784,9 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 768px) {
   .header {
-    min-height: 60px; }
+    min-height: 60px;
+    position: relative;
+    z-index: 3; }
   .header__menu {
     position: absolute;
     right: 0;
@@ -964,7 +966,8 @@ button.swiper-pagination-bullet {
      object-fit: contain;
   position: absolute;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  overflow: hidden; }
   .title-block__background-block .title-block__main-background {
     width: 100%;
     height: auto; }
