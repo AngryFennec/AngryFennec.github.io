@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Телем</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-body">
+  <header class="header">
+    <div class="wrapper">
+      <a class = "header__logo" href="index.html">
+        <img src="img/logo.png" alt="логотип" class="header__image">
+      </a>
+      <nav>
+        <div class="header__menu-wrapper">
+          <ul class="header__menu">
+            <li><a class="anchor" href="#price">Цены и услуги</a></li>
+            <li><a class="anchor" href="#offer">Акции</a></li>
+            <li><a class="anchor" href="#contacts">Связаться с нами</a></li>
+          </ul>
+          <ul class="header__contacts">
+            <li><a href="mailto:tema@box.ru">tema@box.ru</a></li>
+            <li><a href="tel:89155956242">8 (915) 595-62-42</a></li>
+            <li><a class="header__popup js-popup" href="#">перезвоните мне</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__burger-wrapper"><button class="header__burger" type="button"><img src="img/burger.svg" alt="иконка меню"></button></div>
+    </div>
+  </header>
+  <main>
+    <section class="main">
+
+      <div class="wrapper">
+        <div class="main__para-wrapper">
+          <a class="main__para-btn"></a>
+        </div>
+        <div class="main__left">
+          <h1>Мы – ваш надеждый рекламный партнер</h1>
+          <p>Мы — оператор транзитной рекламы №1 в Рязани. Занимаемся рекламой снаружи и внутри общественного транспорта.</p>
+          <ul class="main__types">
+            <li><a class="anchor" href="#back">Заднее стекло</a></li>
+            <li><a class="anchor" href="#full">Полная оклейка</a></li>
+            <li><a class="anchor" href="#back-full">Задний борт полностью</a></li>
+            <li><a class="anchor" href="#side">Борта</a></li>
+            <li><a class="anchor" href="#headrest">Реклама на подголовниках</a></li>
+          </ul>
+          <a class="main__btn js-popup" href="#">Оставить заявку</a>
+          <ul class="main__advantages">
+            <li>Самая низкая цена среди конкурентов</li>
+            <li>Разработка макета&nbsp;бесплатно</li>
+          </ul>
+        </div>
+        <div class="main__right">
+          <img src="img/main-bus.png" width=1004 height=500 alt="автобус">
+        </div>
+      </div>
+    </section>
+   <section class="offer" id="offer">
+     <div class="parallax">
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="thumbnail" src="img/cloud1.png" alt="image">
+        </div>
+          </div>
+          </div>
+     <div class="wrapper">
+
+      <div class="offer__content">
+        <h2 class="offer__title">Спецпредложение</h2>
+        <p class="offer__description">Скидка при размещении на 10 маршрутках 50%!</p>
+        <a class="offer__link js-popup" href="#">ОСТАВИТЬ ЗАЯВКУ</a>
+      </div>
+    </div>
+   </section>
+   <section class="option">
+     <div class="wrapper">
+      <h2 class = "option__header">Варианты размещения вашей рекламы</h2>
+      <ul class="option__list">
+        <li id="back">
+          <div class="option__card">
+            <div class="options__card-text-wrapper">
+              <h3 class = "option__card-header">Только заднее стекло</h3>
+              <p class="option__card-description">размер 1,5х0,5 м</p>
+              <form class="option__form" action="#">
+                <label for="option-one">Введите кол-во автомобилей:
+                  <input id = "option-one" type="text" value="1">
+                </label>
+              </form>
+              <ul class="option__card-price-list">
+                <li>
+                  <span>1 месяц</span>
+                  <span data-summ="2500">2 500 ₽</span>
+                  <span data-summ="0"></span>
+                </li>
+                <li>
+                  <span>3 месяца</span>
+                  <span data-summ="6500">6 500 ₽</span>
+                  <span data-summ="6500"><s>6 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>6 месяцев</span>
+                  <span data-summ="12500">12 500 ₽</span>
+                  <span data-summ="10500"><s>10 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>12 месяцев</span>
+                  <span data-summ="24500">24 500 ₽</span>
+                  <span data-summ="20500"><s>20 500 ₽</s></span>
+                </li>
+              </ul>
+              <p class="option__card-add-price">Изготовление и монтаж 2 000 рублей</p>
+              <div class="option__button-block">
+                <a class="option__button button button--border js-popup" href="#">Оставить заявку</a>
+                <a class="option__button button  fancy-button one" href="#">Примеры оклейки</a>
+              </div>
+            </div>
+            <div class="options__card-image-wrapper">
+              <div class="option__card-image-block">
+               <img src="img/car-1.png" alt="">
+              </div>
+              <ul class="option__example-list">
+                <li><a id="one" href="img/example-1.png" data-fancybox="option-one" ><img src="img/example-1.png" alt=""></a></li>
+                <li><a href="img/example-2.png" data-fancybox="option-one"><img src="img/example-2.png" alt=""></a></li>
+                <li><a href="img/example-3.png" data-fancybox="option-one"><img src="img/example-3.png" alt=""></a></li>
+                <li><a href="img/example-4.png" data-fancybox="option-one"><img src="img/example-4.png" alt=""></a></li>
+                <li><a href="img/example-5.png" data-fancybox="option-one"><img src="img/example-5.png" alt=""></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </li>
+        <li id="back-full">
+          <div class="option__card">
+            <div class="options__card-text-wrapper">
+              <h3 class = "option__card-header">Весь задний борт</h3>
+              <p class="option__card-description">размер 1,5х0,5 м</p>
+              <form class="option__form" action="#">
+                <label for="option-two">Введите кол-во автомобилей:
+                  <input id="option-two" type="text" value="1">
+                </label>
+              </form>
+              <ul class="option__card-price-list">
+                <li>
+                  <span>1 месяц</span>
+                  <span data-summ="2500">2 500 ₽</span>
+                  <span data-summ="0"></span>
+                </li>
+                <li>
+                  <span>3 месяца</span>
+                  <span data-summ="6500">6 500 ₽</span>
+                  <span data-summ="6500"><s>6 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>6 месяцев</span>
+                  <span data-summ="12500">12 500 ₽</span>
+                  <span data-summ="10500"><s>10 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>12 месяцев</span>
+                  <span data-summ="24500">24 500 ₽</span>
+                  <span data-summ="20500"><s>20 500 ₽</s></span>
+                </li>
+              </ul>
+              <p class="option__card-add-price">Изготовление и монтаж 2 000 рублей</p>
+              <div class="option__button-block">
+                <a class="option__button button button--border js-popup" href="#">Оставить заявку</a>
+                <a class="option__button button fancy-button two" href="#">Примеры оклейки</a>
+              </div>
+            </div>
+            <div class="options__card-image-wrapper">
+              <div class="option__card-image-block">
+                <img src="img/car-2.png" alt="картинка">
+              </div>
+              <ul class="option__example-list">
+                <li><a id="two" href="img/example-1.png" data-fancybox="option-two"><img src="img/example-1.png" alt=""></a></li>
+                <li><a href="img/example-2.png" data-fancybox="option-two"><img src="img/example-2.png" alt=""></a></li>
+                <li><a href="img/example-3.png" data-fancybox="option-two"><img src="img/example-3.png" alt=""></a></li>
+                <li><a href="img/example-4.png" data-fancybox="option-two"><img src="img/example-4.png" alt=""></a></li>
+                <li><a href="img/example-5.png" data-fancybox="option-two"><img src="img/example-5.png" alt=""></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </li>
+        <li id="side">
+          <div class="option__card">
+            <div class="options__card-text-wrapper">
+              <h3 class = "option__card-header"> Полосы на боковых и заднем борте </h3>
+              <p class="option__card-description">размер 1,5х0,5 м</p>
+              <form class="option__form" action="#">
+                <label for="option-three">Введите кол-во автомобилей:
+                  <input id="option-three" type="text" value="1">
+                </label>
+              </form>
+              <ul class="option__card-price-list">
+                <li>
+                  <span>1 месяц</span>
+                  <span data-summ="2500">2 500 ₽</span>
+                  <span data-summ="0"></span>
+                </li>
+                <li>
+                  <span>3 месяца</span>
+                  <span data-summ="6500">6 500 ₽</span>
+                  <span data-summ="6500"><s>6 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>6 месяцев</span>
+                  <span data-summ="12500">12 500 ₽</span>
+                  <span data-summ="10500"><s>10 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>12 месяцев</span>
+                  <span data-summ="24500">24 500 ₽</span>
+                  <span data-summ="20500"><s>20 500 ₽</s></span>
+                </li>
+              </ul>
+              <p class="option__card-add-price">Изготовление и монтаж 2 000 рублей</p>
+              <div class="option__button-block">
+                <a class="option__button button button--border js-popup" href="#">Оставить заявку</a>
+                <a class="option__button button fancy-button three" href="#">Примеры оклейки</a>
+              </div>
+            </div>
+            <div class="options__card-image-wrapper">
+              <div class="option__card-image-block">
+               <img src="img/car-3.png" alt="">
+              </div>
+              <ul class="option__example-list">
+                <li><a id="three" href="img/example-1.png" data-fancybox="option-three"><img src="img/example-1.png" alt=""></a></li>
+                <li><a href="img/example-2.png" data-fancybox="option-three"><img src="img/example-2.png" alt=""></a></li>
+                <li><a href="img/example-3.png" data-fancybox="option-three"><img src="img/example-3.png" alt=""></a></li>
+                <li><a href="img/example-4.png" data-fancybox="option-three"><img src="img/example-4.png" alt=""></a></li>
+                <li><a href="img/example-5.png" data-fancybox="option-three"><img src="img/example-5.png" alt=""></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </li>
+        <li id="full">
+          <div class="option__card">
+            <div class="options__card-text-wrapper">
+              <h3 class = "option__card-header">Полностью оклееная маршрутка</h3>
+              <p class="option__card-description">размер 1,5х0,5 м</p>
+              <form class="option__form" action="#">
+                <label for="option-fourth">Введите кол-во автомобилей:
+                  <input id="option-fourth" type="text" value="1">
+                </label>
+              </form>
+              <ul class="option__card-price-list">
+                <li>
+                  <span>1 месяц</span>
+                  <span data-summ="2500">2 500 ₽</span>
+                  <span data-summ="0"></span>
+                </li>
+                <li>
+                  <span>3 месяца</span>
+                  <span data-summ="6500">6 500 ₽</span>
+                  <span data-summ="6500"><s>6 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>6 месяцев</span>
+                  <span data-summ="12500">12 500 ₽</span>
+                  <span data-summ="10500"><s>10 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>12 месяцев</span>
+                  <span data-summ="24500">24 500 ₽</span>
+                  <span data-summ="20500"><s>20 500 ₽</s></span>
+                </li>
+              </ul>
+              <p class="option__card-add-price">Изготовление и монтаж 2 000 рублей</p>
+              <div class="option__button-block">
+                <a class="option__button button button--border js-popup" href="#">Оставить заявку</a>
+                <a class="option__button button fancy-button fourth" href="#">Примеры оклейки</a>
+              </div>
+            </div>
+            <div class="options__card-image-wrapper">
+              <div class="option__card-image-block">
+                <img src="img/car-4.png" alt="картинка">
+              </div>
+              <ul class="option__example-list">
+                <li><a id="fourth" href="img/example-1.png" data-fancybox="option-fourth"><img src="img/example-1.png" alt=""></a></li>
+                <li><a href="img/example-2.png" data-fancybox="option-fourth"><img src="img/example-2.png" alt=""></a></li>
+                <li><a href="img/example-3.png" data-fancybox="option-fourth"><img src="img/example-3.png" alt=""></a></li>
+                <li><a href="img/example-4.png" data-fancybox="option-fourth"><img src="img/example-4.png" alt=""></a></li>
+                <li><a href="img/example-5.png" data-fancybox="option-fourth"><img src="img/example-5.png" alt=""></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </li>
+        <li id="headrest">
+          <div class="option__card">
+            <div class="options__card-text-wrapper">
+              <h3 class = "option__card-header">Размещение на подголовниках</h3>
+              <p class="option__card-description">размер 1,5х0,5 м</p>
+              <form class="option__form" action="#">
+                <label for="option-five">Введите кол-во автомобилей:
+                  <input id="option-five" type="text" value="1">
+                </label>
+              </form>
+              <ul class="option__card-price-list">
+                <li>
+                  <span>1 месяц</span>
+                  <span data-summ="2500">2 500 ₽</span>
+                  <span data-summ="0"></span>
+                </li>
+                <li>
+                  <span>3 месяца</span>
+                  <span data-summ="6500">6 500 ₽</span>
+                  <span data-summ="6500"><s>6 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>6 месяцев</span>
+                  <span data-summ="12500">12 500 ₽</span>
+                  <span data-summ="10500"><s>10 500 ₽</s></span>
+                </li>
+                <li>
+                  <span>12 месяцев</span>
+                  <span data-summ="24500">24 500 ₽</span>
+                  <span data-summ="20500"><s>20 500 ₽</s></span>
+                </li>
+              </ul>
+              <p class="option__card-add-price">Изготовление и монтаж 2 000 рублей</p>
+              <div class="option__button-block">
+                <a class="option__button button button--border js-popup" href="#">Оставить заявку</a>
+                <a class="option__button button fancy-button five" href="#">Примеры оклейки</a>
+              </div>
+            </div>
+            <div class="options__card-image-wrapper">
+              <div class="option__card-image-block">
+               <img src="img/car-5.png" alt="картинка">
+              </div>
+              <ul class="option__example-list">
+                <li><a id="five" href="img/example-1.png" data-fancybox="option-five"><img src="img/example-1.png" alt=""></a></li>
+                <li><a href="img/example-2.png" data-fancybox="option-five"><img src="img/example-2.png" alt=""></a></li>
+                <li><a href="img/example-3.png" data-fancybox="option-five"><img src="img/example-3.png" alt=""></a></li>
+                <li><a href="img/example-4.png" data-fancybox="option-five"><img src="img/example-4.png" alt=""></a></li>
+                <li><a href="img/example-5.png" data-fancybox="option-five"><img src="img/example-5.png" alt=""></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+     </div>
+
+   </section>
+   <section class="price" id="price">
+    <div class="wrapper">
+     <div class="price__content">
+       <h2 class="price__title">Получить коммерческое предложение</h2>
+       <p class="price__description">Скачайте наш полный прайс-лист в формате PDF</p>
+       <a class="price__button button button--red" href="#">Скачать прайс - лист</a>
+     </div>
+   </div>
+  </section>
+   <section class="route">
+     <div class="wrapper">
+      <h2 class="route__header">Не знаете какой маршрут выбрать? Мы поможем вам!</h2>
+      <div class="route__wrapper">
+        <div class="route__left-block">
+          <p>Выберите маршрут:</p>
+          <ul class="route__list">
+            <li><button type="button">41</button></li>
+            <li><button type="button">44</button></li>
+            <li><button type="button">47</button></li>
+            <li><button type="button">49</button></li>
+            <li><button type="button">73</button></li>
+            <li><button type="button">77</button></li>
+            <li><button type="button">49</button></li>
+            <li><button type="button">73</button></li>
+            <li><button type="button">88</button></li>
+            <li><button type="button">33</button></li>
+            <li><button type="button">71</button></li>
+            <li><button type="button">52</button></li>
+            <li><button type="button">12</button></li>
+            <li><button type="button">42</button></li>
+            <li><button type="button">52</button></li>
+          </ul>
+          <ul class="route__map-list">
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+            <li><img src="img/route-77.jpg" alt=""></li>
+
+          </ul>
+        </div>
+        <div class="route__right-block">
+          <ul>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>41 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>44 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>47 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>49 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>73 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>77 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>49 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>73 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>88 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>33 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>71 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>52 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>12 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>42 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+            <li>
+              <img src="img/arrow.svg" alt="">
+              <h3><span>52 </span>Маршрут</h3>
+              <p>Проходит через такие важные точки, как больница, кинотеатр. Подойдёт тем, кто рекламируется на целевую аудиторию бабок и подростков.</p>
+              <img src="img/route-back.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+     </div>
+   </section>
+   <section class="portfolio">
+     <div class="wrapper">
+       <h2>Портфолио</h2>
+       <section class="portfolio__slider">
+         <div class="swiper-container portfolio-top">
+           <div class="swiper-wrapper">
+
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+             <div class="swiper-slide">
+               <a href="img/slider-1.png" data-fancybox="slider-main" ><img class="lazyload"src="img/slider-1.png" width="1198" height="600" alt="картинка в слайдере"></a>
+             </div>
+
+           </div>
+
+           <div class="swiper-button-next"></div>
+           <div class="swiper-button-prev"></div>
+         </div>
+         <div class="swiper-container portfolio-thumbs">
+           <div class="swiper-wrapper">
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+             <div class="swiper-slide">
+               <img class="lazyload" src="img/slider-1.png" width="80" height="80" alt="картинка в томбнейле">
+             </div>
+
+           </div>
+
+         </div>
+       </section>
+     </div>
+   </section>
+   <section class="about">
+     <div class="wrapper">
+      <div class="about__left-block">
+        <h2>О компании</h2>
+        <div>
+          <p> Работаем в сфере транзитной рекламы с 2011 г. Начинали с размещения рекламы на видеомониторах в маршрутных такси. Затем расширились и стали заниматься рекламой на подголовниках и наружной рекламой на транспорте</p>
+          <p> На данный момент клеим рекламу на троллейбусы, автобусы, Пазики, маршрутки и занимаемся размещением рекламы внутри транспорта.</p>
+          <p>Данный сайт посвящен только одной из многих наших услуг, если Вас интересует другой вид транзитной рекламы обращайтесь по телефону или по почте мы все расскажем.</p>
+        </div>
+        <ul>
+          <li>
+            <span>200</span>
+            <span> Маршруток в нашем автопарке</span>
+          </li>
+          <li>
+            <span> -40% </span>
+            <span> Для концертных программ</span>
+          </li>
+          <li>
+            <span>15</span>
+            <span>  Маршрутов, охватывающих весь город</span>
+          </li>
+        </ul>
+       </div>
+
+      <div class="about__right-block">
+        <img src="img/about.png" alt="изображение помещения">
+        <div>
+          <img src="img/about-label.png" alt="заметка">
+        </div>
+
+      </div>
+     </div>
+
+
+   </section>
+  </main>
+  <footer class="footer" id="contacts">
+    <div class="footer__wrapper">
+    <div class="footer__map">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e6cf3c7257a891f278d3c6ae0ebb357edfba2375e77e880e81ad305c81e00eb&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    <div>
+      <h2>Контакты</h2>
+      <ul>
+        <li>
+          <span>Адрес:</span>
+          г. Рязань, Ленинского комсомола, д. 56
+        </li>
+        <li>
+          <span>Телефон:</span>
+          <a href=tel:89155956242>8 (915) 595-62-42 </a>
+        </li>
+        <li>
+          <span>e-mail:</span>
+          <a href=mailto:tm62@telem.ru>Tm62@telem.ru</a>
+        </li>
+        <li><p>Время работы с 9:00 до 18:00</p></li>
+        <li>
+          <a href="https://instagram.com" target="_blank"><img src="img/insta.png" alt=""></a>
+        </li>
+      </ul>
+      <a href="#" class="footer__popup button button--red js-popup">Оставить заявку</a>
+      <p>Разработано старптап студией - <a href="https://s-pushkin.ru/" target="_blank">Pushkin</a></p>
+    </div>
+  </div>
+  </footer>
+  <section class="popup" style="display: none">
+    <div class="popup__block ">
+      <h2 class="popup__header"> Заполните форму обратной связи</h2>
+      <span class="popup__description">И менеджер свяжется с вами как можно скорее.</span>
+      <form class="popup__form" action="#" method="post">
+
+        <div class="popup__fields-wrapper">
+          <label class="visually-hidden" for="user-name">Ваше имя</label>
+          <input type="text" id="user-name" name="user-name" placeholder="Ваше имя" required>
+          <label class="visually-hidden" for="user-phone" >Ваш телефон</label>
+          <input type="text" id="user-phone" name="user-phone" placeholder="Ваш телефон" required>
+          <label class="visually-hidden" for="user-email" >Ваш телефон</label>
+          <input type="text" id="user-email" name="user-email" placeholder="Ваш телефон" required>
+          <label class="visually-hidden" for="user-comment" >Ваш телефон</label>
+          <textarea id="user-comment" name="user-comment" placeholder="Ваш комментарий" required></textarea>
+        </div>
+        <span class="popup__caption">Нажимая на “Оставить заявку”, вы соглашаетесь с <a href="#">политикой обратботки персональных данных.</a></span>
+        <button class="popup__btn button button--red"><span>Оставить заявку</span></button>
+      </form>
+      <button type="button" class="popup__close"><img src="img/close-icon.svg" alt=""></button>
+    </div>
+  </section>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
