@@ -3339,7 +3339,7 @@ button.swiper-pagination-bullet {
     height: 100vh; }
   .popup__block {
     margin-top: 30px;
-    padding: 30px;
+    padding: 15px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -3349,16 +3349,21 @@ button.swiper-pagination-bullet {
     text-align: center; }
   .popup__form {
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    padding-top: 10px; }
   .popup__header {
     font-size: 25px;
     line-height: 30px; }
   .popup__form input {
     height: 40px; }
   .popup__form textarea {
-    height: 80px; }
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
   .popup__close {
     top: -23px;
     right: 0; }
   .popup__btn {
-    margin-top: 20px; } }
+    margin-top: 20px;
+    min-height: 40px;
+    max-height: 50px; } }
