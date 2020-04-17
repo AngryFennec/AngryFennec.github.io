@@ -61,7 +61,7 @@ $('.option input').on('input', function(){
                     lastPiece = "0" + lastPiece;
                 }
             }
-            $(this).text(firstPiece + ' ' + lastPiece + ' ₽');
+            $(this).html(firstPiece + ' ' + lastPiece + ' <img class="option__icon" src="img/icon-rub.png" alt="иконка рубля">');
         }
     });
     $(this).parent().parent().parent().find('ul li span:nth-child(3)').each(function(){
@@ -76,7 +76,7 @@ $('.option input').on('input', function(){
                      lastPiece = "0" + lastPiece;
                  }
              }
-             $(this).html('<s>' + firstPiece + ' ' + lastPiece + ' ₽</s>');
+             $(this).html('<s>' + firstPiece + ' ' + lastPiece + ' <img class="option__icon option__icon--red" src="img/icon-rub-red.png" alt="иконка рубля"></s>');
          }
      });
     }
@@ -106,7 +106,7 @@ transition: 'cubic-bezier(0,0,0,1)'
 
 
 $(document).mousemove(function(e) {
-  $(".main__para-btn").parallax(20, e);
+  $(".para-btn").parallax(20, e);
   });
 'use strict';
 (function() {
@@ -191,6 +191,13 @@ $('.popup__close').on('click', function (evt) {
 
 $(document).on('keydown', function (evt) {
   if (evt.keyCode === 27) {
+    $('.popup').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
+  }
+});
+
+$('.popup').on('click', function (evt) {
+  if ($(evt.target).hasClass('popup')) {
     $('.popup').fadeOut(300);
     $('.page-body').removeClass('page-body--overflow');
   }

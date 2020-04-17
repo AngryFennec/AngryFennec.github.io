@@ -32,7 +32,7 @@ $('.option input').on('input', function(){
                     lastPiece = "0" + lastPiece;
                 }
             }
-            $(this).text(firstPiece + ' ' + lastPiece + ' ₽');
+            $(this).html(firstPiece + ' ' + lastPiece + ' <img class="option__icon" src="img/icon-rub.png" alt="иконка рубля">');
         }
     });
     $(this).parent().parent().parent().find('ul li span:nth-child(3)').each(function(){
@@ -47,7 +47,7 @@ $('.option input').on('input', function(){
                      lastPiece = "0" + lastPiece;
                  }
              }
-             $(this).html('<s>' + firstPiece + ' ' + lastPiece + ' ₽</s>');
+             $(this).html('<s>' + firstPiece + ' ' + lastPiece + ' <img class="option__icon option__icon--red" src="img/icon-rub-red.png" alt="иконка рубля"></s>');
          }
      });
     }

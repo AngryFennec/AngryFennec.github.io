@@ -17,5 +17,5 @@
 
 
 $(document).mousemove(function(e) {
-  $(".main__para-btn").parallax(20, e);
+  $(".para-btn").parallax(20, e);
   });
