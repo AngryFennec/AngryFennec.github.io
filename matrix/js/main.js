@@ -26,6 +26,13 @@
             slidesPerGroup: 2,
 
           },
+          320: {
+            slidesPerView: 1.3,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true
+
+          },
 
         1024: {
       slidesPerView: 3,
