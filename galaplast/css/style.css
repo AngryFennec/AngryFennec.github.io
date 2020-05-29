@@ -1729,14 +1729,13 @@ button.swiper-pagination-bullet {
         counter-increment: item;
         top: 2px;
         left: -20px; }
-  .article .article__img {
+  .article img {
     margin-top: 20px;
-    margin-bottom: 70px; }
-    .article .article__img img {
-      -o-object-fit: cover;
-         object-fit: cover;
-      width: 100%;
-      height: auto; }
+    margin-bottom: 70px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: auto; }
 
 .two-string {
   max-width: 180px; }
@@ -1763,6 +1762,7 @@ button.swiper-pagination-bullet {
     width: 55%;
     max-height: 507px; }
     .article__block .article__block-img img {
+      margin: 0;
       -o-object-fit: cover;
          object-fit: cover;
       width: 100%;
@@ -2761,7 +2761,14 @@ button.swiper-pagination-bullet {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  color: #000000; }
+  color: #000000;
+  display: -ms-flexbox;
+  display: flex; }
+  .cart-item__price img {
+    height: 18px;
+    width: 100%;
+    margin-top: 2px;
+    margin-left: 5px; }
 
 .cart-item__options {
   max-width: 470px; }
@@ -2848,13 +2855,27 @@ button.swiper-pagination-bullet {
     font-size: 24px;
     line-height: 28px;
     color: #000000; }
+    .cart-result__row--accent .cart-result__value img {
+      height: 18px;
+      width: auto;
+      margin-top: 4px;
+      margin-left: 5px; }
 
 .cart-result__name {
   width: 50%; }
 
 .cart-result__value {
   width: 50%;
-  text-align: right; }
+  text-align: right;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .cart-result__value img {
+    height: 12px;
+    width: auto;
+    margin-left: 5px;
+    margin-top: 2px; }
 
 .cart-result__button {
   width: 100%;
@@ -3154,9 +3175,11 @@ button.swiper-pagination-bullet {
     margin-bottom: 0; }
   .contacts .contacts__map {
     border-radius: 50%;
-    max-width: 480px;
+    width: 480px;
     height: 480px;
-    width: 100%; }
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    overflow: hidden; }
     .contacts .contacts__map ymaps {
       border-radius: 50%; }
   .contacts .contacts__data-where {
@@ -3248,8 +3271,6 @@ button.swiper-pagination-bullet {
     min-width: 188px;
     max-width: 188px;
     height: 55px; }
-    .contacts .contacts__btn:hover {
-      opacity: 0.7; }
   .contacts .contacts__way-container {
     padding-top: 70px; }
     .contacts .contacts__way-container h3 {
@@ -3258,7 +3279,8 @@ button.swiper-pagination-bullet {
       font-size: 36px;
       line-height: 42px;
       color: #000000;
-      margin: 0 0 30px; }
+      margin: 0;
+      margin-bottom: 30px; }
     .contacts .contacts__way-container .contacts__params {
       padding-right: 6.5%;
       display: -ms-flexbox;
