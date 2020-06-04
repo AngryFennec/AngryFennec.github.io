@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Oswald Medium"), local("Oswald-Medium"), url("../font/OswaldMedium.woff2") format("woff2"), url("../font/OswaldMedium.woff") format("woff"); }
+  src: local("Oswald Medium"), local("Oswald-Medium"), url("../font/Oswaldmedium.woff2") format("woff2"), url("../font/Oswaldmedium.woff") format("woff"); }
 
 @font-face {
   font-family: "Open Sans";
