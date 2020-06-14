@@ -1152,12 +1152,17 @@ button.swiper-pagination-bullet {
   .catalog-index ul li a {
     font-size: 14px; } }
 
+.footer {
+  max-width: 1920px;
+  margin: 0 auto; }
+
 .footer__wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  padding-top: 40px; }
+  padding-top: 40px;
+  margin: 0 auto; }
 
 .footer__top {
   display: -ms-flexbox;
@@ -1296,7 +1301,9 @@ button.swiper-pagination-bullet {
 .header {
   width: 100%;
   position: relative;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  max-width: 1920px;
+  margin: 0 auto; }
   .header ul {
     display: -ms-flexbox;
     display: flex;
@@ -1788,7 +1795,8 @@ aside.item-menu {
     line-height: 17px; } }
 
 .page-main {
-  max-width: 1920px; }
+  max-width: 1920px;
+  margin: 0 auto; }
 
 .popup {
   position: fixed;
