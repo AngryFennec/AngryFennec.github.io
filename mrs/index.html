@@ -50,6 +50,9 @@
         <a class="header__price" href="#">Скачать прайс-лист</a>
       </div>
     </div>
+    <a class="header__logo-mobile" href="#">
+      <img src="img/logo.png" width="130" height=21 alt="логотип">
+    </a>
     <button class="header__burger" type="button"><img src="img/burger.svg" alt="иконка меню"><img class="none" src="img/close-burger.svg" alt="иконка меню"></button>
   </header>
   <main class="page-main">
@@ -87,52 +90,130 @@
     <section class="catalog-index">
       <div class="catalog-index__wrapper">
         <h2>Каталог</h2>
-        <ul>
+        <ul class="catalog-index__desktop">
           <li>
-            <a href="#">Арматура/круг</a>
+            <a href="#"><span>Арматура/круг</span></a>
+            <ul class="catalog-index__sublist">
+              <li><a href="#"><span>Пункт 1</span></a></li>
+              <li><a href="#"><span>Второй пункт</span></a></li>
+              <li><a href="#"><span>Еще один</span></a></li>
+            </ul>
           </li>
           <li>
-            <a href="#">Листы</a>
+            <a href="#"><span>Листы</span></a>
           </li>
           <li>
-            <a href="#">Уголок</a>
+            <a href="#"><span>Уголок</span></a>
           </li>
           <li>
-            <a href="#">Абразивы</a>
+            <a href="#"><span>Абразивы</span></a>
           </li>
           <li>
-            <a href="#">Проволока</a>
+            <a href="#"><span>Проволока</span></a>
           </li>
           <li>
-            <a href="#">Швеллер</a>
+            <a href="#"><span>Швеллер</span></a>
+            <ul class="catalog-index__sublist">
+              <li><a href="#"><span>Пункт 1</span></a></li>
+              <li><a href="#"><span>Второй пункт</span></a></li>
+              <li><a href="#"><span>Еще один</span></a></li>
+            </ul>
           </li>
           <li>
-            <a href="#">Балка</a>
+            <a href="#"><span>Балка</span></a>
           </li>
           <li>
-            <a href="#">Полоса</a>
+            <a href="#"><span>Полоса</span></a>
           </li>
           <li>
-            <a href="#">Электроды</a>
+            <a href="#"><span>Электроды</span></a>
           </li>
           <li>
-            <a href="#">Квадрат</a>
+            <a href="#"><span>Квадрат</span></a>
           </li>
           <li>
-            <a href="#">Труба</a>
+            <a href="#"><span>Труба</span></a>
+            <ul class="catalog-index__sublist">
+              <li><a href="#"><span>Пункт 1</span></a></li>
+              <li><a href="#"><span>Второй пункт</span></a></li>
+              <li><a href="#"><span>Еще один</span></a></li>
+            </ul>
           </li>
           <li class="catalog-index__list-hidden">
-            <a></a>
           </li>
           <li>
-            <a href="#">Комплекты для ворот</a>
+            <a href="#"><span>Комплекты для ворот</span></a>
           </li>
           <li>
-            <a href="#">Труба профильная</a>
+            <a href="#"><span>Труба профильная</span></a>
           </li>
           <li class="catalog-index__list-hidden">
-            <a></a>
           </li>
+        </ul>
+
+        <ul class="catalog-index__mobile">
+          <li>
+            <a href="#"><span>Арматура/круг</span></a>
+            <ul class="catalog-index__sublist">
+              <li><a href="#"><span>Пункт 1</span></a></li>
+              <li><a href="#"><span>Второй пункт</span></a></li>
+              <li><a href="#"><span>Еще один</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>Полоса</span></a>
+          </li>
+
+          <li>
+            <a href="#"><span>Абразивы</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Труба</span></a>
+            <ul class="catalog-index__sublist">
+              <li><a href="#"><span>Пункт 1</span></a></li>
+              <li><a href="#"><span>Второй пункт</span></a></li>
+              <li><a href="#"><span>Еще один</span></a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#"><span>Балка</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Труба профильная</span></a>
+          </li>
+
+          <li>
+            <a href="#"><span>Квадрат</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Уголок</span></a>
+          </li>
+
+          <li>
+            <a href="#"><span>Комплекты для ворот</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Швеллер</span></a>
+            <ul class="catalog-index__sublist">
+              <li><a href="#"><span>Пункт 1</span></a></li>
+              <li><a href="#"><span>Второй пункт</span></a></li>
+              <li><a href="#"><span>Еще один</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>Листы</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Электроды</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Проволока</span></a>
+          </li>
+
+
+
+
         </ul>
       </div>
     </section>
@@ -201,13 +282,21 @@
       <p>Заполните поля, наш менеджер свяжется с вами</p>
       <form class="popup__form" action="#" method="post">
         <div class="popup__fields-wrapper">
+          <div class="popup__input-container">
           <label class="visually-hidden" for="user-phone">Ваш телефон</label>
           <input type="text" id="user-phone" name="user-phone" placeholder="Номер телефона" required>
+          <span></span>
+        </div>
+        <div class="popup__input-container">
           <label class="visually-hidden" for="user-name">Ваше имя</label>
-          <input type="text" id="user-name" name="user-name" placeholder="Ваше имя" required>
-
+          <input class="empty" type="text" id="user-name" name="user-name"  value="" placeholder="Ваше имя" required>
+          <span></span>
+        </div>
+        <div class="popup__input-container">
           <label class="visually-hidden" for="user-email">Ваш email</label>
-          <input type="text" id="user-email" name="user-email" placeholder="E-mail" required>
+          <input type="email" value="" id="user-email" name="user-email" value="" placeholder="E-mail" required>
+          <span></span>
+        </div>
         </div>
 
         <button class="popup__btn button button-gradient"><span>Отправить заявку</span></button>

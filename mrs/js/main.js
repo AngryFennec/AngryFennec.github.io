@@ -62,9 +62,12 @@ $('.popup').on('click', function (evt) {
   }
 });
 
-const input = $('input[name="user-phone"]')[0];
-let im = new Inputmask("+7 (999) 999-99-99");
-if(input)im.mask(input);
+
+var inputPhone = $('input[name="user-phone"]')[0];
+//var inputEmail = $('input[name="user-email"]')[0];
+
+Inputmask({"mask": "+7 (999) 999-99-99", showMaskOnHover: false}).mask(inputPhone);
+//Inputmask({regex: '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/1/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/', showMaskOnHover: false}).mask(inputEmail);
 'use strict';
 
 if ($('aside')[0]) {
@@ -82,4 +85,27 @@ if ($('aside')[0]) {
     $(this).parent().find('.item-menu__sublist').slideToggle();
     $(this).toggleClass('opened');
   });
+}
+
+if ($('.catalog-index')[0]) {
+  var catlinks = $('.catalog-index__wrapper ul > li > a').not('.catalog-index__sublist a');
+  catlinks.each(function(){
+    if (($(this).parent().find('.catalog-index__sublist')).length === 0) {
+      $(this).addClass('non-circle');
+    }
+  });
+  catlinks.on('click', function (evt) {
+    evt.preventDefault();
+    catlinks.not($(this)).each(function(){
+        $(this).parent().find('.catalog-index__sublist').slideUp();
+    })
+    $(this).parent().find('.catalog-index__sublist').slideToggle();
+    $(this).toggleClass('opened');
+  });
+}
+
+var inputPhoneForm = $('input[name="call-phone"]')[0];
+//var inputEmail = $('input[name="user-email"]')[0];
+if(inputPhoneForm) {
+Inputmask({"mask": "+7 (999) 999-99-99", showMaskOnHover: false}).mask(inputPhoneForm);
 }

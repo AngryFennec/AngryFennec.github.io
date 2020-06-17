@@ -26,6 +26,9 @@ $('.popup').on('click', function (evt) {
   }
 });
 
-const input = $('input[name="user-phone"]')[0];
-let im = new Inputmask("+7 (999) 999-99-99");
-if(input)im.mask(input);
+
+var inputPhone = $('input[name="user-phone"]')[0];
+//var inputEmail = $('input[name="user-email"]')[0];
+
+Inputmask({"mask": "+7 (999) 999-99-99", showMaskOnHover: false}).mask(inputPhone);
+//Inputmask({regex: '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/1/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/', showMaskOnHover: false}).mask(inputEmail);
