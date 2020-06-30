@@ -1,5 +1,5 @@
 var rellax = new Rellax('.rellax');
-
+/*
 (function() {
     document.addEventListener("mousemove", parallax);
     const elem = document.querySelector("#parallax");
@@ -16,3 +16,24 @@ var rellax = new Rellax('.rellax');
     }
 
 })();
+*/
+$(document).ready(function(){
+    $(".main-header__button a").click(function(){
+        $(".main-header__overlay").fadeToggle(200);
+       $(this).toggleClass('main-header__btn-open').toggleClass('main-header__btn-close');
+    });
+});
+$('.main-header__overlay').on('click', function(){
+    $(".main-header__overlay").fadeToggle(200);
+    $(".main-header__button a").toggleClass('main-header__btn-open').toggleClass('main-header__btn-close');
+    open = false;
+});
+
+/*
+$(".main-header__menu-link").hover(function(){
+    $(this).addClass('animate__animated animate__pulse');
+});
+$(".main-header__menu-link").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",function(){
+    $(this).removeClass('animate__animated animate__pulse');
+});
+*/
