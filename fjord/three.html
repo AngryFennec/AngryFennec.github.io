@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+  THREE.ShapeUtils.triangulateShape = (function() {
+    var pnlTriangulator = new PNLTRI.Triangulator();
+    return function triangulateShape(contour, holes) {
+      return pnlTriangulator.triangulate_polygon([contour].concat(holes));
+    };
+  })();
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Snow Fjord</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+</head>
+
+
+<body>
+
+  <div id="three-container"></div>
+
+  <div id="instructions">
+    click and drag to control the animation
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/TextGeometry.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/FontUtils.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/pnltri.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/droid_sans_bold.typeface.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

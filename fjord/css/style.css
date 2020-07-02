@@ -1144,11 +1144,11 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 138%;
-  background: #141414;
   color: #E9E9E9; }
 
 a {
-  color: inherit; }
+  color: inherit;
+  cursor: pointer; }
 
 .visually-hidden {
   position: absolute;
@@ -1177,6 +1177,9 @@ a {
   margin: 0 auto;
   padding: 0 205px; }
 
+.portfolio {
+  background: #141414; }
+
 .portfolio__wrapper {
   max-width: 1440px;
   margin: 0 auto; }
@@ -1200,7 +1203,7 @@ a {
   font-weight: 500;
   font-size: 18px;
   line-height: 154.5%;
-  max-width: 300px;
+  max-width: 320px;
   margin-top: 7px; }
 
 .portfolio__item {
@@ -1215,17 +1218,20 @@ a {
   .portfolio__item:first-child {
     margin-top: 0; }
   .portfolio__item:nth-child(2) {
-    margin-top: -150px; }
+    margin-top: -50px; }
   .portfolio__item:nth-child(3) {
-    margin-top: 50px; }
+    margin-top: 350px; }
   .portfolio__item:nth-child(4) {
-    margin-top: 120px; }
+    margin-top: 320px; }
   .portfolio__item:nth-child(2n) {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
   .portfolio__item:nth-child(4) .portfolio__title {
     max-width: 100%; }
+  .portfolio__item a {
+    width: 400px;
+    text-decoration: none; }
 
 .footer__wrapper {
   max-width: 1440px;
@@ -1265,7 +1271,8 @@ a {
 
 .project-about {
   padding-top: 198px;
-  padding-bottom: 180px; }
+  padding-bottom: 180px;
+  background: #141414; }
 
 .project-about__link {
   display: block;
@@ -1309,12 +1316,29 @@ a {
   .project-about--white .project-about__text {
     color: #141414; }
 
+.project-about__description {
+  max-width: 325px;
+  margin-right: 110px; }
+
+.project-about__what {
+  max-width: 200px; }
+
+.project-about--ucandles {
+  background: #DCC7B2;
+  color: #141414; }
+  .project-about--ucandles .project-about__link {
+    color: #141414; }
+
+.project-about--app {
+  background: #222431; }
+
 .project-beautiful {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  background-color: #f5f6fa; }
+  background-color: #EEE3D8; }
+  .project-beautiful img {
+    margin: 0 auto; }
 
 .project-beautiful__wrapper {
   display: -webkit-box;
@@ -1382,14 +1406,13 @@ a {
   margin-right: 123px; }
 
 .ucandles-about {
-  background-color: #ffffff; }
+  background-color: #EEE3D8; }
 
-.ucandles-about__section {
-  min-height: 100vh; }
-
-.ucandles-about__decoration {
-  min-height: 100vh;
-  background-color: #f5f6fa; }
+.ucandles-about__wrapper {
+  padding-top: 172px;
+  padding-bottom: 318px;
+  margin: 0 auto;
+  width: 908px; }
 
 .project-img {
   background-color: #f5f6fa; }
@@ -1408,6 +1431,8 @@ a {
     padding-top: 240px; }
     .lis-about--bottom img {
       margin-bottom: 384px; }
+      .lis-about--bottom img:last-child {
+        margin-bottom: 0; }
 
 .lis-about__section {
   padding-left: 137px;
@@ -1421,6 +1446,25 @@ a {
   line-height: 19px;
   letter-spacing: 0.03em;
   color: #E9E9E9; }
+
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2); } }
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2); } }
+
+.main-header {
+  background: #141414; }
 
 .main-header__wrapper {
   width: 100%;
@@ -1547,18 +1591,171 @@ a {
   -webkit-animation: pulse 1s;
           animation: pulse 1s;
   color: #0D0D0D;
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
   .main-header__menu-link:hover {
-    -webkit-animation: scale 1s linear alternate;
-            animation: scale 1s linear alternate; }
+    text-decoration: underline;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
 
-@-webkit-keyframes scale {
-  to {
-    -webkit-transform: scale(2);
-            transform: scale(2); } }
+.main-header--jstick {
+  background: #017BFF;
+  color: #141414; }
+  .main-header--jstick .main-header__wrapper {
+    background: url("../img/header-title-jstick.svg") no-repeat 15% 50%; }
+  .main-header--jstick .main-header__btn-open:after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 29px;
+    background: url("../img/menu-open-dark.svg") no-repeat; }
+  .main-header--jstick .main-header__overlay .main-header__sing {
+    color: #E9E9E9; }
 
-@keyframes scale {
-  to {
-    -webkit-transform: scale(2);
-            transform: scale(2); } }
+.main-header--ucandles {
+  background: #FAFAFA;
+  color: #141414; }
+  .main-header--ucandles .main-header__wrapper {
+    background: url("../img/header-title-ucandles.svg") no-repeat 15% 50%; }
+  .main-header--ucandles .main-header__btn-open:after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 29px;
+    background: url("../img/menu-open-dark.svg") no-repeat; }
+  .main-header--ucandles .main-header__overlay .main-header__sing {
+    color: #E9E9E9; }
+
+.main-header--lis .main-header__wrapper {
+  background: url("../img/header-title-lis.svg") no-repeat 15% 50%; }
+
+.main-header--app {
+  background: #222431;
+  color: #E9E9E9; }
+  .main-header--app .main-header__wrapper {
+    background: url("../img/header-title-app.svg") no-repeat 15% 50%; }
+  .main-header--app .main-header__overlay .main-header__sing {
+    color: #E9E9E9; }
+
+.main-header--contacts .main-header__wrapper {
+  background: url("../img/header-title-contacts.svg") no-repeat 15% 50%; }
+
+.control {
+  background: #FFFFFF; }
+  .control a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15.8491px;
+    line-height: 19px;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    color: #121212;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    .control a:hover {
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      opacity: 0.7; }
+
+.control__wrapper {
+  padding-top: 152px;
+  padding-bottom: 171px;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.project-footer__wrapper {
+  padding-top: 65px;
+  padding-bottom: 66px;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .project-footer__wrapper p {
+    margin: 0; }
+  .project-footer__wrapper a {
+    text-decoration: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    .project-footer__wrapper a:hover {
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      opacity: 0.7; }
+
+.project-footer {
+  background: #141414; }
+
+.app-about {
+  padding-top: 190px;
+  background: #222431;
+  padding-bottom: 240px; }
+
+.contacts__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 154.5%;
+  /* or 28px */
+  color: #3C3E41; }
+
+.contacts__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 154.5%;
+  /* or 28px */
+  color: #FFFFFF;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  .contacts__link:hover {
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.contacts {
+  background: #141414; }
+
+.contacts__wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-bottom: 300px; }
+
+.contacts__bottom {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .contacts__bottom .contacts__item {
+    margin-right: 400px; }
+
+.contacts__item--social {
+  margin: 0; }
+  .contacts__item--social .contacts__link {
+    background: url("../img/telegram.svg") no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px; }
+
+.container--contacts {
+  background: #141414; }
