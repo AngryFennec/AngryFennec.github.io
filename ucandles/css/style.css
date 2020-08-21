@@ -4078,8 +4078,8 @@ a {
     opacity: 0; }
   .card__img-hover {
     position: absolute;
-    left: -14%;
-    bottom: -14%;
+    left: -10%;
+    bottom: -5%;
     width: 248px;
     height: 226px; }
     @media (max-width: 1024px) {
@@ -4127,8 +4127,8 @@ a {
           line-height: 24px; } }
   .card__cart {
     position: absolute;
-    bottom: 100px;
-    right: 62px;
+    bottom: 90px;
+    right: 67px;
     width: 57px;
     height: 57px;
     padding: 0;
