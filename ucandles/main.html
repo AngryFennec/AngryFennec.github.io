@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Ucandles</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="cursor">
+  <svg class="cursor__arrow cursor__arrow--left" xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+    <path d="M6 1L1 7L6 13" stroke="#975030" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+  <svg class="cursor__arrow cursor__arrow--right" xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+    <path d="M1 13L6 7L0.999999 1" stroke="#975030" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+</div>
+
+  <div class="js-header-scroll section">
+    <header class="header">
+    <div class="header__container container">
+        <div class="header__row">
+            <button class="header__burger burger js-open-menu-btn" type="button" aria-label="открыть/закрыть меню">
+                <span></span>
+            </button>
+            <a href="/" class="header__logo" aria-label="логотип">
+                <picture>
+                    <img src="img/logo.png" alt="логотип" srcset="img/logo@2x.png 2x" width="80" height="48">
+                </picture>
+            </a>
+        </div>
+        <div class="header__menu">
+            <nav class="header__row">
+                <div class="header__menu-wrapper">
+                    <ul class="header__menu-list header__menu-list--main">
+                        <li class="header__item header__arrow">
+                            <a href="#" data-toggle="site-nav" data-target="#menu-catalog" data-toggle-mobile="mobile-nav" data-target-mobile="#mobile-menu-catalog">Каталог</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#">Лукбук</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#">Корпоративные подарки</a>
+                        </li>
+                    </ul>
+                    <ul class="header__menu-list">
+                        <!-- поиск -->
+                        <li class="header__item header__item--search">
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M19.7501 19.7501L15.9438 15.9438" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span>Поиск</span>
+                            </a>
+                        </li>
+                        <!-- профиль -->
+                        <li class="header__item">
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.5 19.375V17.625C19.5 16.6967 19.1313 15.8065 18.4749 15.1501C17.8185 14.4937 16.9283 14.125 16 14.125H9C8.07174 14.125 7.1815 14.4937 6.52513 15.1501C5.86875 15.8065 5.5 16.6967 5.5 17.625V19.375" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M12.5 10.625C14.433 10.625 16 9.058 16 7.125C16 5.192 14.433 3.625 12.5 3.625C10.567 3.625 9 5.192 9 7.125C9 9.058 10.567 10.625 12.5 10.625Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span>Личный кабинет</span>
+                            </a>
+                        </li>
+                        <!-- лайки -->
+                        <li class="header__item">
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.3667 6.03388C18.941 5.58676 18.4357 5.23207 17.8795 4.99008C17.3232 4.74809 16.7271 4.62354 16.125 4.62354C15.5229 4.62354 14.9268 4.74809 14.3705 4.99008C13.8143 5.23207 13.309 5.58676 12.8833 6.03388L12 6.96138L11.1167 6.03388C10.2569 5.13115 9.09086 4.624 7.875 4.624C6.65914 4.624 5.49307 5.13115 4.63333 6.03388C3.77359 6.93661 3.29059 8.16098 3.29059 9.43763C3.29059 10.7143 3.77359 11.9387 4.63333 12.8414L5.51666 13.7689L12 20.5764L18.4833 13.7689L19.3667 12.8414C19.7925 12.3945 20.1303 11.8638 20.3608 11.2798C20.5912 10.6958 20.7099 10.0698 20.7099 9.43763C20.7099 8.80546 20.5912 8.17947 20.3608 7.59545C20.1303 7.01142 19.7925 6.48079 19.3667 6.03388V6.03388Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span>Избранное</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                 <!-- корзина -->
+                <a class="header__card" href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.03125 3.67725L4.51562 7.03141V18.771C4.51562 19.2158 4.69232 19.6424 5.00683 19.9569C5.32135 20.2714 5.74792 20.4481 6.19271 20.4481H17.9323C18.3771 20.4481 18.8037 20.2714 19.1182 19.9569C19.4327 19.6424 19.6094 19.2158 19.6094 18.771V7.03141L17.0938 3.67725H7.03125Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4.51562 7.03125H19.6094" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15.4166 10.3853C15.4166 11.2748 15.0633 12.128 14.4342 12.757C13.8052 13.386 12.9521 13.7394 12.0625 13.7394C11.1729 13.7394 10.3198 13.386 9.69073 12.757C9.0617 12.128 8.70831 11.2748 8.70831 10.3853" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>1</span>
+                </a>
+
+                <div class="header__mobile-menu mobile-menu">
+  <div class="mobile-menu__content" id="mobile-menu-catalog" data-content="mobile-dropdown">
+    <a href="#" class="mobile-menu__back js-back-menu" data-target-mobile="#mobile-menu-catalog">Каталог</a>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item header__arrow">
+        <a href="#" class="mobile-menu__link" data-toggle-mobile="mobile-nav" data-target-mobile="#mobile-products">Продукция</a>
+      </li>
+      <li class="mobile-menu__item header__arrow">
+        <a href="#" class="mobile-menu__link" data-toggle-mobile="mobile-nav" data-target-mobile="#mobile-aroma">Аромат</a>
+      </li>
+      <li class="mobile-menu__item header__arrow">
+        <a href="#" class="mobile-menu__link" data-toggle-mobile="mobile-nav" data-target-mobile="#mobile-mood">Настроение</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Хиты продаж</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Новинки</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Акции</a>
+      </li>
+    </ul>
+    <a href="#" class="mobile-menu__btn button-right">
+      Смотреть всё
+      <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+        <path class="button-right__arrow" d="M6.16224 11.9757L20.3044 11.9935M20.3044 11.9935L16.0564 16.2308M20.3044 11.9935L16.0671 7.74555" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+  <div class="mobile-menu__content" id="mobile-products" data-content="mobile-dropdown">
+    <a href="#" class="mobile-menu__back" data-toggle-back="mobile-back" data-target-mobile="#mobile-menu-catalog">Продукция</a>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item header__arrow">
+        <a href="#" class="mobile-menu__link" data-toggle-mobile="mobile-nav" data-target-mobile="#mobile-products-1">Свечи</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Диффузоры</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Парфюм</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Тарталетки</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Автопарфюм</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Бомбочки для ванн</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Аксессуары</a>
+      </li>
+    </ul>
+    <a href="#" class="mobile-menu__btn button-right">
+      Смотреть всё
+      <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+        <path class="button-right__arrow" d="M6.16224 11.9757L20.3044 11.9935M20.3044 11.9935L16.0564 16.2308M20.3044 11.9935L16.0671 7.74555" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+
+  <div class="mobile-menu__content" id="mobile-products-1" data-content="mobile-dropdown">
+    <a href="#" class="mobile-menu__back" data-toggle-back="mobile-back" data-target-mobile="#mobile-products">Свечи</a>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Свечи серии Bocal</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Свечи серии Verre</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Свечи серии Chakras </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Свечи серии Spa</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Свечи серит Votiv</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Все свечи</a>
+      </li>
+    </ul>
+    <a href="#" class="mobile-menu__btn button-right">
+      Смотреть всё
+      <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+        <path class="button-right__arrow" d="M6.16224 11.9757L20.3044 11.9935M20.3044 11.9935L16.0564 16.2308M20.3044 11.9935L16.0671 7.74555" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+
+  <div class="mobile-menu__content" id="mobile-aroma" data-content="mobile-dropdown">
+    <a href="#" class="mobile-menu__back" data-toggle-back="mobile-back" data-target-mobile="#mobile-products">Аромат</a>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Гурманский</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Древесный</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Травяной</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Фруктовый</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Цветочный</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Свежий</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Пряный</a>
+      </li>
+    </ul>
+    <a href="#" class="mobile-menu__btn button-right">
+      Смотреть всё
+      <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+        <path class="button-right__arrow" d="M6.16224 11.9757L20.3044 11.9935M20.3044 11.9935L16.0564 16.2308M20.3044 11.9935L16.0671 7.74555" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+
+  <div class="mobile-menu__content" id="mobile-mood" data-content="mobile-dropdown">
+    <a href="#" class="mobile-menu__back">Настроение</a>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Уют</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Энергия</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Романтика</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Релаксация</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">Афродозиак</a>
+      </li>
+    </ul>
+    <a href="#" class="mobile-menu__btn button-right">
+      Смотреть всё
+      <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+        <path class="button-right__arrow" d="M6.16224 11.9757L20.3044 11.9935M20.3044 11.9935L16.0564 16.2308M20.3044 11.9935L16.0671 7.74555" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+
+            </nav>
+        </div>
+    </div>
+    <div class="header__dropdown menu" id="menu-catalog" data-content="header-dropdown">
+  <div class="menu__container container">
+    <div class="menu__list-wrap">
+      <ul class="menu__list menu__list--main">
+        <li class="menu__item header__arrow">
+          <a href="#" class="menu__link active" data-toggle="catalog-header" data-target="#header-products">Продукция</a>
+        </li>
+        <li class="menu__item header__arrow">
+          <a href="#" class="menu__link" data-toggle="catalog-header" data-target="#header-aroma">Аромат</a>
+        </li>
+        <li class="menu__item header__arrow">
+          <a href="#" class="menu__link" data-toggle="catalog-header" data-target="#header-mood">Настроение</a>
+        </li>
+      </ul>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">Хиты продаж</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Новинки</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Акции</a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu__content">
+      <ul class="menu__submenu-list active" id="header-products" data-content="header-content">
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Свечи серии Bocal</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Свечи серии Verre</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Свечи серии Chakras</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Свечи серии Spa</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Свечи серит Votiv</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Все свечи</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Диффузоры</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Парфюм</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Тарталетки</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Автопарфюм</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Бомбочки для ванн</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Аксессуары</a>
+        </li>
+      </ul>
+      <ul class="menu__submenu-list" id="header-aroma" data-content="header-content">
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Гурманский</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Древесный</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Травяной</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Фруктовый</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Цветочный</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Свежий</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Пряный</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Мужской</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Афродизиак</a>
+        </li>
+      </ul>
+      <ul class="menu__submenu-list" id="header-mood" data-content="header-content">
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Уют</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Энергия</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Романтика</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Релаксация</a>
+        </li>
+        <li class="menu__submenu-item">
+          <a href="#" class="menu__submenu-link">Афродизиак</a>
+        </li>
+      </ul>
+      <a href="#" class="menu__btn button-right">
+        Смотреть всё
+        <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+          <path class="button-right__arrow" d="M6.16224 11.9757L20.3044 11.9935M20.3044 11.9935L16.0564 16.2308M20.3044 11.9935L16.0671 7.74555" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="menu__img">
+      <img src="img/menu-bg.png" alt="">
+    </div>
+  </div>
+</div>
+
+</header>
+
+    <section class="main-screen js-main js-section">
+  <h1 class="main-screen__title">
+    <span>Ucandles</span>
+    <span>by Evgeni Gor</span>
+  </h1>
+  <a href="#" class="main-screen__button button-right">
+    Каталог
+    <img src="img/sprite/arrow-right.svg" alt="стрелка">
+  </a>
+  <div class="main-screen__img-wrapper"></div>
+  <div class="main-screen__curtain main-screen__curtain--top"></div>
+  <div class="main-screen__curtain main-screen__curtain--bottom"></div>
+  <div class="main-screen__curtain main-screen__curtain--left js-left"></div>
+  <div class="main-screen__curtain main-screen__curtain--right js-right"></div>
+</section>
+
+  </div>
+  <main class="main js-main-scroll section">
+    <section class="aroma">
+  <h2 class="aroma__title section-title">Ароматы продукции</h2>
+  <div class="aroma__swiper">
+  <div class="swiper-container aroma__swiper-container js-slider js-left-block">
+      <div class="swiper-wrapper aroma__swiper-wrapper">
+        <div class="aroma__slide swiper-slide">
+          <b class="aroma__slide-title">Гурманский</b>
+          <img class="aroma__slide-img" src="img/aroma-slide-1.png">
+        </div>
+        <div class="aroma__slide swiper-slide">
+          <b class="aroma__slide-title">Древесный</b>
+<img class="aroma__slide-img" src="https://via.placeholder.com/240">
+        </div>
+        <div class="aroma__slide swiper-slide">
+          <b class="aroma__slide-title">Травяной</b>
+<img class="aroma__slide-img" src="https://via.placeholder.com/240">
+        </div>
+        <div class="aroma__slide swiper-slide">
+          <b class="aroma__slide-title">Фруктовый</b>
+<img class="aroma__slide-img" src="https://via.placeholder.com/240">
+        </div>
+        <div class="aroma__slide swiper-slide">
+          <b class="aroma__slide-title">Цветочный</b>
+<img class="aroma__slide-img" src="https://via.placeholder.com/240">
+        </div>
+        <div class="aroma__slide swiper-slide">
+          <b class="aroma__slide-title">Свежий</b>
+<img class="aroma__slide-img" src="https://via.placeholder.com/240">
+        </div>
+        <div class="aroma__slide swiper-slide">
+          <b class="aroma__slide-title">Пряный</b>
+<img class="aroma__slide-img" src="https://via.placeholder.com/240">
+        </div>
+      </div>
+      </div>
+    </div>
+</section>
+
+    <section class="category">
+  <div class="category__container container">
+    <div class="category__img"></div>
+    <a href="#" class="category__link section-title" data-src="img/product-1_2x.png">Свечи</a>
+    <a href="#" class="category__link section-title" data-src="img/aroma-slide-1.png">Диффузоры</a>
+    <a href="#" class="category__link section-title" data-src="img/product-1-hover_2x.png">Тарталетки</a>
+    <a href="#" class="category__link section-title" data-src="img/product-1_2x.png">Автопарфюм</a>
+    <a href="#" class="category__link section-title" data-src="img/product-1_2x.png">Аксессуары</a>
+    <a href="#" class="category__link section-title" data-src="img/product-1_2x.png">Бомбочки для ванн</a>
+    <a href="#" class="category__link section-title" data-src="img/product-1_2x.png">Парфюм</a>
+  </div>
+</section>
+
+    <section class="hits js-parallax-hits">
+      <div class="hits__container container">
+        <h2 class="hits__title section-title">Хиты продаж</h2>
+        <div class="swiper-container hits__swiper js-hits-swiper js-slider">
+  <div class="swiper-wrapper">
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+  </div>
+  <div class="swiper-button-next">
+    <img src="img/sprite/slide-next.svg" alt="следующий слайд">
+  </div>
+  <div class="swiper-button-prev">
+    <img src="img/sprite/slide-prev.svg" alt="предыдущий слайд">
+  </div>
+</div>
+
+        <div class="hits__bottom">
+          <a href="#" class="hits__button button-right">
+            Все хиты
+            <img src="img/sprite/arrow-right.svg" alt="стрелка">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-lookbook">
+      <div class="main-lookbook__text-block">
+        <div class="main-lookbook__content">
+          <h2 class="main-lookbook__title section-title">Продукция с душой и&nbsp;философией отражена в&nbsp;лукбуке</h2>
+          <a href="#" class="main-lookbook__button button-right">
+            Перейти в лукбук
+            <img src="img/sprite/arrow-right.svg" alt="стрелка">
+          </a>
+        </div>
+      </div>
+      <div class="main-lookbook__image-block">
+        <picture>
+          <img src="img/main-lookbook.jpg" alt="диффузор на бежевом фоне" srcset="img/main-lookbook_2x.jpg" width="960" height="1064">
+        </picture>
+      </div>
+    </section>
+      <section class="manufactur js-text-container">
+  <div class="manufacture__wrapper wrapper">
+    <h2 class="visually-hidden">Арома-мануфактура</h2>
+    <p class="manufacture__text section-title js-text">Арома-мануфактура Евгения Гора UCANDLES by Evgeni Gor с&nbsp;2010&nbsp;года производит свечи, диффузоры и&nbsp;парфюм для&nbsp;дома. Вся&nbsp;продукция компании изготавливается вручную, используя натуральные и&nbsp;природные ингредиенты.
+    </p>
+    <div class="manufacture__bottom">
+    <a class="manufacture__button button button--right button--brown">
+      О нас
+                  <img src="img/sprite/arrow-right.svg" alt="стрелка">
+    </a>
+    </div>
+  </div>
+</section>
+<section class="beauty js-parallax-beuty">
+      <h2 class="visually-hidden">Картинка красивая</h2>
+      <div class="beauty__wrapper wrapper">
+
+      </div>
+</section>
+
+    <section class="hits hits--padding">
+      <div class="hits__container container">
+        <h2 class="hits__title section-title">Новинки</h2>
+        <div class="swiper-container hits__swiper js-hits-swiper js-slider">
+  <div class="swiper-wrapper">
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+    <div class="card swiper-slide">
+  <a href="#" class="card__link">
+    <div class="card__img-wrapper">
+      <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+      <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+    </div>
+    <div class="card__description">
+      <h3>Свеча Bocal Black Pepper And Pine</h3>
+      <span>600 &#x20bd;</span>
+    </div>
+  </a>
+  <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#shopping-bag"></use>
+    </svg>
+  </button>
+  <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#heart"></use>
+    </svg>
+  </button>
+  <form class="card__form count-form">
+    <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+    <label for="count-form" class="visually-hidden">Количество</label>
+    <input id="count-form" type="text" value="1" name="count-form">
+    <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+  </form>
+</div>
+
+  </div>
+  <div class="swiper-button-next">
+    <img src="img/sprite/slide-next.svg" alt="следующий слайд">
+  </div>
+  <div class="swiper-button-prev">
+    <img src="img/sprite/slide-prev.svg" alt="предыдущий слайд">
+  </div>
+</div>
+
+        <div class="hits__bottom">
+          <a href="#" class="hits__button button-right">
+            Все новинки
+            <img src="img/sprite/arrow-right.svg" alt="стрелка">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-presents js-img-container">
+      <h2 class="main-presents__title section-title">Корпоративные подарки брендированные логотипом компании</h2>
+      <div class="main-presents__image-wrapper js-img-wrap">
+        <picture>
+          <img class="main-presents__image" src="img/main-presents.jpg" alt="свеча на светлом фоне" srcset="img/main-presents_2x.jpg" width="416" height="488">
+        </picture>
+      </div>
+      <p class="main-presents__description section-title">в любой праздник порадуют ваших коллег и партнёров</p>
+      <a class="main-presents__button button-right" href="#">
+        Подробнее
+        <img src="img/sprite/arrow-right.svg" alt="стрелка">
+      </a>
+    </section>
+  </main>
+  <footer class="footer footer--biege js-footer">
+  <div class="footer__left-side">
+      <img src="img/footer@2x.jpg" alt="фотография свечи">
+  </div>
+  <div class="footer__right-side">
+      <div class="footer__content">
+          <div class="footer__hashtag-block">
+              <h2 class="footer__title">Instagram</h2>
+              <p class="footer__description">Добавь хэштэг #Ucandles в Instagram, лучшие фотографии мы опубликуем в&nbsp;своём профиле и на сайте.</p>
+              <!-- ДОБАВИТЬ ПРОВЕРКУ НА ЦВЕТ ТЕМЫ -->
+              <!-- <a href="#" class="button-right button-right--light">
+                  Открыть профиль
+                  <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                    <path class="button-right__arrow" d="M6.16224 11.9757L20.3044 11.9935M20.3044 11.9935L16.0564 16.2308M20.3044 11.9935L16.0671 7.74555" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </a> -->
+              <a href="#" class="footer__button button-right">
+                  Открыть профиль
+                  <img src="img/sprite/arrow-right.svg" alt="стрелка">
+                </a>
+          </div>
+      </div>
+  </div>
+  <div class="footer__main">
+      <div class="footer__main-wrapper">
+          <div class="footer__main-left">
+              <ul class="footer__menu-list">
+                  <li>
+                      <a href="#">Сотрудничество</a>
+                  </li>
+                  <li>
+                      <a href="#">Контакты</a>
+                  </li>
+                  <li>
+                      <a href="#">Доставка и оплата</a>
+                  </li>
+                  <li>
+                      <a href="#">Возврат</a>
+                  </li>
+                  <li>
+                      <a href="about-philosophy.html">О нас</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="footer__main-right">
+              <a href="/" class="footer__logo">
+                  <!-- ДОБАВИТЬ ПРОВЕРКУ НА ЦВЕТ ТЕМЫ -->
+                  <!-- <img src="img/logo-light.png" alt="логотип" srcset="img/logo-light@2x.png 2x"> -->
+                  <img src="img/logo.png" alt="логотип" srcset="img/logo@2x.png 2x">
+              </a>
+              <ul class="footer__contacts">
+                  <li>
+                      <a href="tel:+79067280636">
+                          +7 (906) 72-80-636
+                      </a>
+                  </li>
+                  <li>
+                      <a href="mailto:info@ucandles.ru">
+                          info@ucandles.ru
+                      </a>
+                  </li>
+              </ul>
+              <ul class="footer__social-list social-list">
+                  <li>
+                      <a href="#">
+                          <svg width="18" height="20" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
+                              <path class="social-list__back" d="M0 9.06836C0 4.0978 4.02944 0.0683594 9 0.0683594C13.9706 0.0683594 18 4.0978 18 9.06836V10.0684C18 15.0389 13.9706 19.0684 9 19.0684C4.02944 19.0684 0 15.0389 0 10.0684V9.06836Z"></path>
+                              <path class="social-list__inner" d="M12 3.06836H10.0909C9.24704 3.06836 8.43773 3.41077 7.84102 4.02026C7.24432 4.62976 6.90909 5.45641 6.90909 6.31836V8.26836H5V10.8684H6.90909V16.0684H9.45455V10.8684H11.3636L12 8.26836H9.45455V6.31836C9.45455 6.14597 9.52159 5.98064 9.64093 5.85874C9.76027 5.73684 9.92213 5.66836 10.0909 5.66836H12V3.06836Z" fill="#FFFBF5"></path>
+                          </svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <svg width="19" height="20" viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg">
+                              <path class="social-list__back" d="M0 9.56836C0 4.32165 4.25329 0.0683594 9.5 0.0683594C14.7467 0.0683594 19 4.32165 19 9.56836C19 14.8151 14.7467 19.0684 9.5 19.0684C4.25329 19.0684 0 14.8151 0 9.56836Z"></path>
+                              <path class="social-list__inner" d="M13.4922 13.0621L15.3607 13.0395C15.3607 13.0395 16.3386 12.9858 15.8755 12.3111C15.8367 12.2556 15.6052 11.8127 14.4852 10.9016C13.3124 9.94804 13.4696 10.1016 14.8815 8.45273C15.742 7.44926 16.0855 6.83587 15.9778 6.57299C15.8744 6.32141 15.2423 6.38831 15.2423 6.38831L13.1368 6.39962C13.1368 6.39962 12.9807 6.38077 12.8643 6.44202C12.7513 6.50138 12.678 6.63989 12.678 6.63989C12.678 6.63989 12.3453 7.41722 11.9005 8.07867C10.9646 9.47316 10.5898 9.54665 10.4358 9.45997C10.0793 9.25928 10.1687 8.6506 10.1687 8.21717C10.1687 6.86508 10.4035 6.30163 9.71319 6.15558C9.48487 6.10659 9.31579 6.07549 8.73101 6.06984C7.98037 6.06324 7.34389 6.07267 6.98419 6.22625C6.74403 6.32989 6.55987 6.55885 6.67295 6.57205C6.81188 6.58712 7.12743 6.64648 7.29543 6.84718C7.51082 7.1044 7.50328 7.68199 7.50328 7.68199C7.50328 7.68199 7.62713 9.27247 7.21358 9.47033C6.93035 9.60601 6.54157 9.329 5.70585 8.06359C5.27723 7.4144 4.95414 6.69736 4.95414 6.69736C4.95414 6.69736 4.8906 6.56262 4.77967 6.49102C4.64398 6.40433 4.45551 6.37512 4.45551 6.37512L2.45562 6.3836C2.45562 6.3836 2.15622 6.38643 2.0453 6.50044C1.94729 6.60314 2.03884 6.80478 2.03884 6.80478C2.03884 6.80478 3.60472 9.99798 5.37738 11.6158C7.00465 13.0998 8.85055 12.966 8.85055 12.966H9.68734C9.68734 12.966 9.94042 12.9782 10.0697 12.8567C10.1892 12.7436 10.1849 12.5703 10.1849 12.5703C10.1849 12.5703 10.1687 11.5866 10.69 11.4415C11.2037 11.2992 11.8628 12.3922 12.5617 12.8124C13.0894 13.1309 13.4922 13.0621 13.4922 13.0621Z" fill="#FFFBF5"></path>
+                          </svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <svg width="19" height="20" viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg">
+                              <path class="social-list__back" d="M0 9.56836C0 4.32165 4.25329 0.0683594 9.5 0.0683594C14.7467 0.0683594 19 4.32165 19 9.56836C19 14.8151 14.7467 19.0684 9.5 19.0684C4.25329 19.0684 0 14.8151 0 9.56836Z"></path>
+                              <path class="social-list__inner" d="M12.25 4.06836H6.75C5.23122 4.06836 4 5.29958 4 6.81836V12.3184C4 13.8371 5.23122 15.0684 6.75 15.0684H12.25C13.7688 15.0684 15 13.8371 15 12.3184V6.81836C15 5.29958 13.7688 4.06836 12.25 4.06836Z" fill="#FFFBF5"></path>
+                              <circle class="social-list__back" cx="13" cy="6.06836" r="1"></circle>
+                              <path class="social-list__back" d="M11.973 9.20165C12.0501 9.7218 11.9612 10.253 11.7191 10.7198C11.4769 11.1865 11.0937 11.565 10.624 11.8014C10.1543 12.0379 9.62199 12.1201 9.10283 12.0366C8.58366 11.9531 8.10406 11.708 7.73224 11.3361C7.36041 10.9643 7.11529 10.4847 7.03175 9.96553C6.94821 9.44637 7.0305 8.91409 7.26692 8.44439C7.50333 7.97469 7.88183 7.59149 8.34858 7.3493C8.81532 7.10712 9.34656 7.01827 9.86671 7.0954C10.3973 7.17408 10.8885 7.42132 11.2678 7.80059C11.647 8.17987 11.8943 8.67107 11.973 9.20165Z"></path>
+                          </svg>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer__main-bottom">
+          <div class="footer__rights">
+              <p>© 2020 UCANDLES BY Evgeni Gor</p>
+              <p>Сделано в <a href="https://snow-fjord.com">Snow Fjord</a></p>
+          </div>
+          <div class="footer__info">
+              <a href="#">Конфиденциальность</a>
+              <a href="#">Публичная оферта</a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+  <script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
