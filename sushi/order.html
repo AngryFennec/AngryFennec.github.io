@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <title>Суши в Рязани</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+  <body>
+    <header class="header header--cart">
+    <div class="header__wrapper container">
+        <nav>
+            <button class="header__button button button--menu js-open-submenu" type="button">
+                <img src="img/sprite/burger.svg" alt="картинка меню">
+                Меню
+            </button>
+            <div class="header__submenu js-submenu">
+              <button class="header__submenu-button button button--menu js-close-submenu" type="button">
+                <img src="img/sprite/close-menu.svg" alt="картинка меню">
+                Меню
+              </button>
+              <button class="header__mobile-close js-mobile-close-btn" type="button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#close-menu"></use>
+                </svg>
+            </button>
+              <h3>Меню</h3>
+                <ul class="header__submenu-list">
+                  <li>
+                    <a href="#">Маки</a>
+                  </li>
+                  <li>
+                    <a href="#">Акции</a>
+                  </li>
+                  <li>
+                    <a href="#">Запечённые</a>
+                  </li>
+                  <li>
+                    <a href="#">Кранчи</a>
+                  </li>
+                  <li>
+                    <a href="#">Тёплые</a>
+                  </li>
+                  <li>
+                    <a href="#">Роллы</a>
+                  </li>
+                  <li>
+                    <a href="#">Суши</a>
+                  </li>
+                  <li>
+                    <a href="#">Веган</a>
+                  </li>
+                  <li>
+                    <a href="#">Гунканы</a>
+                  </li>
+                </ul>
+            </div>
+            <ul class="header__menu">
+                <li>
+                    <a href="#">О нас</a>
+                </li>
+                <li>
+                    <a href="#">Доставка</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+            <a class="header__mobile-cart button button--border" href="#">Корзина</a>
+        </nav>
+        <a class="header__logo" href="#">
+            <img src="img/logo.png" alt="логотип" width="87" height="71">
+        </a>
+        <div class="header__contacts">
+            <span>Доставка: с 09:00 до 23:00</span>
+            <a href="tel:89156207341">+7 (915) 620 73 41</a>
+        </div>
+        <div class="header__cart">
+            <div>
+                <span>3 порции:</span>
+                <span>1 500 ₽</span>
+            </div>
+            <a class="button button--border" href="#">Корзина</a>
+        </div>
+        <button class="header__mobile-button js-mobile-menu-btn" type="button">
+          <svg width="37" height="17" viewBox="0 0 37 17" fill="none">
+            <use xlink:href="img/sprite.svg#mobile-burger"></use>
+          </svg>
+      </button>
+    </div>
+</header>
+
+    <main>
+        <section class="order">
+            <div class="order__wrapper">
+                <div class="order__row">
+                    <h1>Корзина</h1>
+                    <form action="#">
+                        <div class="order__left-side">
+                            <div class="order__part">
+                                <h3>Ваши данные:</h3>
+                                <div>
+                                    <input class="order__input-false" type="text" name="name" placeholder="Как к вам обращаться?" require="">
+                                    <input class="order__input-false" type="text" name="phone" placeholder="Ваш номер телефона" require="">
+                                    <span>Сначала заполните это поле, а потом все остальное</span>
+                                </div>
+                            </div>
+                            <div class="order__tabs">
+                                <a href="#" class="order__tabs-active order__tabs-adress">Доставка</a>
+                                <a href="#" class="order__tabs-no-delivery">Самовывоз</a>
+                            </div>
+                            <div class="order__part order__part--adress">
+                                <div>
+                                    <input type="text" name="street" placeholder="Улица">
+                                    <input type="text" name="home-number" placeholder="Дом">
+                                    <input type="text" name="" placeholder="Подъезд">
+                                    <input type="text" name="" placeholder="Этаж">
+                                    <input type="text" name="" placeholder="Квартира">
+                                </div>
+                                <div>
+                                    <textarea name="comment" placeholder="Комментарий к заказу"></textarea>
+                                </div>
+                                <div class="order__time">
+                                    <div>
+                                        <input class="visually-hidden" type="radio" name="time" id="now" value="now" checked="">
+                                        <label for="now">Как можно скорее</label>
+                                    </div>
+                                    <div>
+                                        <input class="visually-hidden" type="radio" name="time" id="later" value="later">
+                                        <label for="later">К точному времени</label>
+                                        <div>
+                                            <select name="time-hour" id="time-hour">
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                            </select>
+                                            <select name="time-minutes" id="time-minutes">
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>40</option>
+                                                <option>50</option>
+                                                <option>00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order__part order__part--no-delivery" style="display:none">
+                                <div>
+                                    <img src="img/delivery.png" alt="логотип" width="100" height="100">
+                                    <div>
+                                        <span>ул.Право-Лыбетская, д. 40</span>
+                                        <span>с 10:00 -22:00, ежедневно</span>
+                                        <a href="tel:89155956242">8 (915) 595-62-42</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order__part">
+                                <h3>Оплата:</h3>
+                                <div>
+                                    <input class="visually-hidden" type="radio" name="payment" id="cash" value="cash" checked="">
+                                    <label for="cash">Наличными</label>
+                                </div>
+                                <div>
+                                    <input class="visually-hidden" type="radio" name="payment" id="apple" value="apple">
+                                    <label for="apple"> <img src="img/apple.png" alt="логтип apple pay" width="35" height="22">Apple Pay</label>
+                                </div>
+                                <div>
+                                    <input class="visually-hidden" type="radio" name="payment" id="card" value="card">
+                                    <label for="card">Картой при получении</label>
+                                </div>
+                                <div>
+                                    <input class="visually-hidden" type="radio" name="payment" id="google" value="google">
+                                    <label for="google"><img src="img/google.png" alt="логтип google pay" width="35" height="22">Google Pay</label>
+                                </div>
+                                <div>
+                                    <input class="visually-hidden" type="radio" name="payment" id="card-online" value="card-online">
+                                    <label for="card-online">Картой на сайте</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__right-side">
+                            <h2>Ваш заказ</h2>
+                            <ul>
+                                <li>
+                                    <div class="order__item">
+                                        <div class="order__item-description">
+                                            <img src="img/product.png" alt="продукт" width="107">
+                                            <div>
+                                                <h3>Филадельфия с огурцом</h3>
+                                                <p>Лосось, рис, нори, сливочный сыр, огурец </p>
+                                            </div>
+                                        </div>
+                                        <div class="order__item-price">
+                                            <div class="order__counter count-form">
+                                                <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус">-</button>
+                                                <label for="count-form" class="visually-hidden">Количество</label>
+                                                <input id="count-form" type="text" value="1" name="count-form">
+                                                <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс">+</button>
+                                            </div>
+                                            <span>249 ₽</span>
+                                        </div>
+                                        <button type="button"><img src="img/sprite/close.svg" alt="кнопка удаления"></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="order__item">
+                                        <div class="order__item-description">
+                                            <img src="img/product.png" alt="продукт" width="107">
+                                            <div>
+                                                <h3>Филадельфия с огурцом</h3>
+                                                <p>Лосось, рис, нори, сливочный сыр, огурец </p>
+                                            </div>
+                                        </div>
+                                        <div class="order__item-price">
+                                            <div class="order__counter count-form">
+                                                <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус">-</button>
+                                                <label for="count-form" class="visually-hidden">Количество</label>
+                                                <input id="count-form" type="text" value="1" name="count-form">
+                                                <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс">+</button>
+                                            </div>
+                                            <span>249 ₽</span>
+                                        </div>
+                                        <button type="button"></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="order__item">
+                                        <div class="order__item-description">
+                                            <img src="img/product.png" alt="продукт" width="107">
+                                            <div>
+                                                <h3>Филадельфия с огурцом</h3>
+                                                <p>Лосось, рис, нори, сливочный сыр, огурец </p>
+                                            </div>
+                                        </div>
+                                        <div class="order__item-price">
+                                            <div class="order__counter count-form">
+                                                <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус">-</button>
+                                                <label for="count-form" class="visually-hidden">Количество</label>
+                                                <input id="count-form" type="text" value="1" name="count-form">
+                                                <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс">+</button>
+                                            </div>
+                                            <span>249 ₽</span>
+                                        </div>
+                                        <button type="button"></button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="order__total">
+                                <button data-pay="all" class="button button--normal">Заказать</button>
+                                <button data-pay="apple" class="button button--apple" style="display: none" disabled="">
+                                    <img src="img/sprite/apple.svg" alt="логотип apple">
+                                    Apple pay
+                                </button>
+                                <button data-pay="google" class="button button--google" disabled="" style="display: none">
+                                    <img src="img/sprite/google.svg" alt="логотип google">
+                                    Google pay
+                                </button>
+                                <p>
+                                    <span>Всего:</span>
+                                    <span>1 500 ₽</span>
+                                </p>
+                            </div>
+                            <div class="order__attention"><p>Минимальная сумма заказа – <b>500 ₽</b> Добавьте в корзину еще что-нибудь</p></div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+  <div class="top">
+    <div class="wrapper container">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="delivery.html">Доставка</a></li>
+        <li><a href="delivery.html">Контакты</a></li>
+      </ul>
+      <img src="./img/footer-logo.png" alt="">
+      <div class="info">
+        <p>Доставка: с 09:00 до 23:00</p>
+        <a href="tel:+79156207341">+7 (915) 620 73 41</a>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="wrapper container">
+      <p>Проект сервиса: <a class="left" href="https://xn-----6kccijgvk3c4a4p.xn--p1ai/"> Еда в Рязани</a></p>
+      <p class="end">Разработка сайтов:<a class="right" href="https://s-pushkin.ru/"> Pushkin</a></p>
+    </div>
+  </div>
+</footer>
+<section class="popup" style="display: none">
+  <div class="popup__block">
+    <h2 class="popup__header">Заказ отправлен</h2>
+    <span class="popup__description">Ваш заказ оформлен, сейчас с вами свяжется наш менеджер для подтверждения заказа</span>
+    <span class="popup__time"> Время доставки <b>16:30</b></span>
+    <button type="button" class="button button--normal">Отлично!</button>
+  </div>
+</section>
+
+    <script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/about.js"></script>
+
+  </body>
+</html>
