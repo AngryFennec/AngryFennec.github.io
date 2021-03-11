@@ -10,8 +10,8 @@
 </head>
 
 
-<body class="page-body page-team">
-<header class="header">
+<body class="page-body">
+	<header class="header">
   <div class="header__overlay"></div>
   <div class="header-top">
     <div class="header-top__wrapper container">
@@ -413,76 +413,391 @@
 
 </header>
 
-<main>
-  <div class="breadcrumbs">
-    <ul class="breadcrumbs__container container">
-      <li>
-        <a class="breadcrumbs__item" href="index.html">Главная</a>
-      </li>
-      <li>
-        <a class="breadcrumbs__item" href="#">Услуги</a>
-      </li>
-      <li>
-        <a class="breadcrumbs__item breadcrumbs__item--active">Лечение кариеса</a>
-      </li>
-    </ul>
-  </div>
-  <div class="container">
-    <section class="contacts">
-      <h1 class="contacts__title title">Контакты</h1>
-      <div class="contacts__content">
-        <div class="contacts__text">
-          <p class="contacts__address">г.Рязань,<br>ул. Цветной бульвар, д. 10</p>
-          <span class="contacts__time">Ежедневно с 9:00 до 22:00</span>
-          <div class="contacts__list">
-            <div class="contacts__phone-container">
-              <span class="contacts__label">Телефоны:</span>
-              <ul>
-                <li><a href="tel:+79155956242">+7 (915) 595-62-42</a></li>
-                <li><a href="tel:+74912744212">+7 (4912) 74-42-12</a></li>
-              </ul>
-            </div>
-            <div class="contacts__internet-container">
-              <span class="contacts__label">E-mail:</span>
-              <div><a href="mailto: atmosfera@gmail.ru">atmosfera@gmail.ru</a></div>
-              <ul class="contacts__social-container">
-                <li>
-                  <a href="#">
-                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.9525 6.59783C20.6657 6.59783 20.3853 6.68287 20.1469 6.84219C19.9084 7.00152 19.7226 7.22798 19.6128 7.49293C19.5031 7.75789 19.4744 8.04943 19.5303 8.33071C19.5863 8.61198 19.7244 8.87034 19.9272 9.07313C20.1299 9.27592 20.3883 9.41401 20.6696 9.46996C20.9509 9.52591 21.2424 9.4972 21.5074 9.38745C21.7723 9.2777 21.9988 9.09185 22.1581 8.8534C22.3174 8.61495 22.4025 8.33461 22.4025 8.04782C22.4025 7.66326 22.2497 7.29445 21.9778 7.02252C21.7058 6.75059 21.337 6.59783 20.9525 6.59783ZM26.5108 9.52199C26.4873 8.51944 26.2995 7.52752 25.955 6.58574C25.6477 5.77994 25.1695 5.05029 24.5533 4.44699C23.955 3.82763 23.2236 3.35246 22.4145 3.05741C21.4753 2.70235 20.4822 2.51029 19.4783 2.48949C18.1975 2.41699 17.7866 2.41699 14.5 2.41699C11.2133 2.41699 10.8025 2.41699 9.52163 2.48949C8.51769 2.51029 7.52467 2.70235 6.58538 3.05741C5.77782 3.35544 5.04709 3.83021 4.44663 4.44699C3.82727 5.04533 3.35209 5.77669 3.05704 6.58574C2.70199 7.52503 2.50992 8.51805 2.48913 9.52199C2.41663 10.8028 2.41663 11.2137 2.41663 14.5003C2.41663 17.787 2.41663 18.1978 2.48913 19.4787C2.50992 20.4826 2.70199 21.4756 3.05704 22.4149C3.35209 23.224 3.82727 23.9553 4.44663 24.5537C5.04709 25.1704 5.77782 25.6452 6.58538 25.9432C7.52467 26.2983 8.51769 26.4904 9.52163 26.5112C10.8025 26.5837 11.2133 26.5837 14.5 26.5837C17.7866 26.5837 18.1975 26.5837 19.4783 26.5112C20.4822 26.4904 21.4753 26.2983 22.4145 25.9432C23.2236 25.6482 23.955 25.173 24.5533 24.5537C25.1723 23.9526 25.6509 23.2223 25.955 22.4149C26.2995 21.4731 26.4873 20.4812 26.5108 19.4787C26.5108 18.1978 26.5833 17.787 26.5833 14.5003C26.5833 11.2137 26.5833 10.8028 26.5108 9.52199ZM24.3358 19.3337C24.327 20.1007 24.1881 20.8606 23.925 21.5812C23.732 22.107 23.4221 22.5822 23.0187 22.9707C22.6268 23.3701 22.1526 23.6793 21.6291 23.877C20.9086 24.1401 20.1486 24.279 19.3816 24.2878C18.1733 24.3482 17.7262 24.3603 14.5483 24.3603C11.3704 24.3603 10.9233 24.3603 9.71496 24.2878C8.91854 24.3027 8.12551 24.1801 7.37079 23.9253C6.87028 23.7176 6.41785 23.4091 6.04163 23.0191C5.64057 22.6309 5.33456 22.1553 5.14746 21.6295C4.85245 20.8986 4.68883 20.1214 4.66413 19.3337C4.66413 18.1253 4.59163 17.6782 4.59163 14.5003C4.59163 11.3224 4.59163 10.8753 4.66413 9.66699C4.66954 8.88285 4.81269 8.10576 5.08704 7.37116C5.29977 6.86113 5.62628 6.4065 6.04163 6.04199C6.40873 5.62653 6.86243 5.29657 7.37079 5.07533C8.10733 4.80954 8.88362 4.67063 9.66663 4.66449C10.875 4.66449 11.322 4.59199 14.5 4.59199C17.6779 4.59199 18.125 4.59199 19.3333 4.66449C20.1003 4.67329 20.8603 4.81221 21.5808 5.07533C22.1299 5.27911 22.6227 5.61043 23.0187 6.04199C23.4147 6.41317 23.7241 6.86696 23.925 7.37116C24.1935 8.10695 24.3325 8.88373 24.3358 9.66699C24.3962 10.8753 24.4083 11.3224 24.4083 14.5003C24.4083 17.6782 24.3962 18.1253 24.3358 19.3337ZM14.5 8.30158C13.2745 8.30396 12.0772 8.66954 11.0594 9.35212C10.0416 10.0347 9.249 11.0036 8.78168 12.1365C8.31437 13.2694 8.19334 14.5154 8.43388 15.717C8.67442 16.9187 9.26575 18.0221 10.1331 18.8878C11.0005 19.7535 12.1051 20.3426 13.3072 20.5808C14.5093 20.819 15.755 20.6956 16.887 20.2261C18.019 19.7565 18.9864 18.962 19.667 17.9429C20.3475 16.9238 20.7108 15.7258 20.7108 14.5003C20.7124 13.6848 20.5527 12.8771 20.241 12.1235C19.9293 11.3699 19.4717 10.6854 18.8945 10.1093C18.3173 9.53322 17.6319 9.07694 16.8777 8.7667C16.1235 8.45646 15.3155 8.29839 14.5 8.30158ZM14.5 18.5241C13.7041 18.5241 12.9262 18.2881 12.2645 17.846C11.6028 17.4038 11.087 16.7754 10.7825 16.0401C10.478 15.3049 10.3983 14.4959 10.5535 13.7153C10.7088 12.9348 11.092 12.2178 11.6547 11.6551C12.2175 11.0924 12.9344 10.7091 13.715 10.5539C14.4955 10.3986 15.3045 10.4783 16.0398 10.7829C16.775 11.0874 17.4035 11.6031 17.8456 12.2648C18.2877 12.9266 18.5237 13.7045 18.5237 14.5003C18.5237 15.0287 18.4196 15.552 18.2174 16.0401C18.0152 16.5283 17.7188 16.9719 17.3452 17.3455C16.9715 17.7192 16.528 18.0156 16.0398 18.2178C15.5516 18.42 15.0284 18.5241 14.5 18.5241Z" fill="#626262"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.2131 2.41699H10.7994C4.02771 2.41699 2.41663 4.02808 2.41663 10.7872V18.2008C2.41663 24.9725 4.01518 26.5837 10.7868 26.5837H18.2005C24.9722 26.5837 26.5833 24.9851 26.5833 18.2134V10.7998C26.5833 4.02808 24.9847 2.41699 18.2131 2.41699ZM21.9261 19.6609H20.164C19.4969 19.6609 19.2955 19.1196 18.0998 17.9239C17.0551 16.917 16.6145 16.7911 16.3502 16.7911C15.9852 16.7911 15.8845 16.8918 15.8845 17.3953V18.9812C15.8845 19.4092 15.7461 19.6609 14.6259 19.6609C13.5388 19.5878 12.4847 19.2576 11.5503 18.6974C10.6159 18.1372 9.82789 17.363 9.25126 16.4386C7.88235 14.7348 6.92988 12.735 6.4696 10.5984C6.4696 10.3341 6.57027 10.0949 7.07377 10.0949H8.8359C9.28902 10.0949 9.45268 10.2963 9.62887 10.762C10.4847 13.2794 11.9449 15.4695 12.5364 15.4695C12.763 15.4695 12.8636 15.3688 12.8636 14.8024V12.2095C12.7881 11.0264 12.1588 10.9256 12.1588 10.4977C12.1671 10.3848 12.2191 10.2796 12.3037 10.2044C12.3883 10.1292 12.4988 10.0899 12.6119 10.0949H15.3811C15.7587 10.0949 15.8845 10.2837 15.8845 10.7368V14.236C15.8845 14.6136 16.0481 14.7394 16.1614 14.7394C16.388 14.7394 16.5642 14.6136 16.9795 14.1982C17.8721 13.1098 18.6014 11.8971 19.1445 10.5984C19.1999 10.4421 19.305 10.3083 19.4436 10.2174C19.5823 10.1265 19.7469 10.0834 19.9123 10.0949H21.6744C22.2031 10.0949 22.3164 10.3592 22.2031 10.7368C21.5619 12.1727 20.7686 13.5357 19.8368 14.8024C19.648 15.0919 19.5725 15.2429 19.8368 15.5828C20.013 15.8471 20.6298 16.3631 21.0451 16.854C21.6493 17.4567 22.1509 18.1539 22.5303 18.9183C22.6814 19.4092 22.4296 19.6609 21.9261 19.6609Z" fill="#626262"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2067 6.80041C20.1605 4.75427 17.4418 3.625 14.546 3.625C8.57752 3.625 3.71704 8.48193 3.71704 14.4504C3.7135 16.3585 4.21265 18.2206 5.16138 19.8632L3.625 25.4741L9.36694 23.9661C10.9458 24.8298 12.73 25.283 14.5425 25.2865H14.546C20.5145 25.2865 25.3715 20.4296 25.375 14.4575C25.375 11.5653 24.2493 8.84656 22.2067 6.80041ZM14.546 23.4563H14.5425C12.9282 23.4563 11.3423 23.0209 9.96167 22.2031L9.63245 22.0084L6.22339 22.9005L7.13318 19.58L6.92078 19.2401C6.01807 17.8064 5.5437 16.1497 5.5437 14.4504C5.5437 9.49084 9.58289 5.4552 14.5496 5.4552C16.9532 5.4552 19.2118 6.39331 20.911 8.09253C22.6102 9.79529 23.5448 12.0538 23.5448 14.4575C23.5448 19.4207 19.5056 23.4563 14.546 23.4563ZM19.4808 16.7161C19.2118 16.5815 17.8807 15.9266 17.6329 15.8381C17.3851 15.7461 17.2046 15.7036 17.024 15.9727C16.8435 16.2452 16.3267 16.8541 16.1674 17.0347C16.0116 17.2117 15.8523 17.2365 15.5833 17.1019C15.3107 16.9674 14.4398 16.6807 13.4061 15.7567C12.6025 15.0416 12.0574 14.1531 11.9016 13.884C11.7423 13.6115 11.8839 13.4663 12.0184 13.3318C12.1423 13.2114 12.291 13.0167 12.4255 12.8574C12.5601 12.7017 12.6061 12.5884 12.6981 12.4078C12.7866 12.2273 12.7406 12.068 12.6733 11.9335C12.6061 11.799 12.0645 10.4644 11.8379 9.92273C11.6184 9.39526 11.3954 9.4696 11.229 9.45898C11.0732 9.4519 10.8927 9.45191 10.7122 9.45191C10.5316 9.45191 10.2378 9.51917 9.98999 9.79175C9.74219 10.0608 9.0448 10.7157 9.0448 12.0468C9.0448 13.3778 10.0148 14.6664 10.1493 14.8469C10.2838 15.0239 12.0574 17.7568 14.7726 18.9286C15.4169 19.2083 15.9196 19.3746 16.3125 19.4985C16.9603 19.7039 17.5515 19.6755 18.0188 19.6083C18.5392 19.5304 19.6189 18.9534 19.8455 18.3197C20.0685 17.6896 20.0685 17.1479 20.0012 17.0347C19.934 16.9214 19.7534 16.8541 19.4808 16.7161Z" fill="#626262"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <a class="contacts__btn button button--blue js-modal-btn" data-target="modal-phone" href="#">Записаться на прием</a>
-        </div>
-        <div class="contacts__map-container">
-          <div class="contacts__map">
-            <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A83286ce1b6ff524570042d28f8cf1dafe7ec5dfa66024ad37a1e11510358efd7&amp;width=505&amp;height=505&amp;lang=ru_RU&amp;scroll=true"></script>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+	<main>
+		<div class="breadcrumbs">
+			<ul class="breadcrumbs__container container">
+			  <li>
+				<a class="breadcrumbs__item" href="index.html">Главная</a>
+			  </li>
+			  <li>
+				<a class="breadcrumbs__item breadcrumbs__item--active">О компании</a>
+			  </li>
+			</ul>
+		  </div>
+		<section class="about-promo">
+			<div class="container about-promo__container">
+				<div class="about-promo__content">
+					<h1 class="title">О компании</h1>
+					<p>Мы рады приветствовать вас в Атмосфере. Не забывайте, что мы делаем все, чтобы вам было комфортно и надеемся, что у нас получается!</p>
+					<a href="#" class="button js-popup">Запись на прием</a>
+				</div>
+				<img src="img/about-promo.png" alt="иллюстрация">
+			</div>
+		</section>
+		<section class="about">
+			<div class="about__container container">
+				<h2 class="title title--middle">Про нашу клинику</h2>
+				<div class="about__grid-wrapper">
+					<div class="about__content">
+						<p>Когда мы открывали первую клинику, то вообще не думали о деньгах. Было много задора, интереса и сделать что-то непохожее на других. Что-то тёплое и по-семейному уютное. Возможно именно поэтому и получилось что-то такое теплое, приятное и по-настоящему семейное. Мы много работем и наша работа нам нравится!</p>
+						<p>Стоматология? Пожалуй, нечто большее. Место, куда приятно идти. Где люди улыбаются не потому, что надо, а потому что искреннее любят жизнь. Чего мы уже добились? Сейчас расскажем:</p>
+						<ol>
+							<li>Собрали команду из 40 профессиональных стоматологов;</li>
+							<li>Поднялись с 17 места на 11 в рейтинге ИД «Коммерсантъ»</li>
+							<li>Создали такой уровень доверия, что нас рекомендуют сразу после первого посещения</li>
+						</ol>
+						<p>Ценности — как часто об этом все говорят. Для нас это не просто слова, для нас это что-то большее. Это то, чем мы руководствуемся в своей работе. За годы сотрудничества мы для себя определили свои ориентиры:</p>
+						<ul>
+							<li>Это доверие;</li>
+							<li>Честность;</li>
+							<li>Экспертность;</li>
+							<li>И конечно же... любовь! Куда же без нее?</li>
+						</ul>
+						<p>Если пациент, записанный перед вами, опаздывает, мы не отнимем время вашего приема. Этот момент берем на себя.</p>
+						<p>Если же вы сами опоздали, то мы либо сократим время приема, либо перенесем визит на другое более удобное время.</p>
+					</div>
+					<img src="img/about-illustration.jpg" alt="иллюстрация">
+					<div class="about__quote-block">
+						<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<use xlink:href="img/sprite.svg#quote"></use>
+						</svg>
+						<h3>Дмитрий Хадиков</h3>
+						<blockquote>— Наши стоматологи делают не просто красиво и надежно – мастерски выполненные авторские работы сравнимы с произведениями искусства. Мы очень любим детей – для их комфортного и спокойного лечения у нас есть все необходимое.</blockquote>
+						<p>Директор и основатель клиники “Атмосфера” </p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about-advantages">
+			<div class="about-advantages__container container">
+				<div class="about-advantages__content">
+					<h2 class="title title--middle">Почему команда наших стоматологов одна из&nbsp;лучших в городе?</h2>
+					<p>Для наших специалистов почти не бывает безнадежных случаев. Мы далеко продвинулись в эстетическом протезировании зубов, в&nbsp;том числе на имплантатах.</p>
+				</div>
+				<ul class="about-advantages__list">
+					<li>
+						<div class="about-advantages__card">
+							<img src="img/sprite/about-item-1.svg" alt="иконка">
+							<p>Работаем ежедневно, даже в выходные дни!</p>
+						</div>
+					</li>
+					<li>
+						<div class="about-advantages__card">
+							<img src="img/sprite/about-item-2.svg" alt="иконка">
+							<p>Множество наград и сертификатов </p>
+						</div>
+					</li>
+					<li>
+						<div class="about-advantages__card">
+							<img src="img/sprite/about-item-3.svg" alt="иконка">
+							<p>Удобная парковка и положение в городе</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="about-gallery">
+			<div class="about-gallery__grid-wrapper">
+				<div class="about-gallery__content">
+					<h2 class="title title--middle">Наша клиника</h2>
+					<p>В нашей клинике мы используем только лучшее оборудование, самые топовые инструменты, технику и ровняемся всегда на европейски клиники.</p>
+					<p>За историю существования нашей клиники мы поняли, что для нас существует только три главных принципа:</p>
+					<ul class="about-gallery__list">
+						<li>
+							<div>
+								<img src="img/sprite/about-item-4.svg" alt="иконка">
+							</div>
+							<div>
+								<span>Мы работаем уже:</span>
+								<p>12 лет</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="img/sprite/about-item-5.svg" alt="иконка">
+							</div>
+							<div>
+								<span>Все наши специалисты:</span>
+								<p>Сертифицированные врачи</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<img class="about-gallery__item" src="img/about-gallery-1.jpg" alt="иллюстрация">
+				<img class="about-gallery__item" src="img/about-gallery-2.jpg" alt="иллюстрация">
+				<img class="about-gallery__item" src="img/about-gallery-3.jpg" alt="иллюстрация">
+				<img class="about-gallery__item" src="img/about-gallery-4.jpg" alt="иллюстрация">
+			</div>
+		</section>
+		<section class="diag-team">
+			<div class="diag-team__container container">
+			  <h2 class="title title--middle">Наши врачи</h2>
+			  <ul class="diag-team__list">
+				<li class="diag-team__item team-member">
+				  <img src="img/team-member.png" width="144" height="144" alt="Фото врача">
+				  <p>Давыдова Екатерина Андреевна</p>
+				  <span>Врач терапевт</span>
+				  <span>Стаж: 12 лет</span>
+				  <a href="#">Подробнее</a>
+				</li>
+				<li class="diag-team__item team-member">
+				  <img src="img/team-member.png" width="144" height="144" alt="Фото врача">
+				  <p>Давыдова Екатерина Андреевна</p>
+				  <span>Врач терапевт</span>
+				  <span>Стаж: 12 лет</span>
+				  <a href="#">Подробнее</a>
+				</li>
+				<li class="diag-team__item team-member">
+				  <img src="img/team-member.png" width="144" height="144" alt="Фото врача">
+				  <p>Давыдова Екатерина Андреевна</p>
+				  <span>Врач терапевт</span>
+				  <span>Стаж: 12 лет</span>
+				  <a href="#">Подробнее</a>
+				</li>
+				<li class="diag-team__item team-member team-member--all">
+				  <p>Познакомиться со&nbsp;всеми</p>
+				  <img src="img/team-member-all.png" width="262" height="261" alt="Все врачи">
+				  <a href="#">Познакомиться со всеми</a>
+				</li>
+			  </ul>
+			</div>
+		  </section>
+		<section class="about-testimonials">
+			<div class="about-testimonials__container container">
+				<h2 class="title title--middle">Ваши отзывы о нас</h2>
+				<div class="about-testimonials__top">
+					<p> Мы ценим все, что вы говорите о нас и ждем от вас чего вам не хватает или что мы можем улучшить, чтобы вам было еще приятнее сотрудничать с нами.</p>
+					<a href="#">
+						<img src="img/sprite/pencil.svg" alt="иконка">
+						Написать отзыв
+					</a>
+				</div>
+				<ul class="about-testimonials__list">
+					<li>
+						<div class="testimonial">
+							<h3>Оксана Иванова</h3>
+							<div class="testimonial__content">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<use xlink:href="img/sprite.svg#quote"></use>
+								</svg>
+								<p>Пожалуйста, наладьте работу приложения по онлайн оплате! Уже на протяжении года я вношу деньги за лечение отца Коршунова Андрея и каждый (!) раз делаю не менее 30 попыток! Это издевательство! Спасибо лояльности координаторов, но так продолжаться не может!</p>
+							</div>
+							<div>
+								<div class="testimonial__rating">
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p>12.04.2020</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="testimonial">
+							<h3>Оксана Иванова</h3>
+							<div class="testimonial__content">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<use xlink:href="img/sprite.svg#quote"></use>
+								</svg>
+								<p>Пожалуйста, наладьте работу приложения по онлайн оплате! Уже на протяжении года я вношу деньги за лечение отца Коршунова Андрея и каждый (!) раз делаю не менее 30 попыток! Это издевательство! Спасибо лояльности координаторов, но так продолжаться не может!</p>
+							</div>
+							<div>
+								<div class="testimonial__rating">
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p>12.04.2020</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="testimonial">
+							<h3>Оксана Иванова</h3>
+							<div class="testimonial__content">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<use xlink:href="img/sprite.svg#quote"></use>
+								</svg>
+								<p>Пожалуйста, наладьте работу приложения по онлайн оплате! Уже на протяжении года я вношу деньги за лечение отца Коршунова Андрея и каждый (!) раз делаю не менее 30 попыток! Это издевательство! Спасибо лояльности координаторов, но так продолжаться не может!</p>
+							</div>
+							<div>
+								<div class="testimonial__rating">
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="testimonial__point" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p>12.04.2020</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="img/about-video.jpg" class="about-testimonials__video" data-fancybox="testi-video">
+							<img src="img/about-video.jpg" alt="видеоотзыв">
+							<img class="about-testimonials__play" src="img/play.svg" alt="иконка play">
+						</a>
+					</li>
+				</ul>
+				<a href="#" class="button button--blue about-testimonials__more">Смотреть все отзывы</a>
+			</div>
+		</section>
+		<section class="about-job">
+			<div class="about-job__container container">
+				<h2 class="title title--middle">Вы можете стать частью «Атмосферы»</h2>
+				<div class="about-job__wrapper">
+					<div class="about-job__content">
+						<p> Мы всегда рады новым людям в своей команде. На нашем сайте всегда есть актуальные вакансии, и если вы думаете, что подходите нам, то добро пожаловать в семью — «Атмосферу» </p>
+						<a href="#" class="button button--blue">Смотреть все вакансии</a>
+					</div>
+					<img src="img/about-job.png" alt="иллюстрация">
+				</div>
+			</div>
+		</section>
+		<section class="about-docs">
+			<div class="about-docs__container container">
+				<h2 class="title title--middle">Документы</h2>
+				<div class="about-docs__list">
+					<a href="#">
+						<p>Свидетельство о регистрации юридического лица Общество с ограниченной ответственностью «Атмосфера»</p>
+						<span>PDF</span>
+						<img src="img/pink-arrow.svg" alt="стрелка">
+					</a>
+					<a href="#">
+						<p>Лицензия на осуществление медицинской деятельности (Приложение №2)</p>
+						<span>PDF</span>
+						<img src="img/pink-arrow.svg" alt="стрелка">
+					</a>
+					<a href="#">
+						<p>Лицензия на осуществление медицинской деятельности (Приложение №2)</p>
+						<span>PDF</span>
+						<img src="img/pink-arrow.svg" alt="стрелка">
+					</a>
+					<a href="#">
+						<p>Политика конфиденциальности</p>
+						<span>PDF</span>
+						<img src="img/pink-arrow.svg" alt="стрелка">
+					</a>
 
-</main>
-<footer class="footer">
+				</div>
+			</div>
+		</section>
+		<section class="about-cert">
+			<div class="about-cert__container container">
+				<h2 class="title title--middle">Сертификаты и лицензии</h2>
+				<p>Наша клиника (точно так же, как и все наши специалисты) имеет все необходимые сертификаты и лицензии. Мы постоянно проходим аттестацию и соответсвуем всем государственным стандартам</p>
+			</div>
+			<div class="about-cert__slider swiper-container">
+				<div class="about-cert__nav">
+					<div class="about-cert__prev">
+						<img src="img/swiper-arrow.svg" alt="стрелка назад">
+					</div>
+					<div class="about-cert__next">
+						<img src="img/swiper-arrow.svg" alt="стрелка вперед">
+					</div>
+				</div>
+				<ul class="about-cert__list swiper-wrapper">
+					<li class="swiper-slide">
+						<a href="img/cert-1.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-1.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-2.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-2.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-3.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-3.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-4.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-4.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-1.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-1.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-2.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-2.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-3.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-3.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-4.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-4.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-1.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-1.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-2.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-2.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-3.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-3.jpg" alt="сертификат">
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="img/cert-4.jpg" data-fancybox="cert-slider">
+							<img src="img/cert-4.jpg" alt="сертификат">
+						</a>
+					</li>
+				</ul>
+				<div class="about-cert__pagination"></div>
+
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
   <div class="footer__top">
     <div class="container footer__top-container">
       <div class="footer__left">
@@ -560,7 +875,7 @@
   </div>
 </footer>
 
-<script src="js/vendor.js"></script>
+	<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 
 </body>

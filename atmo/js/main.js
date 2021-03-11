@@ -1,46 +1,46 @@
 
 (function () {
-  var a = document.querySelector('.js-scrolled-title'), b = null, P = 0;
-  window.addEventListener('scroll', Ascroll, false);
-  document.body.addEventListener('scroll', Ascroll, false);
+  // var a = document.querySelector('.js-scrolled-title'), b = null, P = 0;
+  // window.addEventListener('scroll', Ascroll, false);
+  // document.body.addEventListener('scroll', Ascroll, false);
 
-  function Ascroll() {
-    if (b == null) {
-      var Sa = getComputedStyle(a, ''), s = '';
-      for (var i = 0; i < Sa.length; i++) {
-        if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-          s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; ';
-        }
-      }
-      b = document.createElement('div');
-      b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
-      a.insertBefore(b, a.firstChild);
-      var l = a.childNodes.length;
-      for (var i = 1; i < l; i++) {
-        b.appendChild(a.childNodes[1]);
-      }
-      a.style.height = b.getBoundingClientRect().height + 'px';
-      a.style.padding = '0';
-      a.style.border = '0';
-    }
-    var Ra = a.getBoundingClientRect(),
-      R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.js-scrolled-container').getBoundingClientRect().bottom);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
-    if ((Ra.top - P) <= 0) {
-      if ((Ra.top - P) <= R) {
-        b.className = 'stop';
-        b.style.top = -R + 'px';
-      } else {
-        b.className = 'sticky';
-        b.style.top = P + 'px';
-      }
-    } else {
-      b.className = '';
-      b.style.top = '';
-    }
-    window.addEventListener('resize', function () {
-      a.children[0].style.width = getComputedStyle(a, '').width;
-    }, false);
-  }
+  // function Ascroll() {
+  //   if (b == null) {
+  //     var Sa = getComputedStyle(a, ''), s = '';
+  //     for (var i = 0; i < Sa.length; i++) {
+  //       if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+  //         s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; ';
+  //       }
+  //     }
+  //     b = document.createElement('div');
+  //     b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+  //     a.insertBefore(b, a.firstChild);
+  //     var l = a.childNodes.length;
+  //     for (var i = 1; i < l; i++) {
+  //       b.appendChild(a.childNodes[1]);
+  //     }
+  //     a.style.height = b.getBoundingClientRect().height + 'px';
+  //     a.style.padding = '0';
+  //     a.style.border = '0';
+  //   }
+  //   var Ra = a.getBoundingClientRect(),
+  //     R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.js-scrolled-container').getBoundingClientRect().bottom);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
+  //   if ((Ra.top - P) <= 0) {
+  //     if ((Ra.top - P) <= R) {
+  //       b.className = 'stop';
+  //       b.style.top = -R + 'px';
+  //     } else {
+  //       b.className = 'sticky';
+  //       b.style.top = P + 'px';
+  //     }
+  //   } else {
+  //     b.className = '';
+  //     b.style.top = '';
+  //   }
+  //   window.addEventListener('resize', function () {
+  //     a.children[0].style.width = getComputedStyle(a, '').width;
+  //   }, false);
+  // }
 })();
 'use strict';
 (function () {
@@ -165,14 +165,95 @@
     });
   }
 })();
-console.log('123')
-const aboutCertSlider = new Swiper('.about-cert__list', {
-    slidesPerView: 6,
-    // navigation: {
-    // // nextEl: '.art__next',
-    // // prevEl: '.art__prev',
-    // },
-});
+if (document.querySelector('.about-cert')) {
+    const aboutCertSlider = new Swiper('.about-cert__slider', {
+        slidesPerView: '6',
+        spaceBetween: 40,
+        loop: true,
+    
+        breakpoints: {
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 30
+              },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            1150: {
+              slidesPerView: 4,
+              spaceBetween: 40
+            },
+    
+            3000: {
+                slidesPerView: 6,
+                spaceBetween: 40
+              }
+          },
+          navigation: {
+            nextEl: '.about-cert__next',
+            prevEl: '.about-cert__prev',
+        },
+        pagination: {
+            el: '.about-cert__pagination',
+        },
+    });
+    
+    let count = aboutCertSlider.slides.length/2;
+    
+    function updateData(){
+        let activeSlide = aboutCertSlider.realIndex;
+        let slides = document.querySelectorAll('.about-cert .swiper-slide');
+        let firstActiveSlide = ((activeSlide +1) % count == 0) ? 0 : (activeSlide+1) % count;
+        let secondActiveSlide = ((activeSlide + 2) % count == 0) ? 0 : (activeSlide + 2) % count;
+        let thirdActiveSlide = ((activeSlide + 3) % count == 0) ? 0 : (activeSlide + 3) % count
+        let fourthActiveSlide = ((activeSlide + 4) % count == 0) ? 0 : (activeSlide + 4) % count
+    
+        slides.forEach(function(item){
+            let currentNumber = item.getAttribute('data-swiper-slide-index');
+            if ($(window).width() > 1150) {
+                if (currentNumber == firstActiveSlide || currentNumber == secondActiveSlide || currentNumber == thirdActiveSlide || currentNumber == fourthActiveSlide) {
+                    item.style.opacity = '1';
+                } else {
+                    item.style.opacity = '0.3';
+                }
+            } else {
+                item.style.opacity = '1';
+            }
+        });
+    
+    }
+    
+    updateData();
+    
+    $(window).on('resize', updateData);
+    
+    aboutCertSlider.on('slideChange', function () {
+        updateData();
+    });
+}
 let inputs = document.querySelectorAll('input[type="tel"]');
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(inputs);
+const aboutCertSlider = new Swiper('.video-testi__slider', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.video-testi__next',
+        prevEl: '.video-testi__prev',
+    },
+});
+
+const promoCertSlider = new Swiper('.testi-promo__slider', {
+    slidesPerView: 1,
+    effect: 'fade',
+    loop: true,
+    navigation: {
+        nextEl: '.testi-promo__next',
+        prevEl: '.testi-promo__prev',
+    },
+});
