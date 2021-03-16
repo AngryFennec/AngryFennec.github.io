@@ -430,7 +430,7 @@
 					<h1 class="title">Отзывы</h1>
 					<p class="testi-promo__description">Нам очень важно знать ваше мнение. Вы можете оставить свой отзыв или посмотреть отзывы наших клиентов, а так же рейтинги среди агрегаторов клиник по всей России </p>
 					<div class="testi-promo__links">
-						<a class="testi-promo__link" href="#">
+						<a class="testi-promo__link js-testimonial" href="#">
 							<img src="img/testi-button.jpg" alt="картинка">
 							<h2>Написать отзыв</h2>
 							<p>Расскажите, что вы думаете о клинике</p>
@@ -550,7 +550,7 @@
 				<h2 class="title title--middle">Отзывы</h2>
 				<div class="about-testimonials__top">
 					<p> Нам очень важно знать ваше мнение. Вы можете оставить свой отзыв.</p>
-					<a href="#">
+					<a href="#" class="js-testimonial">
 						<img src="img/sprite/pencil.svg" alt="иконка">
 						Написать отзыв
 					</a>
@@ -824,6 +824,21 @@
   </div>
 </footer>
 
+	<section class="popup" style="display: none">
+    <div class="popup__container">
+        <h2>Оставьте ваш отзыв</h2>
+        <p class="popup__description">Вы можете отставить отзыв о посещении нашей клиники</p>
+        <form action="#" class="popup__form">
+            <div>
+                <input type="text" name="name" placeholder="Ваше имя" required="">
+                <input type="tel" name="phone" placeholder="Номер телефона" required="">
+                <textarea name="message" id="message" placeholder="Ваш отзыв"></textarea>
+                <p>Нажимаю на кнопку отправить, вы автоматически соглашаетесь с <a href="#">политикой обработки персональных данных </a></p>
+                <button class="button button--blue">Отправить</button>
+            </div>
+        </form>
+    </div>
+</section>
 	<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 
