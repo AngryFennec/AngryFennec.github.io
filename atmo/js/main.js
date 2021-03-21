@@ -273,3 +273,145 @@ $('.popup').on('click', function (evt) {
   }
 })
 ();
+if (document.querySelector('.main-about')) {
+    const mainAboutSlider = new Swiper('.main-about__slider', {
+        loop: true,
+        centeredSlides: true,
+  
+    
+        breakpoints: {
+            600: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+  
+              },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+              slidesOffsetBefore: 0,
+            },
+            1150: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesOffsetBefore: 200,
+            },
+            3000: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesOffsetBefore: 290,
+            }
+          },
+          navigation: {
+            nextEl: '.main-about__next',
+            prevEl: '.main-about__prev',
+        },
+    });
+}
+if (document.querySelector('.main-slider')) {
+    const aboutMainSlider = new Swiper('.main-slider__container', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.main-slider__next',
+            prevEl: '.main-slider__prev',
+        },
+    });
+}
+if ($('.profile-testimonials__swiper')[0]) {
+  const aboutCertSlider = new Swiper('.profile-testimonials__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: '.profile-testimonials__next',
+      prevEl: '.profile-testimonials__prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      960: {
+        slidesPerView: 1,
+      },
+      5000: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      }
+    },
+  });
+}
+if ($('.caries-ba__swiper')[0]) {
+  const cariesBa = new Swiper('.caries-ba__swiper', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
+    navigation: {
+      nextEl: '.caries-ba__next',
+      prevEl: '.caries-ba__prev',
+    },
+    pagination: {
+      el: '.caries-ba__pagination',
+    },
+    320: {
+      spaceBetween: 10,
+    },
+    1024: {
+      spaceBetween: 10,
+    },
+    5000: {
+      spaceBetween: 30,
+    },
+  });
+}
+
+var cariesProcessSwiper = document.querySelector('.caries-process__slider');
+if (cariesProcessSwiper) {
+  var cariesProcess = new Swiper('.caries-process__slider', {
+    navigation: {
+      nextEl: '.caries-process__next',
+      prevEl: '.caries-process__prev',
+    },
+  });
+}
+
+var cariesAboutSwiper = document.querySelector('.caries-about-top');
+if (cariesAboutSwiper) {
+
+  var cariesThumbs = new Swiper('.caries-about-thumbs', {
+    spaceBetween: 16,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    slidesPerView: 4,
+  });
+  var cariesTop = new Swiper('.caries-about-top', {
+    init: false,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.caries-about__next',
+      prevEl: '.caries-about__prev',
+    },
+    thumbs: {
+      swiper: cariesThumbs
+    },
+  });
+
+
+
+  cariesTop.on('activeIndexChange', function () {
+    var cariesCurrent = document.querySelector('.caries-about__current');
+    var cariesAll = document.querySelector('.caries-about__all');
+    cariesAll.textContent = cariesTop.slides.length;
+    cariesCurrent.textContent = cariesTop.activeIndex+1;
+  });
+
+  cariesTop.on('init', function () {
+    var cariesCurrent = document.querySelector('.caries-about__current');
+    var cariesAll = document.querySelector('.caries-about__all');
+    cariesAll.textContent = cariesTop.slides.length;
+    cariesCurrent.textContent = cariesTop.activeIndex+1;
+  });
+
+  cariesTop.init();
+}
