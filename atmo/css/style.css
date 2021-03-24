@@ -5497,12 +5497,21 @@ button {
 
 .testi-promo__right-column {
   position: relative;
-  width: calc(50% + 110px);
+  width: calc(50% + 33px);
   background: url("../img/hand.png") no-repeat right bottom;
-  margin-right: -110px;
-  margin-top: -50px;
-  padding-left: 40px;
-  min-width: 710px; }
+  margin-right: -80px;
+  margin-top: -61px;
+  padding-left: 20px;
+  min-width: 500px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  min-height: 669px; }
+  @media (max-width: 1255px) {
+    .testi-promo__right-column {
+      min-width: 633px; } }
+  @media (max-width: 1024px) {
+    .testi-promo__right-column {
+      margin-top: -65px; } }
   @media (max-width: 1023px) {
     .testi-promo__right-column {
       display: none; } }
@@ -5510,8 +5519,9 @@ button {
 .testi-promo__slider {
   padding-left: 203px;
   padding-top: 36px; }
-  .testi-promo__slider .swiper-slide {
-    opacity: 0 !important; }
+  .testi-promo__slider .swiper-slide img {
+    border-radius: 26px;
+    overflow: hidden; }
   .testi-promo__slider .swiper-slide-active {
     opacity: 1 !important;
     -webkit-transition: 0.8s;
@@ -6798,9 +6808,7 @@ button {
   .caries-ba .swiper-slide {
     width: calc(50% - 15px);
     position: relative;
-    border-radius: 12px;
-    -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.14);
-            box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.14); }
+    border-radius: 12px; }
     @media (max-width: 1023px) {
       .caries-ba .swiper-slide {
         width: calc(50% - 5px); } }
@@ -6820,8 +6828,8 @@ button {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      bottom: 45px;
-      left: 30px; }
+      bottom: 30px;
+      left: 26px; }
       @media (max-width: 1023px) {
         .caries-ba .swiper-slide::before {
           -webkit-box-sizing: border-box;
@@ -6853,7 +6861,10 @@ button {
       -o-object-fit: contain;
          object-fit: contain;
       width: 100%;
-      height: auto; }
+      height: auto;
+      border-radius: 12px;
+      -webkit-box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.14);
+              box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.14); }
   .caries-ba .swiper-pagination-bullet {
     display: block;
     width: 4px;
