@@ -127,3 +127,46 @@ window.addEventListener('resize', function() {
   cardsDisplay();
 
 });
+// eslint-disable-next-line
+$('.js-popup').on('click', function (evt) {
+  evt.preventDefault();
+  $('.popup').fadeIn(300);
+  $('.page-body').addClass('page-body--overflow');
+});
+
+$(document).on('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    $('.popup').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
+  }
+});
+
+$('.popup').on('click', function (evt) {
+  if ($(evt.target).hasClass('popup')) {
+    $('.popup').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
+  }
+});
+const promoSwiper = new Swiper('.promo__slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  navigation: {
+    nextEl: ".promo__next",
+  },
+});
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__menu');
+const close = document.querySelector('.header__close');
+
+
+burger.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  menu.classList.add('header__menu_active');
+  close.classList.add('header__close_active');
+});
+
+close.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  menu.classList.remove('header__menu_active');
+  close.classList.remove('header__close_active');
+});
