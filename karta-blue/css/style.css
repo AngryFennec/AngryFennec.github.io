@@ -1614,7 +1614,14 @@ a {
         .article__block > div:nth-child(1) {
           width: 100%; } }
     .article__block > div:nth-child(2) {
-      width: 32%; }
+      width: 32%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       @media (max-width: 1023px) {
         .article__block > div:nth-child(2) {
           width: 100%;
@@ -1628,6 +1635,76 @@ a {
     @media (max-width: 1023px) {
       .article__aside--padding {
         padding-top: 0; } }
+  .article__aside--triangle {
+    border-left: 3px solid #7397CE;
+    position: relative;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 20px; }
+    .article__aside--triangle::before {
+      position: absolute;
+      content: '';
+      top: calc(50% - 9px);
+      left: -17px;
+      width: 15px;
+      height: 18px;
+      background: url("../img/article-triangle.svg") no-repeat; }
+      @media (max-width: 1023px) {
+        .article__aside--triangle::before {
+          content: none; } }
+  .article__roadmap {
+    margin: 0;
+    padding-left: 30px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    @media (max-width: 1023px) {
+      .article__roadmap {
+        margin-top: 30px !important; } }
+    .article__roadmap li {
+      width: 20%;
+      min-width: 131px;
+      position: relative;
+      margin-bottom: 96px !important; }
+      @media (max-width: 1023px) {
+        .article__roadmap li {
+          margin-bottom: 60px !important; } }
+      .article__roadmap li::before {
+        content: '';
+        position: absolute;
+        background: url("../img/arrow-list.svg") repeat-x;
+        height: 6px;
+        width: 100%;
+        top: -16px;
+        left: -18px; }
+      .article__roadmap li:last-child::after {
+        content: '';
+        position: absolute;
+        background: url("../img/arrow-list-header.svg") no-repeat;
+        height: 44px;
+        width: 24px;
+        top: -35px;
+        right: 16px; }
+      .article__roadmap li p {
+        max-width: 108px;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        position: relative; }
+        .article__roadmap li p::before {
+          content: '';
+          position: absolute;
+          height: 14px;
+          width: 14px;
+          border-radius: 50%;
+          background: #7397CE;
+          top: -20px;
+          left: 0; }
   .article h2 {
     font-weight: 600;
     color: #27363A;
@@ -1748,8 +1825,8 @@ a {
     font-size: 20px;
     line-height: 32px;
     color: #27363A;
-    padding-left: 16px;
-    border-left: 1px solid #27363a;
+    padding: 20px 30px;
+    border: 2px solid #7397CE;
     display: block;
     margin-bottom: 24px; }
     @media (max-width: 1023px) {
@@ -1835,6 +1912,8 @@ a {
     opacity: 0.7; }
   .article__gallery-text.swiper {
     height: auto; }
+    .article__gallery-text.swiper p {
+      margin: 0; }
     @media (max-width: 1023px) {
       .article__gallery-text.swiper {
         margin-top: 10px; } }
@@ -1869,6 +1948,29 @@ a {
     .article__action a {
       color: #ffffff;
       text-decoration: underline; }
+  .article__special {
+    border: 1px solid #7397CE; }
+    .article__special--active {
+      background: rgba(115, 151, 206, 0.4); }
+  .article__popup {
+    display: none;
+    padding: 22px 35px;
+    border: 1px solid #7397CE;
+    font-size: 14px;
+    line-height: 26px;
+    position: relative; }
+    .article__popup p {
+      margin: 0; }
+    .article__popup--open {
+      display: block; }
+  .article__popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 12px;
+    height: 12px;
+    background: url("../img/article-close.svg") no-repeat;
+    border: none; }
 
 .promo {
   background-color: #7397CE; }
