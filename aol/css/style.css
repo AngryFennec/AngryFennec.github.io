@@ -3758,7 +3758,24 @@ template {
           justify-content: center;
   border: 1px solid #EBEBEB;
 }
-.pagination__item {
+.pagination ul {
+  margin: 30px 0 30px;
+  padding: 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pagination li {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -3778,15 +3795,27 @@ template {
   cursor: pointer;
   margin-right: 14px;
 }
-.pagination__item:last-child {
+.pagination li:last-child {
   margin-right: 0;
 }
-.pagination__item-active {
+.pagination li.active {
   background-color: #D00470;
   color: #FFFFFF;
   border-radius: 3px;
   width: 32px;
   height: 32px;
+}
+.pagination .paginationjs-prev {
+  background: url(../img/pagination/btn-prev.svg) no-repeat center;
+}
+.pagination .paginationjs-prev a {
+  display: none;
+}
+.pagination .paginationjs-next {
+  background: url(../img/pagination/btn-next.svg) no-repeat center;
+}
+.pagination .paginationjs-next a {
+  display: none;
 }
 .pagination-btn {
   background-color: inherit;
@@ -3796,6 +3825,7 @@ template {
 }
 .pagination-btn:last-child {
   margin-right: 0;
+  margin-left: 30px;
 }
 
 @media (max-width: 768px) {

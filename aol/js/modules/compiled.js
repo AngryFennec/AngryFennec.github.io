@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 // var swiper = new Swiper('.mySwiper', {
 //   slidesPerView: 4,
 //   autoHeight: true,
