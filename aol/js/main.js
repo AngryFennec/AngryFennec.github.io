@@ -207,41 +207,255 @@ if (reviewBtn && popupWrapper) {
     document.addEventListener('keydown', escPress);
   });
 }
+
+function fillCard(card) {
+  const tmpl = document.querySelector('#card-template').content.cloneNode(true);
+
+  // проценты скидки
+  const percentBlock = tmpl.querySelector('.card-discount');
+  const percentBottomBlock = tmpl.querySelector('.card-price__discount');
+  if (!card.percent_discount) {
+    percentBlock.remove();
+    percentBottomBlock.remove();
+  } else {
+    percentBlock.textContent = `-${card.percent_discount}%`;
+    percentBottomBlock.textContent = `-${card.percent_discount}%`;
+  }
+
+  // проценты скидки
+  const newBlock = tmpl.querySelector('.card-discount--new');
+  if (!card.isNew) {
+    newBlock.remove();
+  }
+
+  // картинка товара
+  const imgBlock = tmpl.querySelector('.card-content__img');
+  imgBlock.src = card.cart_img;
+  imgBlock.alt = card.title;
+
+  // сердечко
+  const favoriteBlock = tmpl.querySelector('.card-favourites img');
+  if (card.isFavorite) {
+    favoriteBlock.src = 'img/card/favourites-active.svg';
+  }
+
+  // название
+  const titleBlock = tmpl.querySelector('.card-content__title');
+  titleBlock.textContent = card.title;
+
+  // комменты
+  const commentsBlock = tmpl.querySelector('.card-feedback__txt');
+  commentsBlock.textContent = `${card.comments} отзыва`
+
+  // цена
+  const priceBlock = tmpl.querySelector('.card-price__main');
+  priceBlock.textContent = `₽${card.price}`;
+
+  // скидка
+  const priceDiscountBlock = tmpl.querySelector('.card-price__del');
+  if (!card.discount) {
+    priceDiscountBlock.remove();
+  } else {
+    priceDiscountBlock.textContent = `₽${card.price}`;
+  }
+
+  // звезды в рейтинге
+  const starsBlock = tmpl.querySelector('.card-feedback__stars');
+  if (!card.rating) {
+    starsBlock.remove();
+  } else {
+    const stars = Array.from(starsBlock.querySelectorAll('a'));
+    stars.forEach((item, i) => {
+      if (i+1 > card.rating) {
+        item.querySelector('img').src = 'img/card/star.svg';
+      }
+    })
+  }
+
+  return tmpl;
+}
+
 $(function () {
   let container = $('#pag');
   const data = [
-    {name: "hello1"},
-    {name: "hello2"},
-    {name: "hello3"},
-    {name: "hello4"},
-    {name: "hello5"},
-    {name: "hello6"},
-    {name: "hello7"},
-    {name: "hello8"},
-    {name: "hello9"},
-    {name: "hello10"},
-    {name: "hello11"},
-    {name: "hello12"},
-    {name: "hello13"},
-    {name: "hello14"},
-    {name: "hello15"},
-    {name: "hello16"},
-    {name: "hello17"},
+    {
+      id: 3548,
+      cart_img: "img/products/dildo-2.jpg",
+      discount: 1000,
+      comments: 2,
+      percent_discount: 20,
+      title: "INTRIGUE CASANOVA",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA",
+      title_html: "INTRIGUE CASANOVA",
+      price: 1000,
+      rating: 4,
+      total: 0,
+      isFavorite: true,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+      isNew: true,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+    {
+      id: 3549,
+      cart_img: "img/products/dildo-1.jpg",
+      comments: 2,
+      title: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      url: "1rn203_fm14",
+      h1: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      title_html: "INTRIGUE CASANOVA 8\" VIBRATING ROTATING DILDO",
+      description: "<p>Компания &laquo;ТКС&raquo; является официальным поставщиком золотниковых гидрораспределителей Р203 с механическим управлением. В наличии гидрораспределитель 1РН203 ФМ14 (Ду=20мм).</p>\r\n\r\n<p>Все изделия имеют сертификаты и гарантию завода изготовителя. Доставка по всей территории РФ со склада в г. Екатеринбурге, по адресу: ул. Самолетная д. 55</p>\r\n\r\n<p>Оформить заказ можно на нашем сайте, по электронной почте:&nbsp;<a href=\"mailto:mail@tks66.ru\">mail@tks66.ru</a>&nbsp;или по телефону: +7(343)287-11-84.</p>",
+      price: 1000,
+      rating: 1,
+      total: 0,
+    },
+
+
   ];
+
   const pageSize = 10;
   container.pagination({
     dataSource: data,
     pageSize: pageSize,
     callback: function (data, pagination) {
-      var dataHtml = '<ul>';
+      const dataContainer = document.querySelector('#pag-data');
+      dataContainer.innerHTML = '';
+      const fragment = document.createDocumentFragment();
 
-      $.each(data, function (index, item) {
-        dataHtml += '<li>' + item.name + '</li>';
+      data.forEach(item => {
+        fragment.appendChild(fillCard(item));
       });
 
-      dataHtml += '</ul>';
+      dataContainer.append(fragment);
 
-      $("#dat").html(dataHtml);
       document.querySelector('.pagination-btn__start').addEventListener('click', () => {
         container.pagination('go', 1)
       })
