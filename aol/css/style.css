@@ -4347,3 +4347,113 @@ template {
     margin-bottom: 30px;
   }
 }
+.color-filter-wrapper {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-row-gap: 2px;
+  grid-column-gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.color-filter-wrapper .color-filter {
+  width: 28px;
+  height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.color-filter-wrapper .color-filter__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.color-filter-wrapper .color-filter__label {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: red;
+  border-radius: 3px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.color-filter-wrapper .color-filter__label::before {
+  content: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  outline: 1px solid #D00470;
+  background: transparent;
+}
+.color-filter-wrapper .color-filter__checkbox:checked + .color-filter__label {
+  background: red;
+}
+.color-filter-wrapper .color-filter__checkbox:checked + .color-filter__label::before {
+  content: "";
+  -webkit-transform: none;
+          transform: none;
+  float: none;
+  margin: 0;
+}
+
+.color-filter-selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 26px;
+}
+.color-filter-selected__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 28px;
+  margin-bottom: 10px;
+}
+.color-filter-selected__item:last-child {
+  margin-bottom: 0;
+}
+.color-filter-selected__color {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: red;
+  border-radius: 3px;
+  position: relative;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.color-filter-selected__color::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  outline: 1px solid #D00470;
+  background: transparent;
+}
+.color-filter-selected__text {
+  color: #696C74;
+  font-size: 16px;
+  line-height: 24px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: 15px;
+}
