@@ -290,8 +290,8 @@
                 <label for="chacor7" class="filter-label">Цена</label>
                 <div class="acor-body">
                   <div class="filter-box">
-                  <input class="filter-price--min" type="text" value="3 000" placeholder="от">
-                  <input class="filter-price--max" type="text" value="15 000">
+                  <input class="filter-price--min" type="text" placeholder="от">
+                  <input class="filter-price--max" type="text" placeholder="до">
                   <!-- /.filter-price__block -->
                   <div class="filter-price__range">
                     <input type="range" min="500" max="100000" step="10" value="1" class="filter-price__slider" id="myRange">
@@ -305,7 +305,7 @@
                 <div class="acor-body">
                   <div class="filter-brand__block">
                     <span class="filter-item">
-                      <input type="checkbox" name="a" value="Adam & Eve" class="filter-checkbox">
+                      <input type="checkbox" name="b" value="Adam & Eve" class="filter-checkbox">
                       Adam & Eve
                     </span>
                     <span class="filter-item">
@@ -353,10 +353,10 @@
                 </div>
                 <input type="checkbox" name="chacor" id="chacor9" class="acor-input">
                 <label for="chacor9" class="filter-label">Размер</label>
-                <div class="acor-body">
+                <div class="acor-body" id="filter-size">
                   <p class="filter-item"><input type="checkbox" name="a" value="" class="filter-checkbox">10</p>
-                  <p class="filter-item"><input type="checkbox" name="a" value="" class="filter-checkbox">10”</p>
-                  <p class="filter-item"><input type="checkbox" name="a" value="" class="filter-checkbox">11”</p>
+                  <p class="filter-item"><input type="checkbox" name="b" value="" class="filter-checkbox">10”</p>
+                  <p class="filter-item"><input type="checkbox" name="c" value="" class="filter-checkbox">11”</p>
                   <p class="filter-item"><input type="checkbox" name="a" value="" class="filter-checkbox">12”</p>
                   <p class="filter-item"><input type="checkbox" name="a" value="" class="filter-checkbox">16”</p>
                   <p class="filter-item"><input type="checkbox" name="a" value="" class="filter-checkbox">17”</p>
@@ -927,5 +927,6 @@
 <script src="js/vendor/jquery-3.6.0.min.js"></script>
 <script src="js/vendor/swiper-bundle.min.js"></script>
 <script src="js/modules/menu.js"></script>
+<script src="js/modules/compiled.js"></script>
 </body>
 </html>

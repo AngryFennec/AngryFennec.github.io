@@ -1726,7 +1726,7 @@ template {
   color: #D00470;
 }
 
-.acor-container input {
+.acor-input {
   display: none;
 }
 
@@ -1736,12 +1736,12 @@ template {
   margin-left: 15px;
 }
 
-.acor-container input:checked + label {
+.acor-input:checked + label {
   background-color: #D00470;
   color: #FFF;
 }
 
-.acor-container input:checked + label:before {
+.acor-input:checked + label:before {
   -webkit-transition: -webkit-transform 0.35s;
   transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
@@ -1750,7 +1750,7 @@ template {
           transform: rotate(90deg);
 }
 
-.acor-container input:checked + label + .acor-body {
+.acor-input:checked + label + .acor-body {
   height: auto;
   margin-top: -5px;
   color: #31333A;
