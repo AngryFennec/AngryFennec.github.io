@@ -93,6 +93,46 @@ $('.popup').on('click', function (evt) {
   }
 });
 // eslint-disable-next-line
+$('.transport__card--green').on('click', function (evt) {
+  evt.preventDefault();
+  $('.transport-popup--green').fadeIn(300);
+  $('.page-body').addClass('page-body--overflow');
+});
+
+$(document).on('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    $('.transport-popup--green').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
+  }
+});
+
+$('.transport-popup--green').on('click', function (evt) {
+  if ($(evt.target).hasClass('.transport-popup--green')) {
+    $('.transport-popup--green').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
+  }
+});
+
+$('.transport__card--pink').on('click', function (evt) {
+  evt.preventDefault();
+  $('.transport-popup--pink').fadeIn(300);
+  $('.page-body').addClass('page-body--overflow');
+});
+
+$(document).on('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    $('.transport-popup--pink').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
+  }
+});
+
+$('.transport-popup--pink').on('click', function (evt) {
+  if ($(evt.target).hasClass('.transport-popup--pink')) {
+    $('.transport-popup--pink').fadeOut(300);
+    $('.page-body').removeClass('page-body--overflow');
+  }
+});
+// eslint-disable-next-line
 const promoSwiper = new Swiper('.promo__slider', {
   slidesPerView: 'auto',
   spaceBetween: 16,
@@ -101,25 +141,6 @@ const promoSwiper = new Swiper('.promo__slider', {
     prevEl: ".promo__prev",
   },
 });
-
-const card = document.querySelector('.promo__card');
-let topCard = card.getBoundingClientRect().top;
-let leftCard = card.getBoundingClientRect().left;
-window.addEventListener('scroll', function() {
-  if (window.pageYOffset > topCard) {
-    card.style.position = 'fixed';
-    card.style.left = leftCard + 'px';
-    card.style.top = 0;
-    card.style.margin = 0;
-  } else {
-    card.style = "";
-  }
-});
-
-window.addEventListener('resize', function(){
-  topCard = card.getBoundingClientRect().top;
-  leftCard = card.getBoundingClientRect().left;
-})
 // eslint-disable-next-line
 const burger = document.querySelector('.header__burger');
 const menu = document.querySelector('.header__menu');
@@ -129,11 +150,16 @@ const close = document.querySelector('.header__close');
 burger.addEventListener('click', function(evt) {
   evt.preventDefault();
   menu.classList.add('header__menu_active');
-  close.classList.add('header__close_active');
+  burger.style = 'display: none';
+  close.style = 'display: block';
 });
 
 close.addEventListener('click', function(evt) {
   evt.preventDefault();
   menu.classList.remove('header__menu_active');
-  close.classList.remove('header__close_active');
+  burger.style = 'display: block';
+  close.style = 'display: none';
+  console.log(close);
 });
+
+const datepicker = new Datepicker('#datepicker');

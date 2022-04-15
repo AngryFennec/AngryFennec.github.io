@@ -6,11 +6,16 @@ const close = document.querySelector('.header__close');
 burger.addEventListener('click', function(evt) {
   evt.preventDefault();
   menu.classList.add('header__menu_active');
-  close.classList.add('header__close_active');
+  burger.style = 'display: none';
+  close.style = 'display: block';
 });
 
 close.addEventListener('click', function(evt) {
   evt.preventDefault();
   menu.classList.remove('header__menu_active');
-  close.classList.remove('header__close_active');
+  burger.style = 'display: block';
+  close.style = 'display: none';
+  console.log(close);
 });
+
+const datepicker = new Datepicker('#datepicker');

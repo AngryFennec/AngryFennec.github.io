@@ -14,7 +14,6 @@
 	<header class="header">
   <div class="container header__container">
     <nav class="header__nav">
-      <div class="header__menu-wrapper">
         <ul class="header__menu">
           <li>
             <a href="#">О проекте</a>
@@ -26,7 +25,6 @@
             <a href="#">Записаться на бесплатную экскурсию</a>
           </li>
         </ul>
-      </div>
 
       <button class="header__burger">
           <img src="img/burger.svg" alt="burger">
@@ -36,11 +34,84 @@
         </button>
       </nav>
   </div>
+  <div class="header__banner banner">
+    <div class="banner__container container">
+      <p>Добро пожаловать в</p>
+      <img src="img/banner-logo.svg" alt="лого">
+      <p>проект для тех, кто приехал в город ненадолго, но хочет его узнать поближе</p>
+      <div class="banner__form">
+        <form>
+          <input type="text" id="datepicker" readonly="" placeholder="Дата">
+          <select id="select">
+            <option value="1">1</option>
+            <option value="2" selected="">2</option>
+            <option value="3">3</option>
+          </select>
+<!--          <select name="quantity">Количество-->
+<!--            <option value="1">1</option>-->
+<!--            <option value="2" selected>2</option>-->
+<!--            <option value="3">3</option>-->
+<!--            <option value="4">4</option>-->
+<!--          </select>-->
+          <button type="submit">Записаться</button>
+        </form>
+      </div>
+      <div class="banner__text">
+        Для всех гостей города каждую субботу с 23 апреля по 29 октября 2022 г., мы проводим <a>бесплатную обзорную экскурсию.</a>
+      </div>
+    </div>
+  </div>
 
 </header>
 
 
 	<main>
+    <section class="path">
+      <div class="path__container container">
+        <h2>Приезжайте на один день
+          или оставайтесь на выходные.</h2>
+        <img src="img/near.svg" alt="лого">
+        <div class="path__content">
+          <p>Мы продумали ваше знакомство с городом за вас:</p>
+          <button type="button">Записаться на бесплатную экскурсию</button>
+          <div class="path__item path__item--1">
+            <b>Вас встретят</b>
+            <span>Каждую субботу в 12:00 мы встречаем вас около «АМАКС Конгресс-отель» (первомайский проспект, 54)</span>
+          </div>
+          <div class="path__item path__item--2">
+            <b>Покажут лучшее</b>
+            <span>Профессиональные гиды проведут для вас бесплатную экскурсию по самым интересным местам города</span>
+          </div>
+          <div class="path__item path__item--3">
+            <b>Расскажут обо всем, что полезно и выгодно</b>
+            <span>Вы узнаете о региональных сервисах, которые помогут в поездке</span>
+          </div>
+          <div class="path__item path__item--4">
+            <b>Обеспечат необходимым</b>
+            <span>Конечная точка экскурсии – туристский-информационный центр. Здесь вам вручат карту города и ответят на все интересующие вопросы о городе, его жителях, местных особенностях и колорите</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="transport">
+      <div class="transport__container container">
+        <h2>До нас можно добраться любым удобным способом,
+          но мы рекомендуем</h2>
+        <p>А знакомство можно начинать заранее. В машине или поезде – загружайте приложение <a>izi.travel</a> и слушайте аудиогиды по истории Рязани. «Где жил академик Иван Павлов?», «Когда работал аптекарщик Макс Фактор?», «Почему рязанцев назвали косопузыми?» и «Какой секрет хранит памятник Маргелову»?</p>
+        <a class="transport__card transport__card--green">
+          <div class="transport__card-top">
+            <b>На автомобиле</b>
+            <span>~ 2,5 часа</span>
+          </div>
+        </a>
+        <a class="transport__card transport__card--pink">
+          <div class="transport__card-top">
+            <b>На поезде</b>
+            <span>~ 3,5 часа</span>
+          </div>
+        </a>
+      </div>
+    </section>
     <section class="continue">
       <div class="continue__container container">
         <div class="continue__title-wrapper">
@@ -140,69 +211,79 @@
         <div class="swiper-button-next partners__button-next"></div>
         <div class="swiper-button-prev partners__button-prev"></div>
     </section>
-<!--    <section class="promo">-->
-<!--      <div class="promo__grid-container">-->
-<!--        <div class="promo__header">-->
-<!--          <div class="promo__header-container">-->
-<!--            <h1 class="promo__title">Карта привилегий для гостей региона </h1>-->
-<!--            <p class="promo__subtitle">Скачайте бесплатно на IOS или Android и получайте скидки в хороших местах</p>-->
-<!--          </div>-->
-<!--        </div>-->
+    <section class="promo">
+      <div class="promo__grid-container">
+        <div class="promo__header">
+          <div class="promo__header-container">
+            <h1 class="promo__title">Карта привилегий для гостей региона </h1>
+            <p class="promo__subtitle">Скачайте бесплатно на IOS или Android и получайте скидки в хороших местах</p>
+          </div>
+          <div class="promo__btn-block">
+            <a href="#" class="promo__btn">
+              <span>Получить карту</span>
+              <svg width="270" height="70" viewBox="0 0 270 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.98467 35L135 1.03306L266.015 35L135 68.9669L3.98467 35Z" stroke="#9BBC7A" stroke-width="2"></path>
+              </svg>
+            </a>
 
-<!--        <div class="promo__slider-block">-->
-<!--          <h2 class="promo__middle-title">-->
-<!--            и другие выгодные предложения-->
-<!--          </h2>-->
-<!--          <p class="promo__middle-subtitle">Ниже подборка лучших акций и актуальных предложений для выгодных поездок по Рязанской области. Мы регулярно обновляем её. Выбирайте:</p>-->
-<!--          <div class="swiper-container promo__slider">-->
-<!--            <ul class="promo__list swiper-wrapper">-->
-<!--              <li class="swiper-slide swiper-slide-1">-->
-<!--                  <h3> Рязань+</h3>-->
-<!--                  <p>Бесплатные экскурсии не только по субботам</p>-->
-<!--              </li>-->
-<!--              <li class="swiper-slide swiper-slide-2">-->
-<!--                  <h3>Бесплатные карты</h3>-->
-<!--                  <p> Доступны в гостиницах и инфоцентре</p>-->
-<!--              </li>-->
+            <a class="promo__link">Подробнее</a>
+          </div>
+        </div>
 
-<!--              <li class="swiper-slide swiper-slide-1">-->
-<!--                  <h3> Рязань+</h3>-->
-<!--                  <p>Бесплатные экскурсии не только по субботам</p>-->
-<!--              </li>-->
-<!--              <li class="swiper-slide swiper-slide-2">-->
-<!--                  <h3>Бесплатные карты</h3>-->
-<!--                  <p> Доступны в гостиницах и инфоцентре</p>-->
-<!--              </li>-->
+        <div class="promo__slider-block">
+          <h2 class="promo__middle-title">
+            и другие выгодные предложения
+          </h2>
+          <p class="promo__middle-subtitle">Ниже подборка лучших акций и актуальных предложений для выгодных поездок по Рязанской области. Мы регулярно обновляем её. Выбирайте:</p>
+          <div class="swiper-container promo__slider">
+            <ul class="promo__list swiper-wrapper">
+              <li class="swiper-slide swiper-slide-1">
+                  <h3> Рязань+</h3>
+                  <p>Бесплатные экскурсии не только по субботам</p>
+              </li>
+              <li class="swiper-slide swiper-slide-2">
+                  <h3>Бесплатные карты</h3>
+                  <p> Доступны в гостиницах и инфоцентре</p>
+              </li>
 
-<!--              <li class="swiper-slide swiper-slide-1">-->
-<!--                <h3> Рязань+</h3>-->
-<!--                <p>Бесплатные экскурсии не только по субботам</p>-->
-<!--            </li>-->
-<!--            <li class="swiper-slide swiper-slide-2">-->
-<!--                <h3>Бесплатные карты</h3>-->
-<!--                <p> Доступны в гостиницах и инфоцентре</p>-->
-<!--            </li>-->
-<!--            </ul>-->
-<!--            <button class="promo__next swiper-button-next"></button>-->
-<!--            <button class="promo__prev swiper-button-prev"></button>-->
-<!--          </div>-->
-<!--        </div>-->
+              <li class="swiper-slide swiper-slide-1">
+                  <h3> Рязань+</h3>
+                  <p>Бесплатные экскурсии не только по субботам</p>
+              </li>
+              <li class="swiper-slide swiper-slide-2">
+                  <h3>Бесплатные карты</h3>
+                  <p> Доступны в гостиницах и инфоцентре</p>
+              </li>
 
-<!--        <div class="promo__card-block">-->
-<!--          <div class="promo__card" >-->
-<!--            <h3 class="promo__card-title">Близкий друг</h3>-->
-<!--            <img class="promo__card-logo" src="img/logo-header.svg" alt="лого">-->
-<!--          </div>-->
-<!--        </div>-->
+              <li class="swiper-slide swiper-slide-1">
+                <h3> Рязань+</h3>
+                <p>Бесплатные экскурсии не только по субботам</p>
+            </li>
+            <li class="swiper-slide swiper-slide-2">
+                <h3>Бесплатные карты</h3>
+                <p> Доступны в гостиницах и инфоцентре</p>
+            </li>
+            </ul>
+            <button class="promo__next swiper-button-next"></button>
+            <button class="promo__prev swiper-button-prev"></button>
+          </div>
+        </div>
 
-<!--        <div class="promo__subtitle-block">-->
-<!--          <p class="promo__caption">Карта дает скидки и привилегии на все, что пригодится вам в поездке: от гостиницы и ресторана до музея, проката или химчистки</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
+        <div class="promo__card-block">
+          <div class="promo__card">
+            <h3 class="promo__card-title">Близкий друг</h3>
+            <img class="promo__card-logo" src="img/logo-header.svg" alt="лого">
+          </div>
+        </div>
+
+        <div class="promo__subtitle-block">
+          <p class="promo__caption">Карта дает скидки и привилегии на все, что пригодится вам в поездке: от гостиницы и ресторана до музея, проката или химчистки</p>
+        </div>
+      </div>
+    </section>
     <section class="services">
       <div class="container">
-        <h2 class="services__title">Другие сервисы, которые помогут вам в поездке</h2>
+        <h2 class="services__title visually-hidden">Другие сервисы, которые помогут вам в поездке</h2>
       </div>
       <div>
         <div class="services__row">
@@ -298,6 +379,34 @@
       </div>
       <img src="img/continue-popup-izi.png" alt="izi">
     </div>
+    <p>Проводником в мир рязанского зодчества и архитектуры исторического города, а также новинок сезона становится настоящий русский мужик — рязанский косопуз. К слову, идиома «рязанский косопуз» сложилась благодаря традиции мастеровых мужчин Рязанщины затыкать за пузо топор.</p>
+  </div>
+</section>
+
+  <section class="transport-popup transport-popup--green" style="display: none">
+  <div class="transport-popup__container">
+    <h2>На автомобиле</h2>
+    <img src="img/transport-1.png" alt="иллюстрация">
+    <p>По территории Рязанской области проходят две автомобильные дороги федерального значения: <b>М5 «Урал» (Москва — Челябинск)</b> и <b>М6 «Каспий» (Москва — Астрахань).</b>
+    </p>
+    <p>Маршрут от Москвы до Рязани на машине составит <b>примерно 198 км.</b>
+    </p>
+    <a class="transport-popup__strong-link">Проложить маршрут</a>
+  </div>
+</section>
+
+  <section class="transport-popup transport-popup--pink" style="display: none">
+  <div class="transport-popup__container">
+    <h2>На поезде</h2>
+    <img src="img/transport-2.png" alt="иллюстрация">
+    <p>Из Москвы до Рязани можно добраться поездами дальнего следования, электричками и поездами-экспрессами с Казанского вокзала.
+    </p>
+    <b>Самые удобные:</b>
+    <ul>
+      <li>Фирменный двухэтажный поезд дальнего следования Москва - Воронеж. Вы прибываете на станцию Рязань-2  (до места встрече с экскурсоводом 20 мин. пешком);</li>
+      <li>Пригородный экспресс Москва - Рязань. Вы прибываете на станцию Рязань-1 (до места встрече с экскурсоводом 8 мин. пешком).</li>
+    </ul>
+    <p>Посмотреть расписание можно <a class="transport-popup__strong-link">на сайте РЖД</a></p>
   </div>
 </section>
 
