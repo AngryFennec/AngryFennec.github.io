@@ -38,21 +38,20 @@
     <div class="banner__container container">
       <p>Добро пожаловать в</p>
       <img src="img/banner-logo.svg" alt="лого">
-      <p>проект для тех, кто приехал в город ненадолго, но хочет его узнать поближе</p>
+      <p>проект для тех, кто приехал в город ненадолго, но&nbsp;хочет его узнать поближе</p>
       <div class="banner__form">
         <form>
-          <input type="text" id="datepicker" readonly="" placeholder="Дата">
-          <select id="select">
-            <option value="1">1</option>
-            <option value="2" selected="">2</option>
-            <option value="3">3</option>
-          </select>
-<!--          <select name="quantity">Количество-->
-<!--            <option value="1">1</option>-->
-<!--            <option value="2" selected>2</option>-->
-<!--            <option value="3">3</option>-->
-<!--            <option value="4">4</option>-->
-<!--          </select>-->
+          <input type="text" id="datepicker" readonly="" placeholder="Дата &#9662">
+          <div id="dd" class="wrapper-dropdown" tabindex="1">
+            <input class="visually-hidden" name="select" id="select-input">
+            <span>Кол-во людей &#9662;</span>
+            <ul class="dropdown">
+              <li><a>1</a></li>
+              <li><a>2</a></li>
+              <li><a>3</a></li>
+              <li><a>4</a></li>
+            </ul>
+          </div>
           <button type="submit">Записаться</button>
         </form>
       </div>
@@ -69,11 +68,13 @@
     <section class="path">
       <div class="path__container container">
         <h2>Приезжайте на один день
-          или оставайтесь на выходные.</h2>
+          или&nbsp;оставайтесь на выходные.</h2>
         <img src="img/near.svg" alt="лого">
+      </div>
         <div class="path__content">
+          <div class="path__container container">
           <p>Мы продумали ваше знакомство с городом за вас:</p>
-          <button type="button">Записаться на бесплатную экскурсию</button>
+          <button type="button" class="js-form-popup">Записаться на бесплатную экскурсию</button>
           <div class="path__item path__item--1">
             <b>Вас встретят</b>
             <span>Каждую субботу в 12:00 мы встречаем вас около «АМАКС Конгресс-отель» (первомайский проспект, 54)</span>
@@ -95,8 +96,8 @@
     </section>
     <section class="transport">
       <div class="transport__container container">
-        <h2>До нас можно добраться любым удобным способом,
-          но мы рекомендуем</h2>
+        <h2>До нас можно добраться любым&nbsp;удобным способом,
+          но&nbsp;мы рекомендуем</h2>
         <p>А знакомство можно начинать заранее. В машине или поезде – загружайте приложение <a>izi.travel</a> и слушайте аудиогиды по истории Рязани. «Где жил академик Иван Павлов?», «Когда работал аптекарщик Макс Фактор?», «Почему рязанцев назвали косопузыми?» и «Какой секрет хранит памятник Маргелову»?</p>
         <a class="transport__card transport__card--green">
           <div class="transport__card-top">
@@ -215,8 +216,8 @@
       <div class="promo__grid-container">
         <div class="promo__header">
           <div class="promo__header-container">
-            <h1 class="promo__title">Карта привилегий для гостей региона </h1>
-            <p class="promo__subtitle">Скачайте бесплатно на IOS или Android и получайте скидки в хороших местах</p>
+            <h1 class="promo__title">Карта привилегий для&nbsp;гостей региона </h1>
+            <p class="promo__subtitle">Скачайте бесплатно на IOS или Android и&nbsp;получайте скидки в хороших местах</p>
           </div>
           <div class="promo__btn-block">
             <a href="#" class="promo__btn">
@@ -234,35 +235,27 @@
           <h2 class="promo__middle-title">
             и другие выгодные предложения
           </h2>
-          <p class="promo__middle-subtitle">Ниже подборка лучших акций и актуальных предложений для выгодных поездок по Рязанской области. Мы регулярно обновляем её. Выбирайте:</p>
+          <p class="promo__middle-subtitle">Ниже подборка лучших акций и актуальных предложений для выгодных поездок по&nbsp;Рязанской области. Мы регулярно обновляем её. Выбирайте:</p>
           <div class="swiper-container promo__slider">
             <ul class="promo__list swiper-wrapper">
               <li class="swiper-slide swiper-slide-1">
                   <h3> Рязань+</h3>
-                  <p>Бесплатные экскурсии не только по субботам</p>
+                  <p>Выгодный проект формата «City Break»</p>
               </li>
               <li class="swiper-slide swiper-slide-2">
-                  <h3>Бесплатные карты</h3>
-                  <p> Доступны в гостиницах и инфоцентре</p>
+                  <h3>Бесплатные туристические карты</h3>
+                  <p>Доступны в гостиницах
+                    и инфоцентре</p>
               </li>
-
-              <li class="swiper-slide swiper-slide-1">
-                  <h3> Рязань+</h3>
-                  <p>Бесплатные экскурсии не только по субботам</p>
-              </li>
-              <li class="swiper-slide swiper-slide-2">
-                  <h3>Бесплатные карты</h3>
-                  <p> Доступны в гостиницах и инфоцентре</p>
-              </li>
-
               <li class="swiper-slide swiper-slide-1">
                 <h3> Рязань+</h3>
-                <p>Бесплатные экскурсии не только по субботам</p>
-            </li>
-            <li class="swiper-slide swiper-slide-2">
-                <h3>Бесплатные карты</h3>
-                <p> Доступны в гостиницах и инфоцентре</p>
-            </li>
+                <p>Выгодный проект формата «City Break»</p>
+              </li>
+              <li class="swiper-slide swiper-slide-2">
+                <h3>Бесплатные туристические карты</h3>
+                <p>Доступны в гостиницах
+                  и инфоцентре</p>
+              </li>
             </ul>
             <button class="promo__next swiper-button-next"></button>
             <button class="promo__prev swiper-button-prev"></button>
@@ -289,7 +282,7 @@
         <div class="services__row">
           <div class="services__container">
             <div class="services__item service">
-              <h3 class="service__title">Ты с местным</h3>
+              <h3 class="service__title">Ты с местными</h3>
               <p class="service__subtitle">Поддержка для гостей Рязанской области. Теперь у вас есть местные, которые помогут, подскажут и посоветуют</p>
               <ul class="service__info-list">
                 <li class="service__info-item">
@@ -315,7 +308,7 @@
             <div class="services__item service">
               <h3 class="service__title">Сценарии поездки</h3>
               <p class="service__subtitle">Не знаете, куда конкретно поехать или нет времени на планирование? Мы собрали десятки готовых сценариев для разных людей и разных ситуаций. Выбирайте свой — и отправляйтесь в самостоятельную поездку. Все уже продумано</p>
-              <a class="service__link" href="#">выбрать сценарий</a>
+              <a class="service__link" href="#">Выбрать сценарий</a>
             </div>
           </div>
         </div>
@@ -366,6 +359,7 @@
 
   <section class="popup" style="display: none">
   <div class="popup__container">
+    <button type="button"><span>Закрыть</span></button>
     <h2>Рязань «Лайт»</h2>
     <img src="img/continue-popup-1.png" alt="иллюстрация">
     <div class="popup__audio">
@@ -383,8 +377,25 @@
   </div>
 </section>
 
+  <section class="form-popup" style="display: none">
+  <div class="form-popup__container">
+    <button type="button" class="form-popup__close"><span>Закрыть</span></button>
+    <h2>Записаться на&nbsp;экскурсию</h2>
+    <form>
+      <input type="text" name="name" id="name" required="" placeholder="Как вас зовут">
+      <input type="text" name="city" id="city" required="" placeholder="Откуда вы">
+      <input type="text" name="date" id="date" required="" placeholder="Дата приезда" readonly="">
+      <input type="phone" name="phone" id="phone" required="" placeholder="Телефон">
+      <input type="email" name="mail" id="mail" required="" placeholder="E-mail">
+      <button type="submit">Записаться на экскурсию</button>
+    </form>
+    <p>Нажимая на кнопку, вы соглашаетесь с <a>политикой обработки персональных данных</a></p>
+  </div>
+</section>
+
   <section class="transport-popup transport-popup--green" style="display: none">
   <div class="transport-popup__container">
+    <button type="button"><span>Закрыть</span></button>
     <h2>На автомобиле</h2>
     <img src="img/transport-1.png" alt="иллюстрация">
     <p>По территории Рязанской области проходят две автомобильные дороги федерального значения: <b>М5 «Урал» (Москва — Челябинск)</b> и <b>М6 «Каспий» (Москва — Астрахань).</b>
@@ -397,6 +408,7 @@
 
   <section class="transport-popup transport-popup--pink" style="display: none">
   <div class="transport-popup__container">
+    <button type="button"><span>Закрыть</span></button>
     <h2>На поезде</h2>
     <img src="img/transport-2.png" alt="иллюстрация">
     <p>Из Москвы до Рязани можно добраться поездами дальнего следования, электричками и поездами-экспрессами с Казанского вокзала.

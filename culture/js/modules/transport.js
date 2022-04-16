@@ -37,3 +37,8 @@ $('.transport-popup--pink').on('click', function (evt) {
     $('.page-body').removeClass('page-body--overflow');
   }
 });
+
+$('.transport-popup button').on('click', function () {
+  $('.transport-popup').fadeOut(300);
+  $('.page-body').removeClass('page-body--overflow');
+});
