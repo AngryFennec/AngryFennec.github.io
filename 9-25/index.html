@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>site</title>
+  <title>Студия 9/25</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.min.css" rel="stylesheet">
@@ -11,81 +11,246 @@
 
 
 <body class="page-body">
-	<header class="header">
-  <div class="container header__container">
+  <header class="header">
+  <div class="header__container container">
     <a class="header__logo">
-      <img src="img/logo-dark.svg" alt="мастерская 9/25.">
+      <picture>
+        <source media="(min-width: 768)" srcset="img/icons/logo-dark.svg">
+        <img src="img/icons/main-logo_mobile.svg" alt="мастерская 9/25.">
+      </picture>
     </a>
     <nav class="header__nav">
-        <ul class="header__menu">
-          <li>
-            <a href="#">Главная</a>
-          </li>
-          <li>
-            <a href="#">О нас</a>
-          </li>
-          <li>
-            <a href="#">Портфолио</a>
-          </li>
-          <li>
-            <a href="#">Этапы работы</a>
-          </li>
-          <li>
-            <a href="#">Отзывы</a>
-          </li>
-        </ul>
-
-<!--      <button class="header__burger">-->
-<!--          <img src="img/burger.svg" alt="burger">-->
-<!--        </button>-->
-<!--        <button class="header__close">-->
-<!--          <img src="img/close.svg" alt="close">-->
-<!--        </button>-->
-      </nav>
+      <ul class="header__menu header__menu--closed">
+        <li>
+          <a href="#banneer">Главная</a>
+        </li>
+        <li>
+          <a href="#about">О нас</a>
+        </li>
+        <li>
+          <a href="#portfolio">Портфолио</a>
+        </li>
+        <li>
+          <a href="#steps">Этапы работы</a>
+        </li>
+        <li>
+          <a href="#">Отзывы</a>
+        </li>
+      </ul>
+      <button class="header__burger-btn" aria-label="Кнопка открытия меню">
+        <img src="img/icons/burger.svg" alt="burger">
+      </button>
+      <button class="header__close-btn closed" aria-label="Кнопка закрытия меню">
+        <img src="img/icons/close.svg" alt="close">
+      </button>
+    </nav>
     <span class="header__consult">Бесплатная консультация на объекте</span>
   </div>
 
 </header>
 
 
-	<main>
-    <section class="banner">
-      <div class="banner__container container">
-        <h1>Студия дизайна интерьера</h1>
+  <main class="page-main">
+    <section id="banner" class="banner">
+  <div class="banner__container">
+    <h1 class="visually-hidden">Студия дизайна интерьера</h1>
+    <h2 class="banner__header">Дизайн интерьера под ключ</h2>
+    <p class="banner__slogan">Ваш интерьер начинается здесь</p>
+    <div class="banner__image-wrapper"></div>
+    <button class="banner__btn button">Заказать дизайн-проект</button>
+  </div>
+</section>
+
+    <section id="about" class="about">
+  <div class="about__container container">
+    <h2 class="about__header section-header">О нас</h2>
+    <p class="about__subtitle">Наталья Васильева и Кристина Галина</p>
+    <div class="about__image-wrapper">
+      <picture>
+        <source media="(min-width: 1024)" srcset="img/desktop/owners.jpg 1x, img/desktop/owners@2x.jpg">
+        <img src="img/mobile/owners-mobile.jpg" alt="Пример восхитительного дизайн-проекта" class="about__image" width="349" height="425" srcset="img/mobile/owners-mobile@2x.jpg 2x">
+      </picture>
+    </div>
+    <p class="about__desc">Привет! Нас зовут “Студия 9/25”.
+      Мы пришли в мир архитектуры и дизайна в 2004 году, начав свой путь с участия в масштабных проектах компании
+      “Русский монолит”.</p>
+    <div class="about__special">
+      <p class="about__subtitle about__subtitle--special">Образование
+        <span class="about__akcent">МГХПТУ им. Строганова</span>
+      </p>
+      <p class="about__subtitle about__subtitle--special">Опыт
+        <span class="about__akcent">20 лет</span>
+      </p>
+    </div>
+    <p class="about__desc">Этот опыт и образование, полученное в Академии имени Строганова, научили нас создавать
+      пространство для жизни, в воздухе которого - индивидуальность каждого хозяина квартиры и частного дома!</p>
+  </div>
+</section>
+
+    <section id="portfolio" class="portfolio">
+  <div class="portfolio__container container">
+    <h2 class="portfolio__header section-header">Наши работы</h2>
+    <div class="portfolio__slider slider swiper-container">
+      <div class="swiper-wrapper slider__wrapper">
+        <div class="swiper-slide slider__item card">
+          <a class="card__link" href="#">
+            <div class="card__image-wrapper">
+              <picture>
+                <source media="(min-width: 1024)" type="image/jpeg" srcset="img/desktop/georgian-restorant-desktop.jpg 1x, img/desktop/georgian-restorant-desktop@2x.jpg 2x">
+                <img class="product-card__image" src="img/mobile/georgian_restorant_mobile.jpg" alt="Грузинский ресторан 'Чито-ра'" height="300" width="311" srcset="img/mobile/georgian_restorant_mobile@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3 class="card__title">Грузинский ресторан "Чито-ра"</h3>
+          </a>
+        </div>
       </div>
-    </section>
-    <section class="about">
-      <div class="about__container container">
-        <h2>О нас</h2>
+      <div class="slider__button-container">
+        <div class="slider__button slider__button_prev">
+          <svg class="slider-icon" height="12" width="26">
+          </svg>
+        </div>
+        <div class="slider__button slider__button_next">
+          <svg class="slider-icon" height="12" width="26">
+          </svg>
+        </div>
       </div>
-    </section>
-    <section class="portfolio">
-      <div class="portfolio__container container">
-        <h2>Наши работы</h2>
-      </div>
-    </section>
-    <section class="steps">
-      <div class="steps__container container">
-        <h2>Этапы работы</h2>
-      </div>
-    </section>
-    <section class="service">
-      <div class="service__container container">
+    </div>
+    <p class="portfolio__slogan">Мы можем всё - от разработки креативной концепции до ее финальной реализации. C
+      уважением относимся к любому стилю, от классики до лофта. Без лишней скромности,
+      умеем всё, кроме одного - повторяться. </p>
+  </div>
+</section>
+
+    <section id="steps" class="steps">
+  <div class="steps__container container">
+    <h2 class="steps__header section-header">Этапы работы</h2>
+    <ol type="1" class="steps__list">
+      <li class="steps__item step">
+        <h3 class="step__title">Знакомство</h3>
+        <p class="step__desc">Бесплатная встреча или звонок клиенту; заполнение технического задания, подбор
+          аналогов; заключение договора, обмер и фотофиксация помещения</p>
+      </li>
+      <li class="steps__item step">
+        <h3 class="step__title">Планировочное решение</h3>
+        <p class="step__desc">Разработка вариантов планировок на основе ваших пожеланий; обсуждаем, комбинируем
+          варианты, собираем итоговую планировку</p>
+      </li>
+      <li class="steps__item step">
+        <h3 class="step__title">Разработка мудбордов</h3>
+        <p class="step__desc">Собираем коллажи по каждой из комнат; обсуждаем, вносим правки, согласовываем с вами,
+          приступаем к следующему этапу</p>
+      </li>
+      <li class="steps__item step">
+        <h3 class="step__title">Собираем коллажи по каждой из комнат; обсуждаем, вносим правки, согласовываем с
+          вами, приступаем к следующему этапу</h3>
+        <p class="step__desc">Разработка реалистичных визуализаций по каждой комнате 2-4 видовых точки на помещение;
+          обсуждаем, вносим правки, согласовываем с вами</p>
+      </li>
+      <li class="steps__item step">
+        <h3 class="step__title">Рабочая документация</h3>
+        <p class="step__desc">Разработка полного комплекта чертежей для строителей; каждый чертеж согласовываем с
+          вами; вносим правки, согласовываем</p>
+      </li>
+      <li class="steps__item step">
+        <h3 class="step__title">Авторский надзор</h3>
+        <p class="step__desc">Следим за правильностью реализации проекта; проверяем качество каждого сделанного
+          этапа строителей; решаем спорные вопросы со строителями; вносим коррективы в чертежи проекта при
+          необходимости</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+    <section class="services">
+      <div class="services__container container">
         <h2>Услуги</h2>
+        <ul class="services__list">
+          <li class="services__item service">
+            <h3 class="service__title">Дизайн-проект</h3>
+            <p class="service__desc">Разработаем 3D визуализацию объекта и полный пакет чертежей, необходимых для
+              строительства объекта</p>
+          </li>
+          <li class="services__item service">
+            <h3 class="service__title">Строительные работы</h3>
+            <p class="service__desc">Выполняем все виды общестроительных, ремонтно-отделочных и монтажных работ</p>
+          </li>
+          <li class="services__item service">
+            <h3 class="service__title">Авторский надзор</h3>
+            <p class="service__desc">Предоставляем комплекс услуг, направленный
+              на качественное выполнение дизайн проекта в соответствии с рабочей документацией и разработанным
+              дизайнерским решением</p>
+          </li>
+          <li class="services__item service">
+            <h3 class="service__title">Комплектация</h3>
+            <p class="service__desc">Выбираем и сотрудничаем с квалифицированными компетентными подрядчиками и мастерами
+            </p>
+          </li>
+          <li class="services__item service">
+            <h3 class="service__title">Декорирование</h3>
+            <p class="service__desc">Подбираем элементы декорирования интерьера для создания гармоничного уютного и
+              индивидуального интерьера</p>
+          </li>
+          <li class="services__item service">
+            <h3 class="service__title">Реализация под ключ</h3>
+            <p class="service__desc">Реализуем готовый дизайн-проект, проводим строительные работы, закупаем материалы,
+              устанавливаем комплектующие и сдаем готовый проект</p>
+          </li>
+        </ul>
       </div>
     </section>
-    <section class="testimonials">
-      <div class="testimonials__container container">
+    <section class="request">
+      <h2 class="request__header">Оставьте заявку</h2>
+      <p class="request__slogan">С вами свяжутся в ближайшее время!</p>
+      <form action="#" class="request__form">
+        <label for="name" class="form__input-label">
+          <input id="name" type="text" class="form__input">
+        </label>
+        <label for="phone" class="form__input-label">
+          <input id="phone" type="tel" class="form__input">
+        </label>
+        <label for="email" class="form__input-label">
+          <input id="email" type="email" class="form__input">
+        </label>
+        <input type="submit" class="form__submit-btn button">
+      </form>
+    </section>
+    <section class="reviews">
+      <div class="reviews__container container">
         <h2>Отзывы наших клиентов</h2>
+        <div class="reviews__slider slider swiper-container">
+          <div class="swiper-wrapper slider__wrapper">
+            <div class="swiper-slide slider__item review">
+              <a class="review__link" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/cream-high@1x.webp 1x, img/cream-high@2x.webp 2x">
+                  <source type="image/jpeg" srcset="img/cream-high@1x.jpg 1x, img/cream-high@2x.jpg 2x"><img class="product-card__image" src="img/cream-high@1x.jpg" alt="High - крем для лица" height="312" width="230">
+                </picture>
+                <h3 class="review__title">Домашний интерьер</h3>
+              </a>
+            </div>
+          </div>
+          <div class="slider__button-container">
+            <div class="slider__button slider__button_prev">
+              <svg class="slider-icon" height="12" width="26">
+                <use xlink:href="#arrow-left"></use>
+              </svg>
+            </div>
+            <div class="slider__button slider__button_next">
+              <svg class="slider-icon" height="12" width="26">
+                <use xlink:href="#main-arrow"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-	<footer class="footer">
+  <footer class="footer">
   <div class="footer__container">
     <a class="footer__logo">
-      <img src="img/logo.svg" alt="мастерская 9/25.">
+      <img src="img/icons/logo.svg" alt="мастерская 9/25.">
     </a>
     <ul class="footer__nav">
       <li class="footer__nav-item">
