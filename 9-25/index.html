@@ -15,8 +15,8 @@
   <div class="header__container container">
     <a class="header__logo">
       <picture>
-        <source media="(min-width: 768)" srcset="img/icons/logo-dark.svg">
-        <img src="img/icons/main-logo_mobile.svg" alt="мастерская 9/25.">
+        <source media="(min-width: 768px)" srcset="/img/icons/main-logo-desktop.svg">
+        <img src="/img/icons/main-logo_mobile.svg" alt="мастерская 9/25.">
       </picture>
     </a>
     <nav class="header__nav">
@@ -44,49 +44,53 @@
         <img src="img/icons/close.svg" alt="close">
       </button>
     </nav>
-    <span class="header__consult">Бесплатная консультация на объекте</span>
+    <p class="header__consult"><span>Бесплатная консультация на объекте</span></p>
   </div>
 
 </header>
 
-
   <main class="page-main">
     <section id="banner" class="banner">
   <div class="banner__container">
-    <h1 class="visually-hidden">Студия дизайна интерьера</h1>
-    <h2 class="banner__header">Дизайн интерьера под ключ</h2>
-    <p class="banner__slogan">Ваш интерьер начинается здесь</p>
+    <h1 class="banner__header">Студия дизайна интерьера</h1>
+    <h2 class="banner__slogan">Ваш интерьер начинается здесь</h2>
     <div class="banner__image-wrapper"></div>
-    <button class="banner__btn button">Заказать дизайн-проект</button>
+    <button class="banner__btn button">
+      <span>Заказать дизайн-проект</span>
+      <svg class="banner__btn-icon" width="47" height="37">
+        <use xlink:href="/img/sprite.svg#banner-order-btn"></use>
+      </svg>
+    </button>
   </div>
 </section>
 
     <section id="about" class="about">
   <div class="about__container container">
     <h2 class="about__header section-header">О нас</h2>
-    <p class="about__subtitle">Наталья Васильева и Кристина Галина</p>
-    <div class="about__image-wrapper">
-      <picture>
-        <source media="(min-width: 1024)" srcset="img/desktop/owners.jpg 1x, img/desktop/owners@2x.jpg">
-        <img src="img/mobile/owners-mobile.jpg" alt="Пример восхитительного дизайн-проекта" class="about__image" width="349" height="425" srcset="img/mobile/owners-mobile@2x.jpg 2x">
-      </picture>
+    <div class="about__wrapper">
+      <p class="about__subtitle">Наталья Васильева и Кристина Галина</p>
+      <div class="about__image-wrapper">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="./img/desktop/owners-desktop.jpg 1x, ./img/desktop/owners-desktop@2x.jpg">
+          <img src="img/mobile/owners-mobile.jpg" alt="Наталья Васильева и Кристина Галина" class="about__image" width="349" height="425" srcset="img/mobile/owners-mobile@2x.jpg 2x">
+        </picture>
+      </div>
+      <p class="about__desc">Привет! Нас зовут “Студия 9/25”.
+        Мы пришли в мир архитектуры и дизайна в 2004 году, начав свой путь с участия в масштабных проектах компании
+        “Русский монолит”.</p>
+      <div class="about__special">
+        <p class="about__subtitle about__subtitle--special">Образование
+          <span class="about__akcent">МГХПТУ им. Строганова</span>
+        </p>
+        <p class="about__subtitle about__subtitle--special">Опыт
+          <span class="about__akcent">20 лет</span>
+        </p>
+      </div>
+      <p class="about__desc">Этот опыт и образование, полученное в Академии имени Строганова, научили нас создавать
+        пространство для жизни, в воздухе которого - индивидуальность каждого хозяина квартиры и частного дома!</p>
     </div>
-    <p class="about__desc">Привет! Нас зовут “Студия 9/25”.
-      Мы пришли в мир архитектуры и дизайна в 2004 году, начав свой путь с участия в масштабных проектах компании
-      “Русский монолит”.</p>
-    <div class="about__special">
-      <p class="about__subtitle about__subtitle--special">Образование
-        <span class="about__akcent">МГХПТУ им. Строганова</span>
-      </p>
-      <p class="about__subtitle about__subtitle--special">Опыт
-        <span class="about__akcent">20 лет</span>
-      </p>
-    </div>
-    <p class="about__desc">Этот опыт и образование, полученное в Академии имени Строганова, научили нас создавать
-      пространство для жизни, в воздухе которого - индивидуальность каждого хозяина квартиры и частного дома!</p>
   </div>
 </section>
-
     <section id="portfolio" class="portfolio">
   <div class="portfolio__container container">
     <h2 class="portfolio__header section-header">Наши работы</h2>
@@ -96,24 +100,58 @@
           <a class="card__link" href="#">
             <div class="card__image-wrapper">
               <picture>
-                <source media="(min-width: 1024)" type="image/jpeg" srcset="img/desktop/georgian-restorant-desktop.jpg 1x, img/desktop/georgian-restorant-desktop@2x.jpg 2x">
-                <img class="product-card__image" src="img/mobile/georgian_restorant_mobile.jpg" alt="Грузинский ресторан 'Чито-ра'" height="300" width="311" srcset="img/mobile/georgian_restorant_mobile@2x.jpg 2x">
+                <img class="card__image" src="/img/desktop/home-interior-desktop.jpg" alt="Фото готового дизайна домашнего интерьера" height="300" width="311" srcset="/img/desktop/home-interior-desktop@2x.jpg 2x">
               </picture>
             </div>
-            <h3 class="card__title">Грузинский ресторан "Чито-ра"</h3>
+            <h3 class="card__title">Домашний интерьер
+              <svg width="10" height="15">
+                <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+              </svg>
+            </h3>
+          </a>
+        </div>
+        <div class="swiper-slide slider__item card">
+          <a class="card__link" href="#">
+            <div class="card__image-wrapper">
+              <picture>
+                <source media="(min-width: 1024px)" type="image/jpeg" srcset="/img/desktop/georgian-restorant-desktop.jpg 1x, /img/desktop/georgian-restorant-desktop@2x.jpg 2x">
+                <img class="card__image" src="/img/mobile/georgian_restorant_mobile.jpg" alt="Грузинский ресторан 'Чито-ра'" height="300" width="311" srcset="/img/mobile/georgian_restorant_mobile@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3 class="card__title">Грузинский ресторан "Чито-ра"
+              <svg width="10" height="15">
+                <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+              </svg>
+            </h3>
+          </a>
+        </div>
+        <div class="swiper-slide slider__item card">
+          <a class="card__link" href="#">
+            <div class="card__image-wrapper">
+              <picture>
+                <img class="card__image" src="/img/desktop/coworking-desktop.jpg" alt="Коворкинг центр" height="300" width="311" srcset="/img/desktop/coworking-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3 class="card__title">Коворкинг центр
+              <svg width="10" height="15">
+                <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+              </svg>
+            </h3>
           </a>
         </div>
       </div>
-      <div class="slider__button-container">
-        <div class="slider__button slider__button_prev">
-          <svg class="slider-icon" height="12" width="26">
-          </svg>
-        </div>
-        <div class="slider__button slider__button_next">
-          <svg class="slider-icon" height="12" width="26">
-          </svg>
-        </div>
-      </div>
+    </div>
+    <div class="portfolio__button-container slider-btn">
+      <button class="portfolio__button slider-btn__button slider-btn__button--prev">
+        <svg class="portfolio__btn-icon slider-btn__icon" height="17" width="9">
+          <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+        </svg>
+      </button>
+      <button class="portfolio__button portfolio__button--next slider-btn__button slider-btn__button--next">
+        <svg class="portfolio__btn-icon portfolio__btn-icon--next slider-btn__icon slider-btn__icon--next" height="17" width="9">
+          <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+        </svg>
+      </button>
     </div>
     <p class="portfolio__slogan">Мы можем всё - от разработки креативной концепции до ее финальной реализации. C
       уважением относимся к любому стилю, от классики до лофта. Без лишней скромности,
@@ -124,129 +162,198 @@
     <section id="steps" class="steps">
   <div class="steps__container container">
     <h2 class="steps__header section-header">Этапы работы</h2>
-    <ol type="1" class="steps__list">
+    <ol class="steps__list">
       <li class="steps__item step">
-        <h3 class="step__title">Знакомство</h3>
-        <p class="step__desc">Бесплатная встреча или звонок клиенту; заполнение технического задания, подбор
-          аналогов; заключение договора, обмер и фотофиксация помещения</p>
+        <div class="step__wrapper">
+          <h3 class="step__title item-title">Знакомство</h3>
+          <p class="step__desc item-desc">Бесплатная встреча или звонок клиенту; заполнение технического задания, подбор
+            аналогов; заключение договора, обмер и фотофиксация помещения</p>
+        </div>
       </li>
       <li class="steps__item step">
-        <h3 class="step__title">Планировочное решение</h3>
-        <p class="step__desc">Разработка вариантов планировок на основе ваших пожеланий; обсуждаем, комбинируем
-          варианты, собираем итоговую планировку</p>
+        <div class="step__wrapper">
+          <h3 class="step__title item-title">Планировочное решение</h3>
+          <p class="step__desc item-desc">Разработка вариантов планировок на основе ваших пожеланий; обсуждаем, комбинируем
+            варианты,<br class="desktop-br">собираем итоговую планировку</p>
+        </div>
       </li>
       <li class="steps__item step">
-        <h3 class="step__title">Разработка мудбордов</h3>
-        <p class="step__desc">Собираем коллажи по каждой из комнат; обсуждаем, вносим правки, согласовываем с вами,
-          приступаем к следующему этапу</p>
+        <div class="step__wrapper">
+          <h3 class="step__title item-title">Разработка мудбордов</h3>
+          <p class="step__desc item-desc">Собираем коллажи по каждой из комнат; обсуждаем, вносим правки, согласовываем с вами,
+            приступаем к следующему этапу</p>
+        </div>
       </li>
       <li class="steps__item step">
-        <h3 class="step__title">Собираем коллажи по каждой из комнат; обсуждаем, вносим правки, согласовываем с
-          вами, приступаем к следующему этапу</h3>
-        <p class="step__desc">Разработка реалистичных визуализаций по каждой комнате 2-4 видовых точки на помещение;
-          обсуждаем, вносим правки, согласовываем с вами</p>
+        <div class="step__wrapper">
+          <h3 class="step__title item-title">Визуализации интерьера</h3>
+          <p class="step__desc item-desc">Разработка реалистичных визуализаций по каждой комнате 2-4 видовых точки на помещение;
+            обсуждаем, вносим правки, согласовываем с вами</p>
+        </div>
       </li>
       <li class="steps__item step">
-        <h3 class="step__title">Рабочая документация</h3>
-        <p class="step__desc">Разработка полного комплекта чертежей для строителей; каждый чертеж согласовываем с
-          вами; вносим правки, согласовываем</p>
+        <div class="step__wrapper">
+          <h3 class="step__title item-title">Рабочая документация</h3>
+          <p class="step__desc item-desc">Разработка полного комплекта чертежей для строителей; каждый чертеж согласовываем с
+            вами; вносим правки, согласовываем</p>
+        </div>
       </li>
       <li class="steps__item step">
-        <h3 class="step__title">Авторский надзор</h3>
-        <p class="step__desc">Следим за правильностью реализации проекта; проверяем качество каждого сделанного
-          этапа строителей; решаем спорные вопросы со строителями; вносим коррективы в чертежи проекта при
-          необходимости</p>
+        <div class="step__wrapper">
+          <h3 class="step__title item-title">Авторский надзор</h3>
+          <p class="step__desc item-desc">Следим за правильностью реализации проекта; проверяем качество каждого сделанного
+            этапа строителей; решаем спорные вопросы со строителями; вносим коррективы в чертежи проекта при
+            необходимости</p>
+        </div>
       </li>
     </ol>
   </div>
 </section>
 
     <section class="services">
-      <div class="services__container container">
-        <h2>Услуги</h2>
-        <ul class="services__list">
-          <li class="services__item service">
-            <h3 class="service__title">Дизайн-проект</h3>
-            <p class="service__desc">Разработаем 3D визуализацию объекта и полный пакет чертежей, необходимых для
-              строительства объекта</p>
-          </li>
-          <li class="services__item service">
-            <h3 class="service__title">Строительные работы</h3>
-            <p class="service__desc">Выполняем все виды общестроительных, ремонтно-отделочных и монтажных работ</p>
-          </li>
-          <li class="services__item service">
-            <h3 class="service__title">Авторский надзор</h3>
-            <p class="service__desc">Предоставляем комплекс услуг, направленный
-              на качественное выполнение дизайн проекта в соответствии с рабочей документацией и разработанным
-              дизайнерским решением</p>
-          </li>
-          <li class="services__item service">
-            <h3 class="service__title">Комплектация</h3>
-            <p class="service__desc">Выбираем и сотрудничаем с квалифицированными компетентными подрядчиками и мастерами
-            </p>
-          </li>
-          <li class="services__item service">
-            <h3 class="service__title">Декорирование</h3>
-            <p class="service__desc">Подбираем элементы декорирования интерьера для создания гармоничного уютного и
-              индивидуального интерьера</p>
-          </li>
-          <li class="services__item service">
-            <h3 class="service__title">Реализация под ключ</h3>
-            <p class="service__desc">Реализуем готовый дизайн-проект, проводим строительные работы, закупаем материалы,
-              устанавливаем комплектующие и сдаем готовый проект</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+  <div class="services__container container">
+    <h2 class="services__header section-header">Услуги</h2>
+    <ul class="services__list">
+      <li class="services__item service">
+        <div class="service__wrapper">
+          <h3 class="service__title item-title">Дизайн-проект</h3>
+          <p class="service__desc item-desc item-desc--service">Разработаем 3D визуализацию объекта и полный пакет чертежей, необходимых
+            для
+            строительства объекта</p>
+        </div>
+        <div class="service__icon-wrapper">
+          <svg class="service__icon" width="53" height="53">
+            <use xlink:href="/img/sprite.svg#design"></use>
+          </svg>
+        </div>
+      </li>
+      <li class="services__item service">
+        <div class="service__wrapper">
+          <h3 class="service__title item-title">Строительные работы</h3>
+          <p class="service__desc item-desc item-desc--service">Выполняем все виды общестроительных, ремонтно-отделочных и монтажных работ
+          </p>
+        </div>
+        <div class="service__icon-wrapper">
+          <svg class="service__icon" width="53" height="53">
+            <use xlink:href="/img/sprite.svg#constructions"></use>
+          </svg>
+        </div>
+      </li>
+      <li class="services__item service">
+        <div class="service__wrapper">
+          <h3 class="service__title item-title">Авторский надзор</h3>
+          <p class="service__desc item-desc item-desc--service">Предоставляем комплекс услуг, направленный
+            на качественное выполнение дизайн проекта в соответствии с рабочей документацией и разработанным
+            дизайнерским решением</p>
+        </div>
+        <div class="service__icon-wrapper">
+          <svg class="service__icon" width="53" height="53">
+            <use xlink:href="/img/sprite.svg#supervision"></use>
+          </svg>
+        </div>
+      </li>
+      <li class="services__item service">
+        <div class="service__wrapper">
+          <h3 class="service__title item-title">Комплектация</h3>
+          <p class="service__desc item-desc item-desc--service">Выбираем и сотрудничаем с квалифицированными компетентными подрядчиками и
+            мастерами
+          </p>
+        </div>
+        <div class="service__icon-wrapper">
+          <svg class="service__icon" width="53" height="53">
+            <use xlink:href="/img/sprite.svg#complection"></use>
+          </svg>
+        </div>
+      </li>
+      <li class="services__item service">
+        <div class="service__wrapper">
+          <h3 class="service__title item-title">Декорирование</h3>
+          <p class="service__desc item-desc item-desc--service">Подбираем элементы декорирования интерьера для создания гармоничного
+            уютного
+            и
+            индивидуального интерьера</p>
+        </div>
+        <div class="service__icon-wrapper">
+          <svg class="service__icon" width="53" height="53">
+            <use xlink:href="/img/sprite.svg#columns"></use>
+          </svg>
+        </div>
+      </li>
+      <li class="services__item service">
+        <div class="service__wrapper">
+          <h3 class="service__title item-title">Реализация под ключ</h3>
+          <p class="service__desc item-desc item-desc--service">Реализуем готовый дизайн-проект, проводим строительные работы, закупаем
+            материалы,
+            устанавливаем комплектующие и сдаем готовый проект</p>
+        </div>
+        <div class="service__icon-wrapper">
+          <svg class="service__icon" width="53" height="53">
+            <use xlink:href="/img/sprite.svg#key"></use>
+          </svg>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
     <section class="request">
-      <h2 class="request__header">Оставьте заявку</h2>
-      <p class="request__slogan">С вами свяжутся в ближайшее время!</p>
-      <form action="#" class="request__form">
-        <label for="name" class="form__input-label">
-          <input id="name" type="text" class="form__input">
-        </label>
-        <label for="phone" class="form__input-label">
-          <input id="phone" type="tel" class="form__input">
-        </label>
-        <label for="email" class="form__input-label">
-          <input id="email" type="email" class="form__input">
-        </label>
-        <input type="submit" class="form__submit-btn button">
-      </form>
-    </section>
+  <div class="request__wrapper container">
+    <h2 class="request__header">Оставьте заявку</h2>
+    <p class="request__slogan">С вами свяжутся в&nbsp;ближайшее время!</p>
+    <form action="#" class="request__form form">
+      <div class="form__input-wrapper">
+        <label for="name" class="form__input-label visually-hidden">Имя</label>
+        <input id="name" type="text" class="form__input" placeholder="Имя">
+        <label for="phone" class="form__input-label visually-hidden">Номер телефона</label>
+        <input id="phone" type="tel" class="form__input" placeholder="Номер">
+        <label for="email" class="form__input-label visually-hidden">Электронная почта</label>
+        <input id="email" type="email" class="form__input" placeholder="Почта">
+      </div>
+      <input type="submit" class="form__submit-btn button" aria-label="Отправить заявку">
+    </form>
+  </div>
+</section>
+
     <section class="reviews">
-      <div class="reviews__container container">
-        <h2>Отзывы наших клиентов</h2>
-        <div class="reviews__slider slider swiper-container">
-          <div class="swiper-wrapper slider__wrapper">
-            <div class="swiper-slide slider__item review">
-              <a class="review__link" href="#">
-                <picture>
-                  <source type="image/webp" srcset="img/cream-high@1x.webp 1x, img/cream-high@2x.webp 2x">
-                  <source type="image/jpeg" srcset="img/cream-high@1x.jpg 1x, img/cream-high@2x.jpg 2x"><img class="product-card__image" src="img/cream-high@1x.jpg" alt="High - крем для лица" height="312" width="230">
-                </picture>
-                <h3 class="review__title">Домашний интерьер</h3>
-              </a>
-            </div>
+  <div class="reviews__container container">
+    <h2 class="reviews__header section-header">Отзывы наших клиентов</h2>
+    <div class="reviews__slider slider swiper-container">
+      <div class="swiper-wrapper slider__wrapper">
+        <div class="swiper-slide slider__item review">
+          <div class="review__image-wrapper">
+            <picture>
+              <source media="(min-width: 1024px)" type="image/jpeg" srcset="img/desktop/review-desktop.jpg 1x, img/desktop/review-desktop@2x.jpg 2x">
+              <img class="review__image" src="img/mobile/review-mobile.jpg" alt="Выполненный дизайн интерьера" height="257" width="353" srcset="img/mobile/review-mobile@2x.jpg 2x">
+            </picture>
           </div>
-          <div class="slider__button-container">
-            <div class="slider__button slider__button_prev">
-              <svg class="slider-icon" height="12" width="26">
-                <use xlink:href="#arrow-left"></use>
-              </svg>
+          <div class="review__text-wrapper">
+            <div class="review__main-text-wrapper">
+              <h3 class="review__title">Виктория Кочеткова</h3>
+              <p class="review__desc"> У нас, как у молодой семьи, стояла цель – создать стильное статусное пространство
+                в холлах жилой части и бизнес-центра, которое бы сочеталось с современной оригинальной архитектурой
+                здания.</p>
             </div>
-            <div class="slider__button slider__button_next">
-              <svg class="slider-icon" height="12" width="26">
-                <use xlink:href="#main-arrow"></use>
-              </svg>
-            </div>
+            <span class="review__service-type">Дизайн интерьера</span>
           </div>
         </div>
       </div>
-    </section>
+      <div class="reviews__button-container slider-btn">
+        <button class="reviews__button slider-btn__button slider-btn__button--prev">
+          <svg class="reviews__btn-icon slider-btn__icon" height="17" width="9">
+            <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+          </svg>
+        </button>
+        <button class="reviews__button reviews__button--next slider-btn__button slider-btn__button--next">
+          <svg class="reviews__btn-icon reviews__btn-icon--next slider-btn__icon slider-btn__icon--next" height="17" width="9">
+            <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
   </main>
-
   <footer class="footer">
   <div class="footer__container">
     <a class="footer__logo">
@@ -274,6 +381,197 @@
     </a>
   </div>
 </footer>
+
+  <!-- различные попапы -->
+  <section class="form-popup form-popup--closed">
+  <div class="form-popup__overlay">
+    <div class="form-popup__container">
+      <div class="form-popup__wrapper">
+        <button type="button" class="form-popup__close-btn" aria-label="Закрыть окно">
+          <svg class="form-popup__close-icon">
+            <use xlink:href="/img/sprite.svg#popup-close-icon"></use>
+          </svg>
+        </button>
+        <h2 class="form-popup__header">Отправка заявки</h2>
+        <p class="form-popup__slogan">С вами свяжутся в ближайшее время!</p>
+        <form class="form-popup__form form form--popup">
+          <label class="visually-hidden" for="name">Имя
+          </label>
+          <input class="form__input form__input--popup" type="text" name="name" id="name" required="" placeholder="Имя">
+          <label class="visually-hidden" for="phone">Номер телефона
+          </label>
+          <input class="form__input form__input--popup" type="phone" name="phone" id="phone" required="" placeholder="Номер">
+          <label class="visually-hidden" for="mail">E-mail
+          </label>
+          <input class="form__input form__input--popup" type="email" name="mail" id="mail" required="" placeholder="E-mail">
+          <button class="form__submit-btn form__submit-btn--popup button" aria-label="Отправить заявку" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="form-popup form-popup--success form-popup--success-closed">
+  <div class="form-popup__overlay">
+    <div class="form-popup__container form-popup__container--success">
+      <div class="form-popup__wrapper">
+        <button type="button" class="form-popup__close-btn" aria-label="Закрыть окно">
+          <svg class="form-popup__close-icon">
+            <use xlink:href="/img/sprite.svg#popup-close-icon"></use>
+          </svg>
+        </button>
+        <h2 class="form-popup__header form-popup__header--success">Заявка отправлена</h2>
+        <p class="form-popup__slogan">С вами свяжутся в ближайшее время!</p>
+        <div class="form-popup__success-wrapper">
+          <svg class="form-popup__success-icon">
+            <use xlink:href="/img/sprite.svg#success-tick-icon"></use>
+          </svg>
+        </div>
+        <button class="form__submit-btn form__submit-btn--success-popup button" aria-label="Закрыть попап" type="submit">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="project-popup project-popup--closed">
+  <div class="project-popup__overlay">
+    <div class="project-popup__container">
+      <button type="button" class="project-popup__close-btn" aria-label="Закрыть окно">
+        <svg class="project-popup__close-icon">
+          <use xlink:href="/img/sprite.svg#popup-close-icon"></use>
+        </svg>
+      </button>
+      <h2 class="project-popup__header">Офисное помещение</h2>
+
+      <div class="project-popup__wrapper">
+        <div class="project-popup__cover-wrapper">
+          <img class="project-popup__cover-image" src="/img/desktop/project-popup/popup-cover.jpg" alt="" height="434" width="580" srcset="/img/desktop/project-popup/popup-cover@2x.jpg 2x">
+        </div>
+
+        <div class="project-popup__slider-wrapper">
+          <div class="project-popup__slider slider swiper-container">
+            <div class="swiper-wrapper slider__wrapper">
+              <div class="project-popup__slider-item swiper-slide slider__item">
+                <img class="project-popup__slider-image" src="/img/desktop/project-popup/image5.jpg" alt="" height="240" width="180" srcset="/img/desktop/project-popup/image5@2x.jpg 2x">
+              </div>
+              <div class="project-popup__slider-item swiper-slide slider__item">
+                <img class="project-popup__slider-image" src="/img/desktop/project-popup/image7.jpg" alt="" height="240" width="180" srcset="/img/desktop/project-popup/image7@2x.jpg 2x">
+              </div>
+              <div class="project-popup__slider-item swiper-slide slider__item">
+                <img class="project-popup__slider-image" src="/img/desktop/project-popup/image8.jpg" alt="" height="240" width="180" srcset="/img/desktop/project-popup/image8@2x.jpg 2x">
+              </div>
+              <div class="project-popup__slider-item swiper-slide slider__item">
+                <img class="project-popup__slider-image" src="/img/desktop/project-popup/image8.jpg" alt="" height="240" width="180" srcset="/img/desktop/project-popup/image8@2x.jpg 2x">
+              </div>
+              <div class="project-popup__slider-item swiper-slide slider__item">
+                <img class="project-popup__slider-image" src="/img/desktop/project-popup/image39.jpg" alt="" height="240" width="180" srcset="/img/desktop/project-popup/image39@2x.jpg 2x">
+              </div>
+              <div class="project-popup__slider-item swiper-slide slider__item">
+                <img class="project-popup__slider-image" src="/img/desktop/project-popup/image5.jpg" alt="" height="240" width="180" srcset="/img/desktop/project-popup/image5@2x.jpg 2x">
+              </div>
+            </div>
+          </div>
+
+          <div class="project-popup__scrollbar scrollbar">
+            <div class="scrollbar__slider"></div>
+          </div>
+        </div>
+
+        <div class="project-popup__button-container slider-btn">
+          <button class="project-popup__button slider-btn__button slider-btn__button--prev">
+            <svg class="project-popup__btn-icon slider-btn__icon" height="17" width="9">
+              <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+            </svg>
+          </button>
+          <button class="project-popup__button project-popup__button--next slider-btn__button slider-btn__button--next">
+            <svg class="project-popup__btn-icon project-popup__btn-icon--next slider-btn__icon slider-btn__icon--next" height="17" width="9">
+              <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="project-popup__text-container">
+          <ul class="project-popup__parameters">
+            <li class="project-popup__parameter project-parameter">
+              <h3 class="project-parameter__title">Стиль:</h3>
+              <p class="project-parameter__value">Современный</p>
+            </li>
+            <li class="project-popup__parameter project-parameter">
+              <h3 class="project-parameter__title">Помещение:</h3>
+              <p class="project-parameter__value">Коммерческое помещение</p>
+            </li>
+            <li class="project-popup__parameter project-parameter">
+              <h3 class="project-parameter__title">Количество комнат:</h3>
+              <p class="project-parameter__value">4</p>
+            </li>
+            <li class="project-popup__parameter project-parameter">
+              <h3 class="project-parameter__title">Площадь:</h3>
+              <p class="project-parameter__value">64.5</p>
+            </li>
+            <li class="project-popup__parameter project-parameter">
+              <h3 class="project-parameter__title">Город:</h3>
+              <p class="project-parameter__value">Москва</p>
+            </li>
+          </ul>
+
+          <p class="project-popup__description">Возможное описание Возможное описание Возможное описание Возможное
+            описание Возможное описание Возможное описание Возможное описание Возможное описание</p>
+
+          <a href="#" class="project-popup__link" target="_blank">Открыть чертеж.pdf</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="photo-popup photo-popup--closed">
+  <div class="photo-popup__overlay">
+    <div class="photo-popup__container">
+      <button class="photo-popup__close-btn" type="button" aria-label="Закрыть окно">
+        <svg class="photo-popup__close-icon">
+          <use xlink:href="./img/sprite.svg#popup-close-icon"></use>
+        </svg>
+      </button>
+
+      <div class="photo-popup__wrapper swiper">
+        <div class="photo-popup__photo-container swiper-wrapper">
+          <div class="photo-popup__photo-wrapper swiper-slide">
+            <img class="photo-popup__cover-image" src="/img/desktop/project-popup/photo-popup.jpg" alt="" height="882" width="1180" srcset="/img/desktop/project-popup/photo-popup@2x.jpg 2x">
+          </div>
+          <div class="photo-popup__photo-wrapper swiper-slide">
+            <img class="photo-popup__cover-image" src="/img/desktop/project-popup/photo-popup.jpg" alt="" height="882" width="1180" srcset="/img/desktop/project-popup/photo-popup@2x.jpg 2x">
+          </div>
+          <div class="photo-popup__photo-wrapper swiper-slide">
+            <img class="photo-popup__cover-image" src="/img/desktop/project-popup/photo-popup.jpg" alt="" height="882" width="1180" srcset="/img/desktop/project-popup/photo-popup@2x.jpg 2x">
+          </div>
+          <div class="photo-popup__photo-wrapper swiper-slide">
+            <img class="photo-popup__cover-image" src="/img/desktop/project-popup/photo-popup.jpg" alt="" height="882" width="1180" srcset="/img/desktop/project-popup/photo-popup@2x.jpg 2x">
+          </div>
+          <div class="photo-popup__photo-wrapper swiper-slide">
+            <img class="photo-popup__cover-image" src="/img/desktop/project-popup/photo-popup.jpg" alt="" height="882" width="1180" srcset="/img/desktop/project-popup/photo-popup@2x.jpg 2x">
+          </div>
+          <div class="photo-popup__photo-wrapper swiper-slide">
+            <img class="photo-popup__cover-image" src="/img/desktop/project-popup/photo-popup.jpg" alt="" height="882" width="1180" srcset="/img/desktop/project-popup/photo-popup@2x.jpg 2x">
+          </div>
+        </div>
+      </div>
+      <div class="photo-popup__button-container slider-btn">
+        <button class="photo-popup__button slider-btn__button slider-btn__button--prev">
+          <svg class="photo-popup__btn-icon slider-btn__icon" height="17" width="9">
+            <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+          </svg>
+        </button>
+        <button class="photo-popup__button photo-popup__button--next slider-btn__button slider-btn__button--next">
+          <svg class="photo-popup__btn-icon photo-popup__btn-icon--next slider-btn__icon slider-btn__icon--next" height="17" width="9">
+            <use xlink:href="/img/sprite.svg#btn-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
